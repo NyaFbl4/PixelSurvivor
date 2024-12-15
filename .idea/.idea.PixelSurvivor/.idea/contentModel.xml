@@ -45,8 +45,17 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Ability" t="Include">
+            <e p="Shooter.cs" t="Include" />
+          </e>
+          <e p="Bullet" t="Include">
+            <e p="BulletShooter.cs" t="Include" />
+          </e>
           <e p="Components" t="Include">
             <e p="MoveComponent.cs" t="Include" />
+          </e>
+          <e p="Interfaces" t="Include">
+            <e p="IDamage.cs" t="Include" />
           </e>
           <e p="System" t="Include">
             <e p="InputManager.cs" t="Include" />
