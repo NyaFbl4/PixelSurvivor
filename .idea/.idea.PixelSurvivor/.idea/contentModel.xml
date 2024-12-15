@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\lomok\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\lomok\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_PixelSurvivor.477800879.00" t="ExcludeRecursive" />
+    <e p="C:\Users\lomok\Desktop\Unity\Проекты\PixelSurvivor" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Resources" t="Include">
+          <e p="10-magic-sprite-sheet-effects-pixel-art" t="Include">
+            <e p="License.txt" t="Include" />
+          </e>
+          <e p="boss-monsters-pixel-art" t="Include">
+            <e p="License.txt" t="Include" />
+          </e>
+          <e p="cave-bosses-pixel-art-game-sprites" t="Include">
+            <e p="License.txt" t="Include" />
+          </e>
+          <e p="cave-monster-pixel-art-game-sprite-pack" t="Include">
+            <e p="License.txt" t="Include" />
+          </e>
+          <e p="game-ui-pixel-art" t="Include">
+            <e p="License.txt" t="Include" />
+          </e>
+          <e p="hell-boss-sprite-sheets-pixel-art" t="Include">
+            <e p="License.txt" t="Include" />
+          </e>
+          <e p="hell-monster-pixel-art-game-sprite-pack" t="Include">
+            <e p="License.txt" t="Include" />
+          </e>
+          <e p="pixel-art-tiny-hero-sprites" t="Include">
+            <e p="License.txt" t="Include" />
+          </e>
+          <e p="platformer-pixel-art-cave-2d-tileset" t="Include">
+            <e p="License.txt" t="Include" />
+          </e>
+          <e p="platformer-pixel-art-hell-2d-tileset" t="Include">
+            <e p="License.txt" t="Include" />
+          </e>
+          <e p="platformer-pixel-art-tileset" t="Include">
+            <e p="License.txt" t="Include" />
+          </e>
+          <e p="tiny-monsters-pixel-art-pack" t="Include">
+            <e p="License.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="Components" t="Include">
+            <e p="MoveComponent.cs" t="Include" />
+          </e>
+          <e p="System" t="Include">
+            <e p="InputManager.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="PixelSurvivor.sln" t="IncludeFlat" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
