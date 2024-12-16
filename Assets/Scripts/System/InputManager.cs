@@ -11,10 +11,12 @@ namespace PixelSurvivor
 
         public void Update()
         {
+            /*
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 OnAttack();
             }
+            */
 
             float directionX = 0;
 
