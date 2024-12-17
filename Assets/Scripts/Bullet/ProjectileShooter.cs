@@ -2,11 +2,11 @@
 
 namespace PixelSurvivor
 {
-    public class BulletShooter : MonoBehaviour
+    public class ProjectileShooter : MonoBehaviour
     {
         private int _damage;
 
-        public void SatDamage(int damage)
+        public void SetDamage(int damage)
         {
             _damage = damage;
         }

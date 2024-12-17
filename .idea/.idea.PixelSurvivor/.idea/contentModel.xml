@@ -47,7 +47,7 @@
             <e p="Shooter.cs" t="Include" />
           </e>
           <e p="Bullet" t="Include">
-            <e p="BulletShooter.cs" t="Include" />
+            <e p="ProjectileShooter.cs" t="Include" />
           </e>
           <e p="Components" t="Include">
             <e p="MoveComponent.cs" t="Include" />

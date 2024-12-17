@@ -9,14 +9,16 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/System/InputManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Components.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Components/Components.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Components/Component.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Interfaces/IDamage.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Bullet/BulletShooter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Ability/Shooter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Components/TargetTrackerComponent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/System/InputManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Bullet/BulletShooter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Bullet/ProjectileShooter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Shooter.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2qFxXssEiHz2bMj728fhRLamtpu" />
@@ -59,7 +61,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734334754458</updated>
-      <workItem from="1734334766056" duration="1945000" />
+      <workItem from="1734334766056" duration="2694000" />
+      <workItem from="1734436944218" duration="3457000" />
     </task>
     <servers />
   </component>
