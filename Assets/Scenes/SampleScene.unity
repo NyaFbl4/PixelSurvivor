@@ -539,6 +539,7 @@ GameObject:
   - component: {fileID: 1758085873}
   - component: {fileID: 1758085872}
   - component: {fileID: 1758085874}
+  - component: {fileID: 1758085875}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -620,6 +621,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _detectionRadius: 3
   _targets: []
+--- !u!61 &1758085875
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758085870}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.015683085, y: -0.10664472}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.46677637, y: 0.78671056}
+  m_EdgeRadius: 0
 --- !u!1 &1901864086
 GameObject:
   m_ObjectHideFlags: 0
@@ -770,9 +816,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.005205035, y: -0.2134063}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.36466953
 --- !u!50 &2023054986
 Rigidbody2D:
   serializedVersion: 4
@@ -811,6 +857,10 @@ PrefabInstance:
     - target: {fileID: 928365787084995654, guid: 290184b3e1c0391498d6da7d353618ac, type: 3}
       propertyPath: m_Name
       value: ProjectileShooter
+      objectReference: {fileID: 0}
+    - target: {fileID: 928365787084995654, guid: 290184b3e1c0391498d6da7d353618ac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1888669179005838636, guid: 290184b3e1c0391498d6da7d353618ac, type: 3}
       propertyPath: m_LocalPosition.x

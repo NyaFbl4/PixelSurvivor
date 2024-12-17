@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using Unity.VisualScripting;
+using UnityEngine;
 
 namespace PixelSurvivor
 {
@@ -10,22 +12,22 @@ namespace PixelSurvivor
         {
             _damage = damage;
         }
-        
-        private void OnTriggerEnter(Collider other)
+
+        private void OnTriggerEnter2D(Collider2D other)
         {
             //Debug.Log(other.gameObject.name);
             
-            if (other.gameObject.CompareTag("Enemy")) // Проверяем, что это враг
+            if (other.gameObject.CompareTag("Enemy"))
             {
-                Debug.Log(other.gameObject.name);
-                // Обработка урона врагу
+                //Debug.Log(other.gameObject.name);
+                
                 IDamage damageComponent = other.gameObject.GetComponent<IDamage>();
                 if (damageComponent != null)
                 {
                     damageComponent.TakeDamage(_damage);
                 }
 
-                //Destroy(gameObject); // Уничтожаем пулю
+                Destroy(gameObject); 
             }
         }
     }

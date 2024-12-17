@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
 namespace PixelSurvivor
@@ -13,17 +14,31 @@ namespace PixelSurvivor
         [SerializeField] private int _projectileDamage;
         [SerializeField] private float _fireRate;
         [SerializeField] private int _maxCurrentShots;
+        
+        private Coroutine _shootingCoroutine;
 
         private void Update()
         {
             List<GameObject> targets = _targetTracker.GetCurrentTargets();
             
-            
+            if (targets.Count > 0 && _shootingCoroutine == null)
+            {
+                _shootingCoroutine = StartCoroutine(ShootAutomatically(targets));
+            }
+            else if (targets.Count == 0 && _shootingCoroutine != null)
+            {
+                StopCoroutine(_shootingCoroutine);
+                _shootingCoroutine = null;
+            }
         }
 
-        private IEnumerator SHootAutomatically(List<GameObject> targets)
+        private IEnumerator ShootAutomatically(List<GameObject> targets)
         {
-            
+            while (true)
+            {
+                ShootAtTargets(targets);
+                yield return new WaitForSeconds(_fireRate); 
+            }
         }
 
         private void ShootAtTargets(List<GameObject> targets)
