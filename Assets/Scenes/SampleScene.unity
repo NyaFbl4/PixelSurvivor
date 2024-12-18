@@ -262,6 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 780956996}
   - component: {fileID: 780956997}
+  - component: {fileID: 780956998}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -303,6 +304,26 @@ MonoBehaviour:
   _projectileDamage: 1
   _fireRate: 1
   _maxCurrentShots: 1
+--- !u!114 &780956998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780956995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21e95ab5e4e6033499dcd52fd08708b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _projectile: {fileID: 928365787084995654, guid: 652eca89aa8ed374daff8e12c729941f, type: 3}
+  _cooldown: 5
+  _radius: 3
+  _rotationSpeed: 5
+  _duration: 5
+  _projectileCount: 5
+  _damage: 5
+  _isActive: 0
 --- !u!1 &1053001328
 GameObject:
   m_ObjectHideFlags: 0
