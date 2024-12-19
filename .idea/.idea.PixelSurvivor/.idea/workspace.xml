@@ -26,6 +26,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Projectile/OrbitalAbilityProjectile.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Projectile/ProjectileOrbitalAbility.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/OrbitalAbility.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnepyMoveComponent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMoveComponent.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2qFxXssEiHz2bMj728fhRLamtpu" />
@@ -70,7 +72,7 @@
       <updated>1734334754458</updated>
       <workItem from="1734334766056" duration="2694000" />
       <workItem from="1734436944218" duration="3457000" />
-      <workItem from="1734503182430" duration="5278000" />
+      <workItem from="1734503182430" duration="9179000" />
     </task>
     <servers />
   </component>
