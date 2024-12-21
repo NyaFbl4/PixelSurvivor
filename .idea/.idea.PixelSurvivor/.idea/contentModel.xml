@@ -66,6 +66,7 @@
             <e p="Shooter.cs" t="Include" />
           </e>
           <e p="Components" t="Include">
+            <e p="HeathComponent.cs" t="Include" />
             <e p="MoveComponent.cs" t="Include" />
             <e p="PlayerAnimationComponent.cs" t="Include" />
             <e p="TargetTrackerComponent.cs" t="Include" />

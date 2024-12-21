@@ -29,6 +29,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMoveComponent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Components/PlayerAnimationComponent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Shooter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Components/HeathComponent.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2qFxXssEiHz2bMj728fhRLamtpu" />
