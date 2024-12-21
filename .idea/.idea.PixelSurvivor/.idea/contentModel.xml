@@ -1,45 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Public\Repos\PixelSurvivor" t="IncludeRecursive">
+    <e p="C:\Users\lomok\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\lomok\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_PixelSurvivor.477800879.00" t="ExcludeRecursive" />
+    <e p="C:\Users\lomok\Desktop\Unity\Проекты\PixelSurvivor" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Resources" t="Include">
-          <e p="10-magic-sprite-sheet-effects-pixel-art" t="Include">
-            <e p="License.txt" t="Include" />
+          <e p="Ability" t="Include">
+            <e p="10-magic-sprite-sheet-effects-pixel-art" t="Include">
+              <e p="License.txt" t="Include" />
+            </e>
           </e>
-          <e p="boss-monsters-pixel-art" t="Include">
-            <e p="License.txt" t="Include" />
+          <e p="Enemy" t="Include">
+            <e p="Cave" t="Include">
+              <e p="cave-bosses-pixel-art-game-sprites" t="Include">
+                <e p="License.txt" t="Include" />
+              </e>
+              <e p="cave-monster-pixel-art-game-sprite-pack" t="Include">
+                <e p="License.txt" t="Include" />
+              </e>
+            </e>
+            <e p="Hell" t="Include">
+              <e p="hell-boss-sprite-sheets-pixel-art" t="Include">
+                <e p="License.txt" t="Include" />
+              </e>
+              <e p="hell-monster-pixel-art-game-sprite-pack" t="Include">
+                <e p="License.txt" t="Include" />
+              </e>
+            </e>
+            <e p="Tiny" t="Include">
+              <e p="boss-monsters-pixel-art" t="Include">
+                <e p="License.txt" t="Include" />
+              </e>
+              <e p="tiny-monsters-pixel-art-pack" t="Include">
+                <e p="License.txt" t="Include" />
+              </e>
+            </e>
           </e>
-          <e p="cave-bosses-pixel-art-game-sprites" t="Include">
-            <e p="License.txt" t="Include" />
+          <e p="Player" t="Include">
+            <e p="pixel-art-tiny-hero-sprites" t="Include">
+              <e p="License.txt" t="Include" />
+            </e>
           </e>
-          <e p="cave-monster-pixel-art-game-sprite-pack" t="Include">
-            <e p="License.txt" t="Include" />
+          <e p="Tileset" t="Include">
+            <e p="platformer-pixel-art-cave-2d-tileset" t="Include">
+              <e p="License.txt" t="Include" />
+            </e>
+            <e p="platformer-pixel-art-hell-2d-tileset" t="Include">
+              <e p="License.txt" t="Include" />
+            </e>
+            <e p="platformer-pixel-art-tileset" t="Include">
+              <e p="License.txt" t="Include" />
+            </e>
           </e>
-          <e p="game-ui-pixel-art" t="Include">
-            <e p="License.txt" t="Include" />
-          </e>
-          <e p="hell-boss-sprite-sheets-pixel-art" t="Include">
-            <e p="License.txt" t="Include" />
-          </e>
-          <e p="hell-monster-pixel-art-game-sprite-pack" t="Include">
-            <e p="License.txt" t="Include" />
-          </e>
-          <e p="pixel-art-tiny-hero-sprites" t="Include">
-            <e p="License.txt" t="Include" />
-          </e>
-          <e p="platformer-pixel-art-cave-2d-tileset" t="Include">
-            <e p="License.txt" t="Include" />
-          </e>
-          <e p="platformer-pixel-art-hell-2d-tileset" t="Include">
-            <e p="License.txt" t="Include" />
-          </e>
-          <e p="platformer-pixel-art-tileset" t="Include">
-            <e p="License.txt" t="Include" />
-          </e>
-          <e p="tiny-monsters-pixel-art-pack" t="Include">
-            <e p="License.txt" t="Include" />
+          <e p="UI" t="Include">
+            <e p="game-ui-pixel-art" t="Include">
+              <e p="License.txt" t="Include" />
+            </e>
           </e>
         </e>
         <e p="Scripts" t="Include">
@@ -49,6 +67,7 @@
           </e>
           <e p="Components" t="Include">
             <e p="MoveComponent.cs" t="Include" />
+            <e p="PlayerAnimationComponent.cs" t="Include" />
             <e p="TargetTrackerComponent.cs" t="Include" />
           </e>
           <e p="Enemy" t="Include">
@@ -71,7 +90,5 @@
       <e p="PixelSurvivor.sln" t="IncludeFlat" />
       <e p="Temp\Bin" t="ExcludeRecursive" />
     </e>
-    <e p="C:\Users\Никита\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Никита\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_PixelSurvivor.133610107.00" t="ExcludeRecursive" />
   </component>
 </project>

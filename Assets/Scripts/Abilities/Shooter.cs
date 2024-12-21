@@ -73,6 +73,9 @@ namespace PixelSurvivor
                 {
                     Vector2 direction = (target.transform.position - _shootPoint.position).normalized;
                     projectileRb.velocity = direction * _projectileSpeed;
+                    
+                    float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; // Получаем угол
+                    projectile.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle)); // Устанавливаем вращение
                 }
             }
         }
