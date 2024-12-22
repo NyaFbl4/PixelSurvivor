@@ -64,6 +64,7 @@
           <e p="Abilities" t="Include">
             <e p="OrbitalAbility.cs" t="Include" />
             <e p="Shooter.cs" t="Include" />
+            <e p="Sun-strike.cs" t="Include" />
           </e>
           <e p="Components" t="Include">
             <e p="HeathComponent.cs" t="Include" />

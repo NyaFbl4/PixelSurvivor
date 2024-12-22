@@ -30,6 +30,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Shooter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Components/HeathComponent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Components/PlayerAnimationComponent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Sun-strike.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2qFxXssEiHz2bMj728fhRLamtpu" />
