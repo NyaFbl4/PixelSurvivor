@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace PixelSurvivor
 {
-    public class Sun_strike : MonoBehaviour
+    public class ProjectileSunStrike : MonoBehaviour
     {
         [SerializeField] private Animator _animator;
         private bool _isAnimating = false;

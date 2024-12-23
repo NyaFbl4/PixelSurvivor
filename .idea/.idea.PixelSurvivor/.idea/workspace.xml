@@ -27,10 +27,15 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/OrbitalAbility.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnepyMoveComponent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMoveComponent.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Shooter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Components/HeathComponent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Components/PlayerAnimationComponent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Sun-strike.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Projectile/Sun_strikeProjectile.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Projectile/ProjectileSun_strike.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Sun_strike.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Projectile/ProjectileSunStrike.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Shooter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/SunStrike.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2qFxXssEiHz2bMj728fhRLamtpu" />
@@ -45,7 +50,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+  <component name="RunManager">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -76,6 +81,9 @@
       <workItem from="1734334766056" duration="2694000" />
       <workItem from="1734436944218" duration="3457000" />
       <workItem from="1734503182430" duration="9179000" />
+      <workItem from="1734936047448" duration="1640000" />
+      <workItem from="1734944638061" duration="1587000" />
+      <workItem from="1734955835600" duration="2964000" />
     </task>
     <servers />
   </component>

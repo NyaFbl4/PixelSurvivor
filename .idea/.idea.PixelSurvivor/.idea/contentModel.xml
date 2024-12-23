@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\lomok\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\lomok\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_PixelSurvivor.477800879.00" t="ExcludeRecursive" />
-    <e p="C:\Users\lomok\Desktop\Unity\Проекты\PixelSurvivor" t="IncludeRecursive">
+    <e p="C:\Users\Public\Repos\PixelSurvivor" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Resources" t="Include">
@@ -64,7 +62,7 @@
           <e p="Abilities" t="Include">
             <e p="OrbitalAbility.cs" t="Include" />
             <e p="Shooter.cs" t="Include" />
-            <e p="Sun-strike.cs" t="Include" />
+            <e p="SunStrike.cs" t="Include" />
           </e>
           <e p="Components" t="Include">
             <e p="HeathComponent.cs" t="Include" />
@@ -81,6 +79,7 @@
           <e p="Projectile" t="Include">
             <e p="ProjectileOrbitalAbility.cs" t="Include" />
             <e p="ProjectileShooter.cs" t="Include" />
+            <e p="ProjectileSunStrike.cs" t="Include" />
           </e>
           <e p="System" t="Include">
             <e p="InputManager.cs" t="Include" />
@@ -92,5 +91,7 @@
       <e p="PixelSurvivor.sln" t="IncludeFlat" />
       <e p="Temp\Bin" t="ExcludeRecursive" />
     </e>
+    <e p="C:\Users\Никита\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Никита\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_PixelSurvivor.133610107.00" t="ExcludeRecursive" />
   </component>
 </project>

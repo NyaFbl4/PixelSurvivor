@@ -12,7 +12,7 @@ namespace PixelSurvivor
         [SerializeField] private GameObject _prefabProjectile;
         [SerializeField] private float _projectileSpeed;
         [SerializeField] private int _projectileDamage;
-        [SerializeField] private float _fireRate;
+        [SerializeField] private float _cooldown;
         [SerializeField] private int _maxCurrentShots;
         
         private Coroutine _shootingCoroutine;
@@ -37,7 +37,7 @@ namespace PixelSurvivor
             while (true)
             {
                 ShootAtTargets(targets);
-                yield return new WaitForSeconds(_fireRate); 
+                yield return new WaitForSeconds(_cooldown); 
             }
         }
 
