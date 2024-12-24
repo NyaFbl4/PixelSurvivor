@@ -5,6 +5,8 @@ namespace PixelSurvivor
 {
     public class LvlComponent : MonoBehaviour
     {
+        [SerializeField] private UpgradesManager _upgradeManager;
+        
         [SerializeField] private int _lvl;
         [SerializeField] private int _experience;
 
@@ -14,7 +16,13 @@ namespace PixelSurvivor
         {
             _experience += newExperience;
 
-            _lvl = Array.FindLastIndex(_experienceLvl, e => _experience >= e);
+            var newLvl = Array.FindLastIndex(_experienceLvl, e => _experience >= e);
+
+            if (newLvl > _lvl)
+            {
+                _lvl = newLvl;
+                LvlUp();
+            }
             
             Debug.Log("lvl: " + _lvl.ToString() + " exp: " + _experience.ToString());
         }
@@ -25,9 +33,9 @@ namespace PixelSurvivor
             AddExperience(2);
         }
 
-        public void UpdateLvl()
+        private void LvlUp()
         {
-            
+            _upgradeManager.SuggestUpgrades();
         }
     }
 }
