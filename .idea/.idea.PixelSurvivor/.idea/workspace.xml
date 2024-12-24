@@ -36,6 +36,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Projectile/ProjectileSunStrike.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Shooter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/SunStrike.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Components/LvlComponent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ExperiencePickup.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2qFxXssEiHz2bMj728fhRLamtpu" />
@@ -83,7 +85,8 @@
       <workItem from="1734503182430" duration="9179000" />
       <workItem from="1734936047448" duration="1640000" />
       <workItem from="1734944638061" duration="1587000" />
-      <workItem from="1734955835600" duration="2964000" />
+      <workItem from="1734955835600" duration="3545000" />
+      <workItem from="1735022153678" duration="3512000" />
     </task>
     <servers />
   </component>
