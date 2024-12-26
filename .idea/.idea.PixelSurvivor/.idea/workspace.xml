@@ -23,7 +23,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Projectile/ProjectileShooter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Projectile/OrbitalAbilityProjectile.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Projectile/ProjectileOrbitalAbility.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/OrbitalAbility.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnepyMoveComponent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMoveComponent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Components/HeathComponent.cs" />
@@ -47,12 +46,16 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/Implementation/TestUpgrade1.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/UI/UpgradesUiManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/Upgrade.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/Implementation/OrbitalAbilityUpgrade.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/System/InputManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/Implementation/TestUpgrade2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/Implementation/ShooterUpgrade.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/UpgradesManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/Implementation/SunStrikeUpgrade.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/Implementation/OrbitalAbilityUpgrade.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/AbilitiesConfins.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Configs/ShooterConfig.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Configs/OrbitalAbilityConfig.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/OrbitalAbility.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2qFxXssEiHz2bMj728fhRLamtpu" />
@@ -103,7 +106,7 @@
       <workItem from="1734955835600" duration="3545000" />
       <workItem from="1735022153678" duration="9029000" />
       <workItem from="1735112733636" duration="597000" />
-      <workItem from="1735194296388" duration="5456000" />
+      <workItem from="1735194296388" duration="7133000" />
     </task>
     <servers />
   </component>

@@ -6,23 +6,32 @@ namespace PixelSurvivor
 {
     public class OrbitalAbility : MonoBehaviour
     {
-        [SerializeField] private GameObject _projectile;
+        private GameObject _projectile;
+        [SerializeField] private OrbitalAbilityConfig _config;
 
-        [SerializeField] private float _cooldown;
-        [SerializeField] private float _radius;
-        [SerializeField] private float _rotationSpeed;
-        [SerializeField] private float _duration;
+        private float _cooldown;
+        private float _radius;
+        private float _rotationSpeed;
+        private float _duration;
         
-        [SerializeField] private int _projectileCount;
-        [SerializeField] private int _damage;
+        private int _projectileCount;
+        private int _damage;
 
-        [SerializeField] private bool _isActive;
+        private bool _isActive;
 
         private List<GameObject> _projectiles;
 
         private void Start()
         {
-            _isActive = false;
+            _projectile = _config.prefabProjectile;
+            _cooldown = _config.cooldown;
+            _radius = _config.radius;
+            _rotationSpeed = _config.rotationSpeed;
+            _duration = _config.duration;
+            _projectileCount = _config.currentProjectile;
+            _damage = _config.damage;
+            
+            _isActive = true;
             _projectiles = new List<GameObject>();
             StartCoroutine(AbilityCooldown());
         }
