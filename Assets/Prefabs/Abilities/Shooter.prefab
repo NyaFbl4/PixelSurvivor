@@ -79,11 +79,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _targetTracker: {fileID: 8500379211277386413}
   _shootPoint: {fileID: 3231591913832193061}
-  _prefabProjectile: {fileID: 928365787084995654, guid: 290184b3e1c0391498d6da7d353618ac, type: 3}
-  _projectileSpeed: 1
-  _projectileDamage: 1
-  _cooldown: 1
-  _maxCurrentShots: 1
+  _config: {fileID: 11400000, guid: e750b30611c910647a40c66843e58541, type: 2}
 --- !u!114 &8500379211277386413
 MonoBehaviour:
   m_ObjectHideFlags: 0

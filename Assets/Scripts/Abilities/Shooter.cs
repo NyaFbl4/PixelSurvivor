@@ -9,14 +9,27 @@ namespace PixelSurvivor
         [SerializeField] private TargetTrackerComponent _targetTracker;
 
         [SerializeField] private Transform _shootPoint;
-        [SerializeField] private GameObject _prefabProjectile;
-        [SerializeField] private float _projectileSpeed;
-        [SerializeField] private int _projectileDamage;
-        [SerializeField] private float _cooldown;
-        [SerializeField] private int _maxCurrentShots;
+        [SerializeField] private ShooterConfig _config;
+        
+        private GameObject _prefabProjectile;
+        
+        private int _projectileDamage;
+        private int _maxCurrentShots;
+        
+        private float _projectileSpeed;
+        private float _cooldown;
         
         private Coroutine _shootingCoroutine;
 
+        private void Start()
+        {
+            _prefabProjectile = _config.prefabProjectile;
+            _projectileDamage = _config.damage;
+            _maxCurrentShots = _config.currentProjectile;
+            _projectileSpeed = _config.speedProjectile;
+            _cooldown = _config.cooldown;
+        }
+        
         private void Update()
         {
             List<GameObject> targets = _targetTracker.GetCurrentTargets();
