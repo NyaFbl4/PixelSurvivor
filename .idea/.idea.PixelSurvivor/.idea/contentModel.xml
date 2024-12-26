@@ -87,9 +87,12 @@
             <e p="InputManager.cs" t="Include" />
           </e>
           <e p="Upgrade" t="Include">
+            <e p="Implementation" t="Include">
+              <e p="OrbitalAbilityUpgrade.cs" t="Include" />
+              <e p="ShooterUpgrade.cs" t="Include" />
+              <e p="SunStrikeUpgrade.cs" t="Include" />
+            </e>
             <e p="UI" t="Include">
-              <e p="TestUpgrade1.cs" t="Include" />
-              <e p="TestUpgrade2.cs" t="Include" />
               <e p="UpgradesUiManager.cs" t="Include" />
               <e p="UpgradeUi.cs" t="Include" />
             </e>

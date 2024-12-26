@@ -18,7 +18,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Interfaces/IDamage.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Ability/Shooter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Components/TargetTrackerComponent.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/System/InputManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Bullet/BulletShooter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Bullet/ProjectileShooter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Projectile/ProjectileShooter.cs" />
@@ -38,16 +37,22 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/SunStrike.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ExperiencePickup.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/UpgradeUiManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/UI/UpgradeUi.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/UpgradeManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Components/LvlComponent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/UI/UpgradeUiManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/UpgradesManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/TestUpgrade.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/UI/TestUpgrade1.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/UI/TestUpgrade2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/Upgrade.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/UI/UpgradeUi.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/Implementation/TestUpgrade1.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/UI/UpgradesUiManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/Upgrade.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/Implementation/OrbitalAbilityUpgrade.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/System/InputManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/Implementation/TestUpgrade2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/Implementation/ShooterUpgrade.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/UpgradesManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/Implementation/SunStrikeUpgrade.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2qFxXssEiHz2bMj728fhRLamtpu" />
@@ -96,7 +101,9 @@
       <workItem from="1734936047448" duration="1640000" />
       <workItem from="1734944638061" duration="1587000" />
       <workItem from="1734955835600" duration="3545000" />
-      <workItem from="1735022153678" duration="8238000" />
+      <workItem from="1735022153678" duration="9029000" />
+      <workItem from="1735112733636" duration="597000" />
+      <workItem from="1735194296388" duration="5456000" />
     </task>
     <servers />
   </component>

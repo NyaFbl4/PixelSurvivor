@@ -9,7 +9,7 @@ namespace PixelSurvivor
         [SerializeField] private UpgradesManager _upgradesManager;
         [SerializeField] private Transform _container;
         
-        public void Show(List<Upgrade> upgrades)
+        public void Show(List<Upgrade> upgrades, GameObject playerAbilities)
         {
             gameObject.SetActive(true);
 
@@ -21,7 +21,7 @@ namespace PixelSurvivor
             foreach (var upgrade in upgrades)
             {
                 var ui = Instantiate(_upgradeUiPrefab, _container);
-                ui.Setup(upgrade._title, upgrade._icon, () => OnClickApply(upgrade));
+                ui.Setup(upgrade._title, upgrade._icon, () => OnClickApply(upgrade, playerAbilities));
             }
         }
 
@@ -30,9 +30,9 @@ namespace PixelSurvivor
             gameObject.SetActive(false);
         }
 
-        private void OnClickApply(Upgrade upgrade)
+        private void OnClickApply(Upgrade upgrade, GameObject playerAbilities)
         {
-            upgrade.Apply();
+            upgrade.Apply(playerAbilities);
             _upgradesManager.OnUpgradeApplied(upgrade);
         }
     }

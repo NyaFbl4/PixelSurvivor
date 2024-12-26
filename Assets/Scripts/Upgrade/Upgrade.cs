@@ -7,6 +7,6 @@ namespace PixelSurvivor
         [SerializeField] public string _title;
         [SerializeField] public Sprite _icon;
         
-        public abstract void Apply();
+        public abstract void Apply(GameObject playerAbilities);
     }
 }

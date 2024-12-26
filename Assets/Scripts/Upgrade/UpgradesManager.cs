@@ -8,8 +8,9 @@ namespace PixelSurvivor
     {
         [SerializeField] private UpgradesUiManager _uiManager;
         [SerializeField] private Upgrade[] _upgrades;
+        [SerializeField] private GameObject _playerAbilities; 
 
-        private List<Upgrade> _availableUpgrades;
+        [SerializeField] private List<Upgrade> _availableUpgrades;
 
         private void Awake()
         {
@@ -21,7 +22,7 @@ namespace PixelSurvivor
             if (_availableUpgrades.Count > 0)
             {
                 Time.timeScale = 0;
-                _uiManager.Show(_availableUpgrades);
+                _uiManager.Show(_availableUpgrades, _playerAbilities);
             }
         }
 

@@ -7,7 +7,7 @@ namespace PixelSurvivor
     {
         public event Action<float> OnMoveX;
         public event Action<float> OnMoveY;
-        public event Action OnAttack;
+        //public event Action OnAttack;
 
         public void Update()
         {
