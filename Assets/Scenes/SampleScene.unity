@@ -507,11 +507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _targetTracker: {fileID: 1758085874}
   _shootPoint: {fileID: 0}
-  _prefabProjectile: {fileID: 928365787084995654, guid: 290184b3e1c0391498d6da7d353618ac, type: 3}
-  _projectileSpeed: 5
-  _projectileDamage: 1
-  _cooldown: 0
-  _maxCurrentShots: 1
+  _config: {fileID: 0}
 --- !u!114 &780956999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -524,11 +520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4ada0d416573b5449d2b5a9709951ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _projectileSunStrike: {fileID: 2573195963849891416, guid: 4ed4af7a0ff9fcf449bb641bf1ffe379, type: 3}
-  _radius: 5
-  _projectileDamage: 10
-  _maxCurrentSunStrike: 5
-  _cooldown: 2
+  _config: {fileID: 0}
 --- !u!1 &810433240
 GameObject:
   m_ObjectHideFlags: 0

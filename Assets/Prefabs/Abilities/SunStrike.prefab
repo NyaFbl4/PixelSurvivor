@@ -44,8 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4ada0d416573b5449d2b5a9709951ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _projectileSunStrike: {fileID: 2573195963849891416, guid: 4ed4af7a0ff9fcf449bb641bf1ffe379, type: 3}
-  _radius: 5
-  _projectileDamage: 10
-  _maxCurrentSunStrike: 2
-  _cooldown: 5
+  _config: {fileID: 11400000, guid: 0b2eb419ff11a244aa9ef8771c1ae401, type: 2}
