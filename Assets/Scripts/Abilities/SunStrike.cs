@@ -5,15 +5,23 @@ namespace PixelSurvivor
 {
     public class SunStrike : MonoBehaviour
     {
-        [SerializeField] private GameObject _projectileSunStrike;
-        [SerializeField] private float _radius;
+        [SerializeField] private SunStrikeConfig _config;
+        
+        private GameObject _projectileSunStrike;
 
-        [SerializeField] private int _projectileDamage;
-        [SerializeField] private int _maxCurrentSunStrike;
-        [SerializeField] private float _cooldown;
+        private int _projectileDamage;
+        private int _maxCurrentSunStrike;
+        private float _cooldown; 
+        private float _radius;
 
         private void Start()
         {
+            _projectileSunStrike = _config.prefabProjectile;
+            _projectileDamage = _config.damage;
+            _maxCurrentSunStrike = _config.currentProjectile;
+            _cooldown = _config.cooldown;
+            _radius = _config.radius;
+            
             StartCoroutine(SpawnSunStrikes());
         }
 

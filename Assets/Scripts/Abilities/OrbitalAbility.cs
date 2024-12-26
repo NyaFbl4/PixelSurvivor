@@ -6,9 +6,10 @@ namespace PixelSurvivor
 {
     public class OrbitalAbility : MonoBehaviour
     {
-        private GameObject _projectile;
         [SerializeField] private OrbitalAbilityConfig _config;
 
+        private GameObject _projectile;
+        
         private float _cooldown;
         private float _radius;
         private float _rotationSpeed;

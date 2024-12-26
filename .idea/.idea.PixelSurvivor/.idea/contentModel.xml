@@ -63,6 +63,7 @@
             <e p="Configs" t="Include">
               <e p="OrbitalAbilityConfig.cs" t="Include" />
               <e p="ShooterConfig.cs" t="Include" />
+              <e p="SunStrikeConfig.cs" t="Include" />
             </e>
             <e p="OrbitalAbility.cs" t="Include" />
             <e p="Shooter.cs" t="Include" />
