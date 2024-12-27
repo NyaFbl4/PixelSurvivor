@@ -34,7 +34,7 @@ namespace PixelSurvivor
             
             _isActive = true;
             _projectiles = new List<GameObject>();
-            StartCoroutine(AbilityCooldown());
+            ActivateAbility();
         }
 
         private IEnumerator AbilityCooldown()

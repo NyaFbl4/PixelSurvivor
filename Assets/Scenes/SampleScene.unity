@@ -469,8 +469,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 780956996}
-  - component: {fileID: 780956997}
-  - component: {fileID: 780956999}
   m_Layer: 0
   m_Name: Abilities
   m_TagString: Untagged
@@ -493,34 +491,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1758085871}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &780956997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 780956995}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b98e873a7214a7fa8a0bd13672508bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _targetTracker: {fileID: 1758085874}
-  _shootPoint: {fileID: 0}
-  _config: {fileID: 0}
---- !u!114 &780956999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 780956995}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4ada0d416573b5449d2b5a9709951ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _config: {fileID: 0}
 --- !u!1 &810433240
 GameObject:
   m_ObjectHideFlags: 0
@@ -1022,7 +992,7 @@ MonoBehaviour:
   _upgradeManager: {fileID: 1963764760}
   _lvl: 0
   _experience: 0
-  _experienceLvl: 000000000200000004000000230000003c000000
+  _experienceLvl: 0000000002000000040000000600000008000000
 --- !u!1001 &1765342823
 PrefabInstance:
   m_ObjectHideFlags: 0

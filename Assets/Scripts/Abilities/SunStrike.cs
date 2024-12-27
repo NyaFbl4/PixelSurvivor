@@ -25,6 +25,11 @@ namespace PixelSurvivor
             StartCoroutine(SpawnSunStrikes());
         }
 
+        public void UpgradeAbility()
+        {
+            _maxCurrentSunStrike++;
+        }
+        
         private IEnumerator SpawnSunStrikes()
         {
             while (true)
@@ -40,7 +45,7 @@ namespace PixelSurvivor
         
         private void SpawnSunStrike()
         {
-            for (int i = 0; i < _maxCurrentSunStrike; i++)
+            for (var i = 0; i < _maxCurrentSunStrike; i++)
             {
                 Vector2 randomPosition = GetRandomSpawnPosition();
 

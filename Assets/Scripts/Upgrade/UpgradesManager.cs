@@ -29,7 +29,7 @@ namespace PixelSurvivor
         public void OnUpgradeApplied(Upgrade appliedUpgrade)
         {
             _uiManager.Hide();
-            _availableUpgrades.Remove(appliedUpgrade);
+            //_availableUpgrades.Remove(appliedUpgrade);
             Time.timeScale = 1;
         }
     }

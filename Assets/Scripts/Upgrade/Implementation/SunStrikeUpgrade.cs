@@ -8,8 +8,18 @@ namespace PixelSurvivor
         
         public override void Apply(GameObject playerAbilities)
         {
-            var sunSrike = Instantiate(_sunStrikePrefab, playerAbilities.transform.position, Quaternion.identity);
-            sunSrike.transform.SetParent(playerAbilities.transform, true);
+            var sunStrike = playerAbilities.GetComponentInChildren<SunStrike>();
+            
+            if (sunStrike == null)
+            {
+                sunStrike = Instantiate(_sunStrikePrefab, playerAbilities.transform.position, Quaternion.identity);
+                sunStrike.transform.SetParent(playerAbilities.transform, true);
+            }
+            else
+            {
+                sunStrike.UpgradeAbility();
+                Debug.Log("Upgrade SunStrike");
+            }
         }
     }
 }
