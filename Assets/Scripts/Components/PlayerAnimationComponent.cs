@@ -20,7 +20,7 @@ namespace PixelSurvivor
 
         private void Start()
         {
-            IGameListener.Reginster(this);
+            IGameListener.Register(this);
         }
 
         private void OnEnable()
@@ -33,6 +33,8 @@ namespace PixelSurvivor
         {
             _inputManager.OnMoveX -= OnMoveX;
             _inputManager.OnMoveY -= OnMoveY;
+            
+            IGameListener.Unregister(this);
         }
 
         public void OnUpdate(float deltaTime)

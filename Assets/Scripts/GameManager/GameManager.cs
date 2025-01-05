@@ -20,12 +20,15 @@ namespace PixelSurvivor
             _gameState = GameState.Off;
 
             IGameListener.onRegister += AddListener;
+            IGameListener.onUnregister += RemoveListener;
         }
 
         private void OnDestroy()
         {
             _gameState = GameState.Finish;
+            
             IGameListener.onRegister -= AddListener;
+            IGameListener.onUnregister -= RemoveListener;
         }
 
         private void Update()
@@ -70,6 +73,25 @@ namespace PixelSurvivor
             {
                 _gameFixedUpdateListeners.Add(gameFixedUpdateListener);
             }
+            
+            Debug.Log("111");
+        }
+
+        private void RemoveListener(IGameListener gameListener)
+        {
+            _gameListeners.Remove(gameListener);
+            
+            if (gameListener is IGameUpdateListener gameUpdateListener)
+            {
+                _gameUpdateListeners.Remove(gameUpdateListener);
+            }
+
+            if (gameListener is IGameFixedUpdateListener gameFixedUpdateListener)
+            {
+                _gameFixedUpdateListeners.Remove(gameFixedUpdateListener);
+            }
+            
+            Debug.Log("222");
         }
 
         [Button]

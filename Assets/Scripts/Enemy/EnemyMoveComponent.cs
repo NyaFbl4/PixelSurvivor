@@ -12,7 +12,7 @@ namespace PixelSurvivor
 
         private void Start()
         {
-            IGameListener.Reginster(this);
+            IGameListener.Register(this);
         }
 
         public void OnEnable()
@@ -30,13 +30,6 @@ namespace PixelSurvivor
             FollowTarget();
         }
 
-        /*
-        private void OnUpdate()
-        {
-            FollowTarget();
-        }
-        */
-        
         private void FollowTarget()
         {
             if (_character != null)

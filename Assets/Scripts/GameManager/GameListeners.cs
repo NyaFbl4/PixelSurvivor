@@ -5,12 +5,21 @@ namespace PixelSurvivor
     public interface IGameListener
     {
         public static event Action<IGameListener> onRegister;
+        public static event Action<IGameListener> onUnregister;
 
-        public static void Reginster(IGameListener gameListener)
+        public static void Register(IGameListener gameListener)
         {
             if (onRegister != null)
             {
                 onRegister.Invoke(gameListener);
+            }
+        }
+
+        public static void Unregister(IGameListener gameListener)
+        {
+            if (onUnregister != null)
+            {
+                onUnregister.Invoke(gameListener);
             }
         }
     }
