@@ -4,7 +4,8 @@ using UnityEngine;
 
 namespace PixelSurvivor
 {
-    public class PlayerAnimationComponent : MonoBehaviour
+    public class PlayerAnimationComponent : MonoBehaviour, IGameUpdateListener
+    
     {
         [SerializeField] private Animator _animator;
         [SerializeField] private SpriteRenderer _sprite;
@@ -16,6 +17,11 @@ namespace PixelSurvivor
         private float _directionY;
         
         private float _dirX = 0;
+
+        private void Start()
+        {
+            IGameListener.Reginster(this);
+        }
 
         private void OnEnable()
         {
@@ -29,8 +35,9 @@ namespace PixelSurvivor
             _inputManager.OnMoveY -= OnMoveY;
         }
 
-        private void Update()
+        public void OnUpdate(float deltaTime)
         {
+            Debug.Log("+++");
             UpdateAnimation();
         }
 

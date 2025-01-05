@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -31,7 +30,7 @@ namespace PixelSurvivor
 
         private void Update()
         {
-            if (_gameState != GameState.Start)
+            if (_gameState != GameState.Play)
             {
                 return;
             }
@@ -40,12 +39,13 @@ namespace PixelSurvivor
             for (int i = 0; i < _gameUpdateListeners.Count; i++)
             {
                 _gameUpdateListeners[i].OnUpdate(deltaTime);
+                Debug.Log("Update");
             }
         }
         
         private void FixedUpdate()
         {
-            if (_gameState != GameState.Start)
+            if (_gameState != GameState.Play)
             {
                 return;
             }
@@ -83,8 +83,10 @@ namespace PixelSurvivor
                 }
             }
 
-            OnStartGame?.Invoke();
-            _gameState = GameState.Start;
+            //OnStartGame?.Invoke();
+            
+            Time.timeScale = 1;
+            _gameState = GameState.Play;
             Debug.Log("START GAME");
         }
 
@@ -132,7 +134,7 @@ namespace PixelSurvivor
             }
             
             Time.timeScale = 1;
-            _gameState = GameState.Resume;
+            _gameState = GameState.Play;
             Debug.Log("RESUME");
         }
     }
