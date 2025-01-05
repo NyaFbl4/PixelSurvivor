@@ -57,6 +57,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/Implementation/SunStrikeUpgrade.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/UpgradesManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/OrbitalAbility.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameListeners.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2qFxXssEiHz2bMj728fhRLamtpu" />
@@ -109,6 +112,8 @@
       <workItem from="1735112733636" duration="597000" />
       <workItem from="1735194296388" duration="9481000" />
       <workItem from="1735282298217" duration="5356000" />
+      <workItem from="1735739318469" duration="2318000" />
+      <workItem from="1735907378759" duration="2642000" />
     </task>
     <servers />
   </component>
