@@ -40,7 +40,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/Implementation/TestUpgrade1.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/UI/UpgradesUiManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/Upgrade.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/System/InputManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/Implementation/TestUpgrade2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/Implementation/ShooterUpgrade.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/Implementation/OrbitalAbilityUpgrade.cs" />
@@ -55,11 +54,13 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/OrbitalAbility.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Projectile/ProjectileShooter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameState.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMoveComponent.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameListeners.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Components/PlayerAnimationComponent.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Components/HeathComponent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Components/MoveComponent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Components/PlayerAnimationComponent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/System/InputManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameListeners.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMoveComponent.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2qFxXssEiHz2bMj728fhRLamtpu" />

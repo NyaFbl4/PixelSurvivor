@@ -3,13 +3,18 @@ using UnityEngine;
 
 namespace PixelSurvivor
 {
-    public class InputManager : MonoBehaviour
+    public class InputManager : MonoBehaviour, IGameUpdateListener
     {
         public event Action<float> OnMoveX;
         public event Action<float> OnMoveY;
         //public event Action OnAttack;
 
-        public void Update()
+        private void Start()
+        {
+            IGameListener.Register(this);
+        }
+
+        public void OnUpdate(float deltaTime)
         {
             /*
             if (Input.GetKeyDown(KeyCode.Mouse0))

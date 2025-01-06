@@ -9,9 +9,9 @@ namespace PixelSurvivor
     {
         [SerializeField, Unity.Collections.ReadOnly] private GameState _gameState;
 
-        private readonly List<IGameListener> _gameListeners = new();
-        private readonly List<IGameUpdateListener> _gameUpdateListeners = new();
-        private readonly List<IGameFixedUpdateListener> _gameFixedUpdateListeners = new();
+        [SerializeField] private readonly List<IGameListener> _gameListeners = new();
+        [SerializeField] private readonly List<IGameUpdateListener> _gameUpdateListeners = new();
+        [SerializeField] private readonly List<IGameFixedUpdateListener> _gameFixedUpdateListeners = new();
 
         public event Action OnStartGame;
 
@@ -57,6 +57,7 @@ namespace PixelSurvivor
             for (int i = 0; i < _gameFixedUpdateListeners.Count; i++)
             {
                 _gameFixedUpdateListeners[i].OnFixedUpdate(deltaTime);
+                Debug.Log("FixedUpdate");
             }
         }
 
@@ -74,7 +75,7 @@ namespace PixelSurvivor
                 _gameFixedUpdateListeners.Add(gameFixedUpdateListener);
             }
             
-            Debug.Log("111");
+            Debug.Log("AddListener");
         }
 
         private void RemoveListener(IGameListener gameListener)
@@ -91,7 +92,7 @@ namespace PixelSurvivor
                 _gameFixedUpdateListeners.Remove(gameFixedUpdateListener);
             }
             
-            Debug.Log("222");
+            Debug.Log("RemoveListener");
         }
 
         [Button]

@@ -39,7 +39,6 @@ namespace PixelSurvivor
 
         public void OnUpdate(float deltaTime)
         {
-            Debug.Log("+++");
             UpdateAnimation();
         }
 

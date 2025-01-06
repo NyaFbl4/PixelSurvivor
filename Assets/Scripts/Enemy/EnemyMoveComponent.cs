@@ -6,6 +6,7 @@ namespace PixelSurvivor
     public class EnemyMoveComponent : MonoBehaviour, IGameUpdateListener
     {
         [SerializeField] private float _moveSpeed;
+        [SerializeField] private SpriteRenderer _sprite;
         [SerializeField] private Rigidbody2D _rigidbody;
 
         [SerializeField] private Transform _character;
@@ -25,6 +26,11 @@ namespace PixelSurvivor
             }
         }
 
+        public void OnDisable()
+        {
+            IGameListener.Unregister(this);
+        }
+
         public void OnUpdate(float deltaTime)
         {
             FollowTarget();
@@ -34,11 +40,17 @@ namespace PixelSurvivor
         {
             if (_character != null)
             {
-                float distance = Vector2.Distance(transform.position, _character.position);
-                
-                Vector3 direction = (_character.position - transform.position).normalized;
-                
-                transform.position += direction * _moveSpeed * Time.deltaTime;
+                Vector3 vector3 = (_character.position - transform.position).normalized;
+                if (vector3.x > 0)
+                {
+                    _sprite.flipX = true;
+                }
+                else if (vector3.x  < 0)
+                {
+                    _sprite.flipX = false;
+                }
+
+                transform.position += vector3 * _moveSpeed * Time.deltaTime;
             }
         }
     }
