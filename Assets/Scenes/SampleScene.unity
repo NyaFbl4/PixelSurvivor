@@ -1522,6 +1522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveSpeed: 1
+  _sprite: {fileID: 1901864089}
   _rigidbody: {fileID: 2023054986}
   _character: {fileID: 0}
 --- !u!114 &2023054988
