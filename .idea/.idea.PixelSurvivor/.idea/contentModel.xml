@@ -131,18 +131,24 @@
           <e p="System" t="Include">
             <e p="InputManager.cs" t="Include" />
           </e>
-          <e p="Upgrade" t="Include">
-            <e p="Implementation" t="Include">
-              <e p="OrbitalAbilityUpgrade.cs" t="Include" />
-              <e p="ShooterUpgrade.cs" t="Include" />
-              <e p="SunStrikeUpgrade.cs" t="Include" />
+          <e p="UI" t="Include">
+            <e p="Upgrade" t="Include">
+              <e p="Implementation" t="Include">
+                <e p="OrbitalAbilityUpgrade.cs" t="Include" />
+                <e p="ShooterUpgrade.cs" t="Include" />
+                <e p="SunStrikeUpgrade.cs" t="Include" />
+              </e>
+              <e p="UI" t="Include">
+                <e p="UpgradesUiManager.cs" t="Include" />
+                <e p="UpgradeUi.cs" t="Include" />
+              </e>
+              <e p="Upgrade.cs" t="Include" />
+              <e p="UpgradesManager.cs" t="Include" />
             </e>
-            <e p="UI" t="Include">
-              <e p="UpgradesUiManager.cs" t="Include" />
-              <e p="UpgradeUi.cs" t="Include" />
+            <e p="VIew" t="Include">
+              <e p="CurrencyView.cs" t="Include" />
+              <e p="CurrencyViewProvider.cs" t="Include" />
             </e>
-            <e p="Upgrade.cs" t="Include" />
-            <e p="UpgradesManager.cs" t="Include" />
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">
