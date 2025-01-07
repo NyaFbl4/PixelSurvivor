@@ -12,9 +12,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Components/Components.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Components/Component.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Interfaces/IDamage.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Ability/Shooter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Components/TargetTrackerComponent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Bullet/BulletShooter.cs" />
@@ -63,6 +60,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/VIew/asf.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/VIew/CurrencyView.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/VIew/CurrencyViewProvider.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/ExperienceUI/ExperienceStorage.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/ExperienceUI/ExperienceObserver.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/System/Installer/InstallerUI.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2qFxXssEiHz2bMj728fhRLamtpu" />
