@@ -1299,43 +1299,32 @@
               <e p="SunStrikeConfig.cs" t="Include" />
             </e>
             <e p="OrbitalAbility.cs" t="Include" />
+            <e p="Projectile" t="Include">
+              <e p="ProjectileOrbitalAbility.cs" t="Include" />
+              <e p="ProjectileShooter.cs" t="Include" />
+              <e p="ProjectileSunStrike.cs" t="Include" />
+            </e>
             <e p="Shooter.cs" t="Include" />
             <e p="SunStrike.cs" t="Include" />
           </e>
-          <e p="Components" t="Include">
-            <e p="HeathComponent.cs" t="Include" />
-            <e p="LvlComponent.cs" t="Include" />
-            <e p="MoveComponent.cs" t="Include" />
-            <e p="PlayerAnimationComponent.cs" t="Include" />
-            <e p="TargetTrackerComponent.cs" t="Include" />
-          </e>
-          <e p="Enemy" t="Include">
-            <e p="EnemyMoveComponent.cs" t="Include" />
-          </e>
           <e p="ExperiencePickup.cs" t="Include" />
-          <e p="GameManager" t="Include">
-            <e p="GameListeners.cs" t="Include" />
-            <e p="GameManager.cs" t="Include" />
-            <e p="GameState.cs" t="Include" />
-          </e>
-          <e p="Interfaces" t="Include">
-            <e p="IDamage.cs" t="Include" />
-          </e>
-          <e p="Projectile" t="Include">
-            <e p="ProjectileOrbitalAbility.cs" t="Include" />
-            <e p="ProjectileShooter.cs" t="Include" />
-            <e p="ProjectileSunStrike.cs" t="Include" />
-          </e>
           <e p="System" t="Include">
+            <e p="GameManager" t="Include">
+              <e p="GameListeners.cs" t="Include" />
+              <e p="GameManager.cs" t="Include" />
+              <e p="GameState.cs" t="Include" />
+            </e>
             <e p="InputManager.cs" t="Include" />
             <e p="Installer" t="Include">
               <e p="InstallerUI.cs" t="Include" />
             </e>
           </e>
           <e p="UI" t="Include">
-            <e p="ExperienceUI" t="Include">
-              <e p="ExperienceObserver.cs" t="Include" />
-              <e p="ExperienceStorage.cs" t="Include" />
+            <e p="Player" t="Include">
+              <e p="ExperienceUI" t="Include">
+                <e p="ExperienceObserver.cs" t="Include" />
+                <e p="ExperienceStorage.cs" t="Include" />
+              </e>
             </e>
             <e p="Upgrade" t="Include">
               <e p="Implementation" t="Include">
@@ -1353,6 +1342,30 @@
             <e p="VIew" t="Include">
               <e p="CurrencyView.cs" t="Include" />
               <e p="CurrencyViewProvider.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Units" t="Include">
+            <e p="Enemy" t="Include">
+              <e p="EnemyMoveComponent.cs" t="Include" />
+            </e>
+            <e p="Interfaces" t="Include">
+              <e p="IDamage.cs" t="Include" />
+            </e>
+            <e p="Player" t="Include">
+              <e p="Components" t="Include">
+                <e p="ExpereinceManager.cs" t="Include" />
+                <e p="HeathComponent.cs" t="Include" />
+                <e p="LvlComponent.cs" t="Include" />
+                <e p="MoveComponent.cs" t="Include" />
+                <e p="PlayerAnimationComponent.cs" t="Include" />
+                <e p="TargetTrackerComponent.cs" t="Include" />
+              </e>
+              <e p="Configs" t="Include">
+                <e p="ExperienceConfig.cs" t="Include" />
+                <e p="PlayerConfig.cs" t="Include" />
+              </e>
+              <e p="PlayerStats.cs" t="Include" />
+              <e p="PlayerStatsController.cs" t="Include" />
             </e>
           </e>
         </e>

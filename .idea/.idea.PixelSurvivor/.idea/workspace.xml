@@ -8,16 +8,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Abilities/Projectile/ProjectileOrbitalAbility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Abilities/Shooter.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Ability/Shooter.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Components/TargetTrackerComponent.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Bullet/BulletShooter.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Bullet/ProjectileShooter.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Projectile/OrbitalAbilityProjectile.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Projectile/ProjectileOrbitalAbility.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnepyMoveComponent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Sun-strike.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Projectile/Sun_strikeProjectile.cs" />
@@ -58,11 +53,17 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMoveComponent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/VIew/asf.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/VIew/CurrencyView.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/VIew/CurrencyViewProvider.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/ExperienceUI/ExperienceStorage.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/ExperienceUI/ExperienceObserver.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Units/Player/Components/ExpereinceManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/System/Installer/PlayerInstaller.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Units/Player/PlayerStatsController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/VIew/CurrencyViewProvider.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/VIew/CurrencyView.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Player/ExperienceUI/ExperienceStorage.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Player/ExperienceUI/ExperienceObserver.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/System/Installer/InstallerUI.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Units/Player/Components/LvlComponent.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2qFxXssEiHz2bMj728fhRLamtpu" />

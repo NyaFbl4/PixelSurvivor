@@ -13,7 +13,7 @@ namespace PixelSurvivor
         private float _dirX = 0;
         private float _dirY = 0;
 
-        private void Start()
+        private void Awake()
         {
             IGameListener.Register(this);
         }

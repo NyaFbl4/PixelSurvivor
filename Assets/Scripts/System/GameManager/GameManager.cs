@@ -19,6 +19,8 @@ namespace PixelSurvivor
         {
             _gameState = GameState.Off;
 
+            StartGame();
+            
             IGameListener.onRegister += AddListener;
             IGameListener.onUnregister += RemoveListener;
         }
@@ -42,7 +44,7 @@ namespace PixelSurvivor
             for (int i = 0; i < _gameUpdateListeners.Count; i++)
             {
                 _gameUpdateListeners[i].OnUpdate(deltaTime);
-                Debug.Log("Update");
+                Debug.Log("GM Update");
             }
         }
         
@@ -57,7 +59,7 @@ namespace PixelSurvivor
             for (int i = 0; i < _gameFixedUpdateListeners.Count; i++)
             {
                 _gameFixedUpdateListeners[i].OnFixedUpdate(deltaTime);
-                Debug.Log("FixedUpdate");
+                Debug.Log("GM FixedUpdate");
             }
         }
 
@@ -75,7 +77,7 @@ namespace PixelSurvivor
                 _gameFixedUpdateListeners.Add(gameFixedUpdateListener);
             }
             
-            Debug.Log("AddListener");
+            //Debug.Log("AddListener");
         }
 
         private void RemoveListener(IGameListener gameListener)
@@ -92,7 +94,7 @@ namespace PixelSurvivor
                 _gameFixedUpdateListeners.Remove(gameFixedUpdateListener);
             }
             
-            Debug.Log("RemoveListener");
+            //Debug.Log("RemoveListener");
         }
 
         [Button]
@@ -108,8 +110,8 @@ namespace PixelSurvivor
 
             //OnStartGame?.Invoke();
             
-            Time.timeScale = 1;
             _gameState = GameState.Play;
+            Time.timeScale = 1;
             Debug.Log("START GAME");
         }
 

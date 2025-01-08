@@ -16,6 +16,7 @@ namespace PixelSurvivor
             Container
                 .Bind<ExperienceStorage>()
                 .AsSingle()
+                .WithArguments(0)
                 .NonLazy();
 
             Container
