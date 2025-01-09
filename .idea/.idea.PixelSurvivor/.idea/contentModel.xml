@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Public\Repos\PixelSurvivor" t="IncludeRecursive">
+    <e p="C:\Users\lomok\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\lomok\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_PixelSurvivor.477800879.00" t="ExcludeRecursive" />
+    <e p="C:\Users\lomok\Desktop\Unity\Проекты\PixelSurvivor" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -1240,6 +1242,9 @@
             <e p="10-magic-sprite-sheet-effects-pixel-art" t="Include">
               <e p="License.txt" t="Include" />
             </e>
+            <e p="10-magic-sprite-sheet-effects-pixel-art 3" t="Include">
+              <e p="License.txt" t="Include" />
+            </e>
           </e>
           <e p="Enemy" t="Include">
             <e p="Cave" t="Include">
@@ -1463,7 +1468,5 @@
       <e p="Zenject-UnitTests-Editor.csproj" t="IncludeRecursive" />
       <e p="Zenject.csproj" t="IncludeRecursive" />
     </e>
-    <e p="C:\Users\Никита\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Никита\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_PixelSurvivor.133610107.00" t="ExcludeRecursive" />
   </component>
 </project>
