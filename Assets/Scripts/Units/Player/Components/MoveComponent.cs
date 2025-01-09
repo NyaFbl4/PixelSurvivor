@@ -13,7 +13,7 @@ namespace PixelSurvivor
         private float _dirX = 0;
         private float _dirY = 0;
 
-        private void Awake()
+        private void Start()
         {
             IGameListener.Register(this);
         }
@@ -22,17 +22,19 @@ namespace PixelSurvivor
         {
             _inputManager.OnMoveX += OnMoveX;
             _inputManager.OnMoveY += OnMoveY;
+            Debug.Log("OnStartGame");
         }
 
         public void OnFinishGame()
         {
             _inputManager.OnMoveX -= OnMoveX;
-            _inputManager.OnMoveY += OnMoveY;
+            _inputManager.OnMoveY -= OnMoveY;
         }
         
         public void OnFixedUpdate(float deltaTime)
         {
             _rigidbody2D.velocity = new Vector2(_dirX, _dirY ) * _moveSpeed;
+            Debug.Log("MoveComponent OnFixedUpdate");
         }
 
         

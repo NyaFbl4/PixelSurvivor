@@ -16,13 +16,6 @@ namespace PixelSurvivor
 
         public void OnUpdate(float deltaTime)
         {
-            /*
-            if (Input.GetKeyDown(KeyCode.Mouse0))
-            {
-                OnAttack();
-            }
-            */
-
             float directionX = 0;
 
             if (Input.GetKey(KeyCode.LeftArrow))
