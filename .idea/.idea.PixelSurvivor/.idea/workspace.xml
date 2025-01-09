@@ -12,8 +12,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Projectile/Sun_strikeProjectile.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Projectile/ProjectileSun_strike.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Sun_strike.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Projectile/ProjectileSunStrike.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ExperiencePickup.cs" />
@@ -63,6 +61,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/System/InputManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Units/Player/Components/MoveComponent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/System/GameManager/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Player/HealthUI/HealthStorage.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Player/HealthUI/HealthObserver.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2qFxXssEiHz2bMj728fhRLamtpu" />
@@ -118,6 +118,7 @@
       <workItem from="1735739318469" duration="2318000" />
       <workItem from="1735907378759" duration="2642000" />
       <workItem from="1736068695608" duration="5979000" />
+      <workItem from="1736432239448" duration="569000" />
     </task>
     <servers />
   </component>

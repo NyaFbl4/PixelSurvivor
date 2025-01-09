@@ -1323,6 +1323,10 @@
                 <e p="ExperienceObserver.cs" t="Include" />
                 <e p="ExperienceStorage.cs" t="Include" />
               </e>
+              <e p="HealthUI" t="Include">
+                <e p="HealthObserver.cs" t="Include" />
+                <e p="HealthStorage.cs" t="Include" />
+              </e>
             </e>
             <e p="Upgrade" t="Include">
               <e p="Implementation" t="Include">
