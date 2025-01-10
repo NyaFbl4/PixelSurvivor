@@ -1307,6 +1307,7 @@
             </e>
             <e p="Shooter.cs" t="Include" />
             <e p="SunStrike.cs" t="Include" />
+            <e p="TornadoMovement.cs" t="Include" />
           </e>
           <e p="ExperiencePickup.cs" t="Include" />
           <e p="System" t="Include">

@@ -13,7 +13,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/UpgradeUiManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/UpgradeManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Components/LvlComponent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/UI/UpgradeUiManager.cs" />
@@ -64,6 +63,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/Upgrade/Implementation/ShooterUpgrade.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Shooter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/OrbitalAbility.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/TornadoMovement.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2qFxXssEiHz2bMj728fhRLamtpu" />
@@ -121,6 +121,7 @@
       <workItem from="1736068695608" duration="5979000" />
       <workItem from="1736432239448" duration="569000" />
       <workItem from="1736489427497" duration="4871000" />
+      <workItem from="1736515306289" duration="149000" />
     </task>
     <servers />
   </component>
