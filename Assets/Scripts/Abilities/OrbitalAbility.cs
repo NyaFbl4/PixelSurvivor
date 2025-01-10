@@ -37,6 +37,11 @@ namespace PixelSurvivor
             ActivateAbility();
         }
 
+        public void UpgradeAbility()
+        {
+            _projectileCount++;
+        }
+        
         private IEnumerator AbilityCooldown()
         {
             yield return new WaitForSeconds(_cooldown);

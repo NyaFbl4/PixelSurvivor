@@ -44,6 +44,11 @@ namespace PixelSurvivor
                 _shootingCoroutine = null;
             }
         }
+        
+        public void UpgradeAbility()
+        {
+            _maxCurrentShots++;
+        }
 
         private IEnumerator ShootAutomatically(List<GameObject> targets)
         {
