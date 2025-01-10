@@ -60,10 +60,10 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/Player/HealthUI/HealthStorage.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/Player/HealthUI/HealthObserver.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Projectile/ProjectileSunStrike.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Shooter.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/OrbitalAbility.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/Upgrade/Implementation/OrbitalAbilityUpgrade.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/Upgrade/Implementation/ShooterUpgrade.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Shooter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/OrbitalAbility.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2qFxXssEiHz2bMj728fhRLamtpu" />
@@ -120,7 +120,7 @@
       <workItem from="1735907378759" duration="2642000" />
       <workItem from="1736068695608" duration="5979000" />
       <workItem from="1736432239448" duration="569000" />
-      <workItem from="1736489427497" duration="3077000" />
+      <workItem from="1736489427497" duration="4871000" />
     </task>
     <servers />
   </component>
