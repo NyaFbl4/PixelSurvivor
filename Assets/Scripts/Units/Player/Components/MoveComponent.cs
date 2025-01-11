@@ -34,7 +34,6 @@ namespace PixelSurvivor
         public void OnFixedUpdate(float deltaTime)
         {
             _rigidbody2D.velocity = new Vector2(_dirX, _dirY ) * _moveSpeed;
-            Debug.Log("MoveComponent OnFixedUpdate");
         }
 
         

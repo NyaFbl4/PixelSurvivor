@@ -9,6 +9,8 @@ namespace PixelSurvivor
             var view = FindObjectOfType<CurrencyViewProvider>();
             
             ExperienceBind(view.ExperienceView);
+            HealthBind(view.ExperienceView);
+            ScoreBind(view.ExperienceView);
         }
 
         private void ExperienceBind(CurrencyView view)
@@ -21,6 +23,36 @@ namespace PixelSurvivor
 
             Container
                 .BindInterfacesTo<ExperienceObserver>()
+                .AsSingle()
+                .WithArguments(view)
+                .NonLazy();
+        }
+
+        private void HealthBind(CurrencyView view)
+        {
+            Container
+                .Bind<HealthStorage>()
+                .AsSingle()
+                .WithArguments(0)
+                .NonLazy();
+
+            Container
+                .BindInterfacesTo<HealthObserver>()
+                .AsSingle()
+                .WithArguments(view)
+                .NonLazy();
+        }
+        
+        private void ScoreBind(CurrencyView view)
+        {
+            Container
+                .Bind<ScoreStorage>()
+                .AsSingle()
+                .WithArguments(0)
+                .NonLazy();
+
+            Container
+                .BindInterfacesTo<ScoreObserver>()
                 .AsSingle()
                 .WithArguments(view)
                 .NonLazy();

@@ -13,13 +13,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/UpgradeManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Components/LvlComponent.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/UI/UpgradeUiManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/TestUpgrade.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/UI/TestUpgrade1.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/UI/TestUpgrade2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/UI/UpgradeUi.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/Implementation/TestUpgrade1.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/UI/UpgradesUiManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/Upgrade.cs" />
@@ -30,7 +23,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Configs/OrbitalAbilityConfig.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Configs/ShooterConfig.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Configs/SunStrikeConfig.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/SunStrike.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/Implementation/SunStrikeUpgrade.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/UpgradesManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Projectile/ProjectileShooter.cs" />
@@ -47,15 +39,11 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Units/Player/Components/ExpereinceManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/System/Installer/PlayerInstaller.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Units/Player/PlayerStatsController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/VIew/CurrencyViewProvider.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/VIew/CurrencyView.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/Player/ExperienceUI/ExperienceStorage.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/Player/ExperienceUI/ExperienceObserver.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/System/Installer/InstallerUI.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Units/Player/Components/LvlComponent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/System/InputManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Units/Player/Components/MoveComponent.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/System/GameManager/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/Player/HealthUI/HealthStorage.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/Player/HealthUI/HealthObserver.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Projectile/ProjectileSunStrike.cs" />
@@ -64,6 +52,18 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Shooter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/OrbitalAbility.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/TornadoMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/VIew/CurrencyViewProvider.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Player/ScoreUI/ScoreStorage.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Player/ScoreUI/ScoreObserver.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/System/Installer/InstallerUI.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/SunStrike.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Projectile/TornadoMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Configs/Tornado.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Configs/TornadoConfig.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Tornado.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Units/Player/Components/MoveComponent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/System/GameManager/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Projectile/ProjectileTornado.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2qFxXssEiHz2bMj728fhRLamtpu" />
@@ -78,7 +78,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />

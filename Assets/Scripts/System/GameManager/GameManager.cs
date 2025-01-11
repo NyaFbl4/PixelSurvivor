@@ -105,7 +105,7 @@ namespace PixelSurvivor
         {
             foreach (var gameListener in _gameListeners)
             {
-                Debug.Log("IGameStartListener");
+                //Debug.Log("IGameStartListener");
                 if (gameListener is IGameStartListener gameStartListener)
                 {
                     gameStartListener.OnStartGame();
