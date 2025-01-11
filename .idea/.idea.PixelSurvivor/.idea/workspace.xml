@@ -53,8 +53,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Configs/TornadoConfig.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Units/Player/Components/MoveComponent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/System/GameManager/GameManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Projectile/ProjectileTornado.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Tornado.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Shooter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/Upgrade/Implementation/ShooterUpgrade.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Configs/ShooterConfig.cs" />
@@ -64,6 +62,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/Player/ExperienceUI/ExperienceObserver.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/VIew/CurrencyView.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/System/Installer/InstallerUI.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Tornado.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Projectile/ProjectileTornado.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2qFxXssEiHz2bMj728fhRLamtpu" />
