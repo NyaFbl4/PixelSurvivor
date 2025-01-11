@@ -4,12 +4,12 @@ using UnityEngine;
 
 namespace PixelSurvivor
 {
-    public class Shooter : MonoBehaviour
+    public class FireBall : MonoBehaviour
     {
         [SerializeField] private TargetTrackerComponent _targetTracker;
 
         [SerializeField] private Transform _shootPoint;
-        [SerializeField] private ShooterConfig _config;
+        [SerializeField] private FireBallConfig _config;
         
         private GameObject _prefabProjectile;
         

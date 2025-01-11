@@ -2,8 +2,8 @@
 
 namespace PixelSurvivor
 {
-    [CreateAssetMenu(fileName = "ShooterConfig")]
-    public class ShooterConfig : ScriptableObject
+    [CreateAssetMenu(fileName = "FireBallConfig")]
+    public class FireBallConfig : ScriptableObject
     {
         public GameObject prefabProjectile;
 

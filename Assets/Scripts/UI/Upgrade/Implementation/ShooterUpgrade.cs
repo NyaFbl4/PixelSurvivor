@@ -2,13 +2,13 @@
 
 namespace PixelSurvivor
 {
-    public class ShooterUpgrade : Upgrade
+    public class FireBallUpgrade : Upgrade
     {
-        [SerializeField] private Shooter _shooterPrefab;
+        [SerializeField] private FireBall _shooterPrefab;
         
         public override void Apply(GameObject playerAbilities)
         {
-            var shooter = playerAbilities.GetComponentInChildren<Shooter>();
+            var shooter = playerAbilities.GetComponentInChildren<FireBall>();
 
             if (shooter == null)
             {

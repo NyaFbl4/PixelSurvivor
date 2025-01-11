@@ -9,8 +9,8 @@ namespace PixelSurvivor
             var view = FindObjectOfType<CurrencyViewProvider>();
             
             ExperienceBind(view.ExperienceView);
-            HealthBind(view.ExperienceView);
-            ScoreBind(view.ExperienceView);
+            //HealthBind(view.ExperienceView);
+            //ScoreBind(view.ExperienceView);
         }
 
         private void ExperienceBind(CurrencyView view)
@@ -18,7 +18,7 @@ namespace PixelSurvivor
             Container
                 .Bind<ExperienceStorage>()
                 .AsSingle()
-                .WithArguments(0)
+                .WithArguments(0L)
                 .NonLazy();
 
             Container

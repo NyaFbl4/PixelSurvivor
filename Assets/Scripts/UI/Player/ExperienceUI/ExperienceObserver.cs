@@ -4,8 +4,9 @@ using Zenject;
 
 namespace PixelSurvivor
 {
-    public class ExperienceObserver : IInitializable, IDisposable
+    public class ExperienceObserver : IDisposable
     {
+        /*
         private readonly CurrencyView _view;
         private readonly ExperienceStorage _storage;
 
@@ -30,8 +31,8 @@ namespace PixelSurvivor
         {
             _view.UpdateCurrency(exp);
         }
+        */
         
-        /*
         private readonly CurrencyView _view;
         private readonly ExperienceStorage _storage;
         private readonly IDisposable _disposable;
@@ -48,10 +49,10 @@ namespace PixelSurvivor
             _disposable.Dispose();
         }
 
-        private void OnExperienceChanged(int experience)
+        private void OnExperienceChanged(long experience)
         {
             _view.UpdateCurrency(experience);
         }
-        */
+        
     }
 }

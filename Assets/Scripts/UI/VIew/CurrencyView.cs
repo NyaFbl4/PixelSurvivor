@@ -6,21 +6,21 @@ namespace PixelSurvivor
     public class CurrencyView : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI _currencyText;
-        private int _lastCurrency;
+        private long _lastCurrency;
 
-        public void SetupCurrency(int currency)
+        public void SetupCurrency(long currency)
         {
             Setter(currency);
             _lastCurrency = currency;
         }
 
-        public void UpdateCurrency(int currency)
+        public void UpdateCurrency(long currency)
         {
             _lastCurrency = currency;
             Setter(_lastCurrency);
         }
 
-        private void Setter(int value)
+        private void Setter(long value)
         {
             _currencyText.text = value.ToString();
         }
