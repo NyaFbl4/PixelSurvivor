@@ -8,7 +8,7 @@ namespace PixelSurvivor
     public class Tornado : MonoBehaviour
     {
         [SerializeField] private TornadoConfig _config;
-        
+
         private GameObject _projectile;
         
         private int _projectileDamage;
@@ -36,6 +36,7 @@ namespace PixelSurvivor
                 yield return new WaitForSeconds(_cooldown);
             }
         }
+        
 
         private void SpawnTornado()
         {

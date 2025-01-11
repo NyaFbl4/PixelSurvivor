@@ -8,6 +8,7 @@ namespace PixelSurvivor
     {
         [SerializeField] private TornadoConfig _config;
         
+        private float _delay = 5f; 
         private int _damage;
         private float _speed = 1f; // Скорость движения торнадо
         private float _changeDirectionInterval = 1f; // Интервал изменения направления
@@ -18,6 +19,7 @@ namespace PixelSurvivor
             // Устанавливаем начальное направление
             ChangeDirection();
             InvokeRepeating("ChangeDirection", _changeDirectionInterval, _changeDirectionInterval);
+            StartCoroutine(DestroyObjectAfterDelay());
         }
 
         private void Update()
@@ -53,6 +55,15 @@ namespace PixelSurvivor
             float randomX = Random.Range(-1f, 1f);
             float randomY = Random.Range(-1f, 1f);
             _targetDirection = new Vector2(randomX, randomY).normalized; // Нормализуем вектор направления
+        }
+        
+        private IEnumerator DestroyObjectAfterDelay()
+        {
+            // Ждем заданное время
+            yield return new WaitForSeconds(_delay);
+        
+            // Уничтожаем объект
+            Destroy(gameObject);
         }
     }
 }
