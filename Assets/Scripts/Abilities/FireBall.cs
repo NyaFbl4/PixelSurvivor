@@ -7,7 +7,6 @@ namespace PixelSurvivor
     public class FireBall : MonoBehaviour
     {
         [SerializeField] private TargetTrackerComponent _targetTracker;
-
         [SerializeField] private Transform _shootPoint;
         [SerializeField] private FireBallConfig _config;
         

@@ -13,10 +13,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/Implementation/TestUpgrade2.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/Implementation/ShooterUpgrade.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/Implementation/OrbitalAbilityUpgrade.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/AbilitiesConfins.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Configs/OrbitalAbilityConfig.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Configs/SunStrikeConfig.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/Implementation/SunStrikeUpgrade.cs" />
@@ -54,7 +50,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Shooter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/Upgrade/Implementation/ShooterUpgrade.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Configs/ShooterConfig.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/FireBall.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Units/Player/Components/ExpereinceManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/Player/ExperienceUI/ExperienceStorage.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/Player/ExperienceUI/ExperienceObserver.cs" />
@@ -62,8 +57,13 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/System/Installer/InstallerUI.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Tornado.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Projectile/ProjectileTornado.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Units/Enemy/EnemyMoveComponent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Units/Player/Components/PlayerHealthController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Units/Enemy/EnemyMoveComponent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Starfall.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/FireBall.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Units/Enemy/AttackBall.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Units/Enemy/EnemyComponent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Units/Enemy/RangedEnemy.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2qFxXssEiHz2bMj728fhRLamtpu" />

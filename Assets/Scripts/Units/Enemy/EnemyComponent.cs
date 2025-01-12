@@ -10,7 +10,7 @@ namespace PixelSurvivor
         [SerializeField] private int _damage = 1;
         //[SerializeField] private Rigidbody2D _rigidbody;
 
-        [SerializeField] private Transform _character;
+        [SerializeField] private Transform _player;
 
         private void Start()
         {
@@ -19,11 +19,11 @@ namespace PixelSurvivor
 
         public void OnEnable()
         {
-            GameObject character = GameObject.FindGameObjectWithTag("Player");
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
 
-            if (character != null)
+            if (player != null)
             {
-                _character = character.transform;
+                _player = player.transform;
             }
         }
 
@@ -39,9 +39,9 @@ namespace PixelSurvivor
 
         private void FollowTarget()
         {
-            if (_character != null)
+            if (_player != null)
             {
-                Vector3 vector3 = (_character.position - transform.position).normalized;
+                Vector3 vector3 = (_player.position - transform.position).normalized;
                 if (vector3.x > 0)
                 {
                     _sprite.flipX = true;
@@ -54,8 +54,10 @@ namespace PixelSurvivor
                 transform.position += vector3 * _moveSpeed * Time.deltaTime;
             }
         }
+
+        //private void OnTriggerEnter2D(Collider2D other)
         
-        private void OnTriggerEnter2D(Collider2D other)
+        private void OnTriggerStay2D(Collider2D other)
         {
             //Debug.Log(other.gameObject.name);
             

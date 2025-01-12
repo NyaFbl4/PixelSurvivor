@@ -1310,6 +1310,7 @@
               <e p="ProjectileSunStrike.cs" t="Include" />
               <e p="ProjectileTornado.cs" t="Include" />
             </e>
+            <e p="Starfall.cs" t="Include" />
             <e p="SunStrike.cs" t="Include" />
             <e p="Tornado.cs" t="Include" />
           </e>
@@ -1360,7 +1361,9 @@
           </e>
           <e p="Units" t="Include">
             <e p="Enemy" t="Include">
+              <e p="AttackBall.cs" t="Include" />
               <e p="EnemyComponent.cs" t="Include" />
+              <e p="RangedEnemy.cs" t="Include" />
             </e>
             <e p="Interfaces" t="Include">
               <e p="IDamage.cs" t="Include" />
