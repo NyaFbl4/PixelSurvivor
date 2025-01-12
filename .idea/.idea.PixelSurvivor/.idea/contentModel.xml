@@ -1360,7 +1360,7 @@
           </e>
           <e p="Units" t="Include">
             <e p="Enemy" t="Include">
-              <e p="EnemyMoveComponent.cs" t="Include" />
+              <e p="EnemyComponent.cs" t="Include" />
             </e>
             <e p="Interfaces" t="Include">
               <e p="IDamage.cs" t="Include" />

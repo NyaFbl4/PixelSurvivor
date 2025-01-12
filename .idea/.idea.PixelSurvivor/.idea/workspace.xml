@@ -13,8 +13,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/UI/UpgradesUiManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/Upgrade.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/Implementation/TestUpgrade2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/Implementation/ShooterUpgrade.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/Implementation/OrbitalAbilityUpgrade.cs" />
@@ -64,6 +62,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/System/Installer/InstallerUI.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Tornado.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Projectile/ProjectileTornado.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Units/Enemy/EnemyMoveComponent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Units/Player/Components/PlayerHealthController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2qFxXssEiHz2bMj728fhRLamtpu" />

@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 403ac8d64bc94b71817455623d25e3f3, type: 3}
   m_Name: TornadoConfig
   m_EditorClassIdentifier: 
-  prefabProjectile: {fileID: 0}
-  damage: 0
-  speed: 5
-  changeDirectionInterval: 2
-  currentProjectile: 0
-  radius: 0
-  cooldown: 0
+  prefabProjectile: {fileID: 4951222903602999004, guid: ec92952ae1509cc45ba1b6fd3d66cf77, type: 3}
+  damage: 1
+  speed: 1
+  changeDirectionInterval: 1
+  currentProjectile: 1
+  radius: 1
+  cooldown: 1

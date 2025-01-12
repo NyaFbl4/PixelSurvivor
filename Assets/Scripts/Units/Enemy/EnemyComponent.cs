@@ -3,11 +3,12 @@ using UnityEngine;
 
 namespace PixelSurvivor
 {
-    public class EnemyMoveComponent : MonoBehaviour, IGameUpdateListener
+    public class EnemyComponent : MonoBehaviour, IGameUpdateListener
     {
         [SerializeField] private float _moveSpeed;
         [SerializeField] private SpriteRenderer _sprite;
-        [SerializeField] private Rigidbody2D _rigidbody;
+        [SerializeField] private int _damage = 1;
+        //[SerializeField] private Rigidbody2D _rigidbody;
 
         [SerializeField] private Transform _character;
 
@@ -51,6 +52,22 @@ namespace PixelSurvivor
                 }
 
                 transform.position += vector3 * _moveSpeed * Time.deltaTime;
+            }
+        }
+        
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            //Debug.Log(other.gameObject.name);
+            
+            if (other.gameObject.CompareTag("Player"))
+            {
+                //Debug.Log(other.gameObject.name);
+                
+                IDamage damageComponent = other.gameObject.GetComponent<IDamage>();
+                if (damageComponent != null)
+                {
+                    damageComponent.TakeDamage(_damage);
+                }
             }
         }
     }
