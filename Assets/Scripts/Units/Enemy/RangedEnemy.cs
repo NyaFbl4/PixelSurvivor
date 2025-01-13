@@ -9,47 +9,74 @@ namespace PixelSurvivor
         [SerializeField] private int _damage;
         [SerializeField] private Transform _shootPoint;
         [SerializeField] private GameObject _prefabProjectile;
+        [SerializeField] private SpriteRenderer _sprite;
         
         [SerializeField] private float _projectileSpeed;
         [SerializeField] private float _shootingRange = 5f;
         [SerializeField] private float _cooldown;
         [SerializeField] private Transform _player;
+        //[SerializeField] private Transform _playerTransform;
+        
+        [SerializeField] private float currentTime;
 
+        private bool isTrue = true;
+        
         private void Start()
         {
-            GameObject character = GameObject.FindGameObjectWithTag("Player");
+             GameObject player = GameObject.FindGameObjectWithTag("Player");
 
-            if (character != null)
+            if (player != null)
             {
-                _player = character.transform;
+                _player = player.transform;
             }
+
+            currentTime = _cooldown;
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
-            // Вычисляем расстояние до игрока
             float distanceToPlayer = Vector2.Distance(transform.position, _player.position);
 
             if (distanceToPlayer > _shootingRange)
             {
-                // Если противник находится вне диапазона стрельбы, приближаемся к игроку
-                MoveTowardsPlayer();
+                FollowTarget();
             }
             else
             {
-                // Если противник в пределах диапазона стрельбы, стреляем по игроку
-                Shoot();
+                this.currentTime -= Time.fixedDeltaTime;
+                if (this.currentTime <= 0)
+                {
+                    ShootAtTarget(_player);
+                    this.currentTime += this._cooldown;
+                }
+            }
+        }
+        
+        private void FollowTarget()
+        {
+            if (_player != null)
+            {
+                Vector3 vector3 = (_player.position - transform.position).normalized;
+                if (vector3.x > 0)
+                {
+                    _sprite.flipX = true;
+                }
+                else if (vector3.x  < 0)
+                {
+                    _sprite.flipX = false;
+                }
+
+                transform.position += vector3 * _moveSpeed * Time.deltaTime;
             }
         }
         
         private void MoveTowardsPlayer()
         {
-            // Движение к игроку
             Vector2 direction = (_player.position - transform.position).normalized;
             transform.position = Vector2.MoveTowards(transform.position, _player.position, _moveSpeed * Time.deltaTime);
         }
 
-        private void ShootAtTarget(GameObject target)
+        private void ShootAtTarget(Transform target)
         {
             GameObject projectile = Instantiate(_prefabProjectile, _shootPoint.position, _shootPoint.rotation);
 
@@ -70,11 +97,6 @@ namespace PixelSurvivor
                     projectile.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
                 }
             }
-        }
-        
-        private void Shoot()
-        {
-            //Instantiate(_attakcBall, _firePoint.position, _firePoint.rotation);
         }
     }
 }

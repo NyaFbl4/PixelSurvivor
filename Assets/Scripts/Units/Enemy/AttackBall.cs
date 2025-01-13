@@ -13,7 +13,7 @@ namespace PixelSurvivor
             
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.gameObject.CompareTag("Enemy"))
+            if (other.gameObject.CompareTag("Player"))
             {
                 IDamage damageComponent = other.gameObject.GetComponent<IDamage>();
                 if (damageComponent != null)
