@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace PixelSurvivor
 {
-    public class RangedEnemy : MonoBehaviour
+    public class RangedEnemy : EnemyController
     {
         [SerializeField] private float _moveSpeed;
         [SerializeField] private int _damage;
@@ -15,8 +15,7 @@ namespace PixelSurvivor
         [SerializeField] private float _shootingRange = 5f;
         [SerializeField] private float _cooldown;
         [SerializeField] private Transform _player;
-        //[SerializeField] private Transform _playerTransform;
-        
+
         [SerializeField] private float currentTime;
 
         private bool isTrue = true;
@@ -43,11 +42,21 @@ namespace PixelSurvivor
             }
             else
             {
-                this.currentTime -= Time.fixedDeltaTime;
-                if (this.currentTime <= 0)
+                Vector3 vector3 = (_player.position - transform.position).normalized;
+                if (vector3.x > 0)
+                {
+                    _sprite.flipX = true;
+                }
+                else if (vector3.x  < 0)
+                {
+                    _sprite.flipX = false;
+                }
+                
+                currentTime -= Time.fixedDeltaTime;
+                if (currentTime <= 0)
                 {
                     ShootAtTarget(_player);
-                    this.currentTime += this._cooldown;
+                    currentTime += _cooldown;
                 }
             }
         }
@@ -68,12 +77,6 @@ namespace PixelSurvivor
 
                 transform.position += vector3 * _moveSpeed * Time.deltaTime;
             }
-        }
-        
-        private void MoveTowardsPlayer()
-        {
-            Vector2 direction = (_player.position - transform.position).normalized;
-            transform.position = Vector2.MoveTowards(transform.position, _player.position, _moveSpeed * Time.deltaTime);
         }
 
         private void ShootAtTarget(Transform target)
