@@ -9,11 +9,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Abilities/Projectile/ProjectileOrbitalAbility.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Abilities/FireBall.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Configs/OrbitalAbilityConfig.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Configs/SunStrikeConfig.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/Implementation/SunStrikeUpgrade.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Upgrade/UpgradesManager.cs" />
@@ -60,9 +58,10 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Units/Player/Components/PlayerHealthController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Units/Enemy/EnemyMoveComponent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Starfall.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Units/Enemy/EnemyComponent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Projectile/ProjectileShooter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/FireBall.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Units/Enemy/AttackBall.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Units/Enemy/EnemyComponent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Units/Enemy/RangedEnemy.cs" />
     </changedPaths>
   </component>
@@ -78,7 +77,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+  <component name="RunManager">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -122,6 +121,7 @@
       <workItem from="1736432239448" duration="569000" />
       <workItem from="1736489427497" duration="4871000" />
       <workItem from="1736515306289" duration="149000" />
+      <workItem from="1736749209998" duration="1654000" />
     </task>
     <servers />
   </component>

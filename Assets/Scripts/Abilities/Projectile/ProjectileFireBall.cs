@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace PixelSurvivor
 {
-    public class ProjectileShooter : MonoBehaviour
+    public class ProjectileFireBall : MonoBehaviour
     {
         private int _damage;
 

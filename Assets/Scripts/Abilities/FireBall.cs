@@ -78,7 +78,7 @@ namespace PixelSurvivor
         {
             GameObject projectile = Instantiate(_prefabProjectile, _shootPoint.position, _shootPoint.rotation);
 
-            ProjectileShooter projectileComponent = projectile.GetComponent<ProjectileShooter>();
+            ProjectileFireBall projectileComponent = projectile.GetComponent<ProjectileFireBall>();
 
             if (projectileComponent != null)
             {
