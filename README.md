@@ -7,14 +7,14 @@
 2. SunStrike
 3. Tornado
 4. OrbitalAbility
+5. Shield
   
   в разработке
 1. Damage aura
 2. Healing aura
-3. Shield
-4. Blink
-5. Invisible
-6. Laser
-7. Roots
-8. Starfall
-9. Black hole
+3. Blink
+4. Invisible
+5. Laser
+6. Roots
+7. Starfall
+8. Black hole
