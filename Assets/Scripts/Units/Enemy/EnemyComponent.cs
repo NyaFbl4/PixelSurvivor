@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace PixelSurvivor
 {
-    public class EnemyComponent : EnemyController, IGameUpdateListener
+    public class EnemyComponent : EnemyController//, IGameUpdateListener
     {
         [SerializeField] private float _moveSpeed;
         [SerializeField] private SpriteRenderer _sprite;
@@ -13,7 +13,7 @@ namespace PixelSurvivor
 
         private void Start()
         {
-            IGameListener.Register(this);
+            //IGameListener.Register(this);
         }
 
         public void OnEnable()
@@ -28,10 +28,11 @@ namespace PixelSurvivor
 
         public void OnDisable()
         {
-            IGameListener.Unregister(this);
+            //IGameListener.Unregister(this);
         }
 
-        public void OnUpdate(float deltaTime)
+        //public void Update(float deltaTime)
+        public void Update()
         {
             FollowTarget();
         }
