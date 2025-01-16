@@ -31,6 +31,8 @@ namespace PixelSurvivor
         
         private void Update()
         {
+            Debug.Log("111");
+            
             List<GameObject> targets = _targetTracker.GetCurrentTargets();
             
             if (targets.Count > 0 && _shootingCoroutine == null)

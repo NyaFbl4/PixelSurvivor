@@ -12,5 +12,10 @@ namespace PixelSurvivor
         
         [SerializeField]  private float _projectileSpeed;
         [SerializeField] private float _cooldown;
+
+        public void Update()
+        {
+            Debug.Log("!!!!");
+        }
     }
 }

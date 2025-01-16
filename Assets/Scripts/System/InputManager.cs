@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace PixelSurvivor
 {
-    public class InputManager : MonoBehaviour, IGameUpdateListener
+    public class InputManager : MonoBehaviour//, IGameUpdateListener
     {
         public event Action<float> OnMoveX;
         public event Action<float> OnMoveY;
@@ -11,10 +11,11 @@ namespace PixelSurvivor
 
         private void Start()
         {
-            IGameListener.Register(this);
+            //IGameListener.Register(this);
         }
 
-        public void OnUpdate(float deltaTime)
+        //public void OnUpdate(float deltaTime)
+        private void Update()
         {
             float directionX = 0;
 

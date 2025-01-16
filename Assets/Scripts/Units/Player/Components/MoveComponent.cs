@@ -3,8 +3,7 @@ using UnityEngine;
 
 namespace PixelSurvivor
 {
-    public class MoveComponent : MonoBehaviour, IGameStartListener, 
-        IGameFixedUpdateListener, IGameFinishListener
+    public class MoveComponent : MonoBehaviour //, IGameStartListener, IGameFixedUpdateListener, IGameFinishListener
     {
         [SerializeField] private InputManager _inputManager;
         [SerializeField] private Rigidbody2D _rigidbody2D;
@@ -15,23 +14,26 @@ namespace PixelSurvivor
 
         private void Start()
         {
-            IGameListener.Register(this);
+            //IGameListener.Register(this);
         }
 
-        public void OnStartGame()
+        //public void OnStartGame()
+        private void OnEnable()
         {
             _inputManager.OnMoveX += OnMoveX;
             _inputManager.OnMoveY += OnMoveY;
-            Debug.Log("OnStartGame");
+            //Debug.Log("OnStartGame");
         }
 
-        public void OnFinishGame()
+        //public void OnFinishGame()
+        private void OnDisable()
         {
             _inputManager.OnMoveX -= OnMoveX;
             _inputManager.OnMoveY -= OnMoveY;
         }
         
-        public void OnFixedUpdate(float deltaTime)
+        //public void OnFixedUpdate(float deltaTime)
+        private void FixedUpdate()
         {
             _rigidbody2D.velocity = new Vector2(_dirX, _dirY ) * _moveSpeed;
         }
