@@ -57,12 +57,15 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/FireBall.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Units/Enemy/AttackBall.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Units/Enemy/EnemyController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Units/Enemy/EnemyComponent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Units/Enemy/RangedEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Projectile/ProjectileFireBall.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Shield.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Tornado.cs" />
+<<<<<<< HEAD
       <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Starfall.cs" />
+=======
+      <option value="$PROJECT_DIR$/Assets/Scripts/Units/Enemy/EnemyComponent.cs" />
+>>>>>>> 68a02c3a48434e608842814f79b41755ea56f904
     </changedPaths>
   </component>
   <component name="ProjectId" id="2qFxXssEiHz2bMj728fhRLamtpu" />

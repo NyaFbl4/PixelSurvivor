@@ -222,12 +222,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeed: 1
   _damage: 5
-  _shootPoint: {fileID: 0}
-  _prefabProjectile: {fileID: 0}
-  _sprite: {fileID: 0}
-  _projectileSpeed: 0
+  _shootPoint: {fileID: 1940577103858642345}
+  _prefabProjectile: {fileID: 843319842915957324, guid: 04bf8f26500320b4ebd638b13804dddf, type: 3}
+  _sprite: {fileID: 4718124236209649725}
+  _projectileSpeed: 5
   _shootingRange: 5
-  _cooldown: 0
+  _cooldown: 1
   _player: {fileID: 0}
   currentTime: 0
 --- !u!114 &-1778360123117223386
