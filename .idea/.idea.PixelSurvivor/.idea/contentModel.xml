@@ -1305,6 +1305,7 @@
             <e p="Projectile" t="Include">
               <e p="ProjectileFireBall.cs" t="Include" />
               <e p="ProjectileOrbitalAbility.cs" t="Include" />
+              <e p="ProjectileStarfall.cs" t="Include" />
               <e p="ProjectileSunStrike.cs" t="Include" />
               <e p="ProjectileTornado.cs" t="Include" />
             </e>
