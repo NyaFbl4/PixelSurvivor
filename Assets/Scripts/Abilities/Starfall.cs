@@ -12,7 +12,7 @@ namespace PixelSurvivor
         [SerializeField] private int _projectileDamage;
         [SerializeField] private int _maxCurrentShots;
         
-        [SerializeField]  private float _projectileSpeed;
+        [SerializeField] private float _projectileSpeed;
         [SerializeField] private float _cooldown;
         
         [SerializeField] private float currentTime;

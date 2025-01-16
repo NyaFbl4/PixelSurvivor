@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &161527392441147382
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8030586580130412004}
+  m_Layer: 0
+  m_Name: ShootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8030586580130412004
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161527392441147382}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3081834678308237707}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &498662490360772447
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,6 +43,7 @@ GameObject:
   - component: {fileID: 1435644377959635673}
   - component: {fileID: 4236320822838386056}
   - component: {fileID: 5266088061195233444}
+  - component: {fileID: 6212241255415763672}
   m_Layer: 0
   m_Name: ProjectileStarfall
   m_TagString: Untagged
@@ -33,6 +65,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8622774083532765097}
+  - {fileID: 8030586580130412004}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1435644377959635673
@@ -47,6 +80,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8540763d97411194cb5105a32b11fc08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _targetTrackerComponent: {fileID: 6212241255415763672}
+  _shootPoint: {fileID: 8030586580130412004}
+  _prefabProjectile: {fileID: 498662490360772447}
+  _projectileDamage: 1
+  _maxCurrentShots: 2
+  _projectileSpeed: 1
 --- !u!58 &4236320822838386056
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -109,6 +148,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6212241255415763672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498662490360772447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1ed27dda8231a44e976b41bcf2dde21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _detectionRadius: 3
+  _targets: []
 --- !u!1 &1826586285440072325
 GameObject:
   m_ObjectHideFlags: 0
