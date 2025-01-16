@@ -84,7 +84,7 @@ MonoBehaviour:
   _shootPoint: {fileID: 8030586580130412004}
   _prefabProjectile: {fileID: 498662490360772447}
   _projectileDamage: 1
-  _maxCurrentShots: 2
+  _maxCurrentShots: 0
   _projectileSpeed: 1
 --- !u!58 &4236320822838386056
 CircleCollider2D:
