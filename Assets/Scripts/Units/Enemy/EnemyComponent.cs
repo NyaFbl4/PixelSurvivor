@@ -10,6 +10,8 @@ namespace PixelSurvivor
         [SerializeField] private int _damage = 1;
 
         [SerializeField] private Transform _player;
+        
+        [SerializeField] private MiliEnemyAnimationController _enemyAnimationController;
 
         private void Start()
         {
@@ -42,13 +44,16 @@ namespace PixelSurvivor
             if (_player != null)
             {
                 Vector3 vector3 = (_player.position - transform.position).normalized;
-                if (vector3.x > 0)
+                
+                _enemyAnimationController.FlipSpriteDirection(vector3);
+                
+                if (Vector3.Distance(transform.position, _player.position) > 0.1f)
                 {
-                    _sprite.flipX = true;
+                    _enemyAnimationController.SetMoving(true);
                 }
-                else if (vector3.x  < 0)
+                else
                 {
-                    _sprite.flipX = false;
+                    _enemyAnimationController.SetMoving(false);
                 }
 
                 transform.position += vector3 * _moveSpeed * Time.deltaTime;

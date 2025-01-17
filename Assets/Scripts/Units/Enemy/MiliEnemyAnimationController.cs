@@ -6,7 +6,7 @@ namespace PixelSurvivor
     {
         [SerializeField] private Animator _animator;  // Ссылка на Animator
         [SerializeField] private SpriteRenderer _sprite;  // Ссылка на SpriteRenderer
-        [SerializeField] private float _moveSpeed;  // Скорость перемещения
+        //[SerializeField] private float _moveSpeed;  // Скорость перемещения
 
         private bool _isMoving = false;  // Состояние передвижения
         private bool _isHurt = false;  // Состояние получения урона
