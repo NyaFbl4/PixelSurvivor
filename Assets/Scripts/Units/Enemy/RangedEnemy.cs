@@ -9,17 +9,19 @@ namespace PixelSurvivor
         [SerializeField] private int _damage;
         [SerializeField] private Transform _shootPoint;
         [SerializeField] private GameObject _prefabProjectile;
-        [SerializeField] private SpriteRenderer _sprite;
-        
+
         [SerializeField] private float _projectileSpeed;
         [SerializeField] private float _shootingRange = 5f;
         [SerializeField] private float _cooldown;
         [SerializeField] private Transform _player;
 
-        [SerializeField] private float currentTime;
-
-        private bool isTrue = true;
+        private float currentTime;
+        [SerializeField] private int _health;
         
+        [SerializeField] private GameObject _experience;
+        [SerializeField] private RangetEnemyAnimationController _enemyAnimationController;
+
+
         private void Start()
         {
              GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -28,6 +30,13 @@ namespace PixelSurvivor
             {
                 _player = player.transform;
             }
+
+            base.health = _health;
+            base.player = _player;
+            base.moveSpeed = _moveSpeed;
+            base.experience = _experience;
+            base.damage = _damage;
+            base.enemyAnimationController = _enemyAnimationController;
 
             currentTime = _cooldown;
         }
@@ -42,17 +51,7 @@ namespace PixelSurvivor
             }
             else
             {
-                Vector3 vector3 = (_player.position - transform.position).normalized;
-                if (vector3.x > 0)
-                {
-                    _sprite.flipX = true;
-                }
-                else if (vector3.x  < 0)
-                {
-                    _sprite.flipX = false;
-                }
-                
-                currentTime -= Time.fixedDeltaTime;
+                currentTime -= Time.deltaTime;
                 if (currentTime <= 0)
                 {
                     ShootAtTarget(_player);
@@ -61,6 +60,8 @@ namespace PixelSurvivor
             }
         }
         
+        
+        /*
         private void FollowTarget()
         {
             if (_player != null)
@@ -78,6 +79,7 @@ namespace PixelSurvivor
                 transform.position += vector3 * _moveSpeed * Time.deltaTime;
             }
         }
+        */
 
         private void ShootAtTarget(Transform target)
         {
