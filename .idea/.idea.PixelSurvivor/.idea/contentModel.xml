@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Public\Repos\PixelSurvivor" t="IncludeRecursive">
+    <e p="C:\Users\lomok\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\lomok\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_PixelSurvivor.477800879.00" t="ExcludeRecursive" />
+    <e p="C:\Users\lomok\Desktop\Unity\Проекты\PixelSurvivor" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -1361,14 +1363,28 @@
           </e>
           <e p="Units" t="Include">
             <e p="Enemy" t="Include">
+              <e p="Animation" t="Include">
+                <e p="MiliEnemyAnimationController.cs" t="Include" />
+                <e p="RangetEnemyAnimationController.cs" t="Include" />
+              </e>
               <e p="AttackBall.cs" t="Include" />
               <e p="EnemyComponent.cs" t="Include" />
               <e p="EnemyController.cs" t="Include" />
-              <e p="MiliEnemyAnimationController.cs" t="Include" />
+              <e p="MiliEnemyController.cs" t="Include" />
               <e p="RangedEnemy.cs" t="Include" />
+            </e>
+            <e p="FSM" t="Include">
+              <e p="FSM.cs" t="Include" />
+              <e p="FsmSTate.cs" t="Include" />
+              <e p="States" t="Include">
+                <e p="FsmStateIdle.cs" t="Include" />
+                <e p="FsmStateMovement.cs" t="Include" />
+                <e p="FsmStateWalk.cs" t="Include" />
+              </e>
             </e>
             <e p="Interfaces" t="Include">
               <e p="IDamage.cs" t="Include" />
+              <e p="IEnemyAnimation.cs" t="Include" />
             </e>
             <e p="Player" t="Include">
               <e p="Components" t="Include">
@@ -1481,7 +1497,5 @@
       <e p="Zenject-UnitTests-Editor.csproj" t="IncludeRecursive" />
       <e p="Zenject.csproj" t="IncludeRecursive" />
     </e>
-    <e p="C:\Users\Никита\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Никита\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_PixelSurvivor.133610107.00" t="ExcludeRecursive" />
   </component>
 </project>

@@ -12,8 +12,6 @@ namespace PixelSurvivor
         {
             _health -= damage;
 
-            //Debug.Log(_health);
-            
             if (_health <= 0)
             {
                 GameObject exp = Instantiate(_experience, this.gameObject.transform.position, Quaternion.identity);

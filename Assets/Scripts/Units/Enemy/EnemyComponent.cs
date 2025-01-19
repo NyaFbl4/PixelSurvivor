@@ -3,22 +3,16 @@ using UnityEngine;
 
 namespace PixelSurvivor
 {
-    public class EnemyComponent : EnemyController//, IGameUpdateListener
+    public class EnemyComponent : EnemyController
     {
         [SerializeField] private float _moveSpeed;
-        [SerializeField] private SpriteRenderer _sprite;
         [SerializeField] private int _damage = 1;
-
+        [SerializeField] private int _health;
+        [SerializeField] private GameObject _experience;
         [SerializeField] private Transform _player;
-        
         [SerializeField] private MiliEnemyAnimationController _enemyAnimationController;
 
         private void Start()
-        {
-            //IGameListener.Register(this);
-        }
-
-        public void OnEnable()
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
 
@@ -26,50 +20,39 @@ namespace PixelSurvivor
             {
                 _player = player.transform;
             }
-        }
 
-        public void OnDisable()
-        {
-            //IGameListener.Unregister(this);
+            base.health = _health;
+            base.player = _player;
+            base.moveSpeed = _moveSpeed;
+            base.experience = _experience;
+            base.damage = _damage;
+            base.enemyAnimationController = _enemyAnimationController;
         }
 
         //public void Update(float deltaTime)
         public void Update()
         {
             FollowTarget();
-        }
-
-        private void FollowTarget()
-        {
-            if (_player != null)
+            
+            /*
+            // Меняем анимацию в зависимости от состояния противника
+            if (base.health <= 0)
             {
-                Vector3 vector3 = (_player.position - transform.position).normalized;
-                
-                _enemyAnimationController.FlipSpriteDirection(vector3);
-                
-                if (Vector3.Distance(transform.position, _player.position) > 0.1f)
-                {
-                    _enemyAnimationController.SetMoving(true);
-                }
-                else
-                {
-                    _enemyAnimationController.SetMoving(false);
-                }
-
-                transform.position += vector3 * _moveSpeed * Time.deltaTime;
+                _enemyAnimationController.PlayDeathAnimation();
             }
-        }
-
-        private void OnTriggerStay2D(Collider2D other)
-        {
-            if (other.gameObject.CompareTag("Player"))
+            else if (base.IsAttacking())
             {
-                IDamage damageComponent = other.gameObject.GetComponent<IDamage>();
-                if (damageComponent != null)
-                {
-                    damageComponent.TakeDamage(_damage);
-                }
+                _enemyAnimationController.PlayAttackAnimation();
             }
+            else if (base.IsMoving())
+            {
+                _enemyAnimationController.PlayWalkAnimation();
+            }
+            else
+            {
+                _enemyAnimationController.PlayIdleAnimation();
+            }
+            */
         }
     }
 }
