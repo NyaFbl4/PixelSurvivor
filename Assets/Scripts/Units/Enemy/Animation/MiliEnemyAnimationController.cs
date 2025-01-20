@@ -1,19 +1,22 @@
-﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 namespace PixelSurvivor
 {
     public class MiliEnemyAnimationController : MonoBehaviour, IEnemyAnimation
     {
-        [SerializeField] private Animator _animator; 
-        [SerializeField] private SpriteRenderer _sprite; 
-        
-        private bool _isMoving = false; 
+        [SerializeField] private Animator _animator;
+        [SerializeField] private SpriteRenderer _sprite;
+
+        private bool _isMoving = false;
         private bool _isHurt = false;
 
         private void Start()
         {
-            if (_animator == null) {
-                _animator = GetComponent<Animator>(); 
+            if (_animator == null)
+            {
+                _animator = GetComponent<Animator>();
             }
         }
 
@@ -32,14 +35,14 @@ namespace PixelSurvivor
             {
                 _animator.SetBool("IsMoving", false);
             }
-            
+
             if (_isHurt)
             {
                 _animator.SetTrigger("Hurt");
                 _isHurt = false;
             }
         }
-        
+
         public void TakeDamage()
         {
             Debug.Log("TakeDamage");
@@ -57,11 +60,11 @@ namespace PixelSurvivor
         {
             if (direction.x > 0)
             {
-                _sprite.flipX = true; 
+                _sprite.flipX = true;
             }
             else if (direction.x < 0)
             {
-                _sprite.flipX = false; 
+                _sprite.flipX = false;
             }
         }
     }

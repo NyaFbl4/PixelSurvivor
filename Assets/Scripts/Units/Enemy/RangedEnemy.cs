@@ -21,7 +21,6 @@ namespace PixelSurvivor
         [SerializeField] private GameObject _experience;
         [SerializeField] private RangetEnemyAnimationController _enemyAnimationController;
 
-
         private void Start()
         {
              GameObject player = GameObject.FindGameObjectWithTag("Player");
