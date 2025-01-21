@@ -4959,6 +4959,7 @@ GameObject:
   - component: {fileID: 5869764060201212528}
   - component: {fileID: 3993469737444812410}
   - component: {fileID: 5626796114644349189}
+  - component: {fileID: 5869764060201212529}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Enemy
@@ -4999,7 +5000,7 @@ MonoBehaviour:
   _health: 5
   _experience: {fileID: 714864797984239362, guid: 25f1cc5b861b1894bad13f2c518968b5, type: 3}
   _player: {fileID: 0}
-  _enemyAnimationController: {fileID: 7113384955041207629}
+  _enemyAnimationController: {fileID: 5869764060201212529}
 --- !u!1 &3883482071773521066
 GameObject:
   m_ObjectHideFlags: 0
@@ -5222,6 +5223,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2091677371930166128}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5869764060201212529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3066531532982212124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c85223e2ed4f4141b1821f04c0dc9591, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 5626796114644349189}
+  _sprite: {fileID: 3993469737444812410}
+  isHurt: 0
 --- !u!222 &6028528568481972166
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5491,13 +5507,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1377603805818400724}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c85223e2ed4f4141b1821f04c0dc9591, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 5626796114644349189}
   _sprite: {fileID: 3993469737444812410}
+  isHurt: 0
 --- !u!1 &7997329524158198880
 GameObject:
   m_ObjectHideFlags: 0

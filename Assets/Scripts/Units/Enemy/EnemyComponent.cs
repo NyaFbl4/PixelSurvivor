@@ -32,8 +32,11 @@ namespace PixelSurvivor
         //public void Update(float deltaTime)
         public void Update()
         {
-            FollowTarget();
-            
+            if (!_enemyAnimationController.isHurt)
+            {
+                FollowTarget();
+            }
+
             /*
             // Меняем анимацию в зависимости от состояния противника
             if (base.health <= 0)
