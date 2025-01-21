@@ -4846,7 +4846,7 @@ MonoBehaviour:
   _player: {fileID: 0}
   _health: 10
   _experience: {fileID: 714864797984239362, guid: 25f1cc5b861b1894bad13f2c518968b5, type: 3}
-  _enemyAnimationController: {fileID: 5630275177916481816}
+  _enemyAnimationController: {fileID: 0}
 --- !u!4 &1224418469684415568
 Transform:
   m_ObjectHideFlags: 0
@@ -5001,6 +5001,7 @@ MonoBehaviour:
   _experience: {fileID: 714864797984239362, guid: 25f1cc5b861b1894bad13f2c518968b5, type: 3}
   _player: {fileID: 0}
   _enemyAnimationController: {fileID: 5869764060201212529}
+  _isMoving: 1
 --- !u!1 &3883482071773521066
 GameObject:
   m_ObjectHideFlags: 0
@@ -5128,6 +5129,7 @@ GameObject:
   - component: {fileID: 1224418469684415568}
   - component: {fileID: 8223409400571917576}
   - component: {fileID: 794107331199365541}
+  - component: {fileID: 8223409400571917577}
   m_Layer: 0
   m_Name: Mage
   m_TagString: Untagged
@@ -5186,28 +5188,13 @@ GameObject:
   - component: {fileID: 4021731043268774937}
   - component: {fileID: 1763859430726476511}
   - component: {fileID: 939795433381707835}
-  - component: {fileID: 5630275177916481816}
   m_Layer: 0
   m_Name: Mage
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &5630275177916481816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5630275177916481815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db772d249a71436da3eb9345f6bd9321, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animator: {fileID: 794107331199365541}
-  _sprite: {fileID: 8223409400571917576}
+  m_IsActive: 1
 --- !u!4 &5869764060201212528
 Transform:
   m_ObjectHideFlags: 0
@@ -5237,7 +5224,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 5626796114644349189}
   _sprite: {fileID: 3993469737444812410}
-  isHurt: 0
 --- !u!222 &6028528568481972166
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5514,7 +5500,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 5626796114644349189}
   _sprite: {fileID: 3993469737444812410}
-  isHurt: 0
 --- !u!1 &7997329524158198880
 GameObject:
   m_ObjectHideFlags: 0
@@ -5599,6 +5584,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8223409400571917577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5417434634428462088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db772d249a71436da3eb9345f6bd9321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 794107331199365541}
+  _sprite: {fileID: 8223409400571917576}
 --- !u!1 &8572958056743309263
 GameObject:
   m_ObjectHideFlags: 0

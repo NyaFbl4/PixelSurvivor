@@ -8,12 +8,13 @@ namespace PixelSurvivor
         [SerializeField] private SpriteRenderer _sprite; 
         
         private bool _isMoving = false; 
-        private bool _isHurt = false;
+        public bool isHurt { get; private set; }
 
         private void Start()
         {
-            if (_animator == null) {
-                _animator = GetComponent<Animator>(); 
+            if (_animator == null)
+            {
+                _animator = GetComponent<Animator>();
             }
         }
 
@@ -32,20 +33,29 @@ namespace PixelSurvivor
             {
                 _animator.SetBool("IsMoving", false);
             }
-            
-            if (_isHurt)
+
+            if (isHurt)
             {
-                _animator.SetTrigger("Hurt");
-                _isHurt = false;
+                _animator.SetBool("IsHurt", true);
             }
         }
-        
+
         public void TakeDamage()
         {
             Debug.Log("TakeDamage");
 
-            _isHurt = true;
+            isHurt = true;
             _isMoving = false;
+        }
+
+        public void SetHurt()
+        {
+            _animator.SetBool("IsHurt", false);
+
+            if (isHurt)
+            {
+                isHurt = false;
+            }
         }
 
         public void SetMoving(bool isMoving)
@@ -57,11 +67,11 @@ namespace PixelSurvivor
         {
             if (direction.x > 0)
             {
-                _sprite.flipX = true; 
+                _sprite.flipX = true;
             }
             else if (direction.x < 0)
             {
-                _sprite.flipX = false; 
+                _sprite.flipX = false;
             }
         }
     }

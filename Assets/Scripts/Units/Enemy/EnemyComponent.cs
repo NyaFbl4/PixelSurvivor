@@ -12,6 +12,8 @@ namespace PixelSurvivor
         [SerializeField] private Transform _player;
         [SerializeField] private MiliEnemyAnimationController _enemyAnimationController;
 
+        [SerializeField] private bool _isMoving = true;
+
         private void Start()
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -30,11 +32,14 @@ namespace PixelSurvivor
         }
 
         //public void Update(float deltaTime)
-        public void Update()
+        public void FixedUpdate()
         {
-            if (!_enemyAnimationController.isHurt)
+            if (_isMoving)
             {
-                FollowTarget();
+                if (!_enemyAnimationController.isHurt)
+                {
+                    FollowTarget();
+                }
             }
 
             /*
