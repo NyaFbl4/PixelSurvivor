@@ -4842,11 +4842,12 @@ MonoBehaviour:
   _prefabProjectile: {fileID: 843319842915957324, guid: 04bf8f26500320b4ebd638b13804dddf, type: 3}
   _projectileSpeed: 2
   _shootingRange: 5
-  _cooldown: 1
+  _cooldown: 5
   _player: {fileID: 0}
+  currentTime: 0
   _health: 10
   _experience: {fileID: 714864797984239362, guid: 25f1cc5b861b1894bad13f2c518968b5, type: 3}
-  _enemyAnimationController: {fileID: 0}
+  _enemyAnimationController: {fileID: 8223409400571917577}
 --- !u!4 &1224418469684415568
 Transform:
   m_ObjectHideFlags: 0
@@ -4881,7 +4882,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!70 &1763859430726476511
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

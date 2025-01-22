@@ -9,6 +9,7 @@ namespace PixelSurvivor
         
         private bool _isMoving = false; 
         public bool isHurt { get; private set; }
+        public bool isAttack { get; private set; }
 
         private void Start()
         {
@@ -36,7 +37,16 @@ namespace PixelSurvivor
 
             if (isHurt)
             {
-                _animator.SetBool("IsHurt", true);
+                _animator.SetTrigger("IsHurt");
+            }
+
+            if (isAttack)
+            {
+                _animator.SetBool("Attack", true);
+            }
+            else if(!isAttack)
+            {
+                _animator.SetBool("Attack", false);
             }
         }
 
@@ -61,6 +71,28 @@ namespace PixelSurvivor
         public void SetMoving(bool isMoving)
         {
             _isMoving = isMoving;
+        }
+
+        private void IsAttack()
+        {
+            if (isAttack)
+            {
+                isAttack = false;
+
+                if (!isAttack)
+                {
+                    Debug.Log("attack false");
+                }
+            }
+        }
+
+        public void Attack()
+        {
+            if (!isAttack)
+            {
+                isAttack = true;
+                Debug.Log("attack true");
+            }
         }
 
         public void FlipSpriteDirection(Vector3 direction)

@@ -15,7 +15,7 @@ namespace PixelSurvivor
         [SerializeField] private float _cooldown;
         [SerializeField] private Transform _player;
 
-        private float currentTime;
+        [SerializeField] private float currentTime;
         [SerializeField] private int _health;
         
         [SerializeField] private GameObject _experience;
@@ -44,17 +44,26 @@ namespace PixelSurvivor
         {
             float distanceToPlayer = Vector2.Distance(transform.position, _player.position);
 
-            if (distanceToPlayer > _shootingRange)
+            if (!_enemyAnimationController.isHurt)
             {
-                FollowTarget();
-            }
-            else
-            {
-                currentTime -= Time.deltaTime;
-                if (currentTime <= 0)
+                if (distanceToPlayer > _shootingRange)
                 {
-                    ShootAtTarget(_player);
-                    currentTime += _cooldown;
+                    _enemyAnimationController.SetMoving(false);
+                    FollowTarget();
+                }
+                else
+                {
+                    _enemyAnimationController.SetMoving(false);
+
+                    currentTime -= Time.deltaTime;
+                    if (currentTime <= 0)
+                    {
+                        //TEst();
+                        _enemyAnimationController.Attack();
+                        ShootAtTarget(_player);
+                        Debug.Log("is attack");
+                        currentTime = _cooldown;
+                    }
                 }
             }
         }
@@ -79,6 +88,13 @@ namespace PixelSurvivor
             }
         }
         */
+
+        private void TEst()
+        {
+            Debug.Log("is attack");
+            _enemyAnimationController.Attack();
+            currentTime = _cooldown;
+        }
 
         private void ShootAtTarget(Transform target)
         {

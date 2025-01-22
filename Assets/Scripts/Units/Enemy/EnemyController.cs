@@ -12,7 +12,6 @@ namespace PixelSurvivor
         
         protected IEnemyAnimation enemyAnimationController;
 
-        protected bool isHurt = false;
 
         protected void FollowTarget()
         {
@@ -24,10 +23,12 @@ namespace PixelSurvivor
                 
                 if (Vector3.Distance(transform.position, player.position) > 0.1f)
                 {
+                    Debug.Log("SetMoving(true)");
                     enemyAnimationController.SetMoving(true);
                 }
-                else
+                else if (Vector3.Distance(transform.position, player.position) == 0f)
                 {
+                    Debug.Log("SetMoving(false)");
                     enemyAnimationController.SetMoving(false);
                 }
 
