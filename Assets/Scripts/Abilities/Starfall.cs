@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace PixelSurvivor
@@ -7,15 +8,28 @@ namespace PixelSurvivor
     {
         [SerializeField] private TargetTrackerComponent _targetTracker;
         [SerializeField] private Transform _shootPoint;
+        [SerializeField] private StarfallConfig _config;
         
-        [SerializeField] private GameObject _prefabProjectile;
-        [SerializeField] private int _projectileDamage;
-        [SerializeField] private int _maxCurrentShots;
+        private GameObject _prefabProjectile;
+
+        private int _ricochetShots;
+        private int _projectileDamage;
+        private int _maxCurrentShots;
         
-        [SerializeField] private float _projectileSpeed;
-        [SerializeField] private float _cooldown;
+        private float _projectileSpeed;
+        private float _cooldown;
         
         [SerializeField] private float currentTime;
+
+        private void Start()
+        {
+            _prefabProjectile = _config.prefabProjectile;
+            _ricochetShots = _config.ricochetShots;
+            _projectileDamage = _config.damage;
+            _maxCurrentShots = _config.maxCurrentProjectile;
+            _projectileSpeed = _config.speedProjectile;
+            _cooldown = _config.cooldown;
+        }
 
         public void FixedUpdate()
         {
@@ -60,8 +74,9 @@ namespace PixelSurvivor
 
             if (projectileComponent != null)
             {
-                projectileComponent.SetDamage(_projectileDamage);
-
+                //projectileComponent.SetDamage(_projectileDamage);
+                //projectileComponent.SetRicochetShots(_ricochetShots);
+                projectileComponent.SetParamets(_projectileDamage, _ricochetShots, _projectileSpeed);
                 Rigidbody2D projectileRb = projectile.GetComponent<Rigidbody2D>();
 
                 if (projectileRb != null)

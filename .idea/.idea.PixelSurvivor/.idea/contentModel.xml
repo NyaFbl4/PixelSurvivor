@@ -1297,8 +1297,9 @@
         <e p="Scripts" t="Include">
           <e p="Abilities" t="Include">
             <e p="Configs" t="Include">
+              <e p="FireBallConfig.cs" t="Include" />
               <e p="OrbitalAbilityConfig.cs" t="Include" />
-              <e p="ShooterConfig.cs" t="Include" />
+              <e p="StarfallConfig.cs" t="Include" />
               <e p="SunStrikeConfig.cs" t="Include" />
               <e p="TornadoConfig.cs" t="Include" />
             </e>

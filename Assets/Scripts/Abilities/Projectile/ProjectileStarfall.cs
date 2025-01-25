@@ -7,23 +7,35 @@ namespace PixelSurvivor
     {
         [SerializeField] private TargetTrackerComponent _targetTrackerComponent;
         [SerializeField] private Transform _shootPoint;
-        [SerializeField] private GameObject _prefabProjectile;
-        [SerializeField] private int _projectileDamage;
-        [SerializeField] private int _ricochetShots;
-        [SerializeField] private float _projectileSpeed;
+        private GameObject _prefabProjectile;
+        private int _projectileDamage;
+        private int _ricochetShots;
+        private float _projectileSpeed;
         
         private int _damage;
-        [SerializeField] private GameObject target;
+        private GameObject target;
         //[SerializeField] private float _cooldown;
 
         public ProjectileStarfall(int ricochetShots)
         {
             _ricochetShots = ricochetShots;
         }
+
+        public void SetParamets(int damage, int ricochetShots, float speed)
+        {
+            _damage = damage;
+            _ricochetShots = ricochetShots;
+            _projectileSpeed = speed;
+        }
         
         public void SetDamage(int damage)
         {
             _damage = damage;
+        }
+
+        public void SetRicochetShots(int ricochetShots)
+        {
+            _ricochetShots = ricochetShots;
         }
 
         private void OnTriggerEnter2D(Collider2D other)

@@ -969,6 +969,10 @@ PrefabInstance:
       value: Starfall
       objectReference: {fileID: 0}
     - target: {fileID: 7151775426901217140, guid: 1d5f5042605e3744e9addd2c75f8c3f4, type: 3}
+      propertyPath: _config
+      value: 
+      objectReference: {fileID: 11400000, guid: 6e7781bc828780b49b9a77bb82f2d0f4, type: 2}
+    - target: {fileID: 7151775426901217140, guid: 1d5f5042605e3744e9addd2c75f8c3f4, type: 3}
       propertyPath: _maxCurrentShots
       value: 1
       objectReference: {fileID: 0}
@@ -3247,7 +3251,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1107043359
 Transform:
   m_ObjectHideFlags: 0
