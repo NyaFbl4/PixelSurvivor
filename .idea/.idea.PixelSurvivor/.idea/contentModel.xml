@@ -1302,7 +1302,6 @@
               <e p="SunStrikeConfig.cs" t="Include" />
               <e p="TornadoConfig.cs" t="Include" />
             </e>
-            <e p="FireBall" t="Include" />
             <e p="FireBall.cs" t="Include" />
             <e p="OrbitalAbility.cs" t="Include" />
             <e p="Projectile" t="Include">

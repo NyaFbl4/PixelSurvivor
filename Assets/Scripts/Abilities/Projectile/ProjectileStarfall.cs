@@ -6,17 +6,21 @@ namespace PixelSurvivor
     public class ProjectileStarfall : MonoBehaviour
     {
         [SerializeField] private TargetTrackerComponent _targetTrackerComponent;
-        private int _damage;
-        
         [SerializeField] private Transform _shootPoint;
-        
         [SerializeField] private GameObject _prefabProjectile;
         [SerializeField] private int _projectileDamage;
-        [SerializeField] private int _maxCurrentShots;
-        
+        [SerializeField] private int _ricochetShots;
         [SerializeField] private float _projectileSpeed;
+        
+        private int _damage;
+        [SerializeField] private GameObject target;
         //[SerializeField] private float _cooldown;
 
+        public ProjectileStarfall(int ricochetShots)
+        {
+            _ricochetShots = ricochetShots;
+        }
+        
         public void SetDamage(int damage)
         {
             _damage = damage;
@@ -26,51 +30,59 @@ namespace PixelSurvivor
         {
             if (other.gameObject.CompareTag("Enemy"))
             {
+                _targetTrackerComponent.GetIgnoreTarget(other.gameObject);
+                
                 IDamage damageComponent = other.gameObject.GetComponent<IDamage>();
                 if (damageComponent != null)
                 {
                     damageComponent.TakeDamage(_damage);
+                }
 
-                    List<GameObject> targets = _targetTrackerComponent.GetCurrentTargets();
-                    
-                    if (targets.Count > 0)
+                //_targetTrackerComponent.FindTarges();
+                target = _targetTrackerComponent.GetFirstTarget();
+                _ricochetShots--;
+                
+                if (_ricochetShots > 0)
+                {
+                    ShootAtTarget(target);
+
+                    if (target == null)
                     {
-                        ShootAtTargets(targets);
+                        Destroy(this.gameObject);
                     }
                 }
-
-                Destroy(gameObject); 
-            }
-        }
-        
-        private void ShootAtTargets(List<GameObject> targets)
-        {
-            int shotsFired = 0;
-
-            foreach (var target in targets)
-            {
-                if (shotsFired >= _maxCurrentShots)
+                else
                 {
-                    break;
+                    Destroy(this.gameObject);    
                 }
-
-                ShootAtTarget(target);
-                shotsFired++;
             }
         }
-        
+
         private void ShootAtTarget(GameObject target)
         {
+            Rigidbody2D projectileRb = GetComponent<Rigidbody2D>();
+
+            if (projectileRb != null)
+            {
+                Vector2 direction = (target.transform.position - _shootPoint.position).normalized;
+                
+                projectileRb.velocity = direction * _projectileSpeed;
+                
+                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+            }
+            
+            /*
             Debug.Log("shoot");
             GameObject projectile = Instantiate(_prefabProjectile, _shootPoint.position, _shootPoint.rotation);
 
-            ProjectileStarfall projectileComponent = projectile.GetComponent<ProjectileStarfall>();
+            ProjectileStarfall projectileComponent = this.gameObject.GetComponent<ProjectileStarfall>();
 
             if (projectileComponent != null)
             {
                 projectileComponent.SetDamage(_projectileDamage);
 
-                Rigidbody2D projectileRb = projectile.GetComponent<Rigidbody2D>();
+                Rigidbody2D projectileRb = this.gameObject.GetComponent<Rigidbody2D>();
 
                 if (projectileRb != null)
                 {
@@ -78,9 +90,10 @@ namespace PixelSurvivor
                     projectileRb.velocity = direction * _projectileSpeed;
                     
                     float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; // Получаем угол
-                    projectile.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle)); // Устанавливаем вращение
+                    this.gameObject.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle)); // Устанавливаем вращение
                 }
             }
+            */
         }
     }
 }
