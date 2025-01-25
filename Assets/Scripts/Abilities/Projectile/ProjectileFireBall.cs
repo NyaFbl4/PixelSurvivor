@@ -6,7 +6,13 @@ namespace PixelSurvivor
 {
     public class ProjectileFireBall : MonoBehaviour
     {
+        [SerializeField] private float _lifeTime = 5f; 
         private int _damage;
+
+        private void Start()
+        {
+            Destroy(this.gameObject, _lifeTime);
+        }
 
         public void SetDamage(int damage)
         {

@@ -13,13 +13,18 @@ namespace PixelSurvivor
         protected IEnemyAnimation enemyAnimationController;
 
 
+        protected void MoveTowardsPlayer()
+        {
+            Vector3 vector3 = (player.position - transform.position).normalized;
+                
+            enemyAnimationController.FlipSpriteDirection(vector3);
+        }
+        
         protected void FollowTarget()
         {
             if (player != null)
             {
                 Vector3 vector3 = (player.position - transform.position).normalized;
-                
-                enemyAnimationController.FlipSpriteDirection(vector3);
                 
                 if (Vector3.Distance(transform.position, player.position) > 0.1f)
                 {

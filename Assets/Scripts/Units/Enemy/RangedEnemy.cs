@@ -49,10 +49,14 @@ namespace PixelSurvivor
                 if (distanceToPlayer > _shootingRange)
                 {
                     _enemyAnimationController.SetMoving(false);
+                    
+                    MoveTowardsPlayer();
                     FollowTarget();
                 }
                 else
                 {
+                    MoveTowardsPlayer();
+                    
                     _enemyAnimationController.SetMoving(false);
 
                     currentTime -= Time.deltaTime;

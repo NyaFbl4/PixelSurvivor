@@ -82,11 +82,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _targetTrackerComponent: {fileID: 6212241255415763672}
   _shootPoint: {fileID: 8030586580130412004}
-  _prefabProjectile: {fileID: 498662490360772447}
-  _projectileDamage: 1
-  _ricochetShots: 2
-  _projectileSpeed: 2
-  target: {fileID: 0}
+  _lifeTime: 5
 --- !u!58 &4236320822838386056
 CircleCollider2D:
   m_ObjectHideFlags: 0

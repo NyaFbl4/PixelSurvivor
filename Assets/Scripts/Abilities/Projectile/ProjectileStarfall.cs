@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace PixelSurvivor
@@ -7,6 +8,8 @@ namespace PixelSurvivor
     {
         [SerializeField] private TargetTrackerComponent _targetTrackerComponent;
         [SerializeField] private Transform _shootPoint;
+        [SerializeField] private float _lifeTime; 
+        
         private GameObject _prefabProjectile;
         private int _projectileDamage;
         private int _ricochetShots;
@@ -15,6 +18,11 @@ namespace PixelSurvivor
         private int _damage;
         private GameObject target;
         //[SerializeField] private float _cooldown;
+
+        private void Start()
+        {
+            Destroy(this.gameObject, _lifeTime);
+        }
 
         public ProjectileStarfall(int ricochetShots)
         {
