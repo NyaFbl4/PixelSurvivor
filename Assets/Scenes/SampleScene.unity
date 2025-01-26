@@ -968,6 +968,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Starfall
       objectReference: {fileID: 0}
+    - target: {fileID: 4574105732751680763, guid: 1d5f5042605e3744e9addd2c75f8c3f4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7151775426901217140, guid: 1d5f5042605e3744e9addd2c75f8c3f4, type: 3}
       propertyPath: _config
       value: 
@@ -1101,7 +1105,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &331865849
 Transform:
   m_ObjectHideFlags: 0
@@ -1111,7 +1115,7 @@ Transform:
   m_GameObject: {fileID: 331865848}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.6, y: 1.83, z: 0}
+  m_LocalPosition: {x: -1.33, y: 4.24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1144,7 +1148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 086efeaa0cafc5941bad92b5178e106b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 1
+  _moveSpeed: 0
   _damage: 1
   _health: 5
   _experience: {fileID: 714864797984239362, guid: 25f1cc5b861b1894bad13f2c518968b5, type: 3}
@@ -1838,12 +1842,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 578262966}
+  m_Father: {fileID: 2999372187286762046}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &527039633
 GameObject:
@@ -2085,7 +2089,6 @@ Transform:
   - {fileID: 1420535501}
   - {fileID: 973168838}
   - {fileID: 1767687990}
-  - {fileID: 519420032}
   - {fileID: 1979812974}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3251,7 +3254,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1107043359
 Transform:
   m_ObjectHideFlags: 0
@@ -3637,7 +3640,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1331327118
 Transform:
   m_ObjectHideFlags: 0
@@ -3647,7 +3650,7 @@ Transform:
   m_GameObject: {fileID: 1331327117}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.348, y: 1.83, z: 0}
+  m_LocalPosition: {x: 1.4180002, y: 4.24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3680,7 +3683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 086efeaa0cafc5941bad92b5178e106b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 1
+  _moveSpeed: 0
   _damage: 1
   _health: 5
   _experience: {fileID: 714864797984239362, guid: 25f1cc5b861b1894bad13f2c518968b5, type: 3}
@@ -6026,10 +6029,11 @@ Transform:
   m_GameObject: {fileID: 3019011675523655735}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.45, y: -1.73, z: 0}
+  m_LocalPosition: {x: -0.56, y: -1.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 519420032}
   - {fileID: 2107188502837859705}
   - {fileID: 3254508281017722661}
   m_Father: {fileID: 1153810191}
@@ -6349,7 +6353,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &5803302569739934988
 MonoBehaviour:
   m_ObjectHideFlags: 0
