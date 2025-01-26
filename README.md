@@ -8,6 +8,7 @@
 3. Tornado
 4. OrbitalAbility
 5. Shield
+6. Starfall
   
   в разработке
 1. Damage aura
@@ -16,5 +17,4 @@
 4. Invisible
 5. Laser
 6. Roots
-7. Starfall
-8. Black hole
+7. Black hole
