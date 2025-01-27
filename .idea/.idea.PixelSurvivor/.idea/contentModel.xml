@@ -1373,6 +1373,10 @@
               <e p="EnemyController.cs" t="Include" />
               <e p="MiliEnemyController.cs" t="Include" />
               <e p="RangedEnemy.cs" t="Include" />
+              <e p="Spawner" t="Include">
+                <e p="EnemiesSpawner.cs" t="Include" />
+                <e p="Wave.cs" t="Include" />
+              </e>
             </e>
             <e p="FSM" t="Include">
               <e p="FSM.cs" t="Include" />
