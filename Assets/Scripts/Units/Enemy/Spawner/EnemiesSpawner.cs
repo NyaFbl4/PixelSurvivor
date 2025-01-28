@@ -5,18 +5,22 @@ using Random = UnityEngine.Random;
 namespace PixelSurvivor
 {
     public class EnemiesSpawner : MonoBehaviour
-    {
+    { 
+        [SerializeField] private float _spawnRadius;
+        [SerializeField] private Transform _center;
         [SerializeField] private Wave[] _waves;
-
+        
         private int _waveIndex;
 
         private Wave CurrentWave => _waves[_waveIndex];
+        private bool HasWaves => _waveIndex < _waves.Length;
         
         private void Update()
         {
-            if (Time.timeSinceLevelLoad > CurrentWave.spawnTime)
+            if (HasWaves && Time.timeSinceLevelLoad > CurrentWave.spawnTime)
             {
                 Spawn();
+                _waveIndex++;
             }
         }
 
@@ -26,7 +30,8 @@ namespace PixelSurvivor
 
             for (int i = 0; i < count; i++)
             {
-                Instantiate(CurrentWave.enemyPrefab);
+                var spawnPosition = _center.position + (Vector3)Random.insideUnitCircle* _spawnRadius;
+                Instantiate(CurrentWave.enemyPrefab, spawnPosition, Quaternion.identity);
             }
         }
     }

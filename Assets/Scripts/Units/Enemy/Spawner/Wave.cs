@@ -7,7 +7,7 @@ namespace PixelSurvivor
     public class Wave
     {
         public float spawnTime;
-        public EnemyComponent enemyPrefab;
+        public EnemyController enemyPrefab;
         public int countMin, countMax;
     }
 }
