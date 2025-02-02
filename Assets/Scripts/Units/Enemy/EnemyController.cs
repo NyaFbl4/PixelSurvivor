@@ -9,6 +9,7 @@ namespace PixelSurvivor
         protected int damage;
         protected int health;
         protected GameObject experience;
+        protected EnemyDamageUI damageUI;
         
         protected IEnemyAnimation enemyAnimationController;
 
@@ -44,7 +45,8 @@ namespace PixelSurvivor
         public void TakeDamage(int damage)
         {
             enemyAnimationController.TakeDamage();
-            
+            damageUI.ShowDamage(damage);
+                
             health -= damage;
 
             if (health <= 0)

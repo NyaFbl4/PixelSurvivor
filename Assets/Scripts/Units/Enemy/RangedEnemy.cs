@@ -20,6 +20,7 @@ namespace PixelSurvivor
         
         [SerializeField] private GameObject _experience;
         [SerializeField] private RangetEnemyAnimationController _enemyAnimationController;
+        [SerializeField] private EnemyDamageUI _enemyDamageUI;
 
         private void Start()
         {
@@ -30,6 +31,7 @@ namespace PixelSurvivor
                 _player = player.transform;
             }
 
+            base.damageUI = _enemyDamageUI;
             base.health = _health;
             base.player = _player;
             base.moveSpeed = _moveSpeed;

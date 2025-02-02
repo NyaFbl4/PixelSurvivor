@@ -11,6 +11,7 @@ namespace PixelSurvivor
         [SerializeField] private GameObject _experience;
         [SerializeField] private Transform _player;
         [SerializeField] private MiliEnemyAnimationController _enemyAnimationController;
+        [SerializeField] private EnemyDamageUI _enemyDamageUI;
 
         [SerializeField] private bool _isMoving = true;
 
@@ -23,6 +24,7 @@ namespace PixelSurvivor
                 _player = player.transform;
             }
 
+            base.damageUI = _enemyDamageUI;
             base.health = _health;
             base.player = _player;
             base.moveSpeed = _moveSpeed;
@@ -30,8 +32,7 @@ namespace PixelSurvivor
             base.damage = _damage;
             base.enemyAnimationController = _enemyAnimationController;
         }
-
-        //public void Update(float deltaTime)
+        
         public void FixedUpdate()
         {
             if (_isMoving)
@@ -42,26 +43,6 @@ namespace PixelSurvivor
                     FollowTarget();
                 }
             }
-
-            /*
-            // Меняем анимацию в зависимости от состояния противника
-            if (base.health <= 0)
-            {
-                _enemyAnimationController.PlayDeathAnimation();
-            }
-            else if (base.IsAttacking())
-            {
-                _enemyAnimationController.PlayAttackAnimation();
-            }
-            else if (base.IsMoving())
-            {
-                _enemyAnimationController.PlayWalkAnimation();
-            }
-            else
-            {
-                _enemyAnimationController.PlayIdleAnimation();
-            }
-            */
         }
     }
 }
