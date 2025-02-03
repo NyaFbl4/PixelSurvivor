@@ -285,7 +285,6 @@ GameObject:
   - component: {fileID: 7287484464255444662}
   - component: {fileID: 4036594128528155920}
   - component: {fileID: 7694549986460154248}
-  - component: {fileID: 7461428066068830479}
   m_Layer: 0
   m_Name: Ooze
   m_TagString: Enemy
@@ -392,20 +391,6 @@ MonoBehaviour:
   _enemyAnimationController: {fileID: 86316832362730972}
   _enemyDamageUI: {fileID: 4717771829129167525}
   _isMoving: 1
---- !u!114 &7461428066068830479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5155222597936637012}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c85223e2ed4f4141b1821f04c0dc9591, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animator: {fileID: 8287876964353257699}
-  _sprite: {fileID: 7929078057364747242}
 --- !u!1 &8544151937548188413
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace PixelSurvivor
 {
-    public class SunStrike : MonoBehaviour
+    public class SunStrike : Ability
     {
         [SerializeField] private SunStrikeConfig _config;
         
@@ -19,10 +19,15 @@ namespace PixelSurvivor
             _projectileSunStrike = _config.prefabProjectile;
             _projectileDamage = _config.damage;
             _maxCurrentSunStrike = _config.currentProjectile;
-            _cooldown = _config.cooldown;
+            //_cooldown = _config.cooldown;
             _radius = _config.radius;
             
-            StartCoroutine(SpawnSunStrikes());
+            StartCoroutine(ActivateWithCooldown());
+        }
+
+        protected override float CalculateCooldown()
+        {
+            return _config.cooldown;
         }
 
         public void UpgradeAbility()
@@ -30,6 +35,7 @@ namespace PixelSurvivor
             _maxCurrentSunStrike++;
         }
         
+        /*
         private IEnumerator SpawnSunStrikes()
         {
             while (true)
@@ -42,8 +48,10 @@ namespace PixelSurvivor
                 //}
             }
         }
+        */
         
-        private void SpawnSunStrike()
+        //private void SpawnSunStrike()
+        protected override void ActivateAbility()
         {
             for (var i = 0; i < _maxCurrentSunStrike; i++)
             {

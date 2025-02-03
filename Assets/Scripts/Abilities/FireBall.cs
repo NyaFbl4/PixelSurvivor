@@ -4,12 +4,13 @@ using UnityEngine;
 
 namespace PixelSurvivor
 {
-    public class FireBall : MonoBehaviour
+    public class FireBall : Ability
     {
         [SerializeField] private TargetTrackerComponent _targetTracker;
         [SerializeField] private Transform _shootPoint;
         [SerializeField] private FireBallConfig _config;
-        
+
+        private List<GameObject> targets;
         private GameObject _prefabProjectile;
         
         private int _projectileDamage;
@@ -18,7 +19,7 @@ namespace PixelSurvivor
         private float _projectileSpeed;
         private float _cooldown;
         
-        private Coroutine _shootingCoroutine;
+        //private Coroutine _shootingCoroutine;
 
         private void Start()
         {
@@ -26,13 +27,20 @@ namespace PixelSurvivor
             _projectileDamage = _config.damage;
             _maxCurrentShots = _config.currentProjectile;
             _projectileSpeed = _config.speedProjectile;
-            _cooldown = _config.cooldown;
+            
+            StartCoroutine(ActivateWithCooldown());
+        }
+
+        protected override float CalculateCooldown()
+        {
+            return _config.cooldown;
         }
         
         private void Update()
         {
-            List<GameObject> targets = _targetTracker.GetCurrentTargets();
+            targets = _targetTracker.GetCurrentTargets();
             
+            /*
             if (targets.Count > 0 && _shootingCoroutine == null)
             {
                 _shootingCoroutine = StartCoroutine(ShootAutomatically(targets));
@@ -42,6 +50,7 @@ namespace PixelSurvivor
                 StopCoroutine(_shootingCoroutine);
                 _shootingCoroutine = null;
             }
+            */
         }
         
         public void UpgradeAbility()
@@ -49,6 +58,7 @@ namespace PixelSurvivor
             _maxCurrentShots++;
         }
 
+        /*
         private IEnumerator ShootAutomatically(List<GameObject> targets)
         {
             while (true)
@@ -57,8 +67,9 @@ namespace PixelSurvivor
                 yield return new WaitForSeconds(_cooldown); 
             }
         }
+        */
 
-        private void ShootAtTargets(List<GameObject> targets)
+        protected override void ActivateAbility()
         {
             int shotsFired = 0;
 
