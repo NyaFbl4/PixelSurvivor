@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace PixelSurvivor
 {
-    public class SunStrike : Ability
+    public class SunStrike : Ability, IUpgradeable
     {
         [SerializeField] private SunStrikeConfig _config;
         

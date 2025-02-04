@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace PixelSurvivor
 {
-    public class OrbitalAbility : MonoBehaviour
+    public class OrbitalAbility : Ability, IUpgradeable
     {
         [SerializeField] private OrbitalAbilityConfig _config;
 
@@ -34,21 +34,20 @@ namespace PixelSurvivor
             
             _isActive = true;
             _projectiles = new List<GameObject>();
-            ActivateAbility();
+            
+            StartCoroutine(ActivateWithCooldown());
+        }
+        protected override float CalculateCooldown()
+        {
+            return _config.cooldown;
         }
 
         public void UpgradeAbility()
         {
             _projectileCount++;
         }
-        
-        private IEnumerator AbilityCooldown()
-        {
-            yield return new WaitForSeconds(_cooldown);
-            ActivateAbility();
-        }
 
-        private void ActivateAbility()
+        protected override void ActivateAbility()
         {
             SpawnProjectiles();
             StartCoroutine(SpawnAndRotateProjectiles());
@@ -109,7 +108,7 @@ namespace PixelSurvivor
             DestroyProjectiles(_projectiles);
             
             _isActive = false;
-            StartCoroutine(AbilityCooldown());
+            //StartCoroutine(AbilityCooldown());
         }
 
         private void SpawnProjectiles()

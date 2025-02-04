@@ -2,7 +2,8 @@
 
 namespace PixelSurvivor
 {
-    public class SunStrikeUpgrade : Upgrade
+    public class SunStrikeUpgrade : AbilityUpgrade<SunStrike> { }
+    /*
     {
         [SerializeField] private SunStrike _sunStrikePrefab;
         
@@ -21,4 +22,5 @@ namespace PixelSurvivor
             }
         }
     }
+    */
 }

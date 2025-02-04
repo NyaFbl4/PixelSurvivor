@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace PixelSurvivor
 {
-    public class FireBall : Ability
+    public class FireBall : Ability, IUpgradeable
     {
         [SerializeField] private TargetTrackerComponent _targetTracker;
         [SerializeField] private Transform _shootPoint;

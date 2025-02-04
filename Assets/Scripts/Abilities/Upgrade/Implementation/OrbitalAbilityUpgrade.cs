@@ -2,8 +2,9 @@
 
 namespace PixelSurvivor
 {
-    public class OrbitalAbilityUpgrade : Upgrade
-    {
+    public class OrbitalAbilityUpgrade : AbilityUpgrade<OrbitalAbility> { }
+    
+        /*
         [SerializeField] private OrbitalAbility _orbitalAbilityPrefab;
         
         public override void Apply(GameObject playerAbilities)
@@ -22,4 +23,5 @@ namespace PixelSurvivor
 
         }
     }
+    */
 }

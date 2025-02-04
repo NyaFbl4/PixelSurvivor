@@ -11,7 +11,7 @@ namespace PixelSurvivor
         [SerializeField] private GameObject _playerAbilities;
         
         [SerializeField] private List<Upgrade> _availableUpgrades;
-
+        
         private void Awake()
         {
             _availableUpgrades = _upgrades.ToList();

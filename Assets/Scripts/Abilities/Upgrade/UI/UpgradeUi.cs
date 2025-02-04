@@ -1,4 +1,5 @@
 ﻿using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,7 +7,7 @@ namespace PixelSurvivor
 {
     public class UpgradeUi : MonoBehaviour
     {
-        [SerializeField] private Text _title;
+        [SerializeField] private TMP_Text _title;
         [SerializeField] private Image _icon;
 
         private Action _applyAction;

@@ -4,7 +4,7 @@ using Random = UnityEngine.Random;
 
 namespace PixelSurvivor
 {
-    public class Tornado : MonoBehaviour
+    public class Tornado : Ability, IUpgradeable
     {
         [SerializeField] private TornadoConfig _config;
 
@@ -12,7 +12,7 @@ namespace PixelSurvivor
         
         private int _projectileDamage;
         private int _maxCurrentTornado;
-        private float _cooldown; 
+        //private float _cooldown; 
         private float _radius;
 
         private void Start()
@@ -20,12 +20,18 @@ namespace PixelSurvivor
             _projectile = _config.prefabProjectile;
             _projectileDamage = _config.damage;
             _maxCurrentTornado = _config.currentProjectile;
-            _cooldown = _config.cooldown;
+            //_cooldown = _config.cooldown;
             _radius = _config.radius;
             
-            StartCoroutine(SpawnTornados());
+            StartCoroutine(ActivateWithCooldown());
         }
 
+        protected override float CalculateCooldown()
+        {
+            return _config.cooldown;
+        }
+        
+        /*
         private IEnumerator SpawnTornados()
         {
             while (true)
@@ -35,9 +41,9 @@ namespace PixelSurvivor
                 yield return new WaitForSeconds(_cooldown);
             }
         }
-        
+        */
 
-        private void SpawnTornado()
+        protected override void ActivateAbility()
         {
             for (var i = 0; i < _maxCurrentTornado; i++)
             {
@@ -62,5 +68,10 @@ namespace PixelSurvivor
             
             return randomSpawnPosition;
         } 
+        
+        public void UpgradeAbility()
+        {
+            _maxCurrentTornado++;
+        }
     }
 }

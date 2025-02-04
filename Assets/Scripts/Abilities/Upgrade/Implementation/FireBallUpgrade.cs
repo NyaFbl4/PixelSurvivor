@@ -2,7 +2,8 @@
 
 namespace PixelSurvivor
 {
-    public class FireBallUpgrade : Upgrade
+    public class FireBallUpgrade : AbilityUpgrade<FireBall> { }
+    /* : Upgrade
     {
         [SerializeField] private FireBall _fireBallPrefab;
         
@@ -21,4 +22,5 @@ namespace PixelSurvivor
             }
         }
     }
+    */
 }

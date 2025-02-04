@@ -4,12 +4,13 @@ using UnityEngine;
 
 namespace PixelSurvivor
 {
-    public class Starfall : MonoBehaviour
+    public class Starfall : Ability, IUpgradeable
     {
         [SerializeField] private TargetTrackerComponent _targetTracker;
         [SerializeField] private Transform _shootPoint;
         [SerializeField] private StarfallConfig _config;
-        
+
+        private List<GameObject> targets;
         private GameObject _prefabProjectile;
 
         private int _ricochetShots;
@@ -28,28 +29,26 @@ namespace PixelSurvivor
             _projectileDamage = _config.damage;
             _maxCurrentShots = _config.maxCurrentProjectile;
             _projectileSpeed = _config.speedProjectile;
-            _cooldown = _config.cooldown;
+
+            StartCoroutine(ActivateWithCooldown());
+        }
+        
+        protected override float CalculateCooldown()
+        {
+            return _config.cooldown;
         }
 
         public void FixedUpdate()
         {
-            List<GameObject> targets = _targetTracker.GetCurrentTargets();
-
-            if (targets.Count > 0)
-            {
-                currentTime -= Time.fixedDeltaTime;
-                
-                if (currentTime <= 0)
-                {
-                    ShootAtTargets(targets);
-
-                    //ShootAtTarget(_player);
-                    currentTime += _cooldown;
-                }
-            }
+            targets = _targetTracker.GetCurrentTargets();
         }
         
-        private void ShootAtTargets(List<GameObject> targets)
+        public void UpgradeAbility()
+        {
+            _maxCurrentShots++;
+        }
+        
+        protected override void ActivateAbility()
         {
             int shotsFired = 0;
 
