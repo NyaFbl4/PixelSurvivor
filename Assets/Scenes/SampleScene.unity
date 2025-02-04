@@ -930,79 +930,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25f1cc5b861b1894bad13f2c518968b5, type: 3}
---- !u!1001 &251855146
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 3254508281017722661}
-    m_Modifications:
-    - target: {fileID: 4483434756170694084, guid: 1d5f5042605e3744e9addd2c75f8c3f4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4483434756170694084, guid: 1d5f5042605e3744e9addd2c75f8c3f4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4483434756170694084, guid: 1d5f5042605e3744e9addd2c75f8c3f4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4483434756170694084, guid: 1d5f5042605e3744e9addd2c75f8c3f4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4483434756170694084, guid: 1d5f5042605e3744e9addd2c75f8c3f4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4483434756170694084, guid: 1d5f5042605e3744e9addd2c75f8c3f4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4483434756170694084, guid: 1d5f5042605e3744e9addd2c75f8c3f4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4483434756170694084, guid: 1d5f5042605e3744e9addd2c75f8c3f4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4483434756170694084, guid: 1d5f5042605e3744e9addd2c75f8c3f4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4483434756170694084, guid: 1d5f5042605e3744e9addd2c75f8c3f4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4574105732751680763, guid: 1d5f5042605e3744e9addd2c75f8c3f4, type: 3}
-      propertyPath: m_Name
-      value: Starfall
-      objectReference: {fileID: 0}
-    - target: {fileID: 4574105732751680763, guid: 1d5f5042605e3744e9addd2c75f8c3f4, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7151775426901217140, guid: 1d5f5042605e3744e9addd2c75f8c3f4, type: 3}
-      propertyPath: _config
-      value: 
-      objectReference: {fileID: 11400000, guid: 6e7781bc828780b49b9a77bb82f2d0f4, type: 2}
-    - target: {fileID: 7151775426901217140, guid: 1d5f5042605e3744e9addd2c75f8c3f4, type: 3}
-      propertyPath: _maxCurrentShots
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7151775426901217140, guid: 1d5f5042605e3744e9addd2c75f8c3f4, type: 3}
-      propertyPath: _projectileSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1d5f5042605e3744e9addd2c75f8c3f4, type: 3}
 --- !u!1001 &325409777
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1738,6 +1665,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &469702340
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 469702341}
+  - component: {fileID: 469702342}
+  m_Layer: 0
+  m_Name: StarfallUpgrade
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &469702341
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469702340}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1963764763}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &469702342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469702340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 197993d207d24060b3468ad9fcdd8461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Starfall
+  icon: {fileID: 0}
+  _abilityPrefab: {fileID: 7151775426901217140, guid: 1d5f5042605e3744e9addd2c75f8c3f4, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2069,11 +2043,63 @@ Transform:
   m_Children:
   - {fileID: 726054956}
   - {fileID: 1420535501}
-  - {fileID: 973168838}
   - {fileID: 1767687990}
+  - {fileID: 973168838}
   - {fileID: 1979812974}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &648132547
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 648132548}
+  - component: {fileID: 648132549}
+  m_Layer: 0
+  m_Name: AbilitiesManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &648132548
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648132547}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1767687990}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &648132549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648132547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5036c70f7fd6491aa0b151fadb841947, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _abilities:
+  - {fileID: 910057193240064396, guid: 892a22ea4de506e44bdd95d92d1b1c59, type: 3}
+  - {fileID: 6456673218857832994, guid: f633f7867c3e0e4418380dba1e579073, type: 3}
+  - {fileID: 7151775426901217140, guid: 1d5f5042605e3744e9addd2c75f8c3f4, type: 3}
+  - {fileID: 8277930772737254269, guid: 1d3e49fc87b23e84e9564b704db954dd, type: 3}
+  - {fileID: 2138861478376962353, guid: c21c5b34124eedc4785e85123817245d, type: 3}
+  _maxPlayerAbilities: 0
+  _playerAbilites: []
 --- !u!1 &676985932
 GameObject:
   m_ObjectHideFlags: 0
@@ -3418,7 +3444,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: OrbitalAbility
   icon: {fileID: 0}
-  _orbitalAbilityPrefab: {fileID: 6456673218857832994, guid: f633f7867c3e0e4418380dba1e579073, type: 3}
+  _abilityPrefab: {fileID: 0}
 --- !u!1 &1053001328
 GameObject:
   m_ObjectHideFlags: 0
@@ -3797,6 +3823,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1216181680}
   m_CullTransparentMesh: 1
+--- !u!1 &1228917496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1228917498}
+  - component: {fileID: 1228917497}
+  m_Layer: 0
+  m_Name: TornadoUpgrade
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1228917497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228917496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b1a4080bb134084963653f6cad49b9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Tornado
+  icon: {fileID: 0}
+  _abilityPrefab: {fileID: 2138861478376962353, guid: c21c5b34124eedc4785e85123817245d, type: 3}
+--- !u!4 &1228917498
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228917496}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1963764763}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1301465865
 GameObject:
   m_ObjectHideFlags: 0
@@ -3828,7 +3901,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: SunStrike
   icon: {fileID: 21300000, guid: d787e18d65db6654a94249452309dacf, type: 3}
-  _sunStrikePrefab: {fileID: 8277930772737254269, guid: 1d3e49fc87b23e84e9564b704db954dd, type: 3}
+  _abilityPrefab: {fileID: 8277930772737254269, guid: 1d3e49fc87b23e84e9564b704db954dd, type: 3}
 --- !u!4 &1301465867
 Transform:
   m_ObjectHideFlags: 0
@@ -4306,7 +4379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: FireBall
   icon: {fileID: 21300000, guid: 592f4439f6eb3714f8d9ce25319243dc, type: 3}
-  _fireBallPrefab: {fileID: 910057193240064396, guid: 892a22ea4de506e44bdd95d92d1b1c59, type: 3}
+  _abilityPrefab: {fileID: 910057193240064396, guid: 892a22ea4de506e44bdd95d92d1b1c59, type: 3}
 --- !u!1 &1533460865
 GameObject:
   m_ObjectHideFlags: 0
@@ -4372,11 +4445,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!4 &1729344776 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4483434756170694084, guid: 1d5f5042605e3744e9addd2c75f8c3f4, type: 3}
-  m_PrefabInstance: {fileID: 251855146}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1765342823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4539,6 +4607,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1469546053}
+  - {fileID: 648132548}
   - {fileID: 1963764763}
   - {fileID: 869771779}
   m_Father: {fileID: 578262966}
@@ -4716,8 +4785,9 @@ MonoBehaviour:
   _upgrades:
   - {fileID: 1507258063}
   - {fileID: 1039556614}
-  - {fileID: 134566828}
   - {fileID: 1301465866}
+  - {fileID: 469702342}
+  - {fileID: 1228917497}
   _playerAbilities: {fileID: 2046016504836868123}
   _availableUpgrades: []
 --- !u!4 &1963764763
@@ -4737,6 +4807,8 @@ Transform:
   - {fileID: 1039556613}
   - {fileID: 134566827}
   - {fileID: 1301465867}
+  - {fileID: 469702341}
+  - {fileID: 1228917498}
   m_Father: {fileID: 1767687990}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1979812973
@@ -5983,8 +6055,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1729344776}
+  m_Children: []
   m_Father: {fileID: 2999372187286762046}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3743364251743011180
@@ -6393,7 +6464,7 @@ MonoBehaviour:
   _upgradeUiPrefab: {fileID: 8434176564959330834, guid: d7eb74ce235d18c4eb618f16fe5a76ff, type: 3}
   _upgradesManager: {fileID: 1963764760}
   _container: {fileID: 536675831641401490}
-  _maxUpgradeAbility: 4
+  _maxUpgradeAbility: 3
 --- !u!212 &8192630339840711558
 SpriteRenderer:
   m_ObjectHideFlags: 0
