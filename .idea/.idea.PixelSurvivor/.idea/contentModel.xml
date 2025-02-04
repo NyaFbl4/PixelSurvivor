@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\lomok\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\lomok\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_PixelSurvivor.477800879.00" t="ExcludeRecursive" />
-    <e p="C:\Users\lomok\Desktop\Unity\Проекты\PixelSurvivor" t="IncludeRecursive">
+    <e p="C:\Users\Public\Repos\PixelSurvivor" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -1317,6 +1315,22 @@
             <e p="Starfall.cs" t="Include" />
             <e p="SunStrike.cs" t="Include" />
             <e p="Tornado.cs" t="Include" />
+            <e p="Upgrade" t="Include">
+              <e p="AbilityUpgrade.cs" t="Include" />
+              <e p="Implementation" t="Include">
+                <e p="FireBallUpgrade.cs" t="Include" />
+                <e p="OrbitalAbilityUpgrade.cs" t="Include" />
+                <e p="ShieldUpgrade.cs" t="Include" />
+                <e p="SunStrikeUpgrade.cs" t="Include" />
+              </e>
+              <e p="IUpgradeable.cs" t="Include" />
+              <e p="UI" t="Include">
+                <e p="UpgradesUiManager.cs" t="Include" />
+                <e p="UpgradeUi.cs" t="Include" />
+              </e>
+              <e p="Upgrade.cs" t="Include" />
+              <e p="UpgradesManager.cs" t="Include" />
+            </e>
           </e>
           <e p="ExperiencePickup.cs" t="Include" />
           <e p="System" t="Include">
@@ -1348,19 +1362,6 @@
                 <e p="ScoreObserver.cs" t="Include" />
                 <e p="ScoreStorage.cs" t="Include" />
               </e>
-            </e>
-            <e p="Upgrade" t="Include">
-              <e p="Implementation" t="Include">
-                <e p="OrbitalAbilityUpgrade.cs" t="Include" />
-                <e p="ShooterUpgrade.cs" t="Include" />
-                <e p="SunStrikeUpgrade.cs" t="Include" />
-              </e>
-              <e p="UI" t="Include">
-                <e p="UpgradesUiManager.cs" t="Include" />
-                <e p="UpgradeUi.cs" t="Include" />
-              </e>
-              <e p="Upgrade.cs" t="Include" />
-              <e p="UpgradesManager.cs" t="Include" />
             </e>
             <e p="VIew" t="Include">
               <e p="CurrencyView.cs" t="Include" />
@@ -1507,5 +1508,7 @@
       <e p="Zenject-UnitTests-Editor.csproj" t="IncludeRecursive" />
       <e p="Zenject.csproj" t="IncludeRecursive" />
     </e>
+    <e p="C:\Users\Никита\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Никита\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_PixelSurvivor.133610107.00" t="ExcludeRecursive" />
   </component>
 </project>

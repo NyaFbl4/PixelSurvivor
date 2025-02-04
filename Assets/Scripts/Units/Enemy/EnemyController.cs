@@ -29,12 +29,10 @@ namespace PixelSurvivor
                 
                 if (Vector3.Distance(transform.position, player.position) > 0.1f)
                 {
-                    Debug.Log("SetMoving(true)");
                     enemyAnimationController.SetMoving(true);
                 }
                 else if (Vector3.Distance(transform.position, player.position) == 0f)
                 {
-                    Debug.Log("SetMoving(false)");
                     enemyAnimationController.SetMoving(false);
                 }
 

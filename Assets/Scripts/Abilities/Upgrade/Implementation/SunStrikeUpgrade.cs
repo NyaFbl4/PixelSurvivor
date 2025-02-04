@@ -18,7 +18,6 @@ namespace PixelSurvivor
             else
             {
                 sunStrike.UpgradeAbility();
-                Debug.Log("Upgrade SunStrike");
             }
         }
     }

@@ -4,7 +4,7 @@ namespace PixelSurvivor
 {
     public class FireBallUpgrade : Upgrade
     {
-        [SerializeField] private FireBall _shooterPrefab;
+        [SerializeField] private FireBall _fireBallPrefab;
         
         public override void Apply(GameObject playerAbilities)
         {
@@ -12,7 +12,7 @@ namespace PixelSurvivor
 
             if (shooter == null)
             {
-                shooter = Instantiate(_shooterPrefab, playerAbilities.transform.position, Quaternion.identity);
+                shooter = Instantiate(_fireBallPrefab, playerAbilities.transform.position, Quaternion.identity);
                 shooter.transform.SetParent(playerAbilities.transform, true);
             }
             else

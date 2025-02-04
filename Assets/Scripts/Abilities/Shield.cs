@@ -11,6 +11,11 @@ namespace PixelSurvivor
         {
             _currentTime = _timeAbility;
         }
+
+        public void UpgradeAbility()
+        {
+            
+        }
         
         private void Update()
         {

@@ -8,8 +8,8 @@ namespace PixelSurvivor
     {
         [SerializeField] private UpgradesUiManager _uiManager;
         [SerializeField] private Upgrade[] _upgrades;
-        [SerializeField] private GameObject _playerAbilities; 
-
+        [SerializeField] private GameObject _playerAbilities;
+        
         [SerializeField] private List<Upgrade> _availableUpgrades;
 
         private void Awake()

@@ -8,9 +8,7 @@ namespace PixelSurvivor
         
         public override void Apply(GameObject playerAbilities)
         {
-            //Debug.Log("SunStrike");
             var orbitalAbility = playerAbilities.GetComponentInChildren<OrbitalAbility>();
-            //var orbitalAbility = Instantiate(_orbitalAbilityPrefab, playerAbilities.transform.position, Quaternion.identity);
 
             if (orbitalAbility == null)
             {
@@ -21,8 +19,7 @@ namespace PixelSurvivor
             {
                 orbitalAbility.UpgradeAbility();
             }
-            
-            orbitalAbility.transform.SetParent(playerAbilities.transform, true); 
+
         }
     }
 }

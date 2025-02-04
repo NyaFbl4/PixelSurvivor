@@ -676,6 +676,53 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2515761069811716666, guid: 7f52ac1bf1427f740b54b7cf5a7894ca, type: 3}
   m_PrefabInstance: {fileID: 107648268}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &134566826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 134566827}
+  - component: {fileID: 134566828}
+  m_Layer: 0
+  m_Name: ShieldUpgrade
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &134566827
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134566826}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1963764763}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &134566828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134566826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2648df13d0a3d4147bc0218769449712, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Shield
+  icon: {fileID: 21300000, guid: 0eeb323edf8eaf84088613049fe11403, type: 3}
+  _shieldPrefab: {fileID: 5890348444967855923, guid: 93082f34c0323894eaf3b50d0c7979e5, type: 3}
 --- !u!1 &193339535
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,11 +887,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 865396162309953525, guid: 25f1cc5b861b1894bad13f2c518968b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.92
+      value: 3.15
       objectReference: {fileID: 0}
     - target: {fileID: 865396162309953525, guid: 25f1cc5b861b1894bad13f2c518968b5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.383
+      value: 2.217
       objectReference: {fileID: 0}
     - target: {fileID: 865396162309953525, guid: 25f1cc5b861b1894bad13f2c518968b5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3325,6 +3372,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1026219722}
   m_CullTransparentMesh: 1
+--- !u!1 &1039556612
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1039556613}
+  - component: {fileID: 1039556614}
+  m_Layer: 0
+  m_Name: OrbitalAbilityUpgrade
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1039556613
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039556612}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1963764763}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1039556614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039556612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b32c2687065cb04448bd00e7b8a579a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: OrbitalAbility
+  icon: {fileID: 0}
+  _orbitalAbilityPrefab: {fileID: 6456673218857832994, guid: f633f7867c3e0e4418380dba1e579073, type: 3}
 --- !u!1 &1053001328
 GameObject:
   m_ObjectHideFlags: 0
@@ -3703,6 +3797,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1216181680}
   m_CullTransparentMesh: 1
+--- !u!1 &1301465865
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1301465867}
+  - component: {fileID: 1301465866}
+  m_Layer: 0
+  m_Name: SunStrikeUpgrade
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1301465866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301465865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c18721c4a81a644da801fd19dc5ea37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: SunStrike
+  icon: {fileID: 21300000, guid: d787e18d65db6654a94249452309dacf, type: 3}
+  _sunStrikePrefab: {fileID: 8277930772737254269, guid: 1d3e49fc87b23e84e9564b704db954dd, type: 3}
+--- !u!4 &1301465867
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301465865}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1963764763}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1303722566
 GameObject:
   m_ObjectHideFlags: 0
@@ -4119,6 +4260,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1767687990}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1507258061
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1507258062}
+  - component: {fileID: 1507258063}
+  m_Layer: 0
+  m_Name: FireBallUpgrade
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1507258062
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507258061}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1963764763}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1507258063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507258061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 972480d01017b824283962b2563b4318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: FireBall
+  icon: {fileID: 21300000, guid: 592f4439f6eb3714f8d9ce25319243dc, type: 3}
+  _fireBallPrefab: {fileID: 910057193240064396, guid: 892a22ea4de506e44bdd95d92d1b1c59, type: 3}
 --- !u!1 &1533460865
 GameObject:
   m_ObjectHideFlags: 0
@@ -4203,11 +4391,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 865396162309953525, guid: 25f1cc5b861b1894bad13f2c518968b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.19
+      value: 1.04
       objectReference: {fileID: 0}
     - target: {fileID: 865396162309953525, guid: 25f1cc5b861b1894bad13f2c518968b5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.79
+      value: 2.81
       objectReference: {fileID: 0}
     - target: {fileID: 865396162309953525, guid: 25f1cc5b861b1894bad13f2c518968b5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4331,7 +4519,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1767687990}
   m_Layer: 0
-  m_Name: Managers
+  m_Name: '[Managers]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4505,9 +4693,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1963764763}
   - component: {fileID: 1963764760}
-  - component: {fileID: 1963764764}
-  - component: {fileID: 1963764765}
-  - component: {fileID: 1963764766}
   m_Layer: 0
   m_Name: UpgradesManager
   m_TagString: Untagged
@@ -4529,9 +4714,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _uiManager: {fileID: 8049769807379313118}
   _upgrades:
-  - {fileID: 1963764764}
-  - {fileID: 1963764765}
-  - {fileID: 1963764766}
+  - {fileID: 1507258063}
+  - {fileID: 1039556614}
+  - {fileID: 134566828}
+  - {fileID: 1301465866}
   _playerAbilities: {fileID: 2046016504836868123}
   _availableUpgrades: []
 --- !u!4 &1963764763
@@ -4546,54 +4732,13 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1507258062}
+  - {fileID: 1039556613}
+  - {fileID: 134566827}
+  - {fileID: 1301465867}
   m_Father: {fileID: 1767687990}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1963764764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1963764759}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b32c2687065cb04448bd00e7b8a579a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _title: OrbitalAbility
-  _icon: {fileID: 21300000, guid: 50e3c3869da96694a861fa47f8b4bf4f, type: 3}
-  _orbitalAbilityPrefab: {fileID: 6456673218857832994, guid: f633f7867c3e0e4418380dba1e579073, type: 3}
---- !u!114 &1963764765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1963764759}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e0823903a2a5d447aa640df7b338974, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _title: Shooter
-  _icon: {fileID: 21300000, guid: 592f4439f6eb3714f8d9ce25319243dc, type: 3}
-  _shooterPrefab: {fileID: 910057193240064396, guid: 892a22ea4de506e44bdd95d92d1b1c59, type: 3}
---- !u!114 &1963764766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1963764759}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c18721c4a81a644da801fd19dc5ea37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _title: SunStrike
-  _icon: {fileID: 21300000, guid: d787e18d65db6654a94249452309dacf, type: 3}
-  _sunStrikePrefab: {fileID: 8277930772737254269, guid: 1d3e49fc87b23e84e9564b704db954dd, type: 3}
 --- !u!1 &1979812973
 GameObject:
   m_ObjectHideFlags: 0
@@ -5600,11 +5745,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 865396162309953525, guid: 25f1cc5b861b1894bad13f2c518968b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2.23
       objectReference: {fileID: 0}
     - target: {fileID: 865396162309953525, guid: 25f1cc5b861b1894bad13f2c518968b5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.82
+      value: 2.78
       objectReference: {fileID: 0}
     - target: {fileID: 865396162309953525, guid: 25f1cc5b861b1894bad13f2c518968b5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6248,6 +6393,7 @@ MonoBehaviour:
   _upgradeUiPrefab: {fileID: 8434176564959330834, guid: d7eb74ce235d18c4eb618f16fe5a76ff, type: 3}
   _upgradesManager: {fileID: 1963764760}
   _container: {fileID: 536675831641401490}
+  _maxUpgradeAbility: 4
 --- !u!212 &8192630339840711558
 SpriteRenderer:
   m_ObjectHideFlags: 0

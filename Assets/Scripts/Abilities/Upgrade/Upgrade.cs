@@ -4,8 +4,8 @@ namespace PixelSurvivor
 {
     public abstract class Upgrade : MonoBehaviour
     {
-        [SerializeField] public string _title;
-        [SerializeField] public Sprite _icon;
+        [SerializeField] public string title;
+        [SerializeField] public Sprite icon;
         
         public abstract void Apply(GameObject playerAbilities);
     }
