@@ -5,7 +5,7 @@ namespace PixelSurvivor
 {
     public class AbilityManager : MonoBehaviour
     {
-        [SerializeField] private List<Ability> _abilities;
+        [SerializeField] private List<Upgrade> _playerAbilities;
 
         [SerializeField] private int _maxPlayerAbilities;
         [SerializeField] private List<Ability> _playerAbilites;

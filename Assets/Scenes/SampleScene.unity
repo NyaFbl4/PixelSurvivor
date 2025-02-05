@@ -2092,12 +2092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5036c70f7fd6491aa0b151fadb841947, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _abilities:
-  - {fileID: 910057193240064396, guid: 892a22ea4de506e44bdd95d92d1b1c59, type: 3}
-  - {fileID: 6456673218857832994, guid: f633f7867c3e0e4418380dba1e579073, type: 3}
-  - {fileID: 7151775426901217140, guid: 1d5f5042605e3744e9addd2c75f8c3f4, type: 3}
-  - {fileID: 8277930772737254269, guid: 1d3e49fc87b23e84e9564b704db954dd, type: 3}
-  - {fileID: 2138861478376962353, guid: c21c5b34124eedc4785e85123817245d, type: 3}
+  _playerAbilities: []
   _maxPlayerAbilities: 0
   _playerAbilites: []
 --- !u!1 &676985932
@@ -3444,7 +3439,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: OrbitalAbility
   icon: {fileID: 0}
-  _abilityPrefab: {fileID: 0}
+  _abilityPrefab: {fileID: 6456673218857832994, guid: f633f7867c3e0e4418380dba1e579073, type: 3}
 --- !u!1 &1053001328
 GameObject:
   m_ObjectHideFlags: 0
@@ -4782,14 +4777,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _uiManager: {fileID: 8049769807379313118}
-  _upgrades:
+  _abilityPool:
   - {fileID: 1507258063}
   - {fileID: 1039556614}
   - {fileID: 1301465866}
   - {fileID: 469702342}
   - {fileID: 1228917497}
-  _playerAbilities: {fileID: 2046016504836868123}
-  _availableUpgrades: []
+  _auraPool:
+  - {fileID: 134566828}
+  _playerAbilitiesContainer: {fileID: 2046016504836868123}
+  _maxPlayerAbilities: 3
+  _playerAbilities: []
+  _upgradesPool: []
 --- !u!4 &1963764763
 Transform:
   m_ObjectHideFlags: 0
@@ -5781,6 +5780,10 @@ PrefabInstance:
     - target: {fileID: 5155222597936637012, guid: 20f9ac74580ea754ca6617b432420943, type: 3}
       propertyPath: m_Name
       value: Bear
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155222597936637012, guid: 20f9ac74580ea754ca6617b432420943, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
