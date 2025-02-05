@@ -38,7 +38,7 @@ namespace PixelSurvivor
             
             //_storage.AddExperience(_experience);
             
-            Debug.Log("lvl: " + _lvl.ToString() + " exp: " + _experience.ToString());
+            //Debug.Log("lvl: " + _lvl.ToString() + " exp: " + _experience.ToString());
         }
 
         [ContextMenu("AddExp")]

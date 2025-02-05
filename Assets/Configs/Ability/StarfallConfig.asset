@@ -17,4 +17,4 @@ MonoBehaviour:
   maxCurrentProjectile: 1
   ricochetShots: 2
   speedProjectile: 3
-  cooldown: 2
+  cooldown: 1

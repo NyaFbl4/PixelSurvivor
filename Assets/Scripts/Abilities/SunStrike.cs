@@ -22,10 +22,10 @@ namespace PixelSurvivor
             //_cooldown = _config.cooldown;
             _radius = _config.radius;
             
-            StartCoroutine(ActivateWithCooldown());
+            //StartCoroutine(ActivateWithCooldown());
         }
 
-        protected override float CalculateCooldown()
+        public override float CalculateCooldown()
         {
             return _config.cooldown;
         }

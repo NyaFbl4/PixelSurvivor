@@ -28,10 +28,10 @@ namespace PixelSurvivor
             _maxCurrentShots = _config.currentProjectile;
             _projectileSpeed = _config.speedProjectile;
             
-            StartCoroutine(ActivateWithCooldown());
+            //StartCoroutine(ActivateWithCooldown());
         }
 
-        protected override float CalculateCooldown()
+        public override float CalculateCooldown()
         {
             return _config.cooldown;
         }

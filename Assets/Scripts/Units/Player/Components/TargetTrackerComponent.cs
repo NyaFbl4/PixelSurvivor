@@ -17,7 +17,6 @@ namespace PixelSurvivor
 
         public void GetIgnoreTarget(GameObject ignoreTarget)
         {
-            Debug.Log("Add ignor targget");
             _ignoreTargets.Clear();
             _ignoreTargets.Add(ignoreTarget);
         }

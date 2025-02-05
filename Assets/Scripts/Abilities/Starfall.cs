@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace PixelSurvivor
@@ -29,15 +30,22 @@ namespace PixelSurvivor
             _projectileDamage = _config.damage;
             _maxCurrentShots = _config.maxCurrentProjectile;
             _projectileSpeed = _config.speedProjectile;
-
-            StartCoroutine(ActivateWithCooldown());
+            _cooldown = _config.cooldown;
+            
+            //StartCoroutine(ActivateWithCooldown());
         }
         
-        protected override float CalculateCooldown()
+        public override float CalculateCooldown()
         {
-            return _config.cooldown;
+            return _cooldown;
         }
 
+        [Button]
+        private void test(float cooldown)
+        {
+            _cooldown = cooldown;
+        }
+        
         public void FixedUpdate()
         {
             targets = _targetTracker.GetCurrentTargets();

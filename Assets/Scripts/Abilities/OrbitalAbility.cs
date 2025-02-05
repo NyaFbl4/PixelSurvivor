@@ -35,9 +35,9 @@ namespace PixelSurvivor
             _isActive = true;
             _projectiles = new List<GameObject>();
             
-            StartCoroutine(ActivateWithCooldown());
+            //StartCoroutine(ActivateWithCooldown());
         }
-        protected override float CalculateCooldown()
+        public override float CalculateCooldown()
         {
             return _config.cooldown;
         }
