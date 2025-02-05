@@ -1316,6 +1316,9 @@
             <e p="Starfall.cs" t="Include" />
             <e p="SunStrike.cs" t="Include" />
             <e p="Tornado.cs" t="Include" />
+            <e p="UI" t="Include">
+              <e p="AbilityCooldown.cs" t="Include" />
+            </e>
             <e p="Upgrade" t="Include">
               <e p="AbilityUpgrade.cs" t="Include" />
               <e p="Implementation" t="Include">

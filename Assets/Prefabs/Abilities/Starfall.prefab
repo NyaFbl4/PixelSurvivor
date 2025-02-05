@@ -48,11 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _targetTracker: {fileID: 1546238228957759373}
   _shootPoint: {fileID: 2815812174248716608}
-  _prefabProjectile: {fileID: 498662490360772447, guid: ebe0491777e1f5e438292a32b0323782, type: 3}
-  _projectileDamage: 1
-  _maxCurrentShots: 2
-  _projectileSpeed: 2
-  _cooldown: 2
+  _config: {fileID: 11400000, guid: 6e7781bc828780b49b9a77bb82f2d0f4, type: 2}
   currentTime: 0
 --- !u!114 &1546238228957759373
 MonoBehaviour:
@@ -68,6 +64,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _detectionRadius: 6
   _targets: []
+  _ignoreTargets: []
 --- !u!1 &8440878604960832673
 GameObject:
   m_ObjectHideFlags: 0

@@ -1710,7 +1710,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   title: Starfall
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: dff73910226c530469a26b89838b8be6, type: 3}
   _abilityPrefab: {fileID: 7151775426901217140, guid: 1d5f5042605e3744e9addd2c75f8c3f4, type: 3}
 --- !u!1 &519420028
 GameObject:
@@ -3438,7 +3438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   title: OrbitalAbility
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: d74fdbe7b81e14c47b94d6d9f721acdf, type: 3}
   _abilityPrefab: {fileID: 6456673218857832994, guid: f633f7867c3e0e4418380dba1e579073, type: 3}
 --- !u!1 &1053001328
 GameObject:
@@ -3848,7 +3848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   title: Tornado
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 49519404c8c2e214d8577b2547537c23, type: 3}
   _abilityPrefab: {fileID: 2138861478376962353, guid: c21c5b34124eedc4785e85123817245d, type: 3}
 --- !u!4 &1228917498
 Transform:
@@ -4783,9 +4783,8 @@ MonoBehaviour:
   - {fileID: 1301465866}
   - {fileID: 469702342}
   - {fileID: 1228917497}
-  _auraPool:
-  - {fileID: 134566828}
   _playerAbilitiesContainer: {fileID: 2046016504836868123}
+  _maxRandomAbilities: 0
   _maxPlayerAbilities: 3
   _playerAbilities: []
   _upgradesPool: []

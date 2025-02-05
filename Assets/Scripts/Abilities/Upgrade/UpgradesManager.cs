@@ -9,9 +9,10 @@ namespace PixelSurvivor
         [SerializeField] private UpgradesUiManager _uiManager;
         
         [SerializeField] private List<Upgrade> _abilityPool;
-        [SerializeField] private List<Upgrade> _auraPool;
-        
+
         [SerializeField] private GameObject _playerAbilitiesContainer;
+
+        [SerializeField] private int _maxRandomAbilities;
         [SerializeField] private int _maxPlayerAbilities;
         
         [SerializeField] private List<Upgrade> _playerAbilities;
@@ -52,6 +53,47 @@ namespace PixelSurvivor
             }
         }
         
+        /*
+        private void GetRandomAbilities(int count)
+        {
+            // Проверка, заполнен ли список полученных способностей
+            if (_playerAbilities.Count > 0)
+            {
+                Debug.Log("У персонажа уже есть способности. Новые способности недоступны.");
+                return;
+            }
+
+            // Проверка на доступность способностей
+            if (_abilityPool.Count == 0 || count <= 0 || count > _abilityPool.Count)
+            {
+                Debug.LogWarning("Невозможно получить случайные способности.");
+                return;
+            }
+
+            HashSet<int> randomIndices = new HashSet<int>();
+            System.Random rand = new System.Random();
+
+            // Генерируем уникальные индексы для способностей
+            while (randomIndices.Count < count)
+            {
+                int randomIndex = rand.Next(_abilityPool.Count);
+                randomIndices.Add(randomIndex);
+            }
+
+            foreach (int index in randomIndices)
+            {
+                _playerAbilities.Add(_abilityPool[index]); // Добавляем способности в список персонажа
+            }
+
+            // Выводим полученные способности для проверки
+            Debug.Log("Персонаж получил следующие способности:");
+            foreach (var ability in _playerAbilities)
+            {
+                Debug.Log(ability.name); // Предполагая, что у Upgrade есть свойство name
+            }
+        }
+        */
+        
         public void SuggestUpgrades()
         {
             /*
@@ -73,6 +115,9 @@ namespace PixelSurvivor
         public void OnUpgradeApplied(Upgrade appliedUpgrade)
         {
             _uiManager.Hide();
+            
+            _playerAbilities.Add(appliedUpgrade);
+            
             //_availableUpgrades.Remove(appliedUpgrade);
             Time.timeScale = 1;
         }
