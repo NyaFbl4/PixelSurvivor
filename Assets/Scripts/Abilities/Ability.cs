@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using UniRx;
 using UnityEngine;
 using Zenject;
 
@@ -7,31 +8,26 @@ namespace PixelSurvivor
 {
     public abstract class Ability: MonoBehaviour
     {
-        // Метод для вычисления кулдауна
         public abstract float CalculateCooldown();
 
-        private float cooldown; // Текущий кулдаун
-        private float cooldownTimer; // Таймер кулдауна
+        private float _maxCooldown; // Текущий кулдаун
+        private float _currentCooldown; // Таймер кулдауна
 
-        private CooldownStorage _storage;
-        
-        public float Cooldown => cooldown;
-        public float CooldownTimer => cooldownTimer;
+        public event Action<float> OnCooldownChanged; // Событие при изменении текущего кулдауна
+        public event Action<float> OnMaxCooldownChanged; // Событие при изменении максимального кулдауна
 
-        [Inject]
-        public void Construst(CooldownStorage storage)
-        {
-            _storage = storage;
-        }
-        
         void Update()
         {
             // Уменьшаем таймер кулдауна, если он больше нуля
-            if (cooldownTimer > 0)
+            if (_currentCooldown > 0)
             {
-                cooldownTimer -= Time.deltaTime;
+                _currentCooldown-= Time.deltaTime;
+                OnCooldownChanged?.Invoke(_currentCooldown); 
+                
+                Debug.Log("cooldownTimer = " + _currentCooldown);
+                Debug.Log("cooldown = " + _maxCooldown);
             }
-            else if (cooldownTimer <= 0)
+            else if (_currentCooldown <= 0)
             {
                 // Если кулдаун закончился, активируем способность
                 ActivateAbility();
@@ -42,28 +38,11 @@ namespace PixelSurvivor
         // Метод для начала кулдауна
         private void StartCooldown()
         {
-            cooldown = CalculateCooldown();
-            cooldownTimer = cooldown;
-            //Debug.Log("Cooldown started: " + cooldown);
+            _maxCooldown = CalculateCooldown();
+            OnMaxCooldownChanged?.Invoke(_maxCooldown);
+            _currentCooldown = _maxCooldown;
         }
-
-        // Метод для вычисления кулдауна
-        //public abstract float CalculateCooldown();
         
-        /*
-        protected IEnumerator ActivateWithCooldown()
-        {
-            Debug.Log("Cooldown =" + CalculateCooldown());
-            
-            while (true)
-            {
-                yield return new WaitForSeconds(CalculateCooldown());
-                ActivateAbility();
-            }
-        }
-        */
-
-        // Абстрактный метод для активации способности
         protected abstract void ActivateAbility();
     }
 }

@@ -27,47 +27,25 @@ namespace PixelSurvivor
             _projectileDamage = _config.damage;
             _maxCurrentShots = _config.currentProjectile;
             _projectileSpeed = _config.speedProjectile;
+            _cooldown = _config.cooldown;
             
             //StartCoroutine(ActivateWithCooldown());
         }
 
         public override float CalculateCooldown()
         {
-            return _config.cooldown;
+            return _cooldown;
         }
         
-        private void Update()
+        private void FixedUpdate()
         {
             targets = _targetTracker.GetCurrentTargets();
-            
-            /*
-            if (targets.Count > 0 && _shootingCoroutine == null)
-            {
-                _shootingCoroutine = StartCoroutine(ShootAutomatically(targets));
-            }
-            else if (targets.Count == 0 && _shootingCoroutine != null)
-            {
-                StopCoroutine(_shootingCoroutine);
-                _shootingCoroutine = null;
-            }
-            */
         }
         
         public void UpgradeAbility()
         {
             _maxCurrentShots++;
         }
-
-        /*
-        private IEnumerator ShootAutomatically(List<GameObject> targets)
-        {
-            while (true)
-            {
-                ShootAtTargets(targets);
-                yield return new WaitForSeconds(_cooldown); 
-            }
-        }
-        */
 
         protected override void ActivateAbility()
         {

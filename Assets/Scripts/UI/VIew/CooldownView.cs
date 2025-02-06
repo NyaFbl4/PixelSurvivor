@@ -26,6 +26,8 @@ namespace PixelSurvivor
         public void UpdateCurrentCooldown(float currentCooldown)
         {
             _currentCooldownTime = currentCooldown;
+            
+            Setter(_currentCooldownTime);
         }
         
         private void Setter(float currentCooldown)

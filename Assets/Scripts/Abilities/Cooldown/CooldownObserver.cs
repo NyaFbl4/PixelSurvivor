@@ -1,37 +1,40 @@
 ﻿using System;
 using UniRx;
+using UnityEngine;
 
 namespace PixelSurvivor
 {
-    public class CooldownObserver : IDisposable
+    public class CooldownObserver : MonoBehaviour
     {
-        private readonly CooldownView _view;
-        private readonly CooldownStorage _storage;
-        private readonly IDisposable _disposableMaxCooldown;
-        private readonly IDisposable _disposableCurrentCooldown;
-
-        public CooldownObserver(CooldownView view, CooldownStorage storage)
-        {
-            _view = view;
-            _storage = storage;
-            _disposableMaxCooldown = _storage.MaxCooldown.SkipLatestValueOnSubscribe().Subscribe(OnMaxCooldownChanged);
-            _disposableCurrentCooldown = _storage.CurrentCooldown.SkipLatestValueOnSubscribe().Subscribe(OnCurrentCooldownChanged);
-        }
+        [SerializeField] private Ability ability; // Ссылка на объект Ability
+        [SerializeField] private CooldownView _view;
         
-        private void OnCurrentCooldownChanged(float currentCooldown)
+        private void Start()
+        {
+            if (ability != null)
+            {
+                ability.OnCooldownChanged += HandleCooldownChanged; // Подписка на событие
+                ability.OnMaxCooldownChanged += HandleMaxCooldownChanged; // Подписка на событие
+            }
+        }
+
+        private void HandleCooldownChanged(float currentCooldown)
         {
             _view.UpdateCurrentCooldown(currentCooldown);
         }
-        
-        private void OnMaxCooldownChanged(float maxCooldown)
+
+        private void HandleMaxCooldownChanged(float maxCooldown)
         {
             _view.UpdateMaxCooldown(maxCooldown);
         }
 
-        public void Dispose()
+        private void OnDestroy()
         {
-            _disposableMaxCooldown.Dispose();
-            _disposableCurrentCooldown.Dispose();
+            if (ability != null)
+            {
+                ability.OnCooldownChanged -= HandleCooldownChanged; // Отписка от события
+                ability.OnMaxCooldownChanged -= HandleMaxCooldownChanged; // Отписка от события
+            }
         }
     }
 }

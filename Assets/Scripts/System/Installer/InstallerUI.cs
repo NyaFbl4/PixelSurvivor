@@ -1,9 +1,12 @@
-﻿using Zenject;
+﻿using UnityEngine;
+using Zenject;
 
 namespace PixelSurvivor
 {
     public class InstallerUI : MonoInstaller
     {
+        [SerializeField] private CooldownView _cooldownView;
+        
         public override void InstallBindings()
         {
             var view = FindObjectOfType<CurrencyViewProvider>();
@@ -13,6 +16,20 @@ namespace PixelSurvivor
             //ScoreBind(view.ExperienceView);
         }
 
+        private void CooldownBind()
+        {
+            Container
+                .Bind<CooldownObserver>()
+                .AsTransient()
+                .WithArguments(_cooldownView)
+                .NonLazy();
+
+            Container
+                .Bind<Ability>()
+                .AsTransient()
+                .NonLazy();
+        }
+        
         private void ExperienceBind(CurrencyView view)
         {
             Container
