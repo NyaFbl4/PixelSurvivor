@@ -53,6 +53,5 @@ namespace PixelSurvivor
         {
             _view.UpdateCurrency(experience);
         }
-        
     }
 }

@@ -29,7 +29,7 @@ namespace PixelSurvivor.UI
                 currentCooldownTime -= Time.deltaTime; // Уменьшаем текущий кулдаун
                 cooldownImage.fillAmount = currentCooldownTime / maxCooldownTime; // Обновляем fill amount
 
-                Debug.Log($"Cooldown: {currentCooldownTime}");
+                //Debug.Log($"Cooldown: {currentCooldownTime}");
             }
             else if (currentCooldownTime <= 0)
             {

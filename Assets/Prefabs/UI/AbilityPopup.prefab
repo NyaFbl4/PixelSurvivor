@@ -352,7 +352,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2515761069811716666}
-  - component: {fileID: 8565068696783837216}
+  - component: {fileID: 1458521269875287549}
   m_Layer: 0
   m_Name: AbilityPopup
   m_TagString: Untagged
@@ -383,7 +383,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8565068696783837216
+--- !u!114 &1458521269875287549
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -392,11 +392,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3728816482883940262}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f841bf306e2d42479a63dc6775807e0, type: 3}
+  m_Script: {fileID: 11500000, guid: d0ec90b498321884eaa3887026c9b773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cooldownnImage: {fileID: 4382216398806591327}
-  _cooldown: 0.5
+  _cooldownImage: {fileID: 0}
 --- !u!1 &7008581861841238400
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using Zenject;
 
 namespace PixelSurvivor
 {
@@ -12,8 +13,16 @@ namespace PixelSurvivor
         private float cooldown; // Текущий кулдаун
         private float cooldownTimer; // Таймер кулдауна
 
+        private CooldownStorage _storage;
+        
         public float Cooldown => cooldown;
         public float CooldownTimer => cooldownTimer;
+
+        [Inject]
+        public void Construst(CooldownStorage storage)
+        {
+            _storage = storage;
+        }
         
         void Update()
         {
@@ -35,7 +44,7 @@ namespace PixelSurvivor
         {
             cooldown = CalculateCooldown();
             cooldownTimer = cooldown;
-            Debug.Log("Cooldown started: " + cooldown);
+            //Debug.Log("Cooldown started: " + cooldown);
         }
 
         // Метод для вычисления кулдауна
