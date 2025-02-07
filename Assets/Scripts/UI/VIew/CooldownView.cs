@@ -5,17 +5,15 @@ namespace PixelSurvivor
 {
     public class CooldownView : MonoBehaviour
     {
+        [SerializeField] private Sprite _icon;
         [SerializeField] private Image _cooldownImage;
         
         private float _currentCooldownTime; // Текущее время кулдауна
         private float _maxCooldownTime; // Максимальное время кулдауна
 
-        public void SetupCooldown(float maxCooldown, float currentCooldown)
+        public void SetupCooldown(AbilityConfig config)
         {
-            _maxCooldownTime = maxCooldown;
-            _currentCooldownTime = currentCooldown;
-
-            Setter(_currentCooldownTime);
+            _icon = config.Icon;
         }
 
         public void UpdateMaxCooldown(float maxCooldown)
