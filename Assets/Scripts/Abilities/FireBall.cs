@@ -10,7 +10,7 @@ namespace PixelSurvivor
         [SerializeField] private Transform _shootPoint;
         [SerializeField] private FireBallConfig _config;
 
-        private List<GameObject> targets;
+        private List<GameObject> _targets;
         private GameObject _prefabProjectile;
         
         private int _projectileDamage;
@@ -39,7 +39,7 @@ namespace PixelSurvivor
         
         private void FixedUpdate()
         {
-            targets = _targetTracker.GetCurrentTargets();
+            _targets = _targetTracker.GetCurrentTargets();
         }
         
         public void UpgradeAbility()
@@ -51,7 +51,7 @@ namespace PixelSurvivor
         {
             int shotsFired = 0;
 
-            foreach (var target in targets)
+            foreach (var target in _targets)
             {
                 if (shotsFired >= _maxCurrentShots)
                 {

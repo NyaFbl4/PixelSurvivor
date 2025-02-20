@@ -6,5 +6,6 @@ namespace PixelSurvivor
     public class AbilityConfig : ScriptableObject
     {
         public Sprite Icon;
+        public Ability PrefabAbility;
     }
 }

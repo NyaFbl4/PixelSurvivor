@@ -40,12 +40,6 @@ namespace PixelSurvivor
             return _cooldown;
         }
 
-        [Button]
-        private void test(float cooldown)
-        {
-            _cooldown = cooldown;
-        }
-        
         public void FixedUpdate()
         {
             targets = _targetTracker.GetCurrentTargets();

@@ -5,24 +5,6 @@ namespace PixelSurvivor
 {
     public class ExperienceStorage
     {
-        /*
-        public event Action<int> OnExperienceChanget;
-        
-        public int Experience { get; private set; }
-
-        public ExperienceStorage(int exp)
-        {
-            Experience = exp;
-        }
-
-        public void AddExperience(int exp)
-        {
-            Experience += exp;
-            OnExperienceChanget?.Invoke(Experience);
-        }
-        */
-        
-        
         public IReadOnlyReactiveProperty<long> Experience => _experience;
 
         private readonly ReactiveProperty<long> _experience;

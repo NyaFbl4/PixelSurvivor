@@ -6,7 +6,8 @@ namespace PixelSurvivor
 {
     public class CooldownObserver : MonoBehaviour
     {
-        [SerializeField] private Ability ability; // Ссылка на объект Ability
+        [SerializeField] public Ability ability; // Ссылка на объект Ability
+        //[SerializeField] private Upgrade _config;
         [SerializeField] private CooldownView _view;
         
         private void Start()
@@ -15,7 +16,15 @@ namespace PixelSurvivor
             {
                 ability.OnCooldownChanged += HandleCooldownChanged; // Подписка на событие
                 ability.OnMaxCooldownChanged += HandleMaxCooldownChanged; // Подписка на событие
+                
+                //_view.SetupCooldown(_config.Config);
             }
+        }
+
+        public void SetupCooldown(AbilityConfig config) //, Ability appliedUpgrade)
+        {
+            _view.SetupCooldown(config.Icon);
+            //ability = appliedUpgrade;
         }
 
         private void HandleCooldownChanged(float currentCooldown)

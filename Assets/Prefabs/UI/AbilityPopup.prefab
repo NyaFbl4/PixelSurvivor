@@ -353,6 +353,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2515761069811716666}
   - component: {fileID: 1458521269875287549}
+  - component: {fileID: 2023359702941815222}
   m_Layer: 0
   m_Name: AbilityPopup
   m_TagString: Untagged
@@ -395,7 +396,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0ec90b498321884eaa3887026c9b773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _icon: {fileID: 0}
   _cooldownImage: {fileID: 0}
+--- !u!114 &2023359702941815222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3728816482883940262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9947acbdf3a7cbb4c90045b42de99b0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ability: {fileID: 0}
+  _view: {fileID: 1458521269875287549}
 --- !u!1 &7008581861841238400
 GameObject:
   m_ObjectHideFlags: 0
