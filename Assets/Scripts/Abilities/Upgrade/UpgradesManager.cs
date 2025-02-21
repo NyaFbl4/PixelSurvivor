@@ -8,15 +8,16 @@ namespace PixelSurvivor
     public class UpgradesManager : MonoBehaviour
     {
         [SerializeField] private UpgradesUiManager _uiManager;
+        [SerializeField] private AbilityManager _abilityManager;
         
-        [SerializeField] private List<Upgrade> _abilityPool;
+        //[SerializeField] private List<Upgrade> _abilityPool;
 
-        [SerializeField] private GameObject _playerAbilitiesContainer;
+        //[SerializeField] private GameObject _playerAbilitiesContainer;
 
         [SerializeField] private int _maxRandomAbilities;
         [SerializeField] private int _maxPlayerAbilities;
         
-        [SerializeField] private List<Upgrade> _playerAbilities;
+        //[SerializeField] private List<Upgrade> _playerAbilities;
         [SerializeField] private List<Upgrade> _upgradesPool;
 
         [SerializeField] private AbilityPopupProvider _popupProvider;
@@ -68,8 +69,6 @@ namespace PixelSurvivor
             _uiManager.Hide();
             
             _playerAbilities.Add(appliedUpgrade);
-            var popup = _popupProvider.GetAbilityPopup();
-            popup.SetupCooldown(appliedUpgrade.Config);
             
             Time.timeScale = 1;
         }

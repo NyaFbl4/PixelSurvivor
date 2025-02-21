@@ -24,8 +24,8 @@ namespace PixelSurvivor
                 _currentCooldown-= Time.deltaTime;
                 OnCooldownChanged?.Invoke(_currentCooldown); 
                 
-                Debug.Log("cooldownTimer = " + _currentCooldown);
-                Debug.Log("cooldown = " + _maxCooldown);
+                //Debug.Log("cooldownTimer = " + _currentCooldown);
+                //Debug.Log("cooldown = " + _maxCooldown);
             }
             else if (_currentCooldown <= 0)
             {
