@@ -49,23 +49,26 @@ namespace PixelSurvivor
         {
             _maxCurrentShots++;
         }
-        
+
         protected override void ActivateAbility()
         {
             int shotsFired = 0;
 
-            foreach (var target in targets)
+            if (targets != null)
             {
-                if (shotsFired >= _maxCurrentShots)
+                foreach (var target in targets)
                 {
-                    break;
-                }
+                    if (shotsFired >= _maxCurrentShots)
+                    {
+                        break;
+                    }
 
-                ShootAtTarget(target);
-                shotsFired++;
+                    ShootAtTarget(target);
+                    shotsFired++;
+                }
             }
         }
-        
+
         private void ShootAtTarget(GameObject target)
         {
             Debug.Log("shoot");

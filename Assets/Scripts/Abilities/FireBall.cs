@@ -51,15 +51,18 @@ namespace PixelSurvivor
         {
             int shotsFired = 0;
 
-            foreach (var target in _targets)
+            if (_targets != null)
             {
-                if (shotsFired >= _maxCurrentShots)
+                foreach (var target in _targets)
                 {
-                    break;
-                }
+                    if (shotsFired >= _maxCurrentShots)
+                    {
+                        break;
+                    }
 
-                ShootAtTarget(target);
-                shotsFired++;
+                    ShootAtTarget(target);
+                    shotsFired++;
+                }
             }
         }
 
