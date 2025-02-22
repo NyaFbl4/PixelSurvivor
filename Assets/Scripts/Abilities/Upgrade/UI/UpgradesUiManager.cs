@@ -11,7 +11,7 @@ namespace PixelSurvivor
 
         [SerializeField] private int _maxUpgradeAbility;
         
-        public void Show(List<Upgrade> upgrades, GameObject playerAbilities)
+        public void Show(List<GameObject> abilities, GameObject playerAbilities)
         {
             gameObject.SetActive(true);
 
@@ -20,11 +20,14 @@ namespace PixelSurvivor
                 Destroy(child.gameObject);
             }
             
-            foreach (var upgrade in upgrades)
+            foreach (var ability in abilities)
             //for (int i = 0; i < _maxUpgradeAbility; i++)
             {
                 var ui = Instantiate(_upgradeUiPrefab, _container);
-                ui.Setup(upgrade.title, upgrade.icon, () => OnClickApply(upgrade, playerAbilities));
+
+                var upgrade = ability.GetComponent<Upgrade>();
+                
+                ui.Setup(upgrade.title, upgrade.icon, () => OnClickApply(ability, playerAbilities));
                 //ui.Setup(upgrades[i].title, upgrades[i].icon, () => OnClickApply(upgrades[i], playerAbilities));
             }
         }
@@ -34,10 +37,14 @@ namespace PixelSurvivor
             gameObject.SetActive(false);
         }
 
-        private void OnClickApply(Upgrade upgrade, GameObject playerAbilities)
+        private void OnClickApply(GameObject ability, GameObject playerAbilities)
         {
+            var upgrade = ability.GetComponent<Upgrade>();
+            //var upgrade = ability.GetComponent<Upgrade>();
             upgrade.Apply(playerAbilities);
-            _upgradesManager.OnUpgradeApplied(upgrade);
+            
+            
+            _upgradesManager.OnUpgradeApplied(ability.GetComponent<Ability>());
         }
     }
 }

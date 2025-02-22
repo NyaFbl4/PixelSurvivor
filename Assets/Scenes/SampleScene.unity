@@ -750,7 +750,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2648df13d0a3d4147bc0218769449712, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Config: {fileID: 0}
   title: Shield
   icon: {fileID: 21300000, guid: 0eeb323edf8eaf84088613049fe11403, type: 3}
   _shieldPrefab: {fileID: 5890348444967855923, guid: 93082f34c0323894eaf3b50d0c7979e5, type: 3}
@@ -1767,7 +1766,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 197993d207d24060b3468ad9fcdd8461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Config: {fileID: 11400000, guid: 85a0df5f08783fd4ba940e3c560c8e2c, type: 2}
   title: Starfall
   icon: {fileID: 21300000, guid: dff73910226c530469a26b89838b8be6, type: 3}
   _abilityPrefab: {fileID: 7151775426901217140, guid: 1d5f5042605e3744e9addd2c75f8c3f4, type: 3}
@@ -2170,6 +2168,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5036c70f7fd6491aa0b151fadb841947, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _allAbilitiesPool:
+  - {fileID: 11400000, guid: bf5612771de79f04e9aeeb67306bf1a5, type: 2}
+  - {fileID: 11400000, guid: 0c2e2520a6a007845ba1dba8ebb8e2b9, type: 2}
+  - {fileID: 11400000, guid: 85a0df5f08783fd4ba940e3c560c8e2c, type: 2}
+  - {fileID: 11400000, guid: 2c1ddfa73be70c04ba4685b24d387701, type: 2}
+  - {fileID: 11400000, guid: e432905c7022fcb43ac35a6cb9b12a5d, type: 2}
+  _gameObjects: []
+  _playerAbilitiesContainer: {fileID: 2046016504836868123}
+  _playerAbilities: []
+  _maxPlayerAbilities: 0
 --- !u!1 &676985932
 GameObject:
   m_ObjectHideFlags: 0
@@ -3529,7 +3537,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b32c2687065cb04448bd00e7b8a579a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Config: {fileID: 0}
   title: OrbitalAbility
   icon: {fileID: 21300000, guid: d74fdbe7b81e14c47b94d6d9f721acdf, type: 3}
   _abilityPrefab: {fileID: 6456673218857832994, guid: f633f7867c3e0e4418380dba1e579073, type: 3}
@@ -3945,7 +3952,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b1a4080bb134084963653f6cad49b9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Config: {fileID: 0}
   title: Tornado
   icon: {fileID: 21300000, guid: 49519404c8c2e214d8577b2547537c23, type: 3}
   _abilityPrefab: {fileID: 2138861478376962353, guid: c21c5b34124eedc4785e85123817245d, type: 3}
@@ -3993,7 +3999,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c18721c4a81a644da801fd19dc5ea37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Config: {fileID: 0}
   title: SunStrike
   icon: {fileID: 21300000, guid: d787e18d65db6654a94249452309dacf, type: 3}
   _abilityPrefab: {fileID: 8277930772737254269, guid: 1d3e49fc87b23e84e9564b704db954dd, type: 3}
@@ -4518,7 +4523,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 972480d01017b824283962b2563b4318, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Config: {fileID: 11400000, guid: bf5612771de79f04e9aeeb67306bf1a5, type: 2}
   title: FireBall
   icon: {fileID: 21300000, guid: 592f4439f6eb3714f8d9ce25319243dc, type: 3}
   _abilityPrefab: {fileID: 910057193240064396, guid: 892a22ea4de506e44bdd95d92d1b1c59, type: 3}
@@ -5221,16 +5225,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _uiManager: {fileID: 8049769807379313118}
-  _abilityPool:
-  - {fileID: 1507258063}
-  - {fileID: 1039556614}
-  - {fileID: 1301465866}
-  - {fileID: 469702342}
-  - {fileID: 1228917497}
-  _playerAbilitiesContainer: {fileID: 2046016504836868123}
+  _abilityManager: {fileID: 648132549}
   _maxRandomAbilities: 0
   _maxPlayerAbilities: 3
-  _playerAbilities: []
   _upgradesPool: []
   _popupProvider: {fileID: 527039635}
 --- !u!4 &1963764763

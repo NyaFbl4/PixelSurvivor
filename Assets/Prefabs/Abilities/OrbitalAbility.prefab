@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5229011403723148703}
   - component: {fileID: 6456673218857832994}
+  - component: {fileID: 164501448588852677}
   m_Layer: 0
   m_Name: OrbitalAbility
   m_TagString: Untagged
@@ -45,3 +46,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _config: {fileID: 11400000, guid: 24d9801900b19dc4eab6c76c5abdc4e2, type: 2}
+  _projectiles: []
+--- !u!114 &164501448588852677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5231932522293704924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b32c2687065cb04448bd00e7b8a579a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: OrbitalAbility
+  icon: {fileID: 21300000, guid: cbb761af48dc1474080aa158e7610bc2, type: 3}
+  _abilityPrefab: {fileID: 6456673218857832994}

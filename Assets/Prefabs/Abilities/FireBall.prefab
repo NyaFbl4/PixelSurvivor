@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 3596850566704069154}
   - component: {fileID: 910057193240064396}
   - component: {fileID: 8500379211277386413}
+  - component: {fileID: 2222637490364593942}
   m_Layer: 0
   m_Name: FireBall
   m_TagString: Untagged
@@ -94,3 +95,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _detectionRadius: 5
   _targets: []
+  _ignoreTargets: []
+--- !u!114 &2222637490364593942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8979145992692405639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 972480d01017b824283962b2563b4318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: FireBall
+  icon: {fileID: 21300000, guid: 592f4439f6eb3714f8d9ce25319243dc, type: 3}
+  _abilityPrefab: {fileID: 910057193240064396}

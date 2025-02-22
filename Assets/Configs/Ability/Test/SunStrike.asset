@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b6a37f7a84376e3458d1cd7bc26704e8, type: 3}
-  m_Name: FireBall
+  m_Name: SunStrike
   m_EditorClassIdentifier: 
-  Icon: {fileID: 21300000, guid: 592f4439f6eb3714f8d9ce25319243dc, type: 3}
-  PrefabAbility: {fileID: 8979145992692405639, guid: 892a22ea4de506e44bdd95d92d1b1c59, type: 3}
+  Icon: {fileID: 21300000, guid: e2ff5b455a9ef374da2f53fde63be220, type: 3}
+  PrefabAbility: {fileID: 8423906441426542539, guid: 1d3e49fc87b23e84e9564b704db954dd, type: 3}

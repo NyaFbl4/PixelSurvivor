@@ -18,14 +18,16 @@ namespace PixelSurvivor
         [SerializeField] private int _maxPlayerAbilities;
         
         //[SerializeField] private List<Upgrade> _playerAbilities;
-        [SerializeField] private List<Upgrade> _upgradesPool;
+        [SerializeField] private List<GameObject> _upgradesPool;
 
         [SerializeField] private AbilityPopupProvider _popupProvider;
 
         private void GetRandomAbilities(int count)
         {
+            var abilityPool = _abilityManager.GetAbilitiesPool();
+            
             // Проверяем, что список не пуст и количество запрашиваемых элементов не превышает размер списка
-            if (_abilityPool.Count == 0 || count <= 0 || count > _abilityPool.Count)
+            if (abilityPool.Count == 0 || count <= 0 || count > abilityPool.Count)
             {
                 Debug.LogWarning("Невозможно получить случайные способности.");
                 return;
@@ -38,7 +40,7 @@ namespace PixelSurvivor
             while (randomIndices.Count < count)
             {
                 // Генерируем случайный индекс
-                int randomIndex = rand.Next(_abilityPool.Count);
+                int randomIndex = rand.Next(abilityPool.Count);
                 randomIndices.Add(randomIndex);
             }
 
@@ -48,7 +50,7 @@ namespace PixelSurvivor
             // Добавляем случайные элементы в новый список
             foreach (int index in randomIndices)
             {
-                _upgradesPool.Add(_abilityPool[index]);
+                _upgradesPool.Add(abilityPool[index].PrefabAbility); //.GetComponent<Ability>());
             }
         }
 
@@ -59,16 +61,16 @@ namespace PixelSurvivor
             if (_upgradesPool.Count > 0)
             {
                 Time.timeScale = 0;
-                _uiManager.Show(_upgradesPool, _playerAbilitiesContainer);
+                _uiManager.Show(_upgradesPool, _abilityManager.PlayerAbilitiesContainer);
             }
         }
 
         //ДОБАВЛЕНИЕ СПОСОБНОСТЕЙ ИЛИ ИХ УЛУЧШЕНИЕ
-        public void OnUpgradeApplied(Upgrade appliedUpgrade)
+        public void OnUpgradeApplied(Ability appliedUpgrade)
         {
             _uiManager.Hide();
             
-            _playerAbilities.Add(appliedUpgrade);
+            _abilityManager.AddAbility(appliedUpgrade);
             
             Time.timeScale = 1;
         }
