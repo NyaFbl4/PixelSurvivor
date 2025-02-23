@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using PixelSurvivor.UI;
 using UnityEngine;
 
 namespace PixelSurvivor
@@ -9,9 +10,10 @@ namespace PixelSurvivor
         [SerializeField] private UpgradesManager _upgradesManager;
         [SerializeField] private Transform _container;
 
+        [SerializeField] private AbilityPopupProvider _abilityPopupProvider;
         [SerializeField] private int _maxUpgradeAbility;
         
-        public void Show(List<GameObject> abilities, GameObject playerAbilities)
+        public void Show(List<GameObject> abilities, GameObject playerAbilityContainer)
         {
             gameObject.SetActive(true);
 
@@ -27,7 +29,7 @@ namespace PixelSurvivor
 
                 var upgrade = ability.GetComponent<Upgrade>();
                 
-                ui.Setup(upgrade.title, upgrade.icon, () => OnClickApply(ability, playerAbilities));
+                ui.Setup(upgrade.title, upgrade.icon, () => OnClickApply(ability, playerAbilityContainer));
                 //ui.Setup(upgrades[i].title, upgrades[i].icon, () => OnClickApply(upgrades[i], playerAbilities));
             }
         }
@@ -37,14 +39,13 @@ namespace PixelSurvivor
             gameObject.SetActive(false);
         }
 
-        private void OnClickApply(GameObject ability, GameObject playerAbilities)
+        private void OnClickApply(GameObject ability, GameObject playerAbilityContainer)
         {
             var upgrade = ability.GetComponent<Upgrade>();
             //var upgrade = ability.GetComponent<Upgrade>();
-            upgrade.Apply(playerAbilities);
+            ability = upgrade.Apply(playerAbilityContainer);
             
-            
-            _upgradesManager.OnUpgradeApplied(ability.GetComponent<Ability>());
+            _upgradesManager.OnUpgradeApplied(ability.GetComponent<Ability>(), upgrade.icon);
         }
     }
 }

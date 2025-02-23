@@ -7,7 +7,7 @@ namespace PixelSurvivor
     {
         [SerializeField] private TAbility _abilityPrefab; // Префаб способности
 
-        public override void Apply(GameObject playerAbilities)
+        public override GameObject Apply(GameObject playerAbilities)
         {
             // Ищем способность среди дочерних объектов
             var ability = playerAbilities.GetComponentInChildren<TAbility>();
@@ -23,6 +23,8 @@ namespace PixelSurvivor
                 // Если способность найдена, улучшаем её
                 ability.UpgradeAbility();
             }
+
+            return ability.gameObject;
         }
     }
 }

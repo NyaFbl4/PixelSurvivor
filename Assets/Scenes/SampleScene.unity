@@ -1916,6 +1916,7 @@ MonoBehaviour:
   - {fileID: 2078111343}
   - {fileID: 167332116}
   - {fileID: 2038158181}
+  _activeCooldownObservers: []
 --- !u!1 &559357602
 GameObject:
   m_ObjectHideFlags: 0
@@ -6779,6 +6780,7 @@ MonoBehaviour:
   _upgradeUiPrefab: {fileID: 8434176564959330834, guid: d7eb74ce235d18c4eb618f16fe5a76ff, type: 3}
   _upgradesManager: {fileID: 1963764760}
   _container: {fileID: 536675831641401490}
+  _abilityPopupProvider: {fileID: 0}
   _maxUpgradeAbility: 3
 --- !u!212 &8192630339840711558
 SpriteRenderer:

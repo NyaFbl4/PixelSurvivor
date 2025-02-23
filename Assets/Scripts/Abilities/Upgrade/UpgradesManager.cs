@@ -66,11 +66,13 @@ namespace PixelSurvivor
         }
 
         //ДОБАВЛЕНИЕ СПОСОБНОСТЕЙ ИЛИ ИХ УЛУЧШЕНИЕ
-        public void OnUpgradeApplied(Ability appliedUpgrade)
+        public void OnUpgradeApplied(Ability appliedUpgrade, Sprite icon)
         {
             _uiManager.Hide();
             
             _abilityManager.AddAbility(appliedUpgrade);
+            var popup = _popupProvider.GetAbilityPopup();
+            popup.SetupCooldown(icon, appliedUpgrade);
             
             Time.timeScale = 1;
         }

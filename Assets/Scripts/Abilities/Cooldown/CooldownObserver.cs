@@ -9,31 +9,37 @@ namespace PixelSurvivor
         [SerializeField] public Ability ability; // Ссылка на объект Ability
         //[SerializeField] private Upgrade _config;
         [SerializeField] private CooldownView _view;
-        
-        private void Start()
+
+        public void SetupCooldown(Sprite icon, Ability newAbility)
+        {
+            _view.SetupCooldown(icon);
+            ability = newAbility;
+            StartWork();
+        }
+
+        private void StartWork()
         {
             if (ability != null)
             {
                 ability.OnCooldownChanged += HandleCooldownChanged; // Подписка на событие
                 ability.OnMaxCooldownChanged += HandleMaxCooldownChanged; // Подписка на событие
-                
-                //_view.SetupCooldown(_config.Config);
+                Debug.Log("Подписка выполнена");
+            }
+            else
+            {
+                Debug.LogError("Ability is null!");
             }
         }
-
-        public void SetupCooldown(AbilityConfig config) //, Ability appliedUpgrade)
-        {
-            _view.SetupCooldown(config.Icon);
-            //ability = appliedUpgrade;
-        }
-
+        
         private void HandleCooldownChanged(float currentCooldown)
         {
+            //Debug.Log(currentCooldown);
             _view.UpdateCurrentCooldown(currentCooldown);
         }
 
         private void HandleMaxCooldownChanged(float maxCooldown)
         {
+            //Debug.Log(maxCooldown);
             _view.UpdateMaxCooldown(maxCooldown);
         }
 

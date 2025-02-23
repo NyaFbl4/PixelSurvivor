@@ -6,7 +6,7 @@ namespace PixelSurvivor
     {
         [SerializeField] private Shield _shieldPrefab;
 
-        public override void Apply(GameObject playerAbilities)
+        public override GameObject Apply(GameObject playerAbilities)
         {
             var shield = playerAbilities.GetComponentInChildren<Shield>();
 
@@ -19,6 +19,8 @@ namespace PixelSurvivor
             {
                 shield.UpgradeAbility();
             }
+
+            return shield.gameObject;
         }
     }
 }

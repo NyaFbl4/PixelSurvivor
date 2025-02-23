@@ -7,6 +7,7 @@ namespace PixelSurvivor.UI
     public class AbilityPopupProvider : MonoBehaviour
     {
         [SerializeField] private List<CooldownObserver> _cooldownObservers;
+        [SerializeField] private List<CooldownObserver> _activeCooldownObservers;
 
         public CooldownObserver GetAbilityPopup()
         {
