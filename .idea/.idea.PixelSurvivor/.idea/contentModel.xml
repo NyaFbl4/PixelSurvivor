@@ -1296,6 +1296,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Abilities" t="Include">
+            <e p="AbilitiesUpdater.cs" t="Include" />
             <e p="Ability.cs" t="Include" />
             <e p="AbilityManager.cs" t="Include" />
             <e p="Configs" t="Include">

@@ -22,6 +22,8 @@ namespace PixelSurvivor
 
         [SerializeField] private AbilityPopupProvider _popupProvider;
 
+        [SerializeField] private bool _isActiveAbility;
+
         private void GetRandomAbilities(int count)
         {
             var abilityPool = _abilityManager.GetAbilitiesPool();
@@ -65,14 +67,42 @@ namespace PixelSurvivor
             }
         }
 
+        private bool СheckAbilityStatus(Ability newAbility,List<Ability> playerAbilities)
+        {
+            foreach (var ability in playerAbilities)
+            {
+                // Проверяем, является ли способность нужным типом и активирована ли она
+                if (newAbility.GetType() == ability.GetType())
+                {
+                    return true; // Способность активна
+                }
+            }
+            
+            return false; // Способности нет или она не активна
+        }
+
         //ДОБАВЛЕНИЕ СПОСОБНОСТЕЙ ИЛИ ИХ УЛУЧШЕНИЕ
-        public void OnUpgradeApplied(Ability appliedUpgrade, Sprite icon)
+        public void OnUpgradeApplied(Ability ability, Sprite icon)
         {
             _uiManager.Hide();
             
-            _abilityManager.AddAbility(appliedUpgrade);
-            var popup = _popupProvider.GetAbilityPopup();
-            popup.SetupCooldown(icon, appliedUpgrade);
+            if (!СheckAbilityStatus(ability, _abilityManager.GetPlayerAbilities()))
+            {
+                Debug.Log("false");
+                _abilityManager.AddAbility(ability);
+                
+                var popup = _popupProvider.GetAbilityPopup();
+                popup.SetupCooldown(icon, ability);
+            }
+            else
+            {
+                Debug.Log("true");
+            }
+            
+            //_abilityManager.AddAbility(ability);
+
+            //var popup = _popupProvider.GetAbilityPopup();
+            //popup.SetupCooldown(icon, ability);
             
             Time.timeScale = 1;
         }
