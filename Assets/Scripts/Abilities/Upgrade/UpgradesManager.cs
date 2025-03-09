@@ -82,20 +82,23 @@ namespace PixelSurvivor
         }
 
         //ДОБАВЛЕНИЕ СПОСОБНОСТЕЙ ИЛИ ИХ УЛУЧШЕНИЕ
-        public void OnUpgradeApplied(Ability ability, Sprite icon)
+        public void OnUpgradeApplied(GameObject ability, Sprite icon)
         {
             _uiManager.Hide();
             
-            if (!СheckAbilityStatus(ability, _abilityManager.GetPlayerAbilities()))
+            var newAbility = ability.GetComponentInChildren<Ability>();
+            
+            if (!СheckAbilityStatus(newAbility, _abilityManager.GetPlayerAbilities()))
             {
                 Debug.Log("false");
-                _abilityManager.AddAbility(ability);
+                _abilityManager.AddAbility(newAbility);
                 
                 var popup = _popupProvider.GetAbilityPopup();
-                popup.SetupCooldown(icon, ability);
+                popup.SetupCooldown(icon, newAbility);
             }
             else
             {
+                //ability.
                 Debug.Log("true");
             }
             

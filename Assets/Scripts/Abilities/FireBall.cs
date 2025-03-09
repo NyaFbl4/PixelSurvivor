@@ -44,6 +44,7 @@ namespace PixelSurvivor
         
         public void UpgradeAbility()
         {
+            Debug.Log("upgrade " + gameObject.name);
             _maxCurrentShots++;
         }
 

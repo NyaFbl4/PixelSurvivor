@@ -45,7 +45,7 @@ namespace PixelSurvivor
             //var upgrade = ability.GetComponent<Upgrade>();
             ability = upgrade.Apply(playerAbilityContainer);
             
-            _upgradesManager.OnUpgradeApplied(ability.GetComponent<Ability>(), upgrade.icon);
+            _upgradesManager.OnUpgradeApplied(ability , upgrade.icon);//ability.GetComponent<Ability>(), upgrade.icon);
         }
     }
 }
