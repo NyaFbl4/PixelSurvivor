@@ -50,7 +50,7 @@ namespace PixelSurvivor
             if (health <= 0)
             {
                 GameObject exp = Instantiate(experience, this.gameObject.transform.position, Quaternion.identity);
-                Instantiate(experience);
+                //Instantiate(experience);
             
                 Destroy(gameObject);
             }
