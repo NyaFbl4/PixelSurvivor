@@ -24,8 +24,6 @@ namespace PixelSurvivor
             {
                 StartImmortalStatus(); 
             }
-            
-            Debug.Log(_health);
         }
         
         private void StartImmortalStatus()

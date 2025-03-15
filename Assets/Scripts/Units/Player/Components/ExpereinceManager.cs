@@ -15,14 +15,14 @@ namespace PixelSurvivor
 
         [SerializeField] private ExperienceConfig _config;
 
-        private CurrencyView _view;
-        private ExperienceStorage _storage;
+        private ValueView _view;
+        private CurrentExperienceStorage _storage;
         private IDisposable _disposable;
         
         //[SerializeField] private int[] _experienceLvl;
 
         [Inject]
-        public void Constuct(ExperienceStorage storage)
+        public void Constuct(CurrentExperienceStorage storage)
         {
             _storage = storage;
             //_disposable = storage.Experience.SkipLatestValueOnSubscribe()Subscribe();

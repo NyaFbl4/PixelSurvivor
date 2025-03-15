@@ -3,13 +3,13 @@ using UniRx;
 
 namespace PixelSurvivor
 {
-    public class ExperienceStorage
+    public class CurrentExperienceStorage
     {
         public IReadOnlyReactiveProperty<long> Experience => _experience;
 
         private readonly ReactiveProperty<long> _experience;
         
-        public ExperienceStorage(long experience)
+        public CurrentExperienceStorage(long experience)
         {
             _experience = new LongReactiveProperty(experience);
         }
@@ -18,11 +18,5 @@ namespace PixelSurvivor
         {
             _experience.Value += experience;
         }
-
-        public void SpendMoney(int experience)
-        {
-            _experience.SetValueAndForceNotify(_experience.Value - experience);
-        }
-        
     }
 }

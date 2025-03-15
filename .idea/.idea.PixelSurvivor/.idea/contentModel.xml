@@ -1364,8 +1364,10 @@
             </e>
             <e p="Player" t="Include">
               <e p="ExperienceUI" t="Include">
-                <e p="ExperienceObserver.cs" t="Include" />
-                <e p="ExperienceStorage.cs" t="Include" />
+                <e p="CurrentExperienceObserver.cs" t="Include" />
+                <e p="CurrentExperienceStorage.cs" t="Include" />
+                <e p="MaxExperienceObserver.cs" t="Include" />
+                <e p="MaxExperienceStorage.cs" t="Include" />
               </e>
               <e p="HealthUI" t="Include">
                 <e p="HealthObserver.cs" t="Include" />
@@ -1376,11 +1378,14 @@
                 <e p="ScoreStorage.cs" t="Include" />
               </e>
             </e>
+            <e p="Timer" t="Include">
+              <e p="TimerController.cs" t="Include" />
+            </e>
             <e p="VIew" t="Include">
               <e p="AbilitiesViewProvider.cs" t="Include" />
               <e p="CooldownView.cs" t="Include" />
-              <e p="CurrencyView.cs" t="Include" />
               <e p="CurrencyViewProvider.cs" t="Include" />
+              <e p="ValueView.cs" t="Include" />
             </e>
           </e>
           <e p="Units" t="Include">
@@ -1426,8 +1431,6 @@
                 <e p="ExperienceConfig.cs" t="Include" />
                 <e p="PlayerConfig.cs" t="Include" />
               </e>
-              <e p="PlayerStats.cs" t="Include" />
-              <e p="PlayerStatsController.cs" t="Include" />
             </e>
           </e>
         </e>

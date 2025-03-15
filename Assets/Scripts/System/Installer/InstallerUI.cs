@@ -9,10 +9,13 @@ namespace PixelSurvivor
         
         public override void InstallBindings()
         {
-            var view = FindObjectOfType<CurrencyViewProvider>();
+            var view = FindObjectOfType<ValueViewProvider>();
             
-            ExperienceBind(view.ExperienceView);
-            //HealthBind(view.ExperienceView);
+            CurrentExperienceBind(view.CurrentExperienceView);
+            MaxExperienceBind(view.MaxExperienceView);
+            
+            
+            HealthBind(view.HealthView);
             //ScoreBind(view.ExperienceView);
         }
 
@@ -30,27 +33,42 @@ namespace PixelSurvivor
                 .NonLazy();
         }
         
-        private void ExperienceBind(CurrencyView view)
+        private void CurrentExperienceBind(ValueView view)
         {
             Container
-                .Bind<ExperienceStorage>()
+                .Bind<CurrentExperienceStorage>()
                 .AsSingle()
                 .WithArguments(0L)
                 .NonLazy();
 
             Container
-                .BindInterfacesTo<ExperienceObserver>()
+                .BindInterfacesTo<CurrentExperienceObserver>()
+                .AsSingle()
+                .WithArguments(view)
+                .NonLazy();
+        }
+        
+        private void MaxExperienceBind(ValueView view)
+        {
+            Container
+                .Bind<MaxExperienceStorage>()
+                .AsSingle()
+                .WithArguments(0L)
+                .NonLazy();
+
+            Container
+                .BindInterfacesTo<MaxExperienceObserver>()
                 .AsSingle()
                 .WithArguments(view)
                 .NonLazy();
         }
 
-        private void HealthBind(CurrencyView view)
+        private void HealthBind(ValueView view)
         {
             Container
                 .Bind<HealthStorage>()
                 .AsSingle()
-                .WithArguments(0)
+                .WithArguments(0L)
                 .NonLazy();
 
             Container
@@ -60,7 +78,7 @@ namespace PixelSurvivor
                 .NonLazy();
         }
         
-        private void ScoreBind(CurrencyView view)
+        private void ScoreBind(ValueView view)
         {
             Container
                 .Bind<ScoreStorage>()

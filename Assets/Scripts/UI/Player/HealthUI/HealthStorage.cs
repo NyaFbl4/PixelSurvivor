@@ -1,28 +1,27 @@
 ﻿using System;
+using UniRx;
 
 namespace PixelSurvivor
 {
     public class HealthStorage
     {
-        public event Action<int> OnHealthChanget;
-        
-        public int Health { get; private set; }
+        public IReadOnlyReactiveProperty<long> Health => _health;
 
-        public HealthStorage(int health)
+        private readonly ReactiveProperty<long> _health;
+
+        public HealthStorage(long health)
         {
-            Health = health;
+            _health = new LongReactiveProperty(health);
         }
 
-        public void AddHealth(int health)
+        public void AddHealth(long health)
         {
-            Health += health;
-            OnHealthChanget?.Invoke(Health);
+            _health.Value += health;
         }
 
-        public void SpendHealth(int health)
+        public void SpendHealth(long health)
         {
-            Health -= health;
-            OnHealthChanget?.Invoke(Health);
+            _health.Value -= health;
         }
     }
 }

@@ -1,20 +1,21 @@
 ﻿using System;
 using UniRx;
-using Zenject;
 
 namespace PixelSurvivor
 {
-    public class ExperienceObserver : IDisposable
+    public class CurrentExperienceObserver : IDisposable
     {
-        private readonly CurrencyView _view;
-        private readonly ExperienceStorage _storage;
+        private readonly ValueView _view;
+        private readonly CurrentExperienceStorage _storage;
         private readonly IDisposable _disposable;
 
-        public ExperienceObserver(CurrencyView view, ExperienceStorage storage)
+        public CurrentExperienceObserver(ValueView view, CurrentExperienceStorage storage)
         {
             _view = view;
             _storage = storage;
             _disposable = _storage.Experience.SkipLatestValueOnSubscribe().Subscribe(OnExperienceChanged);
+            
+            OnExperienceChanged(0);
         }
         
         public void Dispose()

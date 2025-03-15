@@ -13,10 +13,10 @@ namespace PixelSurvivor
 
         [SerializeField] private int[] _experienceLvl;
 
-        private ExperienceStorage _storage;
+        private CurrentExperienceStorage _storage;
 
         [Inject]
-        public void Construct(ExperienceStorage storage)
+        public void Construct(CurrentExperienceStorage storage)
         {
             _storage = storage;
             
@@ -35,10 +35,6 @@ namespace PixelSurvivor
                 _lvl = newLvl;
                 LvlUp();
             }
-            
-            //_storage.AddExperience(_experience);
-            
-            //Debug.Log("lvl: " + _lvl.ToString() + " exp: " + _experience.ToString());
         }
 
         [ContextMenu("AddExp")]

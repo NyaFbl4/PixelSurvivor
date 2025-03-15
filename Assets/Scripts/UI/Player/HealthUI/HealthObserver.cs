@@ -1,33 +1,30 @@
 ﻿using System;
+using UniRx;
 using Zenject;
 
 namespace PixelSurvivor
 {
-    public class HealthObserver : IInitializable, IDisposable
+    public class HealthObserver : IDisposable
     {
-        private readonly CurrencyView _view;
+        private readonly ValueView _view;
         private readonly HealthStorage _storage;
+        private readonly IDisposable _disposable;
 
-        public HealthObserver(HealthStorage storage, CurrencyView view)
+        public HealthObserver(ValueView view, HealthStorage storage)
         {
-            _storage = storage;
             _view = view;
-        }
-        
-        public void Initialize()
-        {
-            _storage.OnHealthChanget += OnHealthChanget;
-            _view.SetupCurrency(_storage.Health);
-        }
+            _storage = storage;
+            _disposable = _storage.Health.SkipLatestValueOnSubscribe().Subscribe(OnHealthChanget);
+        }                                 
 
         public void Dispose()
         {
-            _storage.OnHealthChanget -= OnHealthChanget;
+            _disposable.Dispose();
         }
 
-        private void OnHealthChanget(int exp)
+        private void OnHealthChanget(long health)
         {
-            _view.UpdateCurrency(exp);
+            _view.UpdateCurrency(health);
         }
     }
 }

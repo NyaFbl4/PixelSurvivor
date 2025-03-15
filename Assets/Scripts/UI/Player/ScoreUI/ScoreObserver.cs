@@ -5,10 +5,10 @@ namespace PixelSurvivor
 {
     public class ScoreObserver : IInitializable, IDisposable
     {
-    private readonly CurrencyView _view;
+    private readonly ValueView _view;
     private readonly ScoreStorage _storage;
 
-    public ScoreObserver(ScoreStorage storage, CurrencyView view)
+    public ScoreObserver(ScoreStorage storage, ValueView view)
     {
         _storage = storage;
         _view = view;

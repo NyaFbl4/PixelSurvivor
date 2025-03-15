@@ -2,14 +2,20 @@
 
 namespace PixelSurvivor
 {
-    public class CurrencyViewProvider : MonoBehaviour
+    public class ValueViewProvider : MonoBehaviour
     {
-        [SerializeField] private CurrencyView _experienceView;
-        [SerializeField] private CurrencyView _healthView;
-        [SerializeField] private CurrencyView _scoreView;
+        [SerializeField] private ValueView _currenExperienceView;
+        [SerializeField] private ValueView _maxExperienceView;
+        
+        [SerializeField] private ValueView _healthView;
+        [SerializeField] private ValueView _scoreView;
+        [SerializeField] private ValueView _timeView;
 
-        public CurrencyView ExperienceView => _experienceView;
-        public CurrencyView HealthView => _healthView;
-        public CurrencyView ScoreView => _scoreView;
+        public ValueView CurrentExperienceView => _currenExperienceView;
+        public ValueView MaxExperienceView => _maxExperienceView;
+        
+        public ValueView HealthView => _healthView;
+        public ValueView ScoreView => _scoreView;
+        public ValueView TimeView => _timeView;
     }
 }
