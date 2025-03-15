@@ -15,7 +15,7 @@ namespace PixelSurvivor
         
         public void AddMaxExperience(long maxExperience)
         {
-            _maxExperience.Value += maxExperience;
+            _maxExperience.Value = maxExperience;
         }
     }
 }

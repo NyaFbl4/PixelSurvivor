@@ -13,39 +13,39 @@ namespace PixelSurvivor
 
         [SerializeField] private int[] _experienceLvl;
 
-        private CurrentExperienceStorage _storage;
+        private int _newLvl;
+
+        private CurrentExperienceStorage _currentStorage;
+        private MaxExperienceStorage _maxStorage;
 
         [Inject]
-        public void Construct(CurrentExperienceStorage storage)
+        public void Construct(CurrentExperienceStorage currentStorage, MaxExperienceStorage maxStorage)
         {
-            _storage = storage;
+            _currentStorage = currentStorage;
+            _maxStorage = maxStorage;
             
-            _storage.AddExperience(_experience);
+            _currentStorage.AddExperience(_experience);
+            _maxStorage.AddMaxExperience(_experienceLvl[_newLvl + 1]);
         }
         
         public void AddExperience(int newExperience)
         {
-            _storage.AddExperience(newExperience);
+            _currentStorage.AddExperience(newExperience);
             _experience += newExperience;
 
-            var newLvl = Array.FindLastIndex(_experienceLvl, e => _experience >= e);
+            _newLvl = Array.FindLastIndex(_experienceLvl, e => _experience >= e);
 
-            if (newLvl > _lvl)
+            if (_newLvl > _lvl)
             {
-                _lvl = newLvl;
+                _lvl = _newLvl;
                 LvlUp();
             }
-        }
-
-        [ContextMenu("AddExp")]
-        void AddExp()
-        {
-            AddExperience(2);
         }
 
         private void LvlUp()
         {
             _upgradeManager.SuggestUpgrades();
+            _maxStorage.AddMaxExperience(_experienceLvl[_newLvl + 1]);
         }
     }
 }
