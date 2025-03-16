@@ -13,9 +13,8 @@ namespace PixelSurvivor
             
             CurrentExperienceBind(view.CurrentExperienceView);
             MaxExperienceBind(view.MaxExperienceView);
-            
-            
-            HealthBind(view.HealthView);
+
+            //HealthBind(view.HealthView);
             //ScoreBind(view.ExperienceView);
         }
 
@@ -63,7 +62,7 @@ namespace PixelSurvivor
                 .NonLazy();
         }
 
-        private void HealthBind(ValueView view)
+        private void CurrentHealthBind(ValueView view)
         {
             Container
                 .Bind<HealthStorage>()
