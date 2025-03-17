@@ -13,6 +13,9 @@ namespace PixelSurvivor
             
             CurrentExperienceBind(view.CurrentExperienceView);
             MaxExperienceBind(view.MaxExperienceView);
+            
+            CurrentHealthBind(view.CurrentHealthView);
+            MaxHealthBind(view.MaxHealthView);
 
             //HealthBind(view.HealthView);
             //ScoreBind(view.ExperienceView);
@@ -65,13 +68,28 @@ namespace PixelSurvivor
         private void CurrentHealthBind(ValueView view)
         {
             Container
-                .Bind<HealthStorage>()
+                .Bind<CurrentHealthStorage>()
                 .AsSingle()
                 .WithArguments(0L)
                 .NonLazy();
 
             Container
-                .BindInterfacesTo<HealthObserver>()
+                .BindInterfacesTo<CurrentHealthObserver>()
+                .AsSingle()
+                .WithArguments(view)
+                .NonLazy();
+        }
+        
+        private void MaxHealthBind(ValueView view)
+        {
+            Container
+                .Bind<MaxHealthStorage>()
+                .AsSingle()
+                .WithArguments(0L)
+                .NonLazy();
+
+            Container
+                .BindInterfacesTo<MaxHealthObserver>()
                 .AsSingle()
                 .WithArguments(view)
                 .NonLazy();

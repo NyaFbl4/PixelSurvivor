@@ -1370,8 +1370,10 @@
                 <e p="MaxExperienceStorage.cs" t="Include" />
               </e>
               <e p="HealthUI" t="Include">
-                <e p="HealthObserver.cs" t="Include" />
-                <e p="HealthStorage.cs" t="Include" />
+                <e p="CurrentHealthObserver.cs" t="Include" />
+                <e p="CurrentHealthStorage.cs" t="Include" />
+                <e p="MaxHealthObserver.cs" t="Include" />
+                <e p="MaxHealthStorage.cs" t="Include" />
               </e>
               <e p="ScoreUI" t="Include">
                 <e p="ScoreObserver.cs" t="Include" />

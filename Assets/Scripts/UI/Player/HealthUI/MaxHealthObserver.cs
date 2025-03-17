@@ -1,20 +1,20 @@
 ﻿using System;
 using UniRx;
-using Zenject;
+using UnityEngine;
 
 namespace PixelSurvivor
 {
-    public class HealthObserver : IDisposable
+    public class MaxHealthObserver  : IDisposable
     {
         private readonly ValueView _view;
-        private readonly HealthStorage _storage;
+        private readonly MaxHealthStorage _storage;
         private readonly IDisposable _disposable;
 
-        public HealthObserver(ValueView view, HealthStorage storage)
+        public MaxHealthObserver(ValueView view, MaxHealthStorage storage)
         {
             _view = view;
             _storage = storage;
-            _disposable = _storage.Health.SkipLatestValueOnSubscribe().Subscribe(OnHealthChanget);
+            _disposable = _storage.MaxHealth.SkipLatestValueOnSubscribe().Subscribe(OnMaxHealthChanget);
         }                                 
 
         public void Dispose()
@@ -22,7 +22,7 @@ namespace PixelSurvivor
             _disposable.Dispose();
         }
 
-        private void OnHealthChanget(long health)
+        private void OnMaxHealthChanget(long health)
         {
             _view.UpdateCurrency(health);
         }
