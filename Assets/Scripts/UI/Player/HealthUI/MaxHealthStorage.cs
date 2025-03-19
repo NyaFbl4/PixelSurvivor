@@ -13,12 +13,12 @@ namespace PixelSurvivor
             _maxhealth = new LongReactiveProperty(health);
         }
 
-        public void AddCurrentHealth(long health)
+        public void AddMaxHealth(long health)
         {
             _maxhealth.Value += health;
         }
 
-        public void SpendCurrentHealth(long health)
+        public void SpendMaxHealth(long health)
         {
             _maxhealth.Value -= health;
         }
