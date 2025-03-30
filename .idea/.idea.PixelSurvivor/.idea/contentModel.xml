@@ -1397,6 +1397,13 @@
                 <e p="RangetEnemyAnimationController.cs" t="Include" />
               </e>
               <e p="AttackBall.cs" t="Include" />
+              <e p="Bosses" t="Include">
+                <e p="HealthBoss.cs" t="Include" />
+                <e p="MagmaMage" t="Include">
+                  <e p="MagmaMage.cs" t="Include" />
+                  <e p="MagmaMageWalk.cs" t="Include" />
+                </e>
+              </e>
               <e p="EnemyComponent.cs" t="Include" />
               <e p="EnemyController.cs" t="Include" />
               <e p="MiliEnemyController.cs" t="Include" />

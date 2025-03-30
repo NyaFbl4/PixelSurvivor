@@ -64,7 +64,6 @@ namespace PixelSurvivor
                     currentTime -= Time.deltaTime;
                     if (currentTime <= 0)
                     {
-                        //TEst();
                         _enemyAnimationController.Attack();
                         ShootAtTarget(_player);
                         Debug.Log("is attack");
@@ -72,34 +71,6 @@ namespace PixelSurvivor
                     }
                 }
             }
-        }
-        
-        
-        /*
-        private void FollowTarget()
-        {
-            if (_player != null)
-            {
-                Vector3 vector3 = (_player.position - transform.position).normalized;
-                if (vector3.x > 0)
-                {
-                    _sprite.flipX = true;
-                }
-                else if (vector3.x  < 0)
-                {
-                    _sprite.flipX = false;
-                }
-
-                transform.position += vector3 * _moveSpeed * Time.deltaTime;
-            }
-        }
-        */
-
-        private void TEst()
-        {
-            Debug.Log("is attack");
-            _enemyAnimationController.Attack();
-            currentTime = _cooldown;
         }
 
         private void ShootAtTarget(Transform target)

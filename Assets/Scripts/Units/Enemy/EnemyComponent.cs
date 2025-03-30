@@ -39,7 +39,7 @@ namespace PixelSurvivor
             {
                 if (!_enemyAnimationController.isHurt)
                 {
-                    MoveTowardsPlayer();
+                    //MoveTowardsPlayer();
                     FollowTarget();
                 }
             }
