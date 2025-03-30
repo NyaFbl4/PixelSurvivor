@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using Zenject;
 
 namespace PixelSurvivor
 {
@@ -8,6 +9,19 @@ namespace PixelSurvivor
         [SerializeField] private int _health;
         [SerializeField] private bool _isImmortal;
         [SerializeField] private float _immortalDuration;
+
+        private CurrentHealthStorage _currentHealth;
+        private MaxHealthStorage _maxHealth;
+
+        [Inject]
+        public void Construct(MaxHealthStorage maxHealth, CurrentHealthStorage currentHealth)
+        {
+            _maxHealth = maxHealth;
+            _currentHealth = currentHealth;
+            
+            _maxHealth.AddMaxHealth(_health);
+            _currentHealth.AddCurrentHealth(_health);
+        }
         
         public void TakeDamage(int damage)
         {
@@ -22,6 +36,7 @@ namespace PixelSurvivor
             }
             else
             {
+                _currentHealth.SpendCurrentHealth(damage);
                 StartImmortalStatus(); 
             }
         }
