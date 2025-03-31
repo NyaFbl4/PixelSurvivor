@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 public class MagmaMageWalk : StateMachineBehaviour
@@ -14,7 +15,7 @@ public class MagmaMageWalk : StateMachineBehaviour
         Debug.Log("Enter MagmaMageWalk");
         
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        
+
         if (player != null)
         {
             _player = player.transform;
