@@ -837,6 +837,7 @@ GameObject:
   - component: {fileID: 137656242}
   - component: {fileID: 137656241}
   - component: {fileID: 137656240}
+  - component: {fileID: 137656243}
   m_Layer: 0
   m_Name: MageBoss
   m_TagString: Enemy
@@ -987,6 +988,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &137656243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137656236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bf28c3de2fa5c14a9af68bcce1bae76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moveSpeed: 0
+  _damage: 0
+  _shootPoint: {fileID: 754003528}
+  _prefabProjectile: {fileID: 843319842915957324, guid: 04bf8f26500320b4ebd638b13804dddf, type: 3}
+  _projectileSpeed: 1
 --- !u!224 &167332113 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2515761069811716666, guid: 7f52ac1bf1427f740b54b7cf5a7894ca, type: 3}
