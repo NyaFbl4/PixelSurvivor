@@ -1000,9 +1000,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bf28c3de2fa5c14a9af68bcce1bae76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 0
-  _damage: 1
+  _animator: {fileID: 137656241}
   _shootPoint: {fileID: 754003528}
+  _moveSpeed: 1
+  _attackRange: 5
+  _damage: 1
   _prefabProjectile: {fileID: 843319842915957324, guid: 41891aa6b213dd847b284ec5e298c048, type: 3}
   _projectileSpeed: 5
 --- !u!224 &167332113 stripped
