@@ -4,22 +4,38 @@ namespace PixelSurvivor
 {
     public class HealthBoss : MonoBehaviour, IDamage
     {
-        [SerializeField] private int _health;
+        [SerializeField] private int _maxHealth;
+        private int _health;
+        
         [SerializeField] private bool _isImmortalStatus;
+
+        [SerializeField] private int _healthOnSwitchState;
+        
         [SerializeField] private Animator _animator;
 
         private void Start()
         {
             _isImmortalStatus = false;
+            _health = _maxHealth;
         }
 
-        public void SwitchImmortalStatus()
+        public void SwitchImmortalStatus(int i)
         {
-            if (_isImmortalStatus)
+            //_isImmortalStatus = parametr;
+
+            
+            if (i == 1)
             {
                 _isImmortalStatus = false;
-                _animator.SetBool("IsHurt", false);
+                Debug.Log("ImmortalStatus= " + _isImmortalStatus);
+                //_animator.SetTrigger("IsHurt");
             }
+            else if (i == 0)
+            {
+                _isImmortalStatus = true;
+                Debug.Log("ImmortalStatus= " + _isImmortalStatus);
+            }
+            
         }
         
         public void TakeDamage(int damage)
@@ -28,9 +44,22 @@ namespace PixelSurvivor
             {
                 return;
             }
-
-            _animator.SetBool("IsHurt", true);
+            
             _health -= damage;
+            Debug.Log(_health);
+            //_animator.SetTrigger("IsHurt");
+            
+            if (_health <= _healthOnSwitchState )
+            {
+               Debug.Log("SwitchState");
+                _animator.SetTrigger("SwitchState");
+            }
+            else
+            {
+
+                _animator.SetTrigger("IsHurt");
+            }
+
             _isImmortalStatus = true;
         }
     }

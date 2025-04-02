@@ -1396,6 +1396,7 @@
               </e>
               <e p="AttackBall.cs" t="Include" />
               <e p="Bosses" t="Include">
+                <e p="BossHurt.cs" t="Include" />
                 <e p="HealthBoss.cs" t="Include" />
                 <e p="MagmaMage" t="Include">
                   <e p="MagmaMage.cs" t="Include" />
