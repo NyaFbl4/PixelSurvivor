@@ -72,7 +72,7 @@ namespace PixelSurvivor
 
         private void ShootAtTarget(GameObject target)
         {
-            Debug.Log("shoot");
+            //Debug.Log("shoot");
             GameObject projectile = Instantiate(_prefabProjectile, _shootPoint.position, _shootPoint.rotation);
 
             ProjectileStarfall projectileComponent = projectile.GetComponent<ProjectileStarfall>();

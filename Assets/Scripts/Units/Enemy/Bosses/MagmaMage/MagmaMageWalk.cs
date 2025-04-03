@@ -7,7 +7,7 @@ public class MagmaMageWalk : StateMachineBehaviour
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Debug.Log("Enter MagmaMageWalk");
+        //Debug.Log("Enter MagmaMageWalk");
         
         _magmaMageController = animator.GetComponent<MagmaMageController>();
     }
@@ -19,7 +19,6 @@ public class MagmaMageWalk : StateMachineBehaviour
     
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Debug.Log("Exit MagmaMageWalk");
-
+        //Debug.Log("Exit MagmaMageWalk");
     }
 }

@@ -44,7 +44,7 @@ namespace PixelSurvivor
 
         public void TakeDamage()
         {
-            Debug.Log("TakeDamage");
+            //Debug.Log("TakeDamage");
 
             isHurt = true;
             _isMoving = false;

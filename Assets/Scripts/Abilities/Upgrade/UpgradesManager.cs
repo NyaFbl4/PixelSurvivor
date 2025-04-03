@@ -90,7 +90,7 @@ namespace PixelSurvivor
             
             if (!СheckAbilityStatus(newAbility, _abilityManager.GetPlayerAbilities()))
             {
-                Debug.Log("false");
+                //Debug.Log("false");
                 _abilityManager.AddAbility(newAbility);
                 
                 var popup = _popupProvider.GetAbilityPopup();
@@ -99,7 +99,7 @@ namespace PixelSurvivor
             else
             {
                 //ability.
-                Debug.Log("true");
+                //Debug.Log("true");
             }
             
             //_abilityManager.AddAbility(ability);

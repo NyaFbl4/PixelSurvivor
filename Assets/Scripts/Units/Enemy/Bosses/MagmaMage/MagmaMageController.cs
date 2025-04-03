@@ -9,10 +9,13 @@ namespace PixelSurvivor
         [SerializeField] private Animator _animator;
         [SerializeField] private Transform _shootPoint;
         
+        [Header("Параметры босса")]
         [SerializeField] private float _moveSpeed;
         [SerializeField] private float _attackRange;
         [SerializeField] private int _damage;
         
+        [SerializeField] private bool _isInRage;
+
         [SerializeField] private GameObject _prefabProjectile;
         [SerializeField] private float _projectileSpeed;
 
@@ -26,6 +29,9 @@ namespace PixelSurvivor
             {
                 _player = player.transform;
             }
+
+            GetComponent<HealthBoss>().OnRagePhase += EnterRageMode;
+            _isInRage = false;
         }
 
         public void Move()
@@ -40,7 +46,14 @@ namespace PixelSurvivor
             }
             else
             {
-                _animator.SetTrigger("Attack_1");
+                if (!_isInRage)
+                {
+                    _animator.SetTrigger("Attack_2");
+                }
+                else
+                {
+                    _animator.SetTrigger("Attack_3");
+                }
             }
         }
         
@@ -65,6 +78,16 @@ namespace PixelSurvivor
                     projectile.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
                 }
             }
+        }
+
+        private void EnterRageMode(bool isRage)
+        {
+            if (_isInRage)
+            {
+                return;
+            }
+
+            _isInRage = isRage;
         }
     }
 }
