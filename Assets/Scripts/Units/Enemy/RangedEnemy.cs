@@ -42,7 +42,7 @@ namespace PixelSurvivor
             currentTime = _cooldown;
         }
 
-        private void FixedUpdate()
+        public override void Move()
         {
             float distanceToPlayer = Vector2.Distance(transform.position, _player.position);
 

@@ -13,7 +13,7 @@ namespace PixelSurvivor
         [SerializeField] private MiliEnemyAnimationController _enemyAnimationController;
         [SerializeField] private EnemyDamageUI _enemyDamageUI;
 
-        [SerializeField] private bool _isMoving = true;
+        //[SerializeField] private bool _isMoving = true;
 
         private void Start()
         {
@@ -32,9 +32,15 @@ namespace PixelSurvivor
             base.damage = _damage;
             base.enemyAnimationController = _enemyAnimationController;
         }
+
+        public override void Move()
+        {
+            FollowTarget();
+        }
         
         public void FixedUpdate()
         {
+            /*
             if (_isMoving)
             {
                 if (!_enemyAnimationController.isHurt)
@@ -43,6 +49,7 @@ namespace PixelSurvivor
                     FollowTarget();
                 }
             }
+            */
         }
     }
 }

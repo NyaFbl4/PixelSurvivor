@@ -12,8 +12,9 @@ namespace PixelSurvivor
         protected EnemyDamageUI damageUI;
         
         protected IEnemyAnimation enemyAnimationController;
-
-
+        
+        public abstract void Move();
+        
         protected void MoveTowardsPlayer()
         {
             Vector3 vector3 = (player.position - transform.position).normalized;
@@ -26,7 +27,8 @@ namespace PixelSurvivor
             if (player != null)
             {
                 Vector3 vector3 = (player.position - transform.position).normalized;
-                
+
+                /*
                 if (Vector3.Distance(transform.position, player.position) > 0.1f)
                 {
                     enemyAnimationController.SetMoving(true);
@@ -35,7 +37,10 @@ namespace PixelSurvivor
                 {
                     enemyAnimationController.SetMoving(false);
                 }
+                */
 
+                MoveTowardsPlayer();
+                
                 transform.position += vector3 * moveSpeed * Time.deltaTime;
             }
         }
