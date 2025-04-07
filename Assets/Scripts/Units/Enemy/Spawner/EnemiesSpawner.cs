@@ -15,8 +15,7 @@ namespace PixelSurvivor
 
         private Wave CurrentWave => _waves[_waveIndex];
         private bool HasWaves => _waveIndex < _waves.Length;
-        
-        
+
         private Camera mainCamera;
 
         private void Start()
@@ -25,6 +24,17 @@ namespace PixelSurvivor
             StartCoroutine(SpawnWaves());
         }
         
+        private IEnumerator SpawnWaves()
+        {
+            yield return new WaitForSeconds(CurrentWave.SpawnTime);
+            Spawn();
+            
+            _waveIndex++;
+            
+            //StartCoroutine(SpawnWaves());
+        }
+        
+        /*
         private IEnumerator SpawnWaves()
         {
             while (HasWaves)
@@ -46,12 +56,12 @@ namespace PixelSurvivor
                 _waveIndex++;
             }
         }
-        
+        */
 
         private void Spawn()
         {
             int countEnemy = Random.Range(CurrentWave.CountMin, CurrentWave.CountMax);
-            
+            Debug.Log("spawn");
             for (int i = 0; i < countEnemy; i++)
             {
                 Vector3 spawnPosition = GetRandomSpawnPosition();
