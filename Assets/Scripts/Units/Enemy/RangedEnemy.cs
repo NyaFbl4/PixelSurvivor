@@ -50,7 +50,7 @@ namespace PixelSurvivor
             {
                 if (distanceToPlayer > _shootingRange)
                 {
-                    _enemyAnimationController.SetMoving(false);
+                    _enemyAnimationController.SetMoving(true);
                     
                     MoveTowardsPlayer();
                     FollowTarget();

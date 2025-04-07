@@ -35,11 +35,6 @@ namespace PixelSurvivor
                 _animator.SetBool("IsMoving", false);
             }
 
-            if (isHurt)
-            {
-                _animator.SetTrigger("IsHurt");
-            }
-
             if (isAttack)
             {
                 _animator.SetBool("Attack", true);
@@ -52,20 +47,12 @@ namespace PixelSurvivor
 
         public void TakeDamage()
         {
-            Debug.Log("TakeDamage");
+            _animator.SetTrigger("IsHurt");
+            
+            //Debug.Log("TakeDamage");
 
-            isHurt = true;
-            _isMoving = false;
-        }
-
-        public void SetHurt()
-        {
-            _animator.SetBool("IsHurt", false);
-
-            if (isHurt)
-            {
-                isHurt = false;
-            }
+            //isHurt = true;
+            //_isMoving = false;
         }
 
         public void SetMoving(bool isMoving)
