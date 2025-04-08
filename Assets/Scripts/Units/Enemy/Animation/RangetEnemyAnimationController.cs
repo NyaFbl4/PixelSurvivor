@@ -35,6 +35,7 @@ namespace PixelSurvivor
                 _animator.SetBool("IsMoving", false);
             }
 
+            /*
             if (isAttack)
             {
                 _animator.SetBool("Attack", true);
@@ -43,6 +44,7 @@ namespace PixelSurvivor
             {
                 _animator.SetBool("Attack", false);
             }
+            */
         }
 
         public void TakeDamage()

@@ -8,6 +8,7 @@ namespace PixelSurvivor
     {
         [Header("Основные настройки")]
         [SerializeField] private GameObject[] _enemyPrefabsPool;
+        [SerializeField] private GameObject[] _enemyElitePrefabsPool;
         [SerializeField] private float _timeBetweenWaves;
         [SerializeField] private float _spawnRadius;
         [SerializeField] private Transform _player;
@@ -17,8 +18,11 @@ namespace PixelSurvivor
         [SerializeField] private int _startEnemyCount; // Стартовое кол-во врагов
         [SerializeField] private float _enemyCountMultiplier; // Множитель роста кол-ва врагов
         [SerializeField] private float _spawnRateIncrease; // Ускорение спавна (меньше = быстрее)
+        [SerializeField] private float _eliteChanceStart; // Начальный шанс элитных врагов
+        [SerializeField] private float _eliteChanceGrowth; // Рост шанса за волну
 
         private int _currentWave;
+        private float _currentEliteChance;
         private List<GameObject> _aliveEnemies = new();
 
         private void Start()
@@ -43,6 +47,7 @@ namespace PixelSurvivor
                 }
 
                 _currentWave++;
+                _currentEliteChance = Mathf.Min(0.5f, _eliteChanceStart + (_eliteChanceGrowth * _currentWave));
             }
         }
 
@@ -53,8 +58,17 @@ namespace PixelSurvivor
                 return;
             }
 
-            GameObject enemyPrefab = _enemyPrefabsPool[Random.Range(0, _enemyPrefabsPool.Length)];
-
+            GameObject enemyPrefab;
+            
+            if (Random.value < _currentEliteChance)
+            {
+                enemyPrefab = _enemyElitePrefabsPool[Random.Range(0, _enemyPrefabsPool.Length)];
+            }
+            else
+            {
+                enemyPrefab = _enemyPrefabsPool[Random.Range(0, _enemyPrefabsPool.Length)];
+            }
+            
             Vector3 spawnPosition = GetRandomPosition();
             GameObject enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
             _aliveEnemies.Add(enemy);

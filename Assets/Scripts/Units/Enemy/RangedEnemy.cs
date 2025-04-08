@@ -66,7 +66,7 @@ namespace PixelSurvivor
                     {
                         _enemyAnimationController.Attack();
                         ShootAtTarget(_player);
-                        Debug.Log("is attack");
+                        //Debug.Log("is attack");
                         currentTime = _cooldown;
                     }
                 }
