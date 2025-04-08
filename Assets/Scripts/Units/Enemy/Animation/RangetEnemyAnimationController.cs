@@ -65,11 +65,6 @@ namespace PixelSurvivor
             if (isAttack)
             {
                 isAttack = false;
-
-                if (!isAttack)
-                {
-                    Debug.Log("attack false");
-                }
             }
         }
 
@@ -77,9 +72,7 @@ namespace PixelSurvivor
         {
             if (!isAttack)
             {
-                isAttack = true;
-                Debug.Log("attack true");
-            }
+                isAttack = true; }
         }
 
         public void FlipSpriteDirection(Vector3 direction)
