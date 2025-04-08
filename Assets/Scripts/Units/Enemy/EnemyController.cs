@@ -5,6 +5,7 @@ namespace PixelSurvivor
     public abstract class EnemyController : MonoBehaviour, IDamage
     {
         protected Transform player;
+        protected bool elite;
         protected float moveSpeed;
         protected int damage;
         protected int health;
@@ -54,7 +55,15 @@ namespace PixelSurvivor
 
             if (health <= 0)
             {
-                GameObject exp = Instantiate(experience, this.gameObject.transform.position, Quaternion.identity);
+                if (elite)
+                {
+                    for (int i = 0; i < 5; i++)
+                    {
+                        Instantiate(experience, this.gameObject.transform.position, Quaternion.identity);
+                    }
+                }
+                
+                Instantiate(experience, this.gameObject.transform.position, Quaternion.identity);
                 //Instantiate(experience);
             
                 Destroy(gameObject);

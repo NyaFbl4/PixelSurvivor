@@ -72,7 +72,8 @@ namespace PixelSurvivor
         {
             if (!isAttack)
             {
-                isAttack = true; }
+                isAttack = true; 
+            }
         }
 
         public void FlipSpriteDirection(Vector3 direction)

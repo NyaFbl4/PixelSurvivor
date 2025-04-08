@@ -264,9 +264,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 086efeaa0cafc5941bad92b5178e106b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 1
-  _damage: 1
-  _health: 5
+  _elite: 0
+  _moveSpeed: 0.75
+  _damage: 3
+  _health: 25
   _experience: {fileID: 714864797984239362, guid: 25f1cc5b861b1894bad13f2c518968b5, type: 3}
   _player: {fileID: 0}
   _enemyAnimationController: {fileID: 6463604319324470623}

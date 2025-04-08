@@ -5,6 +5,7 @@ namespace PixelSurvivor
 {
     public class EnemyComponent : EnemyController
     {
+        [SerializeField] private bool _elite;
         [SerializeField] private float _moveSpeed;
         [SerializeField] private int _damage = 1;
         [SerializeField] private int _health;
@@ -25,6 +26,7 @@ namespace PixelSurvivor
             }
 
             base.damageUI = _enemyDamageUI;
+            base.elite = _elite;
             base.health = _health;
             base.player = _player;
             base.moveSpeed = _moveSpeed;
