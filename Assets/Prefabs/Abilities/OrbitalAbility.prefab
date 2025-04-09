@@ -60,5 +60,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   title: OrbitalAbility
-  icon: {fileID: 21300000, guid: cbb761af48dc1474080aa158e7610bc2, type: 3}
+  icon: {fileID: 1701999617, guid: 306e312503e39464e875ea78ccb09834, type: 3}
   _abilityPrefab: {fileID: 6456673218857832994}

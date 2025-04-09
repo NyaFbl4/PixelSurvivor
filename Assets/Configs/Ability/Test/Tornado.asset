@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6a37f7a84376e3458d1cd7bc26704e8, type: 3}
   m_Name: Tornado
   m_EditorClassIdentifier: 
-  Icon: {fileID: -1823317737, guid: 8eb3d3c4f504183439525e85361d9aa7, type: 3}
   PrefabAbility: {fileID: 7901159448377992446, guid: c21c5b34124eedc4785e85123817245d, type: 3}

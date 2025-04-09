@@ -59,5 +59,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   title: Tornado
-  icon: {fileID: -156422724, guid: 8eb3d3c4f504183439525e85361d9aa7, type: 3}
+  icon: {fileID: 21300000, guid: 3a784581d96b18941b74701c1bc17b0b, type: 3}
   _abilityPrefab: {fileID: 2138861478376962353}
