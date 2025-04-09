@@ -12,6 +12,7 @@ namespace PixelSurvivor
         
         [SerializeField] private GameObject _playerAbilitiesContainer;
         [SerializeField] private List<Ability> _playerAbilities;
+        [SerializeField] private List<Ability> _playerBuffs;
         [SerializeField] private int _maxPlayerAbilities;
 
         public int MaxPlayerAbilities => _maxPlayerAbilities;
@@ -46,6 +47,16 @@ namespace PixelSurvivor
         public void AddAbility(Ability newAbility)
         {
             _playerAbilities.Add(newAbility);
+        }
+
+        public List<Ability> GetPlayerBuffs()
+        {
+            return _playerBuffs;
+        }
+
+        public void AddBuff(Ability newAbility)
+        {
+            _playerBuffs.Add(newAbility);
         }
     }
 }

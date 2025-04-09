@@ -9,15 +9,10 @@ namespace PixelSurvivor
     {
         [SerializeField] private UpgradesUiManager _uiManager;
         [SerializeField] private AbilityManager _abilityManager;
-        
-        //[SerializeField] private List<Upgrade> _abilityPool;
-
-        //[SerializeField] private GameObject _playerAbilitiesContainer;
 
         [SerializeField] private int _maxRandomAbilities;
         [SerializeField] private int _maxPlayerAbilities;
         
-        //[SerializeField] private List<Upgrade> _playerAbilities;
         [SerializeField] private List<GameObject> _upgradesPool;
 
         [SerializeField] private AbilityPopupProvider _popupProvider;

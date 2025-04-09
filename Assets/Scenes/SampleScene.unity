@@ -722,103 +722,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &325409777
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 536675831641401490}
-    m_Modifications:
-    - target: {fileID: 4133877525570648707, guid: d7eb74ce235d18c4eb618f16fe5a76ff, type: 3}
-      propertyPath: m_Name
-      value: UpdrageUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794836796024115626, guid: d7eb74ce235d18c4eb618f16fe5a76ff, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794836796024115626, guid: d7eb74ce235d18c4eb618f16fe5a76ff, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794836796024115626, guid: d7eb74ce235d18c4eb618f16fe5a76ff, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794836796024115626, guid: d7eb74ce235d18c4eb618f16fe5a76ff, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794836796024115626, guid: d7eb74ce235d18c4eb618f16fe5a76ff, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794836796024115626, guid: d7eb74ce235d18c4eb618f16fe5a76ff, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794836796024115626, guid: d7eb74ce235d18c4eb618f16fe5a76ff, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794836796024115626, guid: d7eb74ce235d18c4eb618f16fe5a76ff, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 600
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794836796024115626, guid: d7eb74ce235d18c4eb618f16fe5a76ff, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794836796024115626, guid: d7eb74ce235d18c4eb618f16fe5a76ff, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794836796024115626, guid: d7eb74ce235d18c4eb618f16fe5a76ff, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794836796024115626, guid: d7eb74ce235d18c4eb618f16fe5a76ff, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794836796024115626, guid: d7eb74ce235d18c4eb618f16fe5a76ff, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794836796024115626, guid: d7eb74ce235d18c4eb618f16fe5a76ff, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794836796024115626, guid: d7eb74ce235d18c4eb618f16fe5a76ff, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794836796024115626, guid: d7eb74ce235d18c4eb618f16fe5a76ff, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 960
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794836796024115626, guid: d7eb74ce235d18c4eb618f16fe5a76ff, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -540.0328
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794836796024115626, guid: d7eb74ce235d18c4eb618f16fe5a76ff, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794836796024115626, guid: d7eb74ce235d18c4eb618f16fe5a76ff, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794836796024115626, guid: d7eb74ce235d18c4eb618f16fe5a76ff, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d7eb74ce235d18c4eb618f16fe5a76ff, type: 3}
 --- !u!1 &353671219
 GameObject:
   m_ObjectHideFlags: 0
@@ -1315,6 +1218,7 @@ MonoBehaviour:
   title: Starfall
   icon: {fileID: -1946607025, guid: 6aec26c705042af42b5a701d490a4cae, type: 3}
   _abilityPrefab: {fileID: 7151775426901217140, guid: 1d5f5042605e3744e9addd2c75f8c3f4, type: 3}
+  _abilityType: 0
 --- !u!1 &481866637
 GameObject:
   m_ObjectHideFlags: 0
@@ -1740,6 +1644,7 @@ MonoBehaviour:
   _gameObjects: []
   _playerAbilitiesContainer: {fileID: 2046016504836868123}
   _playerAbilities: []
+  _playerBuffs: []
   _maxPlayerAbilities: 0
 --- !u!1 &683206218
 GameObject:
@@ -3076,6 +2981,7 @@ MonoBehaviour:
   title: OrbitalAbility
   icon: {fileID: -804685804, guid: 306e312503e39464e875ea78ccb09834, type: 3}
   _abilityPrefab: {fileID: 6456673218857832994, guid: f633f7867c3e0e4418380dba1e579073, type: 3}
+  _abilityType: 0
 --- !u!1 &1053001328
 GameObject:
   m_ObjectHideFlags: 0
@@ -3450,11 +3356,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 552138e1726ac97408811cbf464731fd, type: 3}
---- !u!224 &1207420755 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4794836796024115626, guid: d7eb74ce235d18c4eb618f16fe5a76ff, type: 3}
-  m_PrefabInstance: {fileID: 325409777}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1224120762
 GameObject:
   m_ObjectHideFlags: 0
@@ -23271,6 +23172,7 @@ MonoBehaviour:
   title: Tornado
   icon: {fileID: 21300000, guid: 3a784581d96b18941b74701c1bc17b0b, type: 3}
   _abilityPrefab: {fileID: 2138861478376962353, guid: c21c5b34124eedc4785e85123817245d, type: 3}
+  _abilityType: 0
 --- !u!4 &1228917498
 Transform:
   m_ObjectHideFlags: 0
@@ -23318,6 +23220,7 @@ MonoBehaviour:
   title: SunStrike
   icon: {fileID: 21300000, guid: d787e18d65db6654a94249452309dacf, type: 3}
   _abilityPrefab: {fileID: 8277930772737254269, guid: 1d3e49fc87b23e84e9564b704db954dd, type: 3}
+  _abilityType: 0
 --- !u!4 &1301465867
 Transform:
   m_ObjectHideFlags: 0
@@ -23737,6 +23640,7 @@ MonoBehaviour:
   title: FireBall
   icon: {fileID: 21300000, guid: 592f4439f6eb3714f8d9ce25319243dc, type: 3}
   _abilityPrefab: {fileID: 910057193240064396, guid: 892a22ea4de506e44bdd95d92d1b1c59, type: 3}
+  _abilityType: 0
 --- !u!1 &1533460865
 GameObject:
   m_ObjectHideFlags: 0
@@ -25209,8 +25113,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1207420755}
+  m_Children: []
   m_Father: {fileID: 6299900443260614719}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

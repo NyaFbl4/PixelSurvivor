@@ -1297,6 +1297,7 @@
             <e p="AbilitiesUpdater.cs" t="Include" />
             <e p="Ability.cs" t="Include" />
             <e p="AbilityManager.cs" t="Include" />
+            <e p="AbilityType.cs" t="Include" />
             <e p="Configs" t="Include">
               <e p="AbilityConfig.cs" t="Include" />
               <e p="FireBallConfig.cs" t="Include" />
