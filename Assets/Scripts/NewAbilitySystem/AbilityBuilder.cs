@@ -1,4 +1,6 @@
-﻿namespace PixelSurvivor.NewAbilitySystem
+﻿using UnityEngine;
+
+namespace PixelSurvivor.NewAbilitySystem
 {
     public class AbilityBuilder
     {
@@ -15,7 +17,12 @@
             if (_ability != null)
             {
                  _ability.SetDescription(_abilityConfig.Title, _abilityConfig.IconImage);
-                 _ability.SetCooldown(_abilityConfig.CooldownTime);
+                 _ability.SetCooldownTime(_abilityConfig.CooldownTime);
+                 
+                 //_ability.ChangeCooldownTimer(_abilityConfig.CooldownTime);
+                 _ability.ChangeAbilityState(EAbilityState.Ready);
+                 
+                 Debug.Log(_abilityConfig.CooldownTime);
             }
         }
 

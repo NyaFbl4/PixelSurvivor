@@ -6,6 +6,7 @@ namespace PixelSurvivor
     public class HeathComponent : MonoBehaviour, IDamage
     {
         [SerializeField] private int _health;
+        
         [SerializeField] private GameObject _experience;
 
         public void TakeDamage(int damage)

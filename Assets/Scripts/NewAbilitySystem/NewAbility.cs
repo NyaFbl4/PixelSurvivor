@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace PixelSurvivor.NewAbilitySystem
 {
+    [Serializable]
     public class NewAbility
     {
         [SerializeField] private string _title;
@@ -25,16 +26,12 @@ namespace PixelSurvivor.NewAbilitySystem
             _title = title;
             _iconImage = iconImage;
         }
-
-        public void SetCooldown(float cooldown) => _cooldownTime = cooldown;
         
-        //public void SetCooldownTime(float cooldown) => _cooldownTime = cooldown;
-
+        public float SetCooldownTime(float cooldown) => _cooldownTime = cooldown;
         public void ChangeAbilityState(EAbilityState newState) => _abilityState = newState;
-
         public void ChangeCooldownTimer(float timer)
         {
-            _cooldownTimer = Mathf.Clamp(timer, 0.0f, _cooldownTimer);
+            _cooldownTimer = Mathf.Clamp(timer, 0.0f, _cooldownTime);
             EventChangeCooldownTimer?.Invoke(CooldownTimer, CooldownTime);
         }
 
@@ -44,6 +41,7 @@ namespace PixelSurvivor.NewAbilitySystem
         public virtual void CheckCondition() { }
         public virtual void EventTick(float deltaTick) { }
         public virtual void CancelCast() { }
+        public virtual void Added(GameObject player){}
         
     }
 }

@@ -7,7 +7,7 @@ namespace PixelSurvivor.NewAbilitySystem
     {
         [SerializeField] private AbilityStorage _abilityStorage;
 
-        private List<NewAbility> _abilities;
+        private List<NewAbility> _abilities = new();
         private NewAbility _currentAbility;
 
         private void Start()
@@ -23,13 +23,17 @@ namespace PixelSurvivor.NewAbilitySystem
             switch (_abilities[abilityIndex].AbilityState)
             {
                 case EAbilityState.Ready:
-
+                    
+                    Debug.Log("Ability Ready");
                     _currentAbility = _abilities[abilityIndex];
-                    _currentAbility.StartCast();
+                    _currentAbility.ApplyCast();
                     
                     break;
                 case EAbilityState.Cooldown: 
+                    
+                    Debug.Log("Ability Cooldown");
                     break;
+                
                 default:
                     break;
             }
@@ -37,14 +41,16 @@ namespace PixelSurvivor.NewAbilitySystem
 
         private void Update()
         {
-            foreach (var ability in _abilities)
+            for (int i = 0; i < _abilities.Count; i++)
             {
-                ability.EventTick(Time.deltaTime);
+                _abilities[i].EventTick(Time.deltaTime);
+                
+                OnAbilityActive(i);
             }
 
             if (_currentAbility != null)
             {
-                _currentAbility.ApplyCast();
+                _currentAbility.StartCast();
                 _currentAbility = null;
             }
         }

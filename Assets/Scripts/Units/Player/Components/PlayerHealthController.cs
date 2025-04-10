@@ -41,6 +41,12 @@ namespace PixelSurvivor
             }
         }
         
+        public void AddHealth(int health)
+        {
+            _health += health;
+            //Debug.Log("new Health = " + _health);
+        }
+        
         private void StartImmortalStatus()
         {
             _isImmortal = true;
