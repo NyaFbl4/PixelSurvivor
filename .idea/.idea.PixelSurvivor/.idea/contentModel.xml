@@ -1345,6 +1345,16 @@
             </e>
           </e>
           <e p="ExperiencePickup.cs" t="Include" />
+          <e p="NewAbilitySystem" t="Include">
+            <e p="AbilityBuilder.cs" t="Include" />
+            <e p="AbilityCastHandler.cs" t="Include" />
+            <e p="AbilityHolder.cs" t="Include" />
+            <e p="AbilityStorage.cs" t="Include" />
+            <e p="EAbilityState.cs" t="Include" />
+            <e p="NewAbility.cs" t="Include" />
+            <e p="NewAbilityConfig.cs" t="Include" />
+            <e p="TestAbility.cs" t="Include" />
+          </e>
           <e p="System" t="Include">
             <e p="GameManager" t="Include">
               <e p="GameListeners.cs" t="Include" />

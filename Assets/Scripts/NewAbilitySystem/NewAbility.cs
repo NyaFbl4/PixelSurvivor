@@ -1,0 +1,49 @@
+﻿using System;
+using UnityEngine;
+
+namespace PixelSurvivor.NewAbilitySystem
+{
+    public class NewAbility
+    {
+        [SerializeField] private string _title;
+        [SerializeField] private Sprite _iconImage;
+        [SerializeField] private float _cooldownTime;
+        [SerializeField] private float _cooldownTimer;
+
+        private EAbilityState _abilityState;
+        
+        public string Title => _title;
+        public Sprite IconImage => _iconImage;
+        public float CooldownTime => _cooldownTime;
+        public float CooldownTimer => _cooldownTimer;
+        public EAbilityState AbilityState => _abilityState;
+
+        public event Action<float, float> EventChangeCooldownTimer; 
+        
+        public void SetDescription(string title, Sprite iconImage)
+        {
+            _title = title;
+            _iconImage = iconImage;
+        }
+
+        public void SetCooldown(float cooldown) => _cooldownTime = cooldown;
+        
+        //public void SetCooldownTime(float cooldown) => _cooldownTime = cooldown;
+
+        public void ChangeAbilityState(EAbilityState newState) => _abilityState = newState;
+
+        public void ChangeCooldownTimer(float timer)
+        {
+            _cooldownTimer = Mathf.Clamp(timer, 0.0f, _cooldownTimer);
+            EventChangeCooldownTimer?.Invoke(CooldownTimer, CooldownTime);
+        }
+
+        //начало выполнения способности
+        public virtual void StartCast() { }
+        public virtual void ApplyCast() { }
+        public virtual void CheckCondition() { }
+        public virtual void EventTick(float deltaTick) { }
+        public virtual void CancelCast() { }
+        
+    }
+}
