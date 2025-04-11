@@ -1389,6 +1389,9 @@
                 <e p="MaxHealthObserver.cs" t="Include" />
                 <e p="MaxHealthStorage.cs" t="Include" />
               </e>
+              <e p="NewAbilityUi" t="Include">
+                <e p="AbilitySlotProvider.cs" t="Include" />
+              </e>
               <e p="ScoreUI" t="Include">
                 <e p="ScoreObserver.cs" t="Include" />
                 <e p="ScoreStorage.cs" t="Include" />
