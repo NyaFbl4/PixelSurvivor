@@ -36,13 +36,13 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
         {
             if (AbilityState == EAbilityState.Cooldown)
             {
-                ChangeCooldownTimer(CooldownTime - deltaTick);
+                ChangeCooldownTimer(CooldownTimer - deltaTick);
 
-                //Debug.Log(CooldownTimer);
+               // Debug.Log(CooldownTimer);
                 
                 if (CooldownTimer <= 0.0f)
                 {
-                    //Debug.Log(EAbilityState.Ready);
+                    Debug.Log(EAbilityState.Ready);
                     
                     ChangeAbilityState(EAbilityState.Ready);
                 }

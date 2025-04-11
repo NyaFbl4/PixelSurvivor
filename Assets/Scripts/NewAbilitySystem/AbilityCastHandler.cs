@@ -39,9 +39,9 @@ namespace PixelSurvivor.NewAbilitySystem
             }
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
-            for (int i = 0; i < _abilities.Count; i++)
+            for (int i = 0; i < _abilities.Count; ++i)
             {
                 _abilities[i].EventTick(Time.deltaTime);
                 
@@ -52,6 +52,8 @@ namespace PixelSurvivor.NewAbilitySystem
             {
                 _currentAbility.StartCast();
                 _currentAbility = null;
+                
+                return;
             }
         }
     }
