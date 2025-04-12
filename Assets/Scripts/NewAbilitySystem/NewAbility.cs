@@ -38,10 +38,10 @@ namespace PixelSurvivor.NewAbilitySystem
         //начало выполнения способности
         public virtual void StartCast() { }
         public virtual void ApplyCast() { }
-        public virtual void CheckCondition() { }
         public virtual void EventTick(float deltaTick) { }
         public virtual void CancelCast() { }
-        public virtual void Added(GameObject player){}
+        public virtual void Added(GameObject player) { }
+        public virtual void UpgradeAbility() { }
         
     }
 }

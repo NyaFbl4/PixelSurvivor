@@ -1,0 +1,28 @@
+﻿using UnityEngine;
+
+namespace PixelSurvivor.NewAbilitySystem.Ability
+{
+    [CreateAssetMenu(menuName = "Game/Abilities/FireBall", fileName = "FireBall ")]
+    public class FireBallConfig : NewAbilityConfig
+    {
+        //[SerializeField] private TargetTrackerComponent _targetTrackerComponent;
+        [SerializeField] private GameObject _prefabProjectile;
+        [SerializeField] private int _damage;
+        [SerializeField] private int _maxCurrentShot;
+        [SerializeField] private int _currentProjectile;
+        [SerializeField] private float _speedProjectile;
+
+        //public TargetTrackerComponent TargetTrackerComponent => _targetTrackerComponent;
+        public GameObject PrefabProjectile => _prefabProjectile;
+        public int Damage => _damage;
+        public int MaxCurrentShot => _maxCurrentShot;
+        public int CurrentProjectile => _currentProjectile;
+        public float SpeedProjectile => _speedProjectile;
+        //public float Cooldown => _cooldown;
+
+        public override AbilityBuilder GetBuilder()
+        {
+            return new FireBallBuilder(this);
+        }
+    }
+}

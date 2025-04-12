@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Public\Repos\PixelSurvivor" t="IncludeRecursive">
+    <e p="C:\Users\lomok\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\lomok\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_PixelSurvivor.477800879.00" t="ExcludeRecursive" />
+    <e p="C:\Users\lomok\Desktop\Unity\Проекты\PixelSurvivor" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -1347,9 +1349,16 @@
           <e p="ExperiencePickup.cs" t="Include" />
           <e p="NewAbilitySystem" t="Include">
             <e p="Ability" t="Include">
-              <e p="HealthAbility.cs" t="Include" />
-              <e p="HealthBuilder.cs" t="Include" />
-              <e p="HealthConfig.cs" t="Include" />
+              <e p="FireBall" t="Include">
+                <e p="FireBallAbility.cs" t="Include" />
+                <e p="FireBallBuilder.cs" t="Include" />
+                <e p="FireBallConfig.cs" t="Include" />
+              </e>
+              <e p="Health" t="Include">
+                <e p="HealthAbility.cs" t="Include" />
+                <e p="HealthBuilder.cs" t="Include" />
+                <e p="HealthConfig.cs" t="Include" />
+              </e>
             </e>
             <e p="AbilityBuilder.cs" t="Include" />
             <e p="AbilityCastHandler.cs" t="Include" />
@@ -1390,7 +1399,8 @@
                 <e p="MaxHealthStorage.cs" t="Include" />
               </e>
               <e p="NewAbilityUi" t="Include">
-                <e p="AbilitySlotProvider.cs" t="Include" />
+                <e p="AbilitySlotPopup.cs" t="Include" />
+                <e p="AbilitySlotsProvoder.cs" t="Include" />
               </e>
               <e p="ScoreUI" t="Include">
                 <e p="ScoreObserver.cs" t="Include" />
@@ -1557,7 +1567,5 @@
       <e p="Zenject-UnitTests-Editor.csproj" t="IncludeRecursive" />
       <e p="Zenject.csproj" t="IncludeRecursive" />
     </e>
-    <e p="C:\Users\Никита\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Никита\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_PixelSurvivor.133610107.00" t="ExcludeRecursive" />
   </component>
 </project>

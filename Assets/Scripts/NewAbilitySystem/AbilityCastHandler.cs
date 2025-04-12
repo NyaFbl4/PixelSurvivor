@@ -1,19 +1,40 @@
 ﻿using System.Collections.Generic;
+using PixelSurvivor.UI.Player.NewAbilityUi;
+using Sirenix.OdinInspector;
 using UnityEngine;
+using Zenject;
 
 namespace PixelSurvivor.NewAbilitySystem
 {
     public class AbilityCastHandler : MonoBehaviour
     {
-        [SerializeField] private AbilityStorage _abilityStorage;
+        //[SerializeField] private AbilityStorage _abilityStorage;
 
-        private List<NewAbility> _abilities = new();
+        [SerializeField] private AbilitySlotsProvoder _slotsProvoder;
+        
+        [SerializeField] private List<NewAbility> _abilities = new();
         private NewAbility _currentAbility;
 
         private void Start()
         {
-            _abilityStorage.Init();
-            _abilities.AddRange(_abilityStorage.GetAbilities());
+            //_abilityStorage.Init();
+            //_abilities.AddRange(_abilityStorage.GetAbilities());
+        }
+
+        //[Inject]
+        public void Construct(AbilitySlotsProvoder slotsProvoder)
+        {
+            _slotsProvoder = slotsProvoder;
+            
+            //_abilityStorage.Init();
+            //_abilities.AddRange(_abilityStorage.GetAbilities());
+        }
+
+        [Button]
+        public void TakeNewAbility(NewAbility newAbility)
+        {
+            _abilities.Add(newAbility);
+            _slotsProvoder.TakeNewAbility(newAbility);
         }
 
         public void OnAbilityActive(int abilityIndex)

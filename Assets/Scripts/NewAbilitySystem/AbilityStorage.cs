@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace PixelSurvivor.NewAbilitySystem
@@ -7,22 +8,12 @@ namespace PixelSurvivor.NewAbilitySystem
     {
         [SerializeField] private List<NewAbilityConfig> _abilityConfigs = new();
         [SerializeField] private GameObject _player;
+        [SerializeField] private AbilityCastHandler _castHandler;
         
         [SerializeField] private List<NewAbility> _abilities = new();
 
         public void Init()
         {
-            /*
-            foreach (var abilityConfig in _abilityConfigs)
-            {
-                var builder = abilityConfig.GetBuilder();
-                builder.Make();
-                
-                
-                _abilities.Add(builder.GetResult());
-            }
-            */
-            
             for (int i = 0; i < _abilityConfigs.Count; ++i)
             {
                 var builder = _abilityConfigs[i].GetBuilder();
@@ -32,10 +23,21 @@ namespace PixelSurvivor.NewAbilitySystem
 
                 ability.Added(_player);
 
-
                 _abilities.Add(ability);
             }
+        }
 
+        [Button]
+        public void AddAbility(NewAbilityConfig newAbility)
+        {
+            var builder = newAbility.GetBuilder();
+
+            builder.Make();
+            var ability = builder.GetResult();
+
+            ability.Added(_player);
+            _abilities.Add(ability);
+            _castHandler.TakeNewAbility(ability);
         }
 
         public List<NewAbility> GetAbilities() => _abilities;

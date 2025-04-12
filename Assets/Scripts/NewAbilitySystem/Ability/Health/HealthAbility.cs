@@ -26,7 +26,6 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
             if (_player != null)
             {
                 _player.GetComponent<PlayerHealthController>().AddHealth(_healthCount);
-                
                 ChangeCooldownTimer(CooldownTime);
                 ChangeAbilityState(EAbilityState.Cooldown);
             }
@@ -38,8 +37,6 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
             {
                 ChangeCooldownTimer(CooldownTimer - deltaTick);
 
-               // Debug.Log(CooldownTimer);
-                
                 if (CooldownTimer <= 0.0f)
                 {
                     Debug.Log(EAbilityState.Ready);

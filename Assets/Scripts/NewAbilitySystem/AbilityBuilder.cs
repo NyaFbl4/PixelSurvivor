@@ -22,7 +22,7 @@ namespace PixelSurvivor.NewAbilitySystem
                  //_ability.ChangeCooldownTimer(_abilityConfig.CooldownTime);
                  _ability.ChangeAbilityState(EAbilityState.Ready);
                  
-                 Debug.Log(_abilityConfig.CooldownTime);
+                 //Debug.Log(_abilityConfig.CooldownTime);
             }
         }
 

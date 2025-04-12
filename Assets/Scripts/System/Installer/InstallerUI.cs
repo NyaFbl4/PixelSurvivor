@@ -1,10 +1,12 @@
-﻿using UnityEngine;
+﻿using PixelSurvivor.UI.Player.NewAbilityUi;
+using UnityEngine;
 using Zenject;
 
 namespace PixelSurvivor
 {
     public class InstallerUI : MonoInstaller
     {
+        [SerializeField] private AbilitySlotsProvoder _abilitySlotsProvoder;
         [SerializeField] private CooldownView _cooldownView;
         
         public override void InstallBindings()
@@ -21,6 +23,14 @@ namespace PixelSurvivor
             //ScoreBind(view.ExperienceView);
         }
 
+        private void AbilitiesBind()
+        {
+            Container
+                .Bind<AbilitySlotsProvoder>()
+                .FromInstance(_abilitySlotsProvoder)
+                .AsSingle();
+        }
+        
         private void CooldownBind()
         {
             Container
