@@ -22,13 +22,12 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
             _maxCurrentShots  = maxCurrentShots;
             _projectileSpeed  = projectileSpeed;
         }
-
-        public void Update()
-        {
-            //получаем таргет или при каждом спользовании способности 
-            //_targetTracker = _player.GetComponent<TargetTrackerComponent>();
-        }
         
+        public override void UpgradeAbility()
+        {
+            Debug.Log("Upgrade FireBallAbility");
+        }
+
         public override void Added(GameObject player)
         {
             _player = player;

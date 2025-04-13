@@ -13,6 +13,7 @@ namespace PixelSurvivor
         [SerializeField] private AbilityPopupProvider _abilityPopupProvider;
         [SerializeField] private int _maxUpgradeAbility;
         
+        //public void Show(List<GameObject> abilities, GameObject playerAbilityContainer)
         public void Show(List<GameObject> abilities, GameObject playerAbilityContainer)
         {
             gameObject.SetActive(true);

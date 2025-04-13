@@ -2,7 +2,7 @@
 using PixelSurvivor.NewAbilitySystem;
 using UnityEngine;
 
-namespace PixelSurvivor.UI.Player.NewAbilityUi
+namespace PixelSurvivor.NewAbilitySystem.UI
 {
     public class AbilitySlotsProvoder : MonoBehaviour
     {

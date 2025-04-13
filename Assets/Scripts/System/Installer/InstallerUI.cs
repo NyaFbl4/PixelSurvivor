@@ -1,4 +1,4 @@
-﻿using PixelSurvivor.UI.Player.NewAbilityUi;
+﻿using PixelSurvivor.NewAbilitySystem.UI;
 using UnityEngine;
 using Zenject;
 

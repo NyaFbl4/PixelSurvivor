@@ -2,7 +2,7 @@
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace PixelSurvivor.UI.Player.NewAbilityUi
+namespace PixelSurvivor.NewAbilitySystem.UI
 {
     public class AbilitySlotPopup : MonoBehaviour //, IPointerEnterHandler, IPointerExitHandler
     {
@@ -10,8 +10,7 @@ namespace PixelSurvivor.UI.Player.NewAbilityUi
         [SerializeField] private Image _displayImage; 
         [SerializeField] private Image _cooldownImage; 
         //[SerializeField] private GameObject _borderImage;
-
-        public void Show() => _rootObject.SetActive(true);
+        
         public void SetDisplayImage(Sprite displayImage) => _displayImage.sprite = displayImage;
 
         public void SetCooldown(float current, float max)
@@ -24,22 +23,8 @@ namespace PixelSurvivor.UI.Player.NewAbilityUi
             {
                 _cooldownImage.fillAmount = current / max;
             }
-            
-            
         }
         
         public void Hide() => _rootObject.SetActive(false);
-        
-        /*
-        public void OnPointerEnter(PointerEventData eventData)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void OnPointerExit(PointerEventData eventData)
-        {
-            throw new System.NotImplementedException();
-        }
-        */
     }
 }

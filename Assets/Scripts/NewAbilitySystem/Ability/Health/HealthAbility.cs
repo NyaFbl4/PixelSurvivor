@@ -16,6 +16,11 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
             _healthCount = healthCount;
         }
 
+        public override void UpgradeAbility()
+        {
+            Debug.Log("Upgrade HealthAbility");
+        }
+
         public override void Added(GameObject player)
         {
             _player = player;

@@ -1368,6 +1368,20 @@
             <e p="NewAbility.cs" t="Include" />
             <e p="NewAbilityConfig.cs" t="Include" />
             <e p="TestAbility.cs" t="Include" />
+            <e p="UI" t="Include">
+              <e p="AbilitySlot" t="Include">
+                <e p="AbilitySlotPopup.cs" t="Include" />
+                <e p="AbilitySlotsProvoder.cs" t="Include" />
+              </e>
+              <e p="AbilityUpgrade" t="Include">
+                <e p="AbilityUpgradeManager.cs" t="Include" />
+                <e p="AbilityUpgradePopup.cs" t="Include" />
+                <e p="AbilityUpgradeUIProvider.cs" t="Include" />
+              </e>
+            </e>
+            <e p="UpgradeSystem" t="Include">
+              <e p="NewUpgradesManager.cs" t="Include" />
+            </e>
           </e>
           <e p="System" t="Include">
             <e p="GameManager" t="Include">
@@ -1397,10 +1411,6 @@
                 <e p="CurrentHealthStorage.cs" t="Include" />
                 <e p="MaxHealthObserver.cs" t="Include" />
                 <e p="MaxHealthStorage.cs" t="Include" />
-              </e>
-              <e p="NewAbilityUi" t="Include">
-                <e p="AbilitySlotPopup.cs" t="Include" />
-                <e p="AbilitySlotsProvoder.cs" t="Include" />
               </e>
               <e p="ScoreUI" t="Include">
                 <e p="ScoreObserver.cs" t="Include" />
