@@ -25,6 +25,7 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
         
         public override void UpgradeAbility()
         {
+            _maxCurrentShots++;
             Debug.Log("Upgrade FireBallAbility");
         }
 

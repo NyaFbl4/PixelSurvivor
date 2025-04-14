@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -7,9 +9,10 @@ namespace PixelSurvivor.NewAbilitySystem
     public class AbilityStorage : MonoBehaviour
     {
         [SerializeField] private List<NewAbilityConfig> _abilityConfigs = new();
-        
-        [SerializeField] private List<NewAbility> _playerAbilities = new();
         [SerializeField] private List<NewAbilityConfig> _playerAbilitiesConfigs = new();
+        [SerializeField] private List<NewAbility> _playerAbilities = new();
+
+                         private Dictionary<Type, NewAbility> _playerAbilitiesDict = new();
         
         [SerializeField] private GameObject _player;
         [SerializeField] private AbilityCastHandler _castHandler;
@@ -17,34 +20,85 @@ namespace PixelSurvivor.NewAbilitySystem
         [Button]
         public void AddAbility(NewAbilityConfig newAbility)
         {
+            /*
             var builder = newAbility.GetBuilder();
             builder.Make();
 
-            if (СheckAbilityStatus(newAbility))
+            var ability = builder.GetResult();
+            ability.Added(_player);
+            _playerAbilities.Add(ability);
+            _playerAbilitiesConfigs.Add(newAbility);
+            _castHandler.TakeNewAbility(ability);
+            */
+            
+            // Проверяем, есть ли уже такая способность у игрока
+            /*
+            NewAbility existingAbility = _playerAbilities.FirstOrDefault(ability => 
+                ability.GetType().Name == newAbility.GetBuilder().GetResult().GetType().Name
+            );
+
+            if (existingAbility != null)
             {
+                // Если способность уже есть - апгрейдим её
+                existingAbility.UpgradeAbility();
+                Debug.Log($"Способность {existingAbility.GetType().Name} улучшена!");
+            }
+            else
+            {
+                // Если способности нет - создаём новую
+                var builder = newAbility.GetBuilder();
+                builder.Make();
+
                 var ability = builder.GetResult();
                 ability.Added(_player);
                 _playerAbilities.Add(ability);
                 _playerAbilitiesConfigs.Add(newAbility);
                 _castHandler.TakeNewAbility(ability);
+                Debug.Log($"Добавлена новая способность: {ability.GetType().Name}");
+            }
+            */
+            
+            var builder = newAbility.GetBuilder();
+            builder.Make();
+            var newAbilityInstance = builder.GetResult();
+
+            if (_playerAbilitiesDict.TryGetValue(newAbilityInstance.GetType(), out var existingAbility))
+            {
+                existingAbility.UpgradeAbility();
+            }
+            else
+            {
+                newAbilityInstance.Added(_player);
+                _playerAbilitiesDict.Add(newAbilityInstance.GetType(), newAbilityInstance);
+                _castHandler.TakeNewAbility(newAbilityInstance);
             }
         }
 
         public List<NewAbilityConfig> GetAbilities => _abilityConfigs;
         public List<NewAbility> GetPlayerAbilities() => _playerAbilities;
-        //public List<NewAbilityConfig> GetAbilities() => _playerAbilitiesConfigs;
-        
-        private bool СheckAbilityStatus(NewAbilityConfig newAbility)
+
+        private void СheckAbilityStatus(NewAbilityConfig newAbility)
         {
             foreach (var ability in _playerAbilitiesConfigs)
             {
                 if (newAbility.GetType() == ability.GetType())
                 {
-                    return true;
+
+                    //return true;
                 }
             }
-
-            return false;
+                        
+            var builder = newAbility.GetBuilder();
+            builder.Make();
+            
+            var _ability = builder.GetResult();
+            _ability.Added(_player);
+            _playerAbilities.Add(_ability);
+            _castHandler.TakeNewAbility(_ability);
+            
+            _playerAbilitiesConfigs.Add(newAbility);
+            
+            //return false;
         }
     }
 }

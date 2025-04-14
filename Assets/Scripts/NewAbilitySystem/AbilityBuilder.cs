@@ -19,10 +19,7 @@ namespace PixelSurvivor.NewAbilitySystem
                  _ability.SetDescription(_abilityConfig.Title, _abilityConfig.IconImage);
                  _ability.SetCooldownTime(_abilityConfig.CooldownTime);
                  
-                 //_ability.ChangeCooldownTimer(_abilityConfig.CooldownTime);
                  _ability.ChangeAbilityState(EAbilityState.Ready);
-                 
-                 //Debug.Log(_abilityConfig.CooldownTime);
             }
         }
 
