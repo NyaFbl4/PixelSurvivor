@@ -1376,9 +1376,6 @@
                 <e p="AbilityUpgradeUIProvider.cs" t="Include" />
               </e>
             </e>
-            <e p="UpgradeSystem" t="Include">
-              <e p="NewUpgradesManager.cs" t="Include" />
-            </e>
           </e>
           <e p="System" t="Include">
             <e p="GameManager" t="Include">

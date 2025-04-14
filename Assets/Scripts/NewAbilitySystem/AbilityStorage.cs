@@ -13,38 +13,38 @@ namespace PixelSurvivor.NewAbilitySystem
         
         [SerializeField] private GameObject _player;
         [SerializeField] private AbilityCastHandler _castHandler;
-        
-        /*
-        public void Init()
-        {
-            for (int i = 0; i < _abilityConfigs.Count; ++i)
-            {
-                var builder = _abilityConfigs[i].GetBuilder();
-                builder.Make();
-                
-                var ability = builder.GetResult();
-                ability.Added(_player);
-                _playerAbilities.Add(ability);
-            }
-        }
-        */
 
         [Button]
         public void AddAbility(NewAbilityConfig newAbility)
         {
             var builder = newAbility.GetBuilder();
             builder.Make();
-            
-            var ability = builder.GetResult();
-            ability.Added(_player);
-            _playerAbilities.Add(ability);
-            _playerAbilitiesConfigs.Add(newAbility);
-            _castHandler.TakeNewAbility(ability);
+
+            if (СheckAbilityStatus(newAbility))
+            {
+                var ability = builder.GetResult();
+                ability.Added(_player);
+                _playerAbilities.Add(ability);
+                _playerAbilitiesConfigs.Add(newAbility);
+                _castHandler.TakeNewAbility(ability);
+            }
         }
 
         public List<NewAbilityConfig> GetAbilities => _abilityConfigs;
         public List<NewAbility> GetPlayerAbilities() => _playerAbilities;
         //public List<NewAbilityConfig> GetAbilities() => _playerAbilitiesConfigs;
         
+        private bool СheckAbilityStatus(NewAbilityConfig newAbility)
+        {
+            foreach (var ability in _playerAbilitiesConfigs)
+            {
+                if (newAbility.GetType() == ability.GetType())
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 }
