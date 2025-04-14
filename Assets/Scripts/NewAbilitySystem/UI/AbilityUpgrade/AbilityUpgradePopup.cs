@@ -12,10 +12,11 @@ namespace PixelSurvivor.NewAbilitySystem.UI
         
         private Action _applyAction;
 
-        public void Setup(Sprite displayImage, string title)
+        public void Setup(Sprite displayImage, string title, Action onApply)
         {
             _displayImage.sprite = displayImage;
             _title.text = title;
+            _applyAction = onApply;
         }
         
         public void Apply()

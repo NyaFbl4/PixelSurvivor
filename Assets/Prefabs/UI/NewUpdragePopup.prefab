@@ -1031,8 +1031,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PixelSurvivor.UpgradeUi, Assembly-CSharp
+      - m_Target: {fileID: 4149748536282415876}
+        m_TargetAssemblyTypeName: PixelSurvivor.NewAbilitySystem.UI.AbilityUpgradePopup,
+          Assembly-CSharp
         m_MethodName: Apply
         m_Mode: 1
         m_Arguments:

@@ -10,8 +10,8 @@ namespace PixelSurvivor
         [SerializeField] private UpgradesManager _upgradesManager;
         [SerializeField] private Transform _container;
 
-        [SerializeField] private AbilityPopupProvider _abilityPopupProvider;
-        [SerializeField] private int _maxUpgradeAbility;
+        //[SerializeField] private AbilityPopupProvider _abilityPopupProvider;
+        //[SerializeField] private int _maxUpgradeAbility;
         
         //public void Show(List<GameObject> abilities, GameObject playerAbilityContainer)
         public void Show(List<GameObject> abilities, GameObject playerAbilityContainer)
@@ -24,14 +24,12 @@ namespace PixelSurvivor
             }
             
             foreach (var ability in abilities)
-            //for (int i = 0; i < _maxUpgradeAbility; i++)
             {
                 var ui = Instantiate(_upgradeUiPrefab, _container);
 
                 var upgrade = ability.GetComponent<Upgrade>();
                 
                 ui.Setup(upgrade.title, upgrade.icon, () => OnClickApply(ability, playerAbilityContainer));
-                //ui.Setup(upgrades[i].title, upgrades[i].icon, () => OnClickApply(upgrades[i], playerAbilities));
             }
         }
 
