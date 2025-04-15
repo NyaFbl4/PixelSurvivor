@@ -15,4 +15,5 @@ MonoBehaviour:
   _title: Health
   _iconImage: {fileID: 21300000, guid: 88335979ae76ac04ca6ed67763ee4149, type: 3}
   _cooldownTime: 5
+  _abilityType: 1
   _health: 1

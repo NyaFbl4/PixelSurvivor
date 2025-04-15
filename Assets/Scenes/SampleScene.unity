@@ -23461,6 +23461,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1306195473}
   - component: {fileID: 1306195474}
+  - component: {fileID: 1306195475}
   m_Layer: 0
   m_Name: NewUpgradeAbilityManager
   m_TagString: Untagged
@@ -23496,10 +23497,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _uiProvider: {fileID: 1709933374}
-  _abilityStorage: {fileID: 6717109342774324045}
+  _abilityStorage: {fileID: 1306195475}
   _maxRandomAbilities: 3
   _maxPlayerAbilities: 10
   _upgradesPool: []
+--- !u!114 &1306195475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306195472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d39f503acabc1c41b5c76b11818aea1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _abilityConfigs:
+  - {fileID: 11400000, guid: cdb0e7b095144be4d947ef8a34217a8b, type: 2}
+  - {fileID: 11400000, guid: 5e0da85b59dc8e641a803e9b7f4a6fd6, type: 2}
+  - {fileID: 11400000, guid: c99c37b38b292bd41a1cef111e062385, type: 2}
+  _playerAbilitiesConfigs: []
+  _playerAbilities: []
+  _player: {fileID: 3019011675523655735}
+  _castHandler: {fileID: 6717109342774324044}
 --- !u!224 &1356641941 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2515761069811716666, guid: 7f52ac1bf1427f740b54b7cf5a7894ca, type: 3}
@@ -25801,7 +25822,6 @@ GameObject:
   - component: {fileID: 3743364251743011180}
   - component: {fileID: 296006697078464166}
   - component: {fileID: 6717109342774324046}
-  - component: {fileID: 6717109342774324045}
   - component: {fileID: 6717109342774324044}
   m_Layer: 0
   m_Name: Player
@@ -26160,25 +26180,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _slotsProvoder: {fileID: 841572902}
---- !u!114 &6717109342774324045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3019011675523655735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d39f503acabc1c41b5c76b11818aea1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _abilityConfigs:
-  - {fileID: 11400000, guid: 5e0da85b59dc8e641a803e9b7f4a6fd6, type: 2}
-  - {fileID: 11400000, guid: cdb0e7b095144be4d947ef8a34217a8b, type: 2}
-  _playerAbilitiesConfigs: []
-  _playerAbilities: []
-  _player: {fileID: 3019011675523655735}
-  _castHandler: {fileID: 6717109342774324044}
 --- !u!114 &6717109342774324046
 MonoBehaviour:
   m_ObjectHideFlags: 0

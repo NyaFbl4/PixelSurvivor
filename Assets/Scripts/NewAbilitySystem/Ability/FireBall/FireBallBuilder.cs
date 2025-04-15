@@ -11,9 +11,9 @@
         
         public override void Make()
         {
-            _ability = new FireBallAbility(_config.PrefabProjectile, 
-                _config.Damage, _config.MaxCurrentShot, 
-                _config.SpeedProjectile);
+            _ability = new FireBallAbility(_config.AbilityType,
+                _config.PrefabProjectile, _config.Damage, 
+                _config.MaxCurrentShot, _config.SpeedProjectile);
             
             base.Make();
         }

@@ -3,9 +3,10 @@ using UnityEngine;
 
 namespace PixelSurvivor.NewAbilitySystem.Ability
 {
-    public class FireBallAbility : NewAbility
+    public class StarfallAbility : NewAbility
     {
         private GameObject _player;
+        
         private TargetTrackerComponent _targetTracker;
         private List<GameObject> _targets;
         
@@ -13,38 +14,42 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
         private GameObject _prefabProjectile;
         private int _projectileDamage;
         private int _maxCurrentShots;
+        private int _ricochetShots;
         private float _projectileSpeed;
 
-        public FireBallAbility(AbilityType abilityType, GameObject prefabProjectile, 
-            int projectileDamage, int maxCurrentShots, float projectileSpeed)
+
+        public StarfallAbility(AbilityType abilityType, 
+            GameObject prefabProjectile, int projectileDamage, 
+            int maxCurrentShots, int ricochetShots, 
+            float projectileSpeed)
         {
-            _abilityType      = abilityType;
+            _abilityType = abilityType;
             _prefabProjectile = prefabProjectile;
             _projectileDamage = projectileDamage;
-            _maxCurrentShots  = maxCurrentShots;
-            _projectileSpeed  = projectileSpeed;
+            _maxCurrentShots = maxCurrentShots;
+            _ricochetShots = ricochetShots;
+            _projectileSpeed = projectileSpeed;
         }
         
         public override void UpgradeAbility()
         {
+            Debug.Log("Upgrade StarfallAbility");
             _maxCurrentShots++;
-            Debug.Log("Upgrade FireBallAbility");
         }
-
+        
         public override void Added(GameObject player)
         {
             _player = player;
             
             _targetTracker = _player.GetComponent<TargetTrackerComponent>();
         }
-
+        
         public override void ApplyCast()
         {
             int shotsFired = 0;
-            
-            //_targetTracker.GetCurrentTargets();
 
             _targets = _targetTracker.GetCurrentTargets();
+            
             if (_targets != null)
             {
                 foreach (var target in _targets)
@@ -80,22 +85,23 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
         
         private void ShootAtTarget(GameObject target)
         {
+            //Debug.Log("shoot");
             GameObject projectile = Object.Instantiate(_prefabProjectile, 
                 _player.transform.position, _player.transform.rotation);
 
-            ProjectileFireBall projectileComponent = projectile.GetComponent<ProjectileFireBall>();
+            ProjectileStarfall projectileComponent = projectile.GetComponent<ProjectileStarfall>();
 
-            _targetTracker.GetFirstTarget();
-            
             if (projectileComponent != null)
             {
-                projectileComponent.SetDamage(_projectileDamage);
-
+                //projectileComponent.SetDamage(_projectileDamage);
+                //projectileComponent.SetRicochetShots(_ricochetShots);
+                projectileComponent.SetParamets(_projectileDamage, _ricochetShots, _projectileSpeed);
                 Rigidbody2D projectileRb = projectile.GetComponent<Rigidbody2D>();
 
                 if (projectileRb != null)
                 {
-                    Vector2 direction = (target.transform.position - _player.transform.position).normalized;
+                    Vector2 direction = (target.transform.position - 
+                                         _player.transform.position).normalized;
                     projectileRb.velocity = direction * _projectileSpeed;
                     
                     float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; // Получаем угол

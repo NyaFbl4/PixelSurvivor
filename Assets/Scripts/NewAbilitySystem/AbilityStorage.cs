@@ -20,44 +20,6 @@ namespace PixelSurvivor.NewAbilitySystem
         [Button]
         public void AddAbility(NewAbilityConfig newAbility)
         {
-            /*
-            var builder = newAbility.GetBuilder();
-            builder.Make();
-
-            var ability = builder.GetResult();
-            ability.Added(_player);
-            _playerAbilities.Add(ability);
-            _playerAbilitiesConfigs.Add(newAbility);
-            _castHandler.TakeNewAbility(ability);
-            */
-            
-            // Проверяем, есть ли уже такая способность у игрока
-            /*
-            NewAbility existingAbility = _playerAbilities.FirstOrDefault(ability => 
-                ability.GetType().Name == newAbility.GetBuilder().GetResult().GetType().Name
-            );
-
-            if (existingAbility != null)
-            {
-                // Если способность уже есть - апгрейдим её
-                existingAbility.UpgradeAbility();
-                Debug.Log($"Способность {existingAbility.GetType().Name} улучшена!");
-            }
-            else
-            {
-                // Если способности нет - создаём новую
-                var builder = newAbility.GetBuilder();
-                builder.Make();
-
-                var ability = builder.GetResult();
-                ability.Added(_player);
-                _playerAbilities.Add(ability);
-                _playerAbilitiesConfigs.Add(newAbility);
-                _castHandler.TakeNewAbility(ability);
-                Debug.Log($"Добавлена новая способность: {ability.GetType().Name}");
-            }
-            */
-            
             var builder = newAbility.GetBuilder();
             builder.Make();
             var newAbilityInstance = builder.GetResult();
