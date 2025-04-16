@@ -1357,6 +1357,11 @@
                 <e p="HealthBuilder.cs" t="Include" />
                 <e p="HealthConfig.cs" t="Include" />
               </e>
+              <e p="OrbitalAbility" t="Include">
+                <e p="NewOrbitalAbility.cs" t="Include" />
+                <e p="OrbitalBuilder.cs" t="Include" />
+                <e p="OrbitalConfig.cs" t="Include" />
+              </e>
               <e p="Starfall" t="Include">
                 <e p="StarfallAbility.cs" t="Include" />
                 <e p="StarfallBuilder.cs" t="Include" />

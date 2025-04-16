@@ -34,8 +34,6 @@ namespace PixelSurvivor.NewAbilitySystem
             _cooldownTimer = Mathf.Clamp(timer, 0.0f, _cooldownTime);
             EventChangeCooldownTimer?.Invoke(CooldownTimer, CooldownTime);
         }
-
-        //начало выполнения способности
         public virtual void StartCast() { }
         public virtual void ApplyCast() { }
         public virtual void EventTick(float deltaTick) { }

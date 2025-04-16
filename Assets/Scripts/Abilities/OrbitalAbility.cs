@@ -88,7 +88,10 @@ namespace PixelSurvivor
                 for (int i = 0; i < _projectileCount; i++)
                 {
                     float angle = i * (360f / _projectileCount) + (elapsedTime / _duration * _rotationSpeed * 360f);
-                    Vector2 orbPosition = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad)) * _radius;
+                    
+                    Vector2 orbPosition = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), 
+                        Mathf.Sin(angle * Mathf.Deg2Rad)) * _radius;
+                    
                     _projectiles[i].transform.position = (Vector2)transform.position + orbPosition;
                 }
 
