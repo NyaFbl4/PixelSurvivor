@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5cf941fc65b597942a304c8109ef0d8a
+guid: 8eb3d3c4f504183439525e85361d9aa7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shield_0
+      name: Tornado_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2092f84914479bd4a940b1890a470043
-      internalID: -1982266399
+      spriteID: 67161e1db2c0e9b4f82278b7af6ba591
+      internalID: -156422724
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_1
+      name: Tornado_1
       rect:
         serializedVersion: 2
         x: 72
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6b2594e8724e3d4eb2891eecbcbcdaa
-      internalID: -1474948556
+      spriteID: 597d6b50b8f6e0b49bf728248fc521d6
+      internalID: -1823317737
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_2
+      name: Tornado_2
       rect:
         serializedVersion: 2
         x: 144
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49e275286cd11434880a8a77b0ddafa7
-      internalID: 1128166561
+      spriteID: c6c980b5561b97d4b84eb222f9b28a9d
+      internalID: 1354663785
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_3
+      name: Tornado_3
       rect:
         serializedVersion: 2
         x: 216
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 194cee09e2fbab5408694049a6d467e6
-      internalID: -696840575
+      spriteID: 230969992bfc4b846a99206ab3914f1c
+      internalID: -770600611
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_4
+      name: Tornado_4
       rect:
         serializedVersion: 2
         x: 288
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebd4c0c3f2373e044ae84c4038985e92
-      internalID: -649915490
+      spriteID: c4aa217eb9a77594084bc857feb42ca6
+      internalID: -1950409552
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_5
+      name: Tornado_5
       rect:
         serializedVersion: 2
         x: 360
@@ -229,50 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c2d78b0ba0fc0e4c82a6bf89e1c0bc6
-      internalID: -190951826
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shield_6
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 0
-        width: 72
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 156693106b50ee44392bf4f252210cfa
-      internalID: 1061154089
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shield_7
-      rect:
-        serializedVersion: 2
-        x: 504
-        y: 0
-        width: 72
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9c3a3f2ea020f534fb199a05db8659ae
-      internalID: -2025516383
+      spriteID: c18093997731f764a8ec225a8d89788b
+      internalID: -622746103
       vertices: []
       indices: 
       edges: []
@@ -288,14 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Shield_0: -1982266399
-      Shield_1: -1474948556
-      Shield_2: 1128166561
-      Shield_3: -696840575
-      Shield_4: -649915490
-      Shield_5: -190951826
-      Shield_6: 1061154089
-      Shield_7: -2025516383
+      Tornado_0: -156422724
+      Tornado_1: -1823317737
+      Tornado_2: 1354663785
+      Tornado_3: -770600611
+      Tornado_4: -1950409552
+      Tornado_5: -622746103
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

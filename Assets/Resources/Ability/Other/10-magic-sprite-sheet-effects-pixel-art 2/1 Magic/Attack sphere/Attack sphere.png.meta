@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5cf941fc65b597942a304c8109ef0d8a
+guid: ccb950c5939c0864688673a24b0385bd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shield_0
+      name: Attack sphere_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2092f84914479bd4a940b1890a470043
-      internalID: -1982266399
+      spriteID: f4cd2140294f8e940b1404d39b08b093
+      internalID: 1721806896
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_1
+      name: Attack sphere_1
       rect:
         serializedVersion: 2
         x: 72
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6b2594e8724e3d4eb2891eecbcbcdaa
-      internalID: -1474948556
+      spriteID: d8a531acb5936aa4fb708a2bede3c4a8
+      internalID: 96321583
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_2
+      name: Attack sphere_2
       rect:
         serializedVersion: 2
         x: 144
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49e275286cd11434880a8a77b0ddafa7
-      internalID: 1128166561
+      spriteID: 18907fc143e107b4090845c97176fc9a
+      internalID: -1979094554
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_3
+      name: Attack sphere_3
       rect:
         serializedVersion: 2
         x: 216
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 194cee09e2fbab5408694049a6d467e6
-      internalID: -696840575
+      spriteID: c6c08bb007148be458f50d66e1829223
+      internalID: -725789221
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_4
+      name: Attack sphere_4
       rect:
         serializedVersion: 2
         x: 288
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebd4c0c3f2373e044ae84c4038985e92
-      internalID: -649915490
+      spriteID: 5bc9bbeb6e6ad4b428b3443bd51146a6
+      internalID: -964431736
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_5
+      name: Attack sphere_5
       rect:
         serializedVersion: 2
         x: 360
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c2d78b0ba0fc0e4c82a6bf89e1c0bc6
-      internalID: -190951826
+      spriteID: 285834edab2096f428f30660a2d493cc
+      internalID: -1525813360
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_6
+      name: Attack sphere_6
       rect:
         serializedVersion: 2
         x: 432
@@ -250,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 156693106b50ee44392bf4f252210cfa
-      internalID: 1061154089
+      spriteID: 595562b5b8adc5a4b9e763d64864b11a
+      internalID: 553273777
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_7
+      name: Attack sphere_7
       rect:
         serializedVersion: 2
         x: 504
@@ -271,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c3a3f2ea020f534fb199a05db8659ae
-      internalID: -2025516383
+      spriteID: 1ede6551c4051ed4889cf2ddbb72094f
+      internalID: 1631643610
       vertices: []
       indices: 
       edges: []
@@ -288,14 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Shield_0: -1982266399
-      Shield_1: -1474948556
-      Shield_2: 1128166561
-      Shield_3: -696840575
-      Shield_4: -649915490
-      Shield_5: -190951826
-      Shield_6: 1061154089
-      Shield_7: -2025516383
+      Attack sphere_0: 1721806896
+      Attack sphere_1: 96321583
+      Attack sphere_2: -1979094554
+      Attack sphere_3: -725789221
+      Attack sphere_4: -964431736
+      Attack sphere_5: -1525813360
+      Attack sphere_6: 553273777
+      Attack sphere_7: 1631643610
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

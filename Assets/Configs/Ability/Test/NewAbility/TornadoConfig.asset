@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7a3b1b4854b41b9b631b1b2bf538bae, type: 3}
+  m_Name: TornadoConfig
+  m_EditorClassIdentifier: 
+  _title: Tornado
+  _iconImage: {fileID: 21300000, guid: 3a784581d96b18941b74701c1bc17b0b, type: 3}
+  _cooldownTime: 5
+  _abilityType: 0
+  _prefabProjectile: {fileID: 4951222903602999004, guid: ec92952ae1509cc45ba1b6fd3d66cf77, type: 3}
+  _damage: 0
+  _maxCurrentTornado: 2
+  _radius: 2

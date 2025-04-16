@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5cf941fc65b597942a304c8109ef0d8a
+guid: 3f33abfc7e0c3d845b821b1d6d5775e6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 72
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shield_0
+      name: Lightning_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2092f84914479bd4a940b1890a470043
-      internalID: -1982266399
+      spriteID: 27ff0657f59cde24d977e0524ea54c90
+      internalID: 1390487032
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_1
+      name: Lightning_1
       rect:
         serializedVersion: 2
         x: 72
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6b2594e8724e3d4eb2891eecbcbcdaa
-      internalID: -1474948556
+      spriteID: b62b58f44f4826043bf3ff639380236c
+      internalID: 1627580997
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_2
+      name: Lightning_2
       rect:
         serializedVersion: 2
         x: 144
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49e275286cd11434880a8a77b0ddafa7
-      internalID: 1128166561
+      spriteID: 5c94e76a80a252447a58770356a94d94
+      internalID: -1686115121
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_3
+      name: Lightning_3
       rect:
         serializedVersion: 2
         x: 216
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 194cee09e2fbab5408694049a6d467e6
-      internalID: -696840575
+      spriteID: 6a4adb2f15c692d469a3c51d4830b709
+      internalID: 587663077
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_4
+      name: Lightning_4
       rect:
         serializedVersion: 2
         x: 288
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebd4c0c3f2373e044ae84c4038985e92
-      internalID: -649915490
+      spriteID: ebd488923ad21d440b2aa71bff2e1e2b
+      internalID: 1486574786
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_5
+      name: Lightning_5
       rect:
         serializedVersion: 2
         x: 360
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c2d78b0ba0fc0e4c82a6bf89e1c0bc6
-      internalID: -190951826
+      spriteID: be531760bbf576d4c9c7907e9397c03a
+      internalID: -720488639
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_6
+      name: Lightning_6
       rect:
         serializedVersion: 2
         x: 432
@@ -250,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 156693106b50ee44392bf4f252210cfa
-      internalID: 1061154089
+      spriteID: e12f38a4a408b184e9c04b1c5bc4cc3f
+      internalID: -679319441
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_7
+      name: Lightning_7
       rect:
         serializedVersion: 2
         x: 504
@@ -271,8 +271,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c3a3f2ea020f534fb199a05db8659ae
-      internalID: -2025516383
+      spriteID: 3b56aa9239d1e0149abe5d62ef16ab9a
+      internalID: 841635975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_8
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5ef416982d4ea44c8e22ff6f4e3a988
+      internalID: -1506107991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_9
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 0
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d924ae007518e9d46ac709e57bfd0c10
+      internalID: 1365678215
       vertices: []
       indices: 
       edges: []
@@ -288,14 +330,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Shield_0: -1982266399
-      Shield_1: -1474948556
-      Shield_2: 1128166561
-      Shield_3: -696840575
-      Shield_4: -649915490
-      Shield_5: -190951826
-      Shield_6: 1061154089
-      Shield_7: -2025516383
+      Lightning_0: 1390487032
+      Lightning_1: 1627580997
+      Lightning_2: -1686115121
+      Lightning_3: 587663077
+      Lightning_4: 1486574786
+      Lightning_5: -720488639
+      Lightning_6: -679319441
+      Lightning_7: 841635975
+      Lightning_8: -1506107991
+      Lightning_9: 1365678215
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5cf941fc65b597942a304c8109ef0d8a
+guid: 5abeafacdfe4e1347bc127dc144ea698
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 72
+  spritePixelsToUnits: 36
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,169 +110,190 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shield_0
+      name: Fire-ball_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 72
-        height: 72
+        height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2092f84914479bd4a940b1890a470043
-      internalID: -1982266399
+      spriteID: dac9bb16fabf8ae4b84839baf3246f74
+      internalID: 2137243230
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_1
+      name: Fire-ball_1
       rect:
         serializedVersion: 2
         x: 72
         y: 0
         width: 72
-        height: 72
+        height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6b2594e8724e3d4eb2891eecbcbcdaa
-      internalID: -1474948556
+      spriteID: b3918948c59648948b7665b2eb53a74b
+      internalID: -950529331
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_2
+      name: Fire-ball_2
       rect:
         serializedVersion: 2
         x: 144
         y: 0
         width: 72
-        height: 72
+        height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49e275286cd11434880a8a77b0ddafa7
-      internalID: 1128166561
+      spriteID: 8720e8404aff62c42bd559e8323fbf49
+      internalID: -843132923
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_3
+      name: Fire-ball_3
       rect:
         serializedVersion: 2
         x: 216
         y: 0
         width: 72
-        height: 72
+        height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 194cee09e2fbab5408694049a6d467e6
-      internalID: -696840575
+      spriteID: 60f6d5e48dc671e49a18ceb7e1ee8f50
+      internalID: -23559083
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_4
+      name: Fire-ball_4
       rect:
         serializedVersion: 2
         x: 288
         y: 0
         width: 72
-        height: 72
+        height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebd4c0c3f2373e044ae84c4038985e92
-      internalID: -649915490
+      spriteID: c32d84ee54b2aeb4bb58c9c12382e113
+      internalID: 164416516
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_5
+      name: Fire-ball_5
       rect:
         serializedVersion: 2
         x: 360
         y: 0
         width: 72
-        height: 72
+        height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c2d78b0ba0fc0e4c82a6bf89e1c0bc6
-      internalID: -190951826
+      spriteID: 6d2e087bc1be25a41865d513a8521007
+      internalID: 1661236373
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_6
+      name: Fire-ball_6
       rect:
         serializedVersion: 2
         x: 432
         y: 0
         width: 72
-        height: 72
+        height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 156693106b50ee44392bf4f252210cfa
-      internalID: 1061154089
+      spriteID: 63169cbf3371e1a439d5d6e140ae8afe
+      internalID: 1598520310
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_7
+      name: Fire-ball_7
       rect:
         serializedVersion: 2
         x: 504
         y: 0
         width: 72
-        height: 72
+        height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c3a3f2ea020f534fb199a05db8659ae
-      internalID: -2025516383
+      spriteID: b4cd246b40102ef418d95241c1d6f5e6
+      internalID: 233678442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire-ball_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 576
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50b1e08615268d14385652593881f1d0
+      internalID: 1530453428
       vertices: []
       indices: 
       edges: []
@@ -288,14 +309,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Shield_0: -1982266399
-      Shield_1: -1474948556
-      Shield_2: 1128166561
-      Shield_3: -696840575
-      Shield_4: -649915490
-      Shield_5: -190951826
-      Shield_6: 1061154089
-      Shield_7: -2025516383
+      Fire-ball_0: 2137243230
+      Fire-ball_1: -950529331
+      Fire-ball_2: -843132923
+      Fire-ball_3: -23559083
+      Fire-ball_4: 164416516
+      Fire-ball_5: 1661236373
+      Fire-ball_6: 1598520310
+      Fire-ball_7: 233678442
+      Fire-ball_8: 1530453428
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

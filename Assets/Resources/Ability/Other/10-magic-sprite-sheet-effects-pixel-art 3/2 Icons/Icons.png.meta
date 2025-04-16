@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5cf941fc65b597942a304c8109ef0d8a
+guid: 6aec26c705042af42b5a701d490a4cae
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 72
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,118 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shield_0
+      name: Icons_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa9a872b80ce8cd4b94f62c8b437a09d
+      internalID: 2134297646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca7f07e92b202a948958709c97877ced
+      internalID: 1336553519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 734123fa001b5e945909ada4b0b0ea4f
+      internalID: 549192985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ce04735d580f2b4988a25797dfd5498
+      internalID: 90099766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22d4c4fbb579126429164f1d581ec0b5
+      internalID: -1183705482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons_5
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 72
-        height: 72
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2092f84914479bd4a940b1890a470043
-      internalID: -1982266399
+      spriteID: 3c5fc9e732e67064785ceebf89dd0318
+      internalID: -1946607025
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_1
+      name: Icons_6
       rect:
         serializedVersion: 2
-        x: 72
+        x: 32
         y: 0
-        width: 72
-        height: 72
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6b2594e8724e3d4eb2891eecbcbcdaa
-      internalID: -1474948556
+      spriteID: 28d79787a6d248342b51e90a967bca0a
+      internalID: -907987725
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_2
+      name: Icons_7
       rect:
         serializedVersion: 2
-        x: 144
+        x: 64
         y: 0
-        width: 72
-        height: 72
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +271,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49e275286cd11434880a8a77b0ddafa7
-      internalID: 1128166561
+      spriteID: 5faaef4b43517bb4290972cd42197e98
+      internalID: -441482413
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_3
+      name: Icons_8
       rect:
         serializedVersion: 2
-        x: 216
+        x: 96
         y: 0
-        width: 72
-        height: 72
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +292,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 194cee09e2fbab5408694049a6d467e6
-      internalID: -696840575
+      spriteID: 05b0ec584d00f674f8313b19b8ef2755
+      internalID: -571016908
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_4
+      name: Icons_9
       rect:
         serializedVersion: 2
-        x: 288
+        x: 128
         y: 0
-        width: 72
-        height: 72
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,71 +313,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebd4c0c3f2373e044ae84c4038985e92
-      internalID: -649915490
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shield_5
-      rect:
-        serializedVersion: 2
-        x: 360
-        y: 0
-        width: 72
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0c2d78b0ba0fc0e4c82a6bf89e1c0bc6
-      internalID: -190951826
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shield_6
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 0
-        width: 72
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 156693106b50ee44392bf4f252210cfa
-      internalID: 1061154089
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shield_7
-      rect:
-        serializedVersion: 2
-        x: 504
-        y: 0
-        width: 72
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9c3a3f2ea020f534fb199a05db8659ae
-      internalID: -2025516383
+      spriteID: 003f618263246d94b818d584b55891da
+      internalID: 1905063530
       vertices: []
       indices: 
       edges: []
@@ -288,14 +330,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Shield_0: -1982266399
-      Shield_1: -1474948556
-      Shield_2: 1128166561
-      Shield_3: -696840575
-      Shield_4: -649915490
-      Shield_5: -190951826
-      Shield_6: 1061154089
-      Shield_7: -2025516383
+      Icons_0: 2134297646
+      Icons_1: 1336553519
+      Icons_2: 549192985
+      Icons_3: 90099766
+      Icons_4: -1183705482
+      Icons_5: -1946607025
+      Icons_6: -907987725
+      Icons_7: -441482413
+      Icons_8: -571016908
+      Icons_9: 1905063530
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

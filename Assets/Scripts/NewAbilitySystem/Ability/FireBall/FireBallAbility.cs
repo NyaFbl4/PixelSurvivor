@@ -71,8 +71,6 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
 
                 if (CooldownTimer <= 0.0f)
                 {
-                    Debug.Log("FireBallAbility " + EAbilityState.Ready);
-                    
                     ChangeAbilityState(EAbilityState.Ready);
                 }
             }

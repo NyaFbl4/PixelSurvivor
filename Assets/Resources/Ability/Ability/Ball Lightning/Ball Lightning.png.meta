@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5cf941fc65b597942a304c8109ef0d8a
+guid: 9f9c081180a256d49ab7c6d2e4b815a4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shield_0
+      name: Ball Lightning_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2092f84914479bd4a940b1890a470043
-      internalID: -1982266399
+      spriteID: eea0e623fec114e4cb9d2b1965822cae
+      internalID: 2084737299
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_1
+      name: Ball Lightning_1
       rect:
         serializedVersion: 2
         x: 72
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6b2594e8724e3d4eb2891eecbcbcdaa
-      internalID: -1474948556
+      spriteID: 2ad7c8a26d0c87d4683150d0f4ceb97c
+      internalID: -1514382467
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_2
+      name: Ball Lightning_2
       rect:
         serializedVersion: 2
         x: 144
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49e275286cd11434880a8a77b0ddafa7
-      internalID: 1128166561
+      spriteID: f7ef5951861ea064cb9a9b38689865ff
+      internalID: -418482303
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_3
+      name: Ball Lightning_3
       rect:
         serializedVersion: 2
         x: 216
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 194cee09e2fbab5408694049a6d467e6
-      internalID: -696840575
+      spriteID: 7545319a93557fb49b06f5dd1ed55fb1
+      internalID: -1114494826
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_4
+      name: Ball Lightning_4
       rect:
         serializedVersion: 2
         x: 288
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebd4c0c3f2373e044ae84c4038985e92
-      internalID: -649915490
+      spriteID: c04ecf46d163b1b4f959c7b6c8d6c0b6
+      internalID: 1213851366
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_5
+      name: Ball Lightning_5
       rect:
         serializedVersion: 2
         x: 360
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c2d78b0ba0fc0e4c82a6bf89e1c0bc6
-      internalID: -190951826
+      spriteID: 36a43aabc1df7e64a96579a7e56ed06e
+      internalID: 71598047
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_6
+      name: Ball Lightning_6
       rect:
         serializedVersion: 2
         x: 432
@@ -250,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 156693106b50ee44392bf4f252210cfa
-      internalID: 1061154089
+      spriteID: b9507d2017f68774aa3428ff246a378a
+      internalID: 1695701646
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shield_7
+      name: Ball Lightning_7
       rect:
         serializedVersion: 2
         x: 504
@@ -271,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c3a3f2ea020f534fb199a05db8659ae
-      internalID: -2025516383
+      spriteID: 8b3a16105de0fbd4fa31effe16b85102
+      internalID: 1249699631
       vertices: []
       indices: 
       edges: []
@@ -288,14 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Shield_0: -1982266399
-      Shield_1: -1474948556
-      Shield_2: 1128166561
-      Shield_3: -696840575
-      Shield_4: -649915490
-      Shield_5: -190951826
-      Shield_6: 1061154089
-      Shield_7: -2025516383
+      Ball Lightning_0: 2084737299
+      Ball Lightning_1: -1514382467
+      Ball Lightning_2: -418482303
+      Ball Lightning_3: -1114494826
+      Ball Lightning_4: 1213851366
+      Ball Lightning_5: 71598047
+      Ball Lightning_6: 1695701646
+      Ball Lightning_7: 1249699631
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -2,7 +2,7 @@
 
 namespace PixelSurvivor.NewAbilitySystem.Ability
 {
-    [CreateAssetMenu(menuName = "Game/Abilities/FireBall", fileName = "FireBall ")]
+    [CreateAssetMenu(menuName = "Game/Abilities/FireBall", fileName = "FireBallConfig ")]
     public class FireBallConfig : NewAbilityConfig
     {
         [SerializeField] private GameObject _prefabProjectile;
