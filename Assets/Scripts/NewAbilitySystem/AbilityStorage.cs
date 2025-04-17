@@ -37,6 +37,7 @@ namespace PixelSurvivor.NewAbilitySystem
         }
 
         public List<NewAbilityConfig> GetAbilities => _abilityConfigs;
+        
         public List<NewAbility> GetPlayerAbilities() => _playerAbilities;
 
         private void СheckAbilityStatus(NewAbilityConfig newAbility)
