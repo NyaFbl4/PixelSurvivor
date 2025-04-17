@@ -24,7 +24,8 @@ namespace PixelSurvivor.NewAbilitySystem
             builder.Make();
             var newAbilityInstance = builder.GetResult();
 
-            if (_playerAbilitiesDict.TryGetValue(newAbilityInstance.GetType(), out var existingAbility))
+            if (_playerAbilitiesDict.TryGetValue(newAbilityInstance.GetType(), 
+                out var existingAbility))
             {
                 existingAbility.UpgradeAbility();
             }

@@ -1369,6 +1369,11 @@
                 <e p="StarfallBuilder.cs" t="Include" />
                 <e p="StarfallConfig.cs" t="Include" />
               </e>
+              <e p="Sunstrike" t="Include">
+                <e p="NewSunstrikeConfig.cs" t="Include" />
+                <e p="SunstrikeAbility.cs" t="Include" />
+                <e p="SunstrikeBuilder.cs" t="Include" />
+              </e>
               <e p="Tornado" t="Include">
                 <e p="TornadoAbility.cs" t="Include" />
                 <e p="TornadoBuilder.cs" t="Include" />
