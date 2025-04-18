@@ -23,6 +23,7 @@ namespace PixelSurvivor.NewAbilitySystem
 
         public void TakeNewAbility(NewAbility newAbility)
         {
+            //if(newAbility.A)
             _playerAbilities.Add(newAbility);
             _slotsProvoder.TakeNewAbility(newAbility);
         }

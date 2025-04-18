@@ -23520,6 +23520,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c99c37b38b292bd41a1cef111e062385, type: 2}
   - {fileID: 11400000, guid: 6ec71b17c0eb9724fba49264b4d17d75, type: 2}
   - {fileID: 11400000, guid: 514ecd7c76f136049917a885f52be04e, type: 2}
+  - {fileID: 11400000, guid: aa01be7284ac6f4478639a4ddd6c274c, type: 2}
   _playerAbilitiesConfigs: []
   _playerAbilities: []
   _player: {fileID: 3019011675523655735}
@@ -26183,6 +26184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _slotsProvoder: {fileID: 841572902}
+  _playerAbilities: []
 --- !u!114 &6717109342774324046
 MonoBehaviour:
   m_ObjectHideFlags: 0

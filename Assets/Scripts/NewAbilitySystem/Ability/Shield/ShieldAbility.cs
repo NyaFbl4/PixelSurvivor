@@ -36,7 +36,7 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
                     _player.transform.rotation, 
                     _player.transform);
 
-                _monobeh.StartCoroutine(DestroyShield());
+                //_monobeh.StartCoroutine(DestroyShield(shield));
 
                 ChangeCooldownTimer(CooldownTime);
                 ChangeAbilityState(EAbilityState.Cooldown);
@@ -58,16 +58,18 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
             }
         }
 
-        private IEnumerator DestroyShield()
+        private IEnumerator DestroyShield(GameObject shield)
         {
+            yield return _timeAbility;
+            /*
             float abilityTime = 0f;
             while (abilityTime < _timeAbility)
             {
                 abilityTime += Time.deltaTime;
                 yield return null;
             }
-            
-            UnityEngine.Object.Destroy(_shield);
+            */
+            UnityEngine.Object.Destroy(shield);
         }
     }
 }

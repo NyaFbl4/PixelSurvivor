@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e63f941eb8b7cc645b9408e5343e1fe3, type: 3}
   m_Name: ShieldConfig
   m_EditorClassIdentifier: 
-  _title: 
-  _iconImage: {fileID: 0}
-  _cooldownTime: 0
-  _abilityType: 0
-  _shield: {fileID: 0}
+  _title: Shield
+  _iconImage: {fileID: 21300000, guid: 0eeb323edf8eaf84088613049fe11403, type: 3}
+  _cooldownTime: 10
+  _abilityType: 1
+  _shield: {fileID: 2525471470712244958, guid: 93082f34c0323894eaf3b50d0c7979e5, type: 3}
   _timeAbility: 0
