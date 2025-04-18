@@ -31,9 +31,20 @@ namespace PixelSurvivor.NewAbilitySystem
             }
             else
             {
-                newAbilityInstance.Added(_player);
-                _playerAbilitiesDict.Add(newAbilityInstance.GetType(), newAbilityInstance);
-                _castHandler.TakeNewAbility(newAbilityInstance);
+                if (newAbility.AbilityType == AbilityType.Ability)
+                {
+                    Debug.Log("Ability");
+                    newAbilityInstance.Added(_player);
+                    _playerAbilitiesDict.Add(newAbilityInstance.GetType(), newAbilityInstance);
+                    _castHandler.TakeNewAbility(newAbilityInstance);
+                }
+                else if (newAbility.AbilityType == AbilityType.Buff)
+                {
+                    Debug.Log("Buff");
+                    newAbilityInstance.Added(_player);
+                    _playerAbilitiesDict.Add(newAbilityInstance.GetType(), newAbilityInstance);
+                    _castHandler.TakeNewAbility(newAbilityInstance);
+                }
             }
         }
 

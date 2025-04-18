@@ -1364,6 +1364,11 @@
                 <e p="OrbitalBuilder.cs" t="Include" />
                 <e p="OrbitalConfig.cs" t="Include" />
               </e>
+              <e p="Shield" t="Include">
+                <e p="ShieldAbility.cs" t="Include" />
+                <e p="ShieldBuilder.cs" t="Include" />
+                <e p="ShieldConfig.cs" t="Include" />
+              </e>
               <e p="Starfall" t="Include">
                 <e p="StarfallAbility.cs" t="Include" />
                 <e p="StarfallBuilder.cs" t="Include" />

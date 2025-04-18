@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace PixelSurvivor.NewAbilitySystem.Ability
 {
-    public class NewOrbitalAbility : NewAbility
+    public class  NewOrbitalAbility : NewAbility
     {
         private GameObject _player;
         private AbilityType _abilityType;

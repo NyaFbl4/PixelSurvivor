@@ -10,6 +10,7 @@ namespace PixelSurvivor.NewAbilitySystem
         [SerializeField] private Sprite _iconImage;
         [SerializeField] private float _cooldownTime;
         [SerializeField] private float _cooldownTimer;
+        //[SerializeField] private AbilityType _abilityType;
 
         private EAbilityState _abilityState;
         
@@ -17,6 +18,7 @@ namespace PixelSurvivor.NewAbilitySystem
         public Sprite IconImage => _iconImage;
         public float CooldownTime => _cooldownTime;
         public float CooldownTimer => _cooldownTimer;
+        //public AbilityType AbilityType => _abilityType;
         public EAbilityState AbilityState => _abilityState;
 
         public event Action<float, float> EventChangeCooldownTimer; 

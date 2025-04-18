@@ -6,8 +6,6 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
     public class HealthAbility : NewAbility
     {
         [SerializeField] private int _healthCount;
-        
-        public int HealthCount => _healthCount;
 
         private GameObject _player;
 

@@ -8,7 +8,8 @@ namespace PixelSurvivor.NewAbilitySystem
     {
         [SerializeField] private AbilitySlotsProvoder _slotsProvoder;
         
-        private List<NewAbility> _abilities = new();
+        [SerializeField] private List<NewAbility> _playerAbilities = new();
+        private List<NewAbility> _playerBuffs = new();
         private NewAbility _currentAbility;
 
         //[Inject]
@@ -22,7 +23,7 @@ namespace PixelSurvivor.NewAbilitySystem
 
         public void TakeNewAbility(NewAbility newAbility)
         {
-            _abilities.Add(newAbility);
+            _playerAbilities.Add(newAbility);
             _slotsProvoder.TakeNewAbility(newAbility);
         }
 
@@ -30,12 +31,12 @@ namespace PixelSurvivor.NewAbilitySystem
         {
             _currentAbility?.CancelCast();
 
-            switch (_abilities[abilityIndex].AbilityState)
+            switch (_playerAbilities[abilityIndex].AbilityState)
             {
                 case EAbilityState.Ready:
                     
                     Debug.Log("Ability Ready");
-                    _currentAbility = _abilities[abilityIndex];
+                    _currentAbility = _playerAbilities[abilityIndex];
                     _currentAbility.ApplyCast();
                     
                     break;
@@ -51,9 +52,9 @@ namespace PixelSurvivor.NewAbilitySystem
 
         private void FixedUpdate()
         {
-            for (int i = 0; i < _abilities.Count; ++i)
+            for (int i = 0; i < _playerAbilities.Count; ++i)
             {
-                _abilities[i].EventTick(Time.deltaTime);
+                _playerAbilities[i].EventTick(Time.deltaTime);
                 
                 OnAbilityActive(i);
             }
