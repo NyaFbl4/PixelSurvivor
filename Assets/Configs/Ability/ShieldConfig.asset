@@ -17,5 +17,5 @@ MonoBehaviour:
   _cooldownTime: 10
   _liveTime: 1
   _abilityType: 1
-  _shield: {fileID: 2525471470712244958, guid: 93082f34c0323894eaf3b50d0c7979e5, type: 3}
-  _timeAbility: 0
+  _shield: {fileID: 3340982221327390646, guid: 98c5050412d81634c92fa69cc962c795, type: 3}
+  _timeAbility: 5

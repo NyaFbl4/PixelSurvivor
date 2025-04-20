@@ -1320,6 +1320,7 @@
                 <e p="ShieldAbility.cs" t="Include" />
                 <e p="ShieldBuilder.cs" t="Include" />
                 <e p="ShieldConfig.cs" t="Include" />
+                <e p="ShieldProjectile.cs" t="Include" />
               </e>
               <e p="Starfall" t="Include">
                 <e p="StarfallAbility.cs" t="Include" />
@@ -1463,6 +1464,9 @@
               <e p="Configs" t="Include">
                 <e p="ExperienceConfig.cs" t="Include" />
                 <e p="PlayerConfig.cs" t="Include" />
+              </e>
+              <e p="Presenter" t="Include">
+                <e p="PlayerPresenter.cs" t="Include" />
               </e>
             </e>
           </e>

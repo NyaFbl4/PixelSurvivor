@@ -6,8 +6,8 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
 {
     public class ShieldAbility : PlayerAbility
     {
-        [SerializeField] private GameObject _shield;
-        [SerializeField] private float _timeAbility;
+        private GameObject _shield;
+        private float _timeAbility;
         
         private MonoBehaviour _monobeh;
         
@@ -35,11 +35,11 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
                     _player.transform.position, 
                     _player.transform.rotation, 
                     _player.transform);
-
-                //_monobeh.StartCoroutine(DestroyShield(shield));
-
-                ChangeCooldownTimer(CooldownTime);
-                ChangeAbilityState(EAbilityState.Cooldown);
+                
+                //FireBallProjectile projectileComponent = shield.GetComponent<FireBallProjectile>();
+                //projectileComponent.SetLifeTime(_timeAbility);
+                //ChangeCooldownTimer(CooldownTime);
+                //ChangeAbilityState(EAbilityState.Cooldown);
             }
         }
 
