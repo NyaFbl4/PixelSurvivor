@@ -13,10 +13,12 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
         private int _maxCurrentTornado;
         private float _radius;
         private float _liveTime;
+        private float _tornadoSpeed;
 
         public TornadoAbility(AbilityType abilityType, 
             GameObject projectile, int projectileDamage, 
-            int maxCurrentTornado, float radius, float liveTime)
+            int maxCurrentTornado, float radius, 
+            float liveTime, float tornadoSpeed)
         {
             _abilityType       = abilityType;
             _projectile        = projectile;
@@ -24,6 +26,7 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
             _maxCurrentTornado = maxCurrentTornado;
             _radius            = radius;
             _liveTime          = liveTime;
+            _tornadoSpeed      = tornadoSpeed;
         }
         
         public override void UpgradeAbility()
@@ -49,8 +52,9 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
 
                 if (projectileComponent != null)
                 {
-                    projectileComponent.SetDamage(_projectileDamage);
+                    //projectileComponent.SetDamage(_projectileDamage);
                     projectileComponent.SetLifeTime(_liveTime);
+                    projectileComponent.SetParametrs(_projectileDamage, _tornadoSpeed);
                 }
             }
             

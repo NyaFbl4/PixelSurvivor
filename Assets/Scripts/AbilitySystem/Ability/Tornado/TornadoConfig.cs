@@ -9,11 +9,13 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
         [SerializeField] private int _damage;
         [SerializeField] private int _maxCurrentTornado;
         [SerializeField] private float _radius;
+        [SerializeField] private float _tornadoSpeed;
         
         public GameObject PrefabProjectile => _prefabProjectile;
         public int Damage => _damage;
         public int MaxCurrentTornado => _maxCurrentTornado;
         public float Radius => _radius;
+        public float TornadoSpeed => _tornadoSpeed;
 
         public override AbilityBuilder GetBuilder()
         {

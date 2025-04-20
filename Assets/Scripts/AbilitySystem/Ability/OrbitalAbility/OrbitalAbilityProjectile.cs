@@ -4,13 +4,8 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
 {
     public class OrbitalAbilityProjectile : MonoBehaviour
     {
-        private float _lifeTime; 
         private int _damage;
-
-        private void Start()
-        {
-            Destroy(this.gameObject, _lifeTime);
-        }
+        
         
         public void SetDamage(int damage)
         {

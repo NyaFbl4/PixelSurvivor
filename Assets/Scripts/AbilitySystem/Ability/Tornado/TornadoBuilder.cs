@@ -14,7 +14,7 @@
             _ability = new TornadoAbility(_config.AbilityType,
                 _config.PrefabProjectile, _config.Damage, 
                 _config.MaxCurrentTornado, _config.Radius,
-                _config.LiveTime);
+                _config.LiveTime, _config.TornadoSpeed);
             
             base.Make();
         }

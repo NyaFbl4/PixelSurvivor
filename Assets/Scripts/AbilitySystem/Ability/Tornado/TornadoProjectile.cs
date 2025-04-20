@@ -26,11 +26,10 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
             transform.Translate(_targetDirection * _speed * Time.deltaTime);
         }
 
-        public void SetParametrs(int damage, float speed, float changeDirectionInterval)
+        public void SetParametrs(int damage, float speed)
         {
             _damage = damage;
             _speed = speed;
-            _changeDirectionInterval = changeDirectionInterval;
         }
         
         private void OnTriggerEnter2D(Collider2D other)
