@@ -15,6 +15,7 @@ MonoBehaviour:
   _title: SunStrike
   _iconImage: {fileID: 21300000, guid: d787e18d65db6654a94249452309dacf, type: 3}
   _cooldownTime: 5
+  _liveTime: 10
   _abilityType: 0
   _prefabProjectile: {fileID: 2573195963849891416, guid: 4ed4af7a0ff9fcf449bb641bf1ffe379, type: 3}
   _projectileDamage: 0

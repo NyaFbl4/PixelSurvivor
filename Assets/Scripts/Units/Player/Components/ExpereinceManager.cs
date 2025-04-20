@@ -20,13 +20,11 @@ namespace PixelSurvivor
         private CurrentExperienceStorage _storage;
         private IDisposable _disposable;
         
-        //[SerializeField] private int[] _experienceLvl;
 
         [Inject]
         public void Constuct(CurrentExperienceStorage storage)
         {
             _storage = storage;
-            //_disposable = storage.Experience.SkipLatestValueOnSubscribe()Subscribe();
         }
         
         public void AddExperience(int newExperience)
