@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8837567443960273632}
   - component: {fileID: 4816338208687409929}
-  - component: {fileID: 9135364288434165833}
+  - component: {fileID: 315682397400993241}
   m_Layer: 0
   m_Name: ProjectileSunStrike
   m_TagString: Untagged
@@ -69,7 +69,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.99}
   serializedVersion: 2
   m_Radius: 0.45616204
---- !u!114 &9135364288434165833
+--- !u!114 &315682397400993241
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -78,7 +78,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2573195963849891416}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6eade6564a49d2140ad1512b8d73f8fd, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c01d27ab1de4e86bd17739c776c3e14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 7586920395275774080}

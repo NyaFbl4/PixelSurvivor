@@ -9,13 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 403ac8d64bc94b71817455623d25e3f3, type: 3}
+  m_Script: {fileID: 11500000, guid: b7a3b1b4854b41b9b631b1b2bf538bae, type: 3}
   m_Name: TornadoConfig
   m_EditorClassIdentifier: 
-  prefabProjectile: {fileID: 4951222903602999004, guid: ec92952ae1509cc45ba1b6fd3d66cf77, type: 3}
-  damage: 1
-  speed: 1
-  changeDirectionInterval: 1
-  currentProjectile: 1
-  radius: 1
-  cooldown: 5
+  _title: Tornado
+  _iconImage: {fileID: 21300000, guid: 3a784581d96b18941b74701c1bc17b0b, type: 3}
+  _cooldownTime: 5
+  _abilityType: 0
+  _prefabProjectile: {fileID: 4951222903602999004, guid: ec92952ae1509cc45ba1b6fd3d66cf77, type: 3}
+  _damage: 0
+  _maxCurrentTornado: 2
+  _radius: 2

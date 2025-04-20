@@ -40,10 +40,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3081834678308237707}
-  - component: {fileID: 1435644377959635673}
   - component: {fileID: 4236320822838386056}
   - component: {fileID: 5266088061195233444}
   - component: {fileID: 6212241255415763672}
+  - component: {fileID: 2231788470240947479}
   m_Layer: 0
   m_Name: ProjectileStarfall
   m_TagString: Untagged
@@ -68,21 +68,6 @@ Transform:
   - {fileID: 8030586580130412004}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1435644377959635673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 498662490360772447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8540763d97411194cb5105a32b11fc08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _targetTrackerComponent: {fileID: 6212241255415763672}
-  _shootPoint: {fileID: 8030586580130412004}
-  _lifeTime: 5
 --- !u!58 &4236320822838386056
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -160,6 +145,20 @@ MonoBehaviour:
   _detectionRadius: 5
   _targets: []
   _ignoreTargets: []
+--- !u!114 &2231788470240947479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498662490360772447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdf7d94edbcb4803835a8b9fca53c2fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetTrackerComponent: {fileID: 6212241255415763672}
+  _shootPoint: {fileID: 8030586580130412004}
 --- !u!1 &1826586285440072325
 GameObject:
   m_ObjectHideFlags: 0

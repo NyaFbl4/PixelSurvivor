@@ -1,4 +1,5 @@
 ﻿using System;
+using PixelSurvivor.NewAbilitySystem.UI;
 using UnityEngine;
 using Zenject;
 
@@ -6,7 +7,7 @@ namespace PixelSurvivor
 {
     public class LvlComponent : MonoBehaviour
     {
-        [SerializeField] private UpgradesManager _upgradeManager;
+        [SerializeField] private AbilityUpgradeManager _upgradeManager;
         
         [SerializeField] private int _lvl;
         [SerializeField] private int _experience;

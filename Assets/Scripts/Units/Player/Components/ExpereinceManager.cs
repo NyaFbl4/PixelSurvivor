@@ -1,4 +1,5 @@
 ﻿using System;
+using PixelSurvivor.NewAbilitySystem.UI;
 using PixelSurvivor.Units.Player.Configs;
 using UniRx;
 using UnityEngine;
@@ -8,7 +9,7 @@ namespace PixelSurvivor
 {
     public class ExpereinceManager : MonoBehaviour
     {
-        [SerializeField] private UpgradesManager _upgradeManager;
+        [SerializeField] private AbilityUpgradeManager _upgradeManager;
         
         [SerializeField] private int _lvl;
         [SerializeField] private long _experience;

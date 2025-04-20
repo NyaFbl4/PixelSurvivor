@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Public\Repos\PixelSurvivor" t="IncludeRecursive">
+    <e p="C:\Users\lomok\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\lomok\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_PixelSurvivor.477800879.00" t="ExcludeRecursive" />
+    <e p="C:\Users\lomok\Desktop\Unity\Проекты\PixelSurvivor" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -1295,64 +1297,13 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="Abilities" t="Include">
-            <e p="AbilitiesUpdater.cs" t="Include" />
-            <e p="Ability.cs" t="Include" />
-            <e p="AbilityManager.cs" t="Include" />
-            <e p="AbilityType.cs" t="Include" />
-            <e p="Configs" t="Include">
-              <e p="AbilityConfig.cs" t="Include" />
-              <e p="FireBallConfig.cs" t="Include" />
-              <e p="OrbitalAbilityConfig.cs" t="Include" />
-              <e p="StarfallConfig.cs" t="Include" />
-              <e p="SunStrikeConfig.cs" t="Include" />
-              <e p="TornadoConfig.cs" t="Include" />
-            </e>
-            <e p="Cooldown" t="Include">
-              <e p="CooldownObserver.cs" t="Include" />
-            </e>
-            <e p="FireBall.cs" t="Include" />
-            <e p="OrbitalAbility.cs" t="Include" />
-            <e p="Projectile" t="Include">
-              <e p="ProjectileFireBall.cs" t="Include" />
-              <e p="ProjectileOrbitalAbility.cs" t="Include" />
-              <e p="ProjectileStarfall.cs" t="Include" />
-              <e p="ProjectileSunStrike.cs" t="Include" />
-              <e p="ProjectileTornado.cs" t="Include" />
-            </e>
-            <e p="Shield.cs" t="Include" />
-            <e p="Starfall.cs" t="Include" />
-            <e p="SunStrike.cs" t="Include" />
-            <e p="Tornado.cs" t="Include" />
-            <e p="UI" t="Include">
-              <e p="AbilityPopupProvider.cs" t="Include" />
-            </e>
-            <e p="Upgrade" t="Include">
-              <e p="AbilityUpgrade.cs" t="Include" />
-              <e p="Implementation" t="Include">
-                <e p="FireBallUpgrade.cs" t="Include" />
-                <e p="OrbitalAbilityUpgrade.cs" t="Include" />
-                <e p="ShieldUpgrade.cs" t="Include" />
-                <e p="StarfallUpgrade.cs" t="Include" />
-                <e p="SunStrikeUpgrade.cs" t="Include" />
-                <e p="TornadoUpgrade.cs" t="Include" />
-              </e>
-              <e p="IUpgradeable.cs" t="Include" />
-              <e p="UI" t="Include">
-                <e p="UpgradesUiManager.cs" t="Include" />
-                <e p="UpgradeUi.cs" t="Include" />
-              </e>
-              <e p="Upgrade.cs" t="Include" />
-              <e p="UpgradesManager.cs" t="Include" />
-            </e>
-          </e>
-          <e p="ExperiencePickup.cs" t="Include" />
-          <e p="NewAbilitySystem" t="Include">
+          <e p="AbilitySystem" t="Include">
             <e p="Ability" t="Include">
               <e p="FireBall" t="Include">
                 <e p="FireBallAbility.cs" t="Include" />
                 <e p="FireBallBuilder.cs" t="Include" />
                 <e p="FireBallConfig.cs" t="Include" />
+                <e p="FireBallProjectile.cs" t="Include" />
               </e>
               <e p="Health" t="Include">
                 <e p="HealthAbility.cs" t="Include" />
@@ -1360,7 +1311,8 @@
                 <e p="HealthConfig.cs" t="Include" />
               </e>
               <e p="OrbitalAbility" t="Include">
-                <e p="NewOrbitalAbility.cs" t="Include" />
+                <e p="OrbitalAbility.cs" t="Include" />
+                <e p="OrbitalAbilityProjectile.cs" t="Include" />
                 <e p="OrbitalBuilder.cs" t="Include" />
                 <e p="OrbitalConfig.cs" t="Include" />
               </e>
@@ -1373,25 +1325,33 @@
                 <e p="StarfallAbility.cs" t="Include" />
                 <e p="StarfallBuilder.cs" t="Include" />
                 <e p="StarfallConfig.cs" t="Include" />
+                <e p="StarfallProjectile.cs" t="Include" />
               </e>
               <e p="Sunstrike" t="Include">
-                <e p="NewSunstrikeConfig.cs" t="Include" />
                 <e p="SunstrikeAbility.cs" t="Include" />
                 <e p="SunstrikeBuilder.cs" t="Include" />
+                <e p="SunStrikeConfig.cs" t="Include" />
+                <e p="SunstrikeProjectile.cs" t="Include" />
               </e>
               <e p="Tornado" t="Include">
                 <e p="TornadoAbility.cs" t="Include" />
                 <e p="TornadoBuilder.cs" t="Include" />
                 <e p="TornadoConfig.cs" t="Include" />
+                <e p="TornadoProjectile.cs" t="Include" />
               </e>
             </e>
+            <e p="Ability.cs" t="Include" />
             <e p="AbilityBuilder.cs" t="Include" />
             <e p="AbilityCastHandler.cs" t="Include" />
+            <e p="AbilityConfig.cs" t="Include" />
             <e p="AbilityHolder.cs" t="Include" />
             <e p="AbilityStorage.cs" t="Include" />
+            <e p="AbilityType.cs" t="Include" />
             <e p="EAbilityState.cs" t="Include" />
-            <e p="NewAbility.cs" t="Include" />
-            <e p="NewAbilityConfig.cs" t="Include" />
+            <e p="Projectiles" t="Include">
+              <e p="IProjectilesController.cs" t="Include" />
+              <e p="ProjectilesController.cs" t="Include" />
+            </e>
             <e p="UI" t="Include">
               <e p="AbilitySlot" t="Include">
                 <e p="AbilitySlotPopup.cs" t="Include" />
@@ -1404,6 +1364,7 @@
               </e>
             </e>
           </e>
+          <e p="ExperiencePickup.cs" t="Include" />
           <e p="System" t="Include">
             <e p="GameManager" t="Include">
               <e p="GameListeners.cs" t="Include" />
@@ -1598,7 +1559,5 @@
       <e p="Zenject-UnitTests-Editor.csproj" t="IncludeRecursive" />
       <e p="Zenject.csproj" t="IncludeRecursive" />
     </e>
-    <e p="C:\Users\Никита\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Никита\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_PixelSurvivor.133610107.00" t="ExcludeRecursive" />
   </component>
 </project>

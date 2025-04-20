@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1888669179005838636}
   - component: {fileID: 404837827049875618}
   - component: {fileID: 7874249442764868327}
-  - component: {fileID: 5444048622343360217}
+  - component: {fileID: 8421261119505492831}
   m_Layer: 0
   m_Name: ProjectileFireball
   m_TagString: Untagged
@@ -97,7 +97,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5444048622343360217
+--- !u!114 &8421261119505492831
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 928365787084995654}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcacf6fad143a2145bf70302487e6860, type: 3}
+  m_Script: {fileID: 11500000, guid: f1c6c9a906fd457bbee391b0586f0752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7949701602247703075

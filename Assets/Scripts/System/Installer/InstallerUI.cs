@@ -30,21 +30,7 @@ namespace PixelSurvivor
                 .FromInstance(_abilitySlotsProvoder)
                 .AsSingle();
         }
-        
-        private void CooldownBind()
-        {
-            Container
-                .Bind<CooldownObserver>()
-                .AsTransient()
-                .WithArguments(_cooldownView)
-                .NonLazy();
 
-            Container
-                .Bind<Ability>()
-                .AsTransient()
-                .NonLazy();
-        }
-        
         private void CurrentExperienceBind(ValueView view)
         {
             Container
