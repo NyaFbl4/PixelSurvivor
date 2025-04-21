@@ -14,10 +14,8 @@ namespace PixelSurvivor
 
         public ValueView CurrentExperienceView => _currenExperienceView;
         public ValueView MaxExperienceView => _maxExperienceView;
-        
         public ValueView CurrentHealthView => _currentHealthView;
         public ValueView MaxHealthView => _maxHealthView;
-
         public ValueView ScoreView => _scoreView;
     }
 }

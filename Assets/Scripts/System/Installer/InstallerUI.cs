@@ -1,4 +1,5 @@
 ﻿using PixelSurvivor.NewAbilitySystem.UI;
+using PixelSurvivor.Units.Player;
 using UnityEngine;
 using Zenject;
 
@@ -13,12 +14,14 @@ namespace PixelSurvivor
         {
             var view = FindObjectOfType<ValueViewProvider>();
             
-            CurrentExperienceBind(view.CurrentExperienceView);
-            MaxExperienceBind(view.MaxExperienceView);
-            
+            //CurrentExperienceBind(view.CurrentExperienceView);
+            //MaxExperienceBind(view.MaxExperienceView);
+
             CurrentHealthBind(view.CurrentHealthView);
             MaxHealthBind(view.MaxHealthView);
 
+            
+            ExperienceBind(view.CurrentExperienceView, view.MaxExperienceView);
             //HealthBind(view.HealthView);
             //ScoreBind(view.ExperienceView);
         }
@@ -31,6 +34,21 @@ namespace PixelSurvivor
                 .AsSingle();
         }
 
+        private void ExperienceBind(ValueView CurrentView, ValueView MaxView)
+        {
+            Container
+                .Bind<PlayerExperienceData>()
+                .AsSingle()
+                .WithArguments(0L, 0L)
+                .NonLazy();
+
+            Container
+                .Bind<ExperienceObserver>()
+                .AsSingle()
+                .WithArguments(CurrentView, MaxView)
+                .NonLazy();
+        }
+        
         private void CurrentExperienceBind(ValueView view)
         {
             Container

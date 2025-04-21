@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\lomok\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\lomok\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_PixelSurvivor.477800879.00" t="ExcludeRecursive" />
-    <e p="C:\Users\lomok\Desktop\Unity\Проекты\PixelSurvivor" t="IncludeRecursive">
+    <e p="C:\Users\Public\Repos\PixelSurvivor" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -1383,6 +1381,9 @@
               <e p="EnemyDamageUI.cs" t="Include" />
             </e>
             <e p="Player" t="Include">
+              <e p="Experience" t="Include">
+                <e p="ExperienceObserver.cs" t="Include" />
+              </e>
               <e p="ExperienceUI" t="Include">
                 <e p="CurrentExperienceObserver.cs" t="Include" />
                 <e p="CurrentExperienceStorage.cs" t="Include" />
@@ -1399,6 +1400,9 @@
                 <e p="ScoreObserver.cs" t="Include" />
                 <e p="ScoreStorage.cs" t="Include" />
               </e>
+            </e>
+            <e p="Presenter" t="Include">
+              <e p="PlayerPresenter.cs" t="Include" />
             </e>
             <e p="Timer" t="Include">
               <e p="TimerController.cs" t="Include" />
@@ -1465,8 +1469,8 @@
                 <e p="ExperienceConfig.cs" t="Include" />
                 <e p="PlayerConfig.cs" t="Include" />
               </e>
-              <e p="Presenter" t="Include">
-                <e p="PlayerPresenter.cs" t="Include" />
+              <e p="Data" t="Include">
+                <e p="PlayerExperienceData.cs" t="Include" />
               </e>
             </e>
           </e>
@@ -1563,5 +1567,7 @@
       <e p="Zenject-UnitTests-Editor.csproj" t="IncludeRecursive" />
       <e p="Zenject.csproj" t="IncludeRecursive" />
     </e>
+    <e p="C:\Users\Никита\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Никита\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_PixelSurvivor.133610107.00" t="ExcludeRecursive" />
   </component>
 </project>

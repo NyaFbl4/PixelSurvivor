@@ -180,7 +180,7 @@ MonoBehaviour:
   _maxExperienceView: {fileID: 2019136994}
   _currentHealthView: {fileID: 2028280508}
   _maxHealthView: {fileID: 872672257}
-  _scoreView: {fileID: 0}
+  _scoreView: {fileID: 683206220}
 --- !u!1 &17679727
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,7 +410,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 76660366}
-  - component: {fileID: 76660367}
   m_Layer: 0
   m_Name: Health
   m_TagString: Untagged
@@ -439,19 +438,6 @@ RectTransform:
   m_AnchoredPosition: {x: -610, y: 980}
   m_SizeDelta: {x: 350, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &76660367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 76660365}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e298be352b9a484aaf3a54d4d7f9fe3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _currencyText: {fileID: 2028280506}
 --- !u!1001 &121379259
 PrefabInstance:
   m_ObjectHideFlags: 0

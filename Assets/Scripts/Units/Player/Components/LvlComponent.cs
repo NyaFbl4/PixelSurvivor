@@ -1,5 +1,6 @@
 ﻿using System;
 using PixelSurvivor.NewAbilitySystem.UI;
+using PixelSurvivor.Units.Player;
 using UnityEngine;
 using Zenject;
 
@@ -16,22 +17,23 @@ namespace PixelSurvivor
 
         private int _newLvl;
 
-        private CurrentExperienceStorage _currentStorage;
+        private PlayerExperienceData _playerExperienceData;
         private MaxExperienceStorage _maxStorage;
 
         [Inject]
-        public void Construct(CurrentExperienceStorage currentStorage, MaxExperienceStorage maxStorage)
+        public void Construct(PlayerExperienceData playerExperienceData) //, MaxExperienceStorage maxStorage)
         {
-            _currentStorage = currentStorage;
-            _maxStorage = maxStorage;
+            _playerExperienceData = playerExperienceData;
             
-            _currentStorage.AddExperience(_experience);
-            _maxStorage.AddMaxExperience(_experienceLvl[_newLvl + 1]);
+            Started();
+            //_maxStorage = maxStorage;
+            
+            //_maxStorage.AddMaxExperience(_experienceLvl[_newLvl + 1]);
         }
         
         public void AddExperience(int newExperience)
         {
-            _currentStorage.AddExperience(newExperience);
+            _playerExperienceData.AddExperience(newExperience);
             _experience += newExperience;
 
             _newLvl = Array.FindLastIndex(_experienceLvl, e => _experience >= e);
@@ -43,10 +45,17 @@ namespace PixelSurvivor
             }
         }
 
+        private void Started()
+        {
+            Debug.Log("STARTED");
+            _playerExperienceData.AddExperience(_experience);
+            _playerExperienceData.AddMaxExperienceOnLvl(_experienceLvl[_newLvl + 1]);
+        }
+        
         private void LvlUp()
         {
             _upgradeManager.SuggestUpgrades();
-            _maxStorage.AddMaxExperience(_experienceLvl[_newLvl + 1]);
+            _playerExperienceData.AddMaxExperienceOnLvl(_experienceLvl[_newLvl + 1]);
         }
     }
 }

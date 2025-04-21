@@ -22,7 +22,7 @@ namespace PixelSurvivor
         
 
         [Inject]
-        public void Constuct(CurrentExperienceStorage storage)
+        public void Construct(CurrentExperienceStorage storage)
         {
             _storage = storage;
         }
