@@ -8,22 +8,17 @@ namespace PixelSurvivor
     public class InstallerUI : MonoInstaller
     {
         [SerializeField] private AbilitySlotsProvoder _abilitySlotsProvoder;
-        [SerializeField] private CooldownView _cooldownView;
+        //[SerializeField] private CooldownView _cooldownView;
         
         public override void InstallBindings()
         {
             var view = FindObjectOfType<ValueViewProvider>();
-            
-            //CurrentExperienceBind(view.CurrentExperienceView);
-            //MaxExperienceBind(view.MaxExperienceView);
 
             CurrentHealthBind(view.CurrentHealthView);
             MaxHealthBind(view.MaxHealthView);
 
-            
             ExperienceBind(view.CurrentExperienceView, view.MaxExperienceView);
-            //HealthBind(view.HealthView);
-            //ScoreBind(view.ExperienceView);
+            ScoreBind(view.ScoreView);
         }
 
         private void AbilitiesBind()
@@ -46,36 +41,6 @@ namespace PixelSurvivor
                 .Bind<ExperienceObserver>()
                 .AsSingle()
                 .WithArguments(CurrentView, MaxView)
-                .NonLazy();
-        }
-        
-        private void CurrentExperienceBind(ValueView view)
-        {
-            Container
-                .Bind<CurrentExperienceStorage>()
-                .AsSingle()
-                .WithArguments(0L)
-                .NonLazy();
-
-            Container
-                .BindInterfacesTo<CurrentExperienceObserver>()
-                .AsSingle()
-                .WithArguments(view)
-                .NonLazy();
-        }
-        
-        private void MaxExperienceBind(ValueView view)
-        {
-            Container
-                .Bind<MaxExperienceStorage>()
-                .AsSingle()
-                .WithArguments(0L)
-                .NonLazy();
-
-            Container
-                .BindInterfacesTo<MaxExperienceObserver>()
-                .AsSingle()
-                .WithArguments(view)
                 .NonLazy();
         }
 
@@ -112,9 +77,9 @@ namespace PixelSurvivor
         private void ScoreBind(ValueView view)
         {
             Container
-                .Bind<ScoreStorage>()
+                .Bind<PlayerScoreData>()
                 .AsSingle()
-                .WithArguments(0)
+                .WithArguments(0L)
                 .NonLazy();
 
             Container

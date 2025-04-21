@@ -15,10 +15,10 @@ MonoBehaviour:
   _title: Balls Lightning
   _iconImage: {fileID: 21300000, guid: d74fdbe7b81e14c47b94d6d9f721acdf, type: 3}
   _cooldownTime: 10
-  _liveTime: 5
   _abilityType: 0
   _prefabProjectile: {fileID: 928365787084995654, guid: 652eca89aa8ed374daff8e12c729941f, type: 3}
-  _damage: 0
+  _damage: 1
   _projectileCount: 4
   _radius: 1
   _rotationSpeed: 2
+  _liveTime: 5

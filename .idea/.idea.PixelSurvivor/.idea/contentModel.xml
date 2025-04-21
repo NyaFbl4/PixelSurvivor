@@ -1381,10 +1381,10 @@
               <e p="EnemyDamageUI.cs" t="Include" />
             </e>
             <e p="Player" t="Include">
-              <e p="Experience" t="Include">
+              <e p="ExperienceUI" t="Include">
                 <e p="ExperienceObserver.cs" t="Include" />
               </e>
-              <e p="ExperienceUI" t="Include">
+              <e p="ExperienceUI(Удалить)" t="Include">
                 <e p="CurrentExperienceObserver.cs" t="Include" />
                 <e p="CurrentExperienceStorage.cs" t="Include" />
                 <e p="MaxExperienceObserver.cs" t="Include" />
@@ -1398,11 +1398,7 @@
               </e>
               <e p="ScoreUI" t="Include">
                 <e p="ScoreObserver.cs" t="Include" />
-                <e p="ScoreStorage.cs" t="Include" />
               </e>
-            </e>
-            <e p="Presenter" t="Include">
-              <e p="PlayerPresenter.cs" t="Include" />
             </e>
             <e p="Timer" t="Include">
               <e p="TimerController.cs" t="Include" />
@@ -1471,6 +1467,7 @@
               </e>
               <e p="Data" t="Include">
                 <e p="PlayerExperienceData.cs" t="Include" />
+                <e p="PlayerScoreData.cs" t="Include" />
               </e>
             </e>
           </e>

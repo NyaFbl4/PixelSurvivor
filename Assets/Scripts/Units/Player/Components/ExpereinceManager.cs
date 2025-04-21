@@ -42,12 +42,6 @@ namespace PixelSurvivor
             Debug.Log("lvl: " + _lvl.ToString() + " exp: " + _experience.ToString());
         }
 
-        [ContextMenu("AddExp")]
-        void AddExp()
-        {
-            AddExperience(2);
-        }
-
         private void LvlUp()
         {
             _upgradeManager.SuggestUpgrades();
