@@ -12,7 +12,7 @@ namespace PixelSurvivor.NewAbilitySystem.Projectiles
         private int _ricochetShots;
         private float _projectileSpeed;
 
-        private int _damage;
+        //private int _damage;
 
         private GameObject target;
         //[SerializeField] private float _cooldown;
@@ -28,11 +28,6 @@ namespace PixelSurvivor.NewAbilitySystem.Projectiles
             _damage = damage;
             _ricochetShots = ricochetShots;
             _projectileSpeed = speed;
-        }
-
-        public void SetRicochetShots(int ricochetShots)
-        {
-            _ricochetShots = ricochetShots;
         }
 
         private void OnTriggerEnter2D(Collider2D other)

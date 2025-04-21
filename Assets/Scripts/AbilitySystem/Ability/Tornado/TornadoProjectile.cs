@@ -7,7 +7,7 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
     public class TornadoProjectile : ProjectilesController
     {
         //private float _delay; 
-        private int _damage;
+        //private int _damageAbility;
         private float _speed;
         private float _changeDirectionInterval = 1f;
         private Vector3 _targetDirection;

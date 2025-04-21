@@ -4,7 +4,7 @@ namespace PixelSurvivor.NewAbilitySystem.Projectiles
 {
     public abstract class ProjectilesController : MonoBehaviour, IProjectilesController
     {
-        protected float lifeTime; 
+        protected float _lifeTime; 
         protected int _damage;
 
         public void SetDamage(int damage)
@@ -14,8 +14,8 @@ namespace PixelSurvivor.NewAbilitySystem.Projectiles
         
         public void SetLifeTime(float livetime)
         {
-            lifeTime = livetime;
-            Destroy(this.gameObject, lifeTime);
+            _lifeTime = livetime;
+            Destroy(this.gameObject, _lifeTime);
         }
 
         private void OnTriggerEnter2D(Collider2D other)

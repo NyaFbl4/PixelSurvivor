@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace PixelSurvivor
 {
@@ -9,10 +10,13 @@ namespace PixelSurvivor
         protected float moveSpeed;
         protected int damage;
         protected int health;
+        protected int killReward;
         protected GameObject experience;
         protected EnemyDamageUI damageUI;
         
         protected IEnemyAnimation enemyAnimationController;
+        
+        public event Action<int> OnDeath;
         
         public abstract void Move();
         
@@ -28,17 +32,6 @@ namespace PixelSurvivor
             if (player != null)
             {
                 Vector3 vector3 = (player.position - transform.position).normalized;
-
-                /*
-                if (Vector3.Distance(transform.position, player.position) > 0.1f)
-                {
-                    enemyAnimationController.SetMoving(true);
-                }
-                else if (Vector3.Distance(transform.position, player.position) == 0f)
-                {
-                    enemyAnimationController.SetMoving(false);
-                }
-                */
 
                 MoveTowardsPlayer();
                 
@@ -63,11 +56,16 @@ namespace PixelSurvivor
                     }
                 }
                 
-                Instantiate(experience, this.gameObject.transform.position, Quaternion.identity);
-                //Instantiate(experience);
-            
-                Destroy(gameObject);
+                Defeat();
             }
+        }
+
+        private void Defeat()
+        {
+            Instantiate(experience, this.gameObject.transform.position, Quaternion.identity);
+            OnDeath?.Invoke(killReward);
+            
+            Destroy(gameObject);
         }
 
         protected virtual void OnTriggerStay2D(Collider2D other)
