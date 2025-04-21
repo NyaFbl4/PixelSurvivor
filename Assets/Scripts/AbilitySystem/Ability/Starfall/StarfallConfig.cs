@@ -10,12 +10,14 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
         [SerializeField] private int _maxCurrentShot;
         [SerializeField] private int _ricochetShots;
         [SerializeField] private float _speedProjectile;
+        [SerializeField] private float _liveTime;
 
         public GameObject PrefabProjectile => _prefabProjectile;
         public int Damage => _damage;
         public int MaxCurrentShot => _maxCurrentShot;
         public int RicochetShots => _ricochetShots;
         public float SpeedProjectile => _speedProjectile;
+        public float LiveTime => _liveTime;
 
         public override AbilityBuilder GetBuilder()
         {

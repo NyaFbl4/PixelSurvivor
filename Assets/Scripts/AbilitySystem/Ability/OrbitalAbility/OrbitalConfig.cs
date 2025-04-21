@@ -10,14 +10,14 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
         [SerializeField] private int _projectileCount;
         [SerializeField] private float _radius;
         [SerializeField] private float _rotationSpeed;
-        //[SerializeField] private float _duration;
+        [SerializeField] private float _liveTime;
         
         public GameObject PrefabProjectile => _prefabProjectile;
         public int Damage => _damage;
         public int ProjectileCount => _projectileCount;
         public float Radius => _radius;
         public float RotationSpeed => _rotationSpeed;
-        //public float Duration => _duration;
+        public float LiveTime => _liveTime;
 
         public override AbilityBuilder GetBuilder()
         {
