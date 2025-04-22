@@ -15,10 +15,10 @@ MonoBehaviour:
   _title: Starfall
   _iconImage: {fileID: 21300000, guid: dff73910226c530469a26b89838b8be6, type: 3}
   _cooldownTime: 2
-  _liveTime: 10
   _abilityType: 0
   _prefabProjectile: {fileID: 498662490360772447, guid: ebe0491777e1f5e438292a32b0323782, type: 3}
-  _damage: 0
+  _damage: 2
   _maxCurrentShot: 1
   _ricochetShots: 2
   _speedProjectile: 5
+  _liveTime: 10

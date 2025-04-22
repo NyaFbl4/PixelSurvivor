@@ -15,10 +15,10 @@ MonoBehaviour:
   _title: Tornado
   _iconImage: {fileID: 21300000, guid: 3a784581d96b18941b74701c1bc17b0b, type: 3}
   _cooldownTime: 5
-  _liveTime: 10
   _abilityType: 0
   _prefabProjectile: {fileID: 4951222903602999004, guid: ec92952ae1509cc45ba1b6fd3d66cf77, type: 3}
-  _damage: 0
+  _damage: 5
   _maxCurrentTornado: 2
+  _liveTime: 10
   _radius: 2
   _tornadoSpeed: 2
