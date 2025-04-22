@@ -52,7 +52,7 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
         public override void ApplyCast()
         {
             SpawnProjectiles();
-            _monobeh.StartCoroutine(SpawnAndRotateProjectiles());
+            _monobeh.StartCoroutine(RotateProjectiles(_projectileCount));
         }
 
         
@@ -91,6 +91,33 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
                 yield return null;
             }
 
+            DestroyProjectiles(_projectiles);
+        }
+
+        private IEnumerator RotateProjectiles(int countProjectile)
+        {
+            ChangeCooldownTimer(CooldownTime);
+            ChangeAbilityState(EAbilityState.Cooldown);
+            
+            float elapsedTime = 0f;
+
+            while (elapsedTime < _liveTime)
+            {
+                for (int i = 0; i < countProjectile; i++)
+                {
+                    float angle = i * (360f / countProjectile) + 
+                                  (elapsedTime / _liveTime * _rotationSpeed * 360);
+                    
+                    Vector2 orbPosition = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), 
+                        Mathf.Sin(angle * Mathf.Deg2Rad)) * _radius;
+                    
+                    _projectiles[i].transform.position = (Vector2)_player.transform.position + orbPosition;
+                }
+                
+                elapsedTime += Time.deltaTime;
+                yield return null;
+            }
+            
             DestroyProjectiles(_projectiles);
         }
         
