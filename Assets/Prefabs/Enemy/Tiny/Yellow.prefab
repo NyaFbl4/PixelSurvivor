@@ -268,6 +268,7 @@ MonoBehaviour:
   _moveSpeed: 1.15
   _damage: 2
   _health: 15
+  _killReward: 1
   _experience: {fileID: 714864797984239362, guid: 25f1cc5b861b1894bad13f2c518968b5, type: 3}
   _player: {fileID: 0}
   _enemyAnimationController: {fileID: 2683162580429663501}

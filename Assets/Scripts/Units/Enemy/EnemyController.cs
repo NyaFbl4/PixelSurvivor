@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace PixelSurvivor
 {
+    [Serializable]
     public abstract class EnemyController : MonoBehaviour, IDamage
     {
         protected Transform player;
@@ -15,8 +16,10 @@ namespace PixelSurvivor
         protected EnemyDamageUI damageUI;
         
         protected IEnemyAnimation enemyAnimationController;
+
+        public int KillReward => killReward;
         
-        public event Action<int> OnDeath;
+        public event Action OnDeath;
         
         public abstract void Move();
         
@@ -63,7 +66,7 @@ namespace PixelSurvivor
         private void Defeat()
         {
             Instantiate(experience, this.gameObject.transform.position, Quaternion.identity);
-            OnDeath?.Invoke(killReward);
+            OnDeath?.Invoke();
             
             Destroy(gameObject);
         }

@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using PixelSurvivor.ScoreManager;
 using UnityEngine;
+using Zenject;
 
 namespace PixelSurvivor
 {
@@ -25,10 +27,18 @@ namespace PixelSurvivor
         private float _currentEliteChance;
         private List<GameObject> _aliveEnemies = new();
 
+        private EnemyRewardSystem _rewardSystem;
+        
         private void Start()
         {
             _mainCamera = Camera.main;
             StartCoroutine(SpawnWaves());
+        }
+
+        [Inject]
+        public void Construct(EnemyRewardSystem enemyRewardSystem)
+        {
+            _rewardSystem = enemyRewardSystem;
         }
 
         IEnumerator SpawnWaves()
@@ -70,7 +80,9 @@ namespace PixelSurvivor
             }
             
             Vector3 spawnPosition = GetRandomPosition();
-            GameObject enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+            var enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+            EnemyController enemyController = enemy.GetComponent<EnemyController>();
+            _rewardSystem.RegisterEnemy(enemyController);
             _aliveEnemies.Add(enemy);
         }
 

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\lomok\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\lomok\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_PixelSurvivor.477800879.00" t="ExcludeRecursive" />
-    <e p="C:\Users\lomok\Desktop\Unity\Проекты\PixelSurvivor" t="IncludeRecursive">
+    <e p="C:\Users\Public\Repos\PixelSurvivor" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -1367,6 +1365,10 @@
           </e>
           <e p="ExperiencePickup.cs" t="Include" />
           <e p="System" t="Include">
+            <e p="EnemyRewardSystem" t="Include">
+              <e p="EnemyRewardSystem.cs" t="Include" />
+              <e p="IEnemyRewardsSystem.cs" t="Include" />
+            </e>
             <e p="GameManager" t="Include">
               <e p="GameListeners.cs" t="Include" />
               <e p="GameManager.cs" t="Include" />
@@ -1375,9 +1377,7 @@
             <e p="InputManager.cs" t="Include" />
             <e p="Installer" t="Include">
               <e p="InstallerUI.cs" t="Include" />
-            </e>
-            <e p="ScoreManager" t="Include">
-              <e p="ScoreManager.cs" t="Include" />
+              <e p="WorldInstaller.cs" t="Include" />
             </e>
           </e>
           <e p="UI" t="Include">
@@ -1569,5 +1569,7 @@
       <e p="Zenject-UnitTests-Editor.csproj" t="IncludeRecursive" />
       <e p="Zenject.csproj" t="IncludeRecursive" />
     </e>
+    <e p="C:\Users\Никита\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Никита\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_PixelSurvivor.133610107.00" t="ExcludeRecursive" />
   </component>
 </project>

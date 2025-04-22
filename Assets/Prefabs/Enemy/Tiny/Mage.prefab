@@ -124,8 +124,9 @@ MonoBehaviour:
   _shootingRange: 5
   _cooldown: 5
   _player: {fileID: 0}
-  currentTime: 0
+  _currentTime: 0
   _health: 10
+  _killReward: 2
   _experience: {fileID: 714864797984239362, guid: 25f1cc5b861b1894bad13f2c518968b5, type: 3}
   _enemyAnimationController: {fileID: 6629994595077004009}
   _enemyDamageUI: {fileID: 2952303472428122897}

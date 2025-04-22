@@ -7,8 +7,9 @@ namespace PixelSurvivor
     {
         [SerializeField] private bool _elite;
         [SerializeField] private float _moveSpeed;
-        [SerializeField] private int _damage = 1;
+        [SerializeField] private int _damage;
         [SerializeField] private int _health;
+        [SerializeField] private int _killReward;
         [SerializeField] private GameObject _experience;
         [SerializeField] private Transform _player;
         [SerializeField] private MiliEnemyAnimationController _enemyAnimationController;
@@ -32,6 +33,7 @@ namespace PixelSurvivor
             base.moveSpeed = _moveSpeed;
             base.experience = _experience;
             base.damage = _damage;
+            base.killReward = _killReward;
             base.enemyAnimationController = _enemyAnimationController;
         }
 

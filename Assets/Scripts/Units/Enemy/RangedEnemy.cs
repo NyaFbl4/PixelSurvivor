@@ -15,8 +15,9 @@ namespace PixelSurvivor
         [SerializeField] private float _cooldown;
         [SerializeField] private Transform _player;
 
-        [SerializeField] private float currentTime;
+        [SerializeField] private float _currentTime;
         [SerializeField] private int _health;
+        [SerializeField] private int _killReward;
         
         [SerializeField] private GameObject _experience;
         [SerializeField] private RangetEnemyAnimationController _enemyAnimationController;
@@ -37,9 +38,10 @@ namespace PixelSurvivor
             base.moveSpeed = _moveSpeed;
             base.experience = _experience;
             base.damage = _damage;
+            base.killReward = _killReward;
             base.enemyAnimationController = _enemyAnimationController;
 
-            currentTime = _cooldown;
+            _currentTime = _cooldown;
         }
 
         public override void Move()
@@ -61,13 +63,13 @@ namespace PixelSurvivor
                     
                     _enemyAnimationController.SetMoving(false);
 
-                    currentTime -= Time.deltaTime;
-                    if (currentTime <= 0)
+                    _currentTime -= Time.deltaTime;
+                    if (_currentTime <= 0)
                     {
                         _enemyAnimationController.Attack();
                         ShootAtTarget(_player);
                         //Debug.Log("is attack");
-                        currentTime = _cooldown;
+                        _currentTime = _cooldown;
                     }
                 }
             }
