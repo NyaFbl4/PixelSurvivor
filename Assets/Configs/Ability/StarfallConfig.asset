@@ -17,8 +17,8 @@ MonoBehaviour:
   _cooldownTime: 2
   _abilityType: 0
   _prefabProjectile: {fileID: 498662490360772447, guid: ebe0491777e1f5e438292a32b0323782, type: 3}
-  _damage: 2
+  _damage: 4
   _maxCurrentShot: 1
   _ricochetShots: 2
   _speedProjectile: 5
-  _liveTime: 10
+  _liveTime: 5

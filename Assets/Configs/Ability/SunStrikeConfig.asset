@@ -17,7 +17,7 @@ MonoBehaviour:
   _cooldownTime: 5
   _abilityType: 0
   _prefabProjectile: {fileID: 2573195963849891416, guid: 4ed4af7a0ff9fcf449bb641bf1ffe379, type: 3}
-  _projectileDamage: 10
+  _projectileDamage: 15
   _maxCurrentSunStrike: 3
   _radius: 5
-  _liveTime: 10
+  _liveTime: 5

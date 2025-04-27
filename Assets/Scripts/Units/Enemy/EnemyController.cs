@@ -40,6 +40,10 @@ namespace PixelSurvivor
                 
                 transform.position += vector3 * moveSpeed * Time.deltaTime;
             }
+            else
+            {
+                Debug.Log("no Player");
+            }
         }
         
         public void TakeDamage(int damage)

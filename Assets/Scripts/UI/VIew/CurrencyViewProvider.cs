@@ -6,10 +6,8 @@ namespace PixelSurvivor
     {
         [SerializeField] private ValueView _currenExperienceView;
         [SerializeField] private ValueView _maxExperienceView;
-        
         [SerializeField] private ValueView _currentHealthView;
         [SerializeField] private ValueView _maxHealthView;
-        
         [SerializeField] private ValueView _scoreView;
 
         public ValueView CurrentExperienceView => _currenExperienceView;

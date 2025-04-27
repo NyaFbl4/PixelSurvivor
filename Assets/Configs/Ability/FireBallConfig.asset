@@ -20,4 +20,4 @@ MonoBehaviour:
   _damage: 5
   _maxCurrentShot: 1
   _speedProjectile: 5
-  _liveTime: 10
+  _liveTime: 5

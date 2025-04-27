@@ -17,7 +17,7 @@ MonoBehaviour:
   _cooldownTime: 5
   _abilityType: 0
   _prefabProjectile: {fileID: 4951222903602999004, guid: ec92952ae1509cc45ba1b6fd3d66cf77, type: 3}
-  _damage: 5
+  _damage: 8
   _maxCurrentTornado: 2
   _liveTime: 10
   _radius: 2

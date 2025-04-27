@@ -25168,7 +25168,7 @@ MonoBehaviour:
   _upgradeManager: {fileID: 1306195474}
   _lvl: 0
   _experience: 0
-  _experienceLvl: 000000000200000019000000410000007d000000ff000000
+  _experienceLvl: 00000000020000000a0000001900000032000000640000009b000000f000000068010000e0010000
 --- !u!1001 &364909842288121169
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25440,7 +25440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44972577fe9647a4b0fd7c58607d04ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 10
+  _health: 25
   _isImmortal: 0
   _immortalDuration: 1
 --- !u!1 &3883482071773521066
