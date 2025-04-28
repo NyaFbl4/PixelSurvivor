@@ -16,12 +16,12 @@ namespace PixelSurvivor
 
         public void AddCurrentHealth(long health)
         {
-            _currenthealth.Value += health;
+            _currenthealth.Value = health;
         }
 
         public void SpendCurrentHealth(long health)
         {
-            _currenthealth.Value -= health;
+            _currenthealth.Value = health;
         }
     }
 }

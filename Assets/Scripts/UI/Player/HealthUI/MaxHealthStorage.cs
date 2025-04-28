@@ -15,12 +15,12 @@ namespace PixelSurvivor
 
         public void AddMaxHealth(long health)
         {
-            _maxhealth.Value += health;
+            _maxhealth.Value = health;
         }
 
         public void SpendMaxHealth(long health)
         {
-            _maxhealth.Value -= health;
+            _maxhealth.Value = health;
         }
     }
 }

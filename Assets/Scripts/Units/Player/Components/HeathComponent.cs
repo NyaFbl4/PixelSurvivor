@@ -21,5 +21,10 @@ namespace PixelSurvivor
                 Destroy(gameObject);
             }
         }
+
+        public void TakeHealing(int healing)
+        {
+            _health += healing;
+        }
     }
 }
