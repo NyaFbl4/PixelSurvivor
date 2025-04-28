@@ -56,7 +56,6 @@ namespace PixelSurvivor
                 }
                 else
                 {
-
                     _animator.SetTrigger("IsHurt");
                 }
                 

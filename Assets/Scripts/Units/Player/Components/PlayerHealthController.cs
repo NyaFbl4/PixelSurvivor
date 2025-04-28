@@ -12,6 +12,8 @@ namespace PixelSurvivor
         [SerializeField] private bool _isImmortal;
         [SerializeField] private float _immortalDuration;
 
+        [SerializeField] private Animator _animator;
+
         private CurrentHealthStorage _currentHealthStorage;
         private MaxHealthStorage _maxHealthStorage;
 
@@ -30,8 +32,10 @@ namespace PixelSurvivor
         
         public void TakeDamage(int damage)
         {
-            if(_isImmortal)
+            if (_isImmortal)
+            {
                 return;
+            }
 
             _currentHealth -= damage;
 
@@ -42,6 +46,7 @@ namespace PixelSurvivor
             else
             {
                 _currentHealthStorage.SpendCurrentHealth(_currentHealth);
+                _animator.SetTrigger("IsHurt");
                 StartImmortalStatus(); 
             }
         }
@@ -51,12 +56,13 @@ namespace PixelSurvivor
             _currentHealth += health;
             _currentHealthStorage.AddCurrentHealth(_currentHealth);
 
-            if (_currentHealth > _maxHealth)
+            if (_currentHealth <= _maxHealth)
             {
-                _maxHealth = _currentHealth;
-                _maxHealthStorage.AddMaxHealth(_maxHealth);
+                return;
             }
-            //Debug.Log("new Health = " + _health);
+            
+            _maxHealth = _currentHealth;
+            _maxHealthStorage.AddMaxHealth(_maxHealth);
         }
         
         private void StartImmortalStatus()
