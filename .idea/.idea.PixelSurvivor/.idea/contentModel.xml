@@ -1385,6 +1385,15 @@
               <e p="DamageUI.cs" t="Include" />
               <e p="EnemyDamageUI.cs" t="Include" />
             </e>
+            <e p="MainMenu" t="Include">
+              <e p="Location" t="Include">
+                <e p="LocationData.cs" t="Include" />
+                <e p="LocationPopup.cs" t="Include" />
+                <e p="LocationPopupProvider.cs" t="Include" />
+                <e p="LocationsConfig.cs" t="Include" />
+              </e>
+              <e p="LocationManager.cs" t="Include" />
+            </e>
             <e p="Player" t="Include">
               <e p="ExperienceUI" t="Include">
                 <e p="ExperienceObserver.cs" t="Include" />
