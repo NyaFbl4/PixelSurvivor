@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace PixelSurvivor.UI.MainMenu.Location
@@ -6,7 +7,7 @@ namespace PixelSurvivor.UI.MainMenu.Location
     public class LocationPopup : MonoBehaviour
     {
         [SerializeField] private Image _locationImage;
-        [SerializeField] private string _locationName;
+        [SerializeField] private TextMeshProUGUI _locationName;
         [SerializeField] private GameObject _locketLocation;
 
         public void SetPopup(LocationData locationData)
@@ -21,7 +22,7 @@ namespace PixelSurvivor.UI.MainMenu.Location
             }
 
             _locationImage.sprite = locationData.LocationImage;
-            _locationName = locationData.LocationName;
+            _locationName.text = locationData.LocationName;
         }
 
         public void HidePopup()
