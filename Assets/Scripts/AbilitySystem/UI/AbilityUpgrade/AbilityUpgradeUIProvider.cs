@@ -12,6 +12,8 @@ namespace PixelSurvivor.NewAbilitySystem.UI
 
         public void Show(List<AbilityConfig> abilities, AbilityStorage abilityStorage)
         {
+            Time.timeScale = 0;
+            
             gameObject.SetActive(true);
 
             _abilityStorage = abilityStorage;
@@ -38,6 +40,7 @@ namespace PixelSurvivor.NewAbilitySystem.UI
         public void Hide()
         {
             gameObject.SetActive(false);
+            Time.timeScale = 1;
         }
     }
 }
