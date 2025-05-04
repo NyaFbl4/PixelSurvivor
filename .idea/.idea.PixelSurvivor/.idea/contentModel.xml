@@ -1365,6 +1365,9 @@
               </e>
             </e>
           </e>
+          <e p="CameraController" t="Include">
+            <e p="CameraController.cs" t="Include" />
+          </e>
           <e p="EntryPoints" t="Include">
             <e p="SceneEntryPoint.cs" t="Include" />
           </e>
