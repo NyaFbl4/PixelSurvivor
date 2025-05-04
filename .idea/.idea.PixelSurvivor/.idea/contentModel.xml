@@ -1395,6 +1395,7 @@
                 <e p="LocationsConfig.cs" t="Include" />
               </e>
               <e p="LocationManager.cs" t="Include" />
+              <e p="ShopManager.cs" t="Include" />
             </e>
             <e p="Player" t="Include">
               <e p="ExperienceUI" t="Include">
@@ -1484,6 +1485,9 @@
               <e p="Data" t="Include">
                 <e p="PlayerExperienceData.cs" t="Include" />
                 <e p="PlayerScoreData.cs" t="Include" />
+              </e>
+              <e p="Economy" t="Include">
+                <e p="GoldManager.cs" t="Include" />
               </e>
             </e>
           </e>
