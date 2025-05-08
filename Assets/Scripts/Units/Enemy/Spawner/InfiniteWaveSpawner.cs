@@ -88,6 +88,11 @@ namespace PixelSurvivor
 
         private Vector3 GetRandomPosition()
         {
+            if (_player == null)
+            {
+                return Vector3.zero;
+            }
+            
             float cameraHeight = _mainCamera.orthographicSize * 2;
             float cameraWidth = cameraHeight * _mainCamera.aspect;
             

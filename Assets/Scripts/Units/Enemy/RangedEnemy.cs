@@ -46,6 +46,11 @@ namespace PixelSurvivor
 
         public override void Move()
         {
+            if (_player == null)
+            {
+                return;
+            }
+            
             float distanceToPlayer = Vector2.Distance(transform.position, _player.position);
 
             if (!_enemyAnimationController.isHurt)
