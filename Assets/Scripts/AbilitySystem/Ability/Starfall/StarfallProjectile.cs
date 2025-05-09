@@ -52,12 +52,14 @@ namespace PixelSurvivor.NewAbilitySystem.Projectiles
 
                     if (target == null)
                     {
-                        Destroy(this.gameObject);
+                        //Destroy(this.gameObject);
+                        base._pool.ReturnProjectile(this.gameObject);
                     }
                 }
                 else
                 {
-                    Destroy(this.gameObject);
+                    //Destroy(this.gameObject);
+                    base._pool.ReturnProjectile(this.gameObject);
                 }
             }
         }

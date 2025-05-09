@@ -17,7 +17,6 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
         private int _damage;
         
         private List<GameObject> _projectiles;
-
         private MonoBehaviour _monobeh;
         
         public OrbitalAbility(AbilityType abilityType, 
@@ -31,16 +30,15 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
             _liveTime        = liveTime;
             _projectileCount = projectileCount;
             _damage          = damage;
-
-            _projectiles = new List<GameObject>();
         }
         
         public override void Added(GameObject player)
         {
             _player = player;
-
+            
             _monobeh = _player.GetComponent<MonoBehaviour>();
         }
+        
         
         public override void UpgradeAbility()
         {
@@ -69,6 +67,7 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
             }
         }
         
+        /*
         private IEnumerator SpawnAndRotateProjectiles()
         {
             ChangeCooldownTimer(CooldownTime);
@@ -93,6 +92,7 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
 
             DestroyProjectiles(_projectiles);
         }
+        */
 
         private IEnumerator RotateProjectiles(int countProjectile)
         {

@@ -31,7 +31,7 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
             _liveTime         = liveTime;
         }
         
-        void InitializePoolContainer()
+        private void InitializePoolContainer()
         {
             _projectilesContainer = new GameObject("FireBallContainer").transform;
             _projectilesContainer.SetParent(_player.transform);
@@ -94,7 +94,6 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
         
         private void ShootAtTarget(GameObject target)
         {
-            // Берем снаряд из пула вместо Instantiate
             GameObject projectile = _projectilePool.GetProjectile();
             projectile.transform.position = _player.transform.position;
             projectile.transform.rotation = _player.transform.rotation;
@@ -105,7 +104,7 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
             {
                 projectileComponent.SetDamage(_projectileDamage);
                 projectileComponent.SetLifeTime(_liveTime);
-                projectileComponent.SetPool(_projectilePool); // Даем ссылку на пул
+                projectileComponent.SetPool(_projectilePool);
 
                 Rigidbody2D projectileRb = projectile.GetComponent<Rigidbody2D>();
                 if (projectileRb != null)

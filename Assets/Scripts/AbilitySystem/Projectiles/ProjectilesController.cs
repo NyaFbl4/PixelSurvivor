@@ -9,7 +9,7 @@ namespace PixelSurvivor.NewAbilitySystem.Projectiles
         private float _lifeTime; 
         protected int _damage;
         
-        private ProjectilePool _pool;
+        protected ProjectilePool _pool;
         private float _time;
         
         public void SetDamage(int damage) => _damage = damage;

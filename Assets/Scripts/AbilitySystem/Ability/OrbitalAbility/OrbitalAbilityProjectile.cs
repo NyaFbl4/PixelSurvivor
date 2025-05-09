@@ -6,7 +6,8 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
     {
         private int _damage;
         
-        
+        private ProjectilePool _pool;
+
         public void SetDamage(int damage)
         {
             _damage = damage;
@@ -21,6 +22,23 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
                 {
                     damageComponent.TakeDamage(_damage);
                 }
+            }
+        }
+
+        private void OnDisable()
+        {
+            CancelInvoke(nameof(ReturnToPool));
+        }
+        
+        private void ReturnToPool()
+        {
+            if (_pool != null)
+            {
+                _pool.ReturnProjectile(gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
             }
         }
     }

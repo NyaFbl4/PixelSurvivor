@@ -15,7 +15,6 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
             _prefab = prefab;
             _parent = parent;
 
-            // Предварительно создаем снаряды
             for (int i = 0; i < initialSize; i++)
             {
                 GameObject projectile = CreateNewProjectile();
@@ -36,7 +35,6 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
         {
             if (_pool.Count == 0)
             {
-                // Если пул пуст, создаем новый снаряд
                 return CreateNewProjectile();
             }
 

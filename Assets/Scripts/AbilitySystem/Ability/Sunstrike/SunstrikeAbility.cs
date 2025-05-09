@@ -15,6 +15,10 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
         private float _radius;
         private float _liveTime;
 
+        private ProjectilePool _projectilePool;
+        private const int PoolInitialSize = 10;
+        private Transform _projectilesContainer;
+        
         public SunstrikeAbility(AbilityType abilityType, 
             GameObject projectile, int projectileDamage, 
             int maxCurrentSunstrike, float radius, float liveTime)
@@ -33,15 +37,29 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
             Debug.Log("Upgrade SunstrikeAbility");
         }
         
+        private void InitializePoolContainer()
+        {
+            _projectilesContainer = new GameObject("FireBallContainer").transform;
+            _projectilesContainer.SetParent(_player.transform);
+            _projectilesContainer.localPosition = Vector3.zero;
+            
+            _projectilePool = new ProjectilePool(_projectile, PoolInitialSize, _projectilesContainer);
+        }
+        
         public override void Added(GameObject player)
         {
             _player = player;
+            
+            InitializePoolContainer();
         }
         public override void ApplyCast()
         {
             for (var i = 0; i < _maxCurrentSunstrike; i++)
             {
                 Vector2 randomPosition = GetRandomSpawnPosition();
+
+                //GameObject projectile = _projectilePool.GetProjectileInPosition(randomPosition);
+                //SunstrikeProjectile projectileComponent = projectile.GetComponent<SunstrikeProjectile>();
 
                 GameObject tornado = GameObject.Instantiate(
                     _projectile, randomPosition, Quaternion.identity);
@@ -51,6 +69,7 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
                 {
                     projectileComponent.SetDamage(_projectileDamage);
                     projectileComponent.SetLifeTime(_liveTime);
+                    projectileComponent.SetPool(_projectilePool);
                 }
             }
             

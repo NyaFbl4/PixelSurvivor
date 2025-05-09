@@ -12,12 +12,16 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
         private List<GameObject> _targets;
         
         private AbilityType _abilityType;
-        private GameObject _prefabProjectile;
-        private int _projectileDamage;
+        private readonly GameObject _prefabProjectile;
+        private readonly int _projectileDamage;
         private int _maxCurrentShots;
-        private int _ricochetShots;
-        private float _projectileSpeed;
-        private float _liveTime;
+        private readonly int _ricochetShots;
+        private readonly float _projectileSpeed;
+        private readonly float _liveTime;
+        
+        private ProjectilePool _projectilePool;
+        private const int PoolInitialSize = 10;
+        private Transform _projectilesContainer;
 
 
         public StarfallAbility(AbilityType abilityType,
@@ -40,10 +44,20 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
             _maxCurrentShots++;
         }
         
+        private void InitializePoolContainer()
+        {
+            _projectilesContainer = new GameObject("StarfallContainer").transform;
+            _projectilesContainer.SetParent(_player.transform);
+            _projectilesContainer.localPosition = Vector3.zero;
+            
+            _projectilePool = new ProjectilePool(_prefabProjectile, PoolInitialSize, _projectilesContainer);
+        }
+        
         public override void Added(GameObject player)
         {
             _player = player;
-            
+
+            InitializePoolContainer();
             _targetTracker = _player.GetComponent<TargetTrackerComponent>();
         }
         
@@ -88,9 +102,9 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
         
         private void ShootAtTarget(GameObject target)
         {
-            //Debug.Log("shoot");
-            GameObject projectile = Object.Instantiate(_prefabProjectile, 
-                _player.transform.position, _player.transform.rotation);
+            GameObject projectile = _projectilePool.GetProjectile();
+            projectile.transform.position = _player.transform.position;
+            projectile.transform.rotation = _player.transform.rotation;
 
             StarfallProjectile projectileComponent = 
                 projectile.GetComponent<StarfallProjectile>();
@@ -99,6 +113,8 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
             {
                 projectileComponent.SetParametrs(_projectileDamage, _ricochetShots, _projectileSpeed);
                 projectileComponent.SetLifeTime(_liveTime);
+                projectileComponent.SetPool(_projectilePool);
+                
                 Rigidbody2D projectileRb = projectile.GetComponent<Rigidbody2D>();
 
                 if (projectileRb != null)

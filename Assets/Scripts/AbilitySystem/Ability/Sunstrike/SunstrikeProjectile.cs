@@ -26,6 +26,7 @@ namespace PixelSurvivor.NewAbilitySystem.Projectiles
         {
             yield return new WaitForSeconds(_animator.GetCurrentAnimatorStateInfo(0).length);
 
+            //base._pool.ReturnProjectile(this.gameObject);
             Destroy(gameObject);
         }
     }
