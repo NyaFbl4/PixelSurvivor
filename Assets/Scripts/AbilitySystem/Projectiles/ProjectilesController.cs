@@ -1,21 +1,29 @@
-﻿using UnityEngine;
+﻿using System;
+using PixelSurvivor.NewAbilitySystem.Ability;
+using UnityEngine;
 
 namespace PixelSurvivor.NewAbilitySystem.Projectiles
 {
     public abstract class ProjectilesController : MonoBehaviour, IProjectilesController
     {
-        protected float _lifeTime; 
+        private float _lifeTime; 
         protected int _damage;
-
-        public void SetDamage(int damage)
-        {
-            _damage = damage;
-        }
         
-        public void SetLifeTime(float livetime)
+        private ProjectilePool _pool;
+        private float _time;
+        
+        public void SetDamage(int damage) => _damage = damage;
+        public void SetLifeTime(float lifeTime) => _lifeTime = lifeTime;
+        public void SetPool(ProjectilePool pool) => _pool = pool;
+
+        private void FixedUpdate()
         {
-            _lifeTime = livetime;
-            Destroy(this.gameObject, _lifeTime);
+            _time += Time.deltaTime;
+            
+            if (_time >= _lifeTime)
+            {
+                ReturnToPool();
+            }
         }
 
         private void OnTriggerEnter2D(Collider2D other)
@@ -28,7 +36,32 @@ namespace PixelSurvivor.NewAbilitySystem.Projectiles
                     damageComponent.TakeDamage(_damage);
                 }
 
-                Destroy(gameObject); 
+                ReturnToPool();
+            }
+        }
+        
+        private void OnEnable()
+        {
+            if (_lifeTime > 0)
+            {
+                Invoke(nameof(ReturnToPool), _lifeTime);
+            }
+        }
+
+        private void OnDisable()
+        {
+            CancelInvoke(nameof(ReturnToPool));
+        }
+        
+        private void ReturnToPool()
+        {
+            if (_pool != null)
+            {
+                _pool.ReturnProjectile(gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
             }
         }
     }
