@@ -10,7 +10,7 @@ namespace PixelSurvivor.EntryPoints
 
         private void Start()
         {
-            //_upgradeManager.SuggestUpgrades();
+            _upgradeManager.SuggestUpgrades();
         }
     }
 }

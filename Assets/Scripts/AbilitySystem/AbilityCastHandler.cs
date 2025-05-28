@@ -36,14 +36,14 @@ namespace PixelSurvivor.NewAbilitySystem
             {
                 case EAbilityState.Ready:
                     
-                    Debug.Log("Ability Ready");
+                    //Debug.Log("Ability Ready");
                     _currentAbility = _playerAbilities[abilityIndex];
                     _currentAbility.ApplyCast();
                     
                     break;
                 case EAbilityState.Cooldown: 
                     
-                    Debug.Log("Ability Cooldown");
+                    //Debug.Log("Ability Cooldown");
                     break;
                 
                 default:

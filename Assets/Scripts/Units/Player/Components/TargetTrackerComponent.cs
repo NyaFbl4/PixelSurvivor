@@ -51,9 +51,12 @@ namespace PixelSurvivor
 
         private void FindTarges()
         {
+            Debug.Log("FindTarges");
+            
             _targets.Clear();
 
-            Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, _detectionRadius);
+            Collider2D[] hitColliders = Physics2D.OverlapCircleAll(
+                transform.position, _detectionRadius);
 
             foreach (var hitCollider in hitColliders)
             {

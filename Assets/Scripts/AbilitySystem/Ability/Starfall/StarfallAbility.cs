@@ -40,7 +40,7 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
         
         public override void UpgradeAbility()
         {
-            Debug.Log("Upgrade StarfallAbility");
+            //Debug.Log("Upgrade StarfallAbility");
             _maxCurrentShots++;
         }
         
@@ -83,6 +83,10 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
                     ChangeAbilityState(EAbilityState.Cooldown);
                 }
             }
+            else
+            {
+                Debug.Log("No targets");
+            }
         }
 
         public override void EventTick(float deltaTick)
@@ -93,7 +97,7 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
 
                 if (CooldownTimer <= 0.0f)
                 {
-                    Debug.Log("FireBallAbility " + EAbilityState.Ready);
+                    Debug.Log("StarfallAbility " + EAbilityState.Ready);
                     
                     ChangeAbilityState(EAbilityState.Ready);
                 }
@@ -102,6 +106,8 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
         
         private void ShootAtTarget(GameObject target)
         {
+            //_targets = _targetTracker.GetCurrentTargets();
+            
             GameObject projectile = _projectilePool.GetProjectile();
             projectile.transform.position = _player.transform.position;
             projectile.transform.rotation = _player.transform.rotation;
@@ -124,9 +130,11 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
                     projectileRb.velocity = direction * _projectileSpeed;
                     
                     float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; // Получаем угол
-                    projectile.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle)); // Устанавливаем вращение
+                    projectile.transform.rotation = Quaternion.Euler(0, 0, angle); // Устанавливаем вращение
                 }
             }
+            
+            Debug.Log("StarfallAbility ShootAtTarget");
         }
     }
 }

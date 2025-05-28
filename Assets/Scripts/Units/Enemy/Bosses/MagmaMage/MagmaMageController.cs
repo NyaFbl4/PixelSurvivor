@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace PixelSurvivor
 {
-    public class MagmaMageController : MonoBehaviour
+    public class MagmaMageController : EnemyController
     {
         [SerializeField] private Animator _animator;
         [SerializeField] private Transform _shootPointAttack2;
@@ -36,16 +36,14 @@ namespace PixelSurvivor
             _isInRage = false;
         }
 
-        public void Move()
+        public override void Move()
         {
             if (_player.position.x < transform.position.x) 
             {
-                // Игрок справа → поворачиваем вправо (обычно угол = 0)
                 Flip(0); 
             }
             else 
             {
-                // Игрок слева → поворачиваем влево (обычно угол = 180)
                 Flip(180);
             }
             
@@ -59,9 +57,7 @@ namespace PixelSurvivor
             if (distanceToPlayer > _attackRange)
             {
                 Vector2 direction = (_player.position - transform.position).normalized;
-                
 
-                
                 Vector3 vector3 = (_player.position - transform.position).normalized;
             
                 transform.position += vector3 * _moveSpeed * Time.deltaTime;
@@ -125,13 +121,11 @@ namespace PixelSurvivor
 
                 if (projectile.TryGetComponent(out Rigidbody2D rb))
                 {
-                    // Направление с учетом угла
                     Vector2 baseDirection = (_player.transform.position - _shootPointAttack3.position).normalized;
                     Vector2 direction = Quaternion.Euler(0, 0, angleDegrees) * baseDirection;
 
                     rb.velocity = direction * _projectileSpeed;
-
-                    // Поворот снаряда по направлению движения
+                    
                     float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
                     projectile.transform.rotation = Quaternion.Euler(0, 0, angle);
                 }

@@ -14,8 +14,7 @@ namespace PixelSurvivor
         [SerializeField] private float _timeBetweenWaves;
         [SerializeField] private float _spawnRadius;
         [SerializeField] private Transform _player;
-        private Camera _mainCamera;
-        
+
         [Header("Прогрессия сложности")]
         [SerializeField] private int _startEnemyCount; // Стартовое кол-во врагов
         [SerializeField] private float _enemyCountMultiplier; // Множитель роста кол-ва врагов
@@ -23,15 +22,22 @@ namespace PixelSurvivor
         [SerializeField] private float _eliteChanceStart; // Начальный шанс элитных врагов
         [SerializeField] private float _eliteChanceGrowth; // Рост шанса за волну
 
+        [Header("Настройки босса")]
+        [SerializeField] private GameObject _boss;
+        [SerializeField] private int _waveBossSpawn;
+        private bool _bossSpawn;
+        
+        private Camera _mainCamera;
         private int _currentWave;
         private float _currentEliteChance;
         private List<GameObject> _aliveEnemies = new();
-
+        
         private EnemyRewardSystem _rewardSystem;
         
         private void Start()
         {
             _mainCamera = Camera.main;
+            _bossSpawn = false;
             StartCoroutine(SpawnWaves());
         }
 
@@ -45,10 +51,15 @@ namespace PixelSurvivor
         {
             while (true)
             {
+                if (_currentWave == _waveBossSpawn)
+                {
+                    SpawnBoss();
+                }
+                
                 int enemiesInWave = Mathf.RoundToInt(
                     _startEnemyCount * Mathf.Pow(_enemyCountMultiplier, _currentWave));
                 
-                Debug.Log($"Волна {_currentWave + 1}. Врагов: {enemiesInWave}");
+                //Debug.Log($"Волна {_currentWave + 1}. Врагов: {enemiesInWave}");
 
                 for (int i = 0; i < enemiesInWave; i++)
                 {
@@ -59,6 +70,17 @@ namespace PixelSurvivor
                 _currentWave++;
                 _currentEliteChance = Mathf.Min(0.5f, _eliteChanceStart + (_eliteChanceGrowth * _currentWave));
             }
+        }
+
+        private void SpawnBoss()
+        {
+            var bossPrefab = _boss;
+            Vector3 spawnPosition = GetRandomPosition();
+            
+            var enemy = Instantiate(bossPrefab, spawnPosition, Quaternion.identity);
+            EnemyController enemyController = enemy.GetComponent<EnemyController>();
+            _rewardSystem.RegisterEnemy(enemyController);
+            _aliveEnemies.Add(enemy);
         }
 
         private void SpawnSingleEnemy()

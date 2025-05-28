@@ -26,7 +26,7 @@ namespace PixelSurvivor.NewAbilitySystem.Projectiles
             }
         }
 
-        private void OnTriggerEnter2D(Collider2D other)
+        protected void OnTriggerEnter2D(Collider2D other)
         {
             if (other.gameObject.CompareTag("Enemy"))
             {
@@ -36,12 +36,15 @@ namespace PixelSurvivor.NewAbilitySystem.Projectiles
                     damageComponent.TakeDamage(_damage);
                 }
 
+                Debug.Log("Return BaseProjectile");
                 ReturnToPool();
             }
         }
         
         private void OnEnable()
         {
+            _time = 0f; // Сбрасываем таймер
+            
             if (_lifeTime > 0)
             {
                 Invoke(nameof(ReturnToPool), _lifeTime);
@@ -58,6 +61,7 @@ namespace PixelSurvivor.NewAbilitySystem.Projectiles
             if (_pool != null)
             {
                 _pool.ReturnProjectile(gameObject);
+                Debug.Log("ReturnToPool");
             }
             else
             {

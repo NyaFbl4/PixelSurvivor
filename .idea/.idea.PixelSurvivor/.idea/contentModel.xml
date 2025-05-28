@@ -1446,6 +1446,7 @@
                 <e p="HealthBoss.cs" t="Include" />
                 <e p="ICheckingBossStage.cs" t="Include" />
                 <e p="MagmaMage" t="Include">
+                  <e p="MagmaLaser.cs" t="Include" />
                   <e p="MagmaMage.cs" t="Include" />
                   <e p="MagmaMAgeController.cs" t="Include" />
                   <e p="MagmaMageWalk.cs" t="Include" />
@@ -1460,15 +1461,6 @@
                 <e p="EnemiesSpawner.cs" t="Include" />
                 <e p="InfiniteWaveSpawner.cs" t="Include" />
                 <e p="Wave.cs" t="Include" />
-              </e>
-            </e>
-            <e p="FSM" t="Include">
-              <e p="FSM.cs" t="Include" />
-              <e p="FsmSTate.cs" t="Include" />
-              <e p="States" t="Include">
-                <e p="FsmStateIdle.cs" t="Include" />
-                <e p="FsmStateMovement.cs" t="Include" />
-                <e p="FsmStateWalk.cs" t="Include" />
               </e>
             </e>
             <e p="Interfaces" t="Include">

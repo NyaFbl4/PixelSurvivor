@@ -40,14 +40,10 @@ namespace PixelSurvivor.Units.Player
         private void OnCurrentExperienceChanged(long experience)
         {
             _viewCurrentExperience.UpdateCurrency(experience);
-            
-            Debug.Log("OnCurrentExperienceChanged" + experience);
         }
         private void OnMaxExperienceChanged(long experience)
         {
             _viewMaxExperience.UpdateCurrency(experience);
-            
-            Debug.Log("OnMaxExperienceChanged" + experience);
         }
     }
 }

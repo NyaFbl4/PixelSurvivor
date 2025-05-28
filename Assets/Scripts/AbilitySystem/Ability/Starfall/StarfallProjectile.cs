@@ -9,15 +9,12 @@ namespace PixelSurvivor.NewAbilitySystem.Projectiles
 
         private GameObject _prefabProjectile;
         private int _projectileDamage;
-        private int _ricochetShots;
+        [SerializeField] private int _ricochetShots;
+        [SerializeField] private int _currentRicochet;
         private float _projectileSpeed;
 
-        //private int _damage;
-
         private GameObject target;
-        //[SerializeField] private float _cooldown;
         
-
         public StarfallProjectile(int ricochetShots)
         {
             _ricochetShots = ricochetShots;
@@ -27,39 +24,40 @@ namespace PixelSurvivor.NewAbilitySystem.Projectiles
         {
             _damage = damage;
             _ricochetShots = ricochetShots;
+            _currentRicochet = _ricochetShots;
             _projectileSpeed = speed;
         }
 
-        private void OnTriggerEnter2D(Collider2D other)
+        protected void OnTriggerEnter2D(Collider2D other)
         {
             if (other.gameObject.CompareTag("Enemy"))
             {
                 _targetTrackerComponent.GetIgnoreTarget(other.gameObject);
+                _targetTrackerComponent.ClearIgnoreTargets();
 
                 IDamage damageComponent = other.gameObject.GetComponent<IDamage>();
                 if (damageComponent != null)
                 {
                     damageComponent.TakeDamage(_damage);
                 }
-
-                //_targetTrackerComponent.FindTarges();
+                
                 target = _targetTrackerComponent.GetFirstTarget();
                 _ricochetShots--;
 
                 if (_ricochetShots > 0)
                 {
-                    ShootAtTarget(target);
-
                     if (target == null)
                     {
-                        //Destroy(this.gameObject);
-                        base._pool.ReturnProjectile(this.gameObject);
+                        Debug.Log("Return StarfallProjectile");
+                        base._pool.ReturnProjectile(gameObject);
                     }
+                    
+                    ShootAtTarget(target);
                 }
                 else
                 {
-                    //Destroy(this.gameObject);
-                    base._pool.ReturnProjectile(this.gameObject);
+                    Debug.Log("Return StarfallProjectile");
+                    base._pool.ReturnProjectile(gameObject);
                 }
             }
         }
@@ -67,13 +65,20 @@ namespace PixelSurvivor.NewAbilitySystem.Projectiles
         private void ShootAtTarget(GameObject target)
         {
             Rigidbody2D projectileRb = GetComponent<Rigidbody2D>();
+            Vector2 direction;
 
             if (projectileRb != null)
             {
-                Vector2 direction = (target.transform.position - _shootPoint.position).normalized;
-
+                if (target != null)
+                { 
+                    direction = (target.transform.position - _shootPoint.position).normalized;
+                }
+                else
+                {
+                    direction = (gameObject.transform.position - _shootPoint.position).normalized;
+                }
+                
                 projectileRb.velocity = direction * _projectileSpeed;
-
                 float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
                 transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
             }

@@ -98,7 +98,8 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
             projectile.transform.position = _player.transform.position;
             projectile.transform.rotation = _player.transform.rotation;
 
-            FireBallProjectile projectileComponent = projectile.GetComponent<FireBallProjectile>();
+            FireBallProjectile projectileComponent = 
+                projectile.GetComponent<FireBallProjectile>();
         
             if (projectileComponent != null)
             {
@@ -109,7 +110,8 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
                 Rigidbody2D projectileRb = projectile.GetComponent<Rigidbody2D>();
                 if (projectileRb != null)
                 {
-                    Vector2 direction = (target.transform.position - _player.transform.position).normalized;
+                    Vector2 direction = (target.transform.position - 
+                                         _player.transform.position).normalized;
                     projectileRb.velocity = direction * _projectileSpeed;
                 
                     float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
