@@ -13,7 +13,7 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
         
         private AbilityType _abilityType;
         private readonly GameObject _prefabProjectile;
-        private readonly int _projectileDamage;
+        //private readonly int _projectileDamage;
         private int _maxCurrentShots;
         private readonly int _ricochetShots;
         private readonly float _projectileSpeed;
@@ -31,7 +31,7 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
         {
             _abilityType      = abilityType;
             _prefabProjectile = prefabProjectile;
-            _projectileDamage = projectileDamage;
+            _damage = projectileDamage;
             _maxCurrentShots  = maxCurrentShots;
             _ricochetShots    = ricochetShots;
             _projectileSpeed  = projectileSpeed;
@@ -117,7 +117,7 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
 
             if (projectileComponent != null)
             {
-                projectileComponent.SetParametrs(_projectileDamage, _ricochetShots, _projectileSpeed);
+                projectileComponent.SetParametrs(_damage, _ricochetShots, _projectileSpeed);
                 projectileComponent.SetLifeTime(_liveTime);
                 projectileComponent.SetPool(_projectilePool);
                 

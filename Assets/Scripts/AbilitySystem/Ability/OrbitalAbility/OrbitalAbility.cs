@@ -14,7 +14,7 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
         private float _rotationSpeed;
         private float _liveTime;
         private int _projectileCount;
-        private int _damage;
+        //private int _damage;
         
         private List<GameObject> _projectiles;
         private MonoBehaviour _monobeh;

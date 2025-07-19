@@ -11,11 +11,14 @@ namespace PixelSurvivor.NewAbilitySystem
         [SerializeField] private float _cooldownTime;
         [SerializeField] private float _cooldownTimer;
         //[SerializeField] private AbilityType _abilityType;
-
+        
         private EAbilityState _abilityState;
+        
+        [SerializeField] protected int _damage;
         
         public string Title => _title;
         public Sprite IconImage => _iconImage;
+        public int Damage => _damage;
         public float CooldownTime => _cooldownTime;
         public float CooldownTimer => _cooldownTimer;
         //public AbilityType AbilityType => _abilityType;
@@ -42,6 +45,15 @@ namespace PixelSurvivor.NewAbilitySystem
         public virtual void CancelCast() { }
         public virtual void Added(GameObject player) { }
         public virtual void UpgradeAbility() { }
-        
+
+        public int GetDamage()
+        {
+            return _damage;
+        }
+
+        public void SetDamage(int newDamage)
+        {
+            _damage = newDamage;
+        }
     }
 }

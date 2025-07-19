@@ -9,7 +9,7 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
         private AbilityType _abilityType;
         
         private GameObject _projectile;
-        private int _projectileDamage;
+        //private int _projectileDamage;
         private int _maxCurrentTornado;
         private float _radius;
         private float _liveTime;
@@ -22,7 +22,7 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
         {
             _abilityType       = abilityType;
             _projectile        = projectile;
-            _projectileDamage  = projectileDamage;
+            _damage  = projectileDamage;
             _maxCurrentTornado = maxCurrentTornado;
             _radius            = radius;
             _liveTime          = liveTime;
@@ -54,7 +54,7 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
                 {
                     //projectileComponent.SetDamage(_projectileDamage);
                     projectileComponent.SetLifeTime(_liveTime);
-                    projectileComponent.SetParametrs(_projectileDamage, _tornadoSpeed);
+                    projectileComponent.SetParametrs(_damage, _tornadoSpeed);
                 }
             }
             

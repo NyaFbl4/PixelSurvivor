@@ -10,8 +10,7 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
         [SerializeField] private int _maxCurrentSunStrike;
         [SerializeField] private float _radius;
         [SerializeField] private float _liveTime;
-        
-        
+
         public GameObject PrefabProjectile => _prefabProjectile;
         public int Damage => _projectileDamage;
         public int MaxCurrentSunStrike => _maxCurrentSunStrike;

@@ -64,8 +64,6 @@ namespace PixelSurvivor.NewAbilitySystem
             {
                 _currentAbility.StartCast();
                 _currentAbility = null;
-                
-                return;
             }
         }
     }

@@ -10,7 +10,7 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
         private AbilityType _abilityType;
         
         private GameObject _projectile;
-        private int _projectileDamage;
+        //private int _projectileDamage;
         private int _maxCurrentSunstrike;
         private float _radius;
         private float _liveTime;
@@ -25,7 +25,7 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
         {
             _abilityType         = abilityType;
             _projectile          = projectile;
-            _projectileDamage    = projectileDamage;
+            _damage    = projectileDamage;
             _maxCurrentSunstrike = maxCurrentSunstrike;
             _radius              = radius;
             _liveTime            = liveTime;
@@ -67,7 +67,7 @@ namespace PixelSurvivor.NewAbilitySystem.Ability
 
                 if (projectileComponent != null)
                 {
-                    projectileComponent.SetDamage(_projectileDamage);
+                    projectileComponent.SetDamage(_damage);
                     projectileComponent.SetLifeTime(_liveTime);
                     projectileComponent.SetPool(_projectilePool);
                 }

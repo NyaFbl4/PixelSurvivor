@@ -1310,6 +1310,13 @@
                 <e p="HealthBuilder.cs" t="Include" />
                 <e p="HealthConfig.cs" t="Include" />
               </e>
+              <e p="Laser" t="Include">
+                <e p="LaserAbility.cs" t="Include" />
+                <e p="LaserBuilder.cs" t="Include" />
+                <e p="LaserConfig.cs" t="Include" />
+                <e p="LaserProjectile.cs" t="Include" />
+                <e p="LasersContainer.cs" t="Include" />
+              </e>
               <e p="OrbitalAbility" t="Include">
                 <e p="OrbitalAbility.cs" t="Include" />
                 <e p="OrbitalAbilityProjectile.cs" t="Include" />
@@ -1341,7 +1348,6 @@
                 <e p="TornadoProjectile.cs" t="Include" />
               </e>
             </e>
-            <e p="Ability.cs" t="Include" />
             <e p="AbilityBuilder.cs" t="Include" />
             <e p="AbilityCastHandler.cs" t="Include" />
             <e p="AbilityConfig.cs" t="Include" />
@@ -1349,6 +1355,7 @@
             <e p="AbilityStorage.cs" t="Include" />
             <e p="AbilityType.cs" t="Include" />
             <e p="EAbilityState.cs" t="Include" />
+            <e p="PlayerAbility.cs" t="Include" />
             <e p="Projectiles" t="Include">
               <e p="IProjectilesController.cs" t="Include" />
               <e p="ProjectilePool.cs" t="Include" />
