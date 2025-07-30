@@ -8,7 +8,7 @@ namespace PixelSurvivor.EntryPoints
     {
         [SerializeField] private AbilityUpgradeManager _upgradeManager;
 
-        private void Start()
+        private void Awake()
         {
             _upgradeManager.SuggestUpgrades();
         }

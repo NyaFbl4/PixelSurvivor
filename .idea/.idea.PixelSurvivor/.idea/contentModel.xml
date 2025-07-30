@@ -1279,6 +1279,18 @@
               <e p="License.txt" t="Include" />
             </e>
           </e>
+          <e p="SimplePixelUI" t="Include">
+            <e p="Fonts" t="Include">
+              <e p="Font1" t="Include">
+                <e p="License.txt" t="Include" />
+                <e p="Readme.txt" t="Include" />
+              </e>
+              <e p="Font2" t="Include">
+                <e p="License.txt" t="Include" />
+                <e p="Readme.txt" t="Include" />
+              </e>
+            </e>
+          </e>
           <e p="Tileset" t="Include">
             <e p="platformer-pixel-art-cave-2d-tileset" t="Include">
               <e p="License.txt" t="Include" />
@@ -1409,6 +1421,7 @@
                 <e p="LocationsConfig.cs" t="Include" />
               </e>
               <e p="LocationManager.cs" t="Include" />
+              <e p="ManagerScene.cs" t="Include" />
               <e p="ShopManager.cs" t="Include" />
             </e>
             <e p="Player" t="Include">

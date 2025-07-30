@@ -13,6 +13,9 @@ namespace PixelSurvivor.UI.MainMenu
         [SerializeField] private List<LocationData> _locationDatas = new();
         [SerializeField] private int _nomberLocation;
         [SerializeField] private int _countLocation;
+
+        private string _activeSceneName;
+        public string ActiveSceneName => _activeSceneName;
         
         public void Start()
         {
@@ -31,6 +34,7 @@ namespace PixelSurvivor.UI.MainMenu
         private void ShowLocation(int nomber)
         {
             _popupProvider.TakeLocation(_locationDatas[nomber]);
+            _activeSceneName = _locationDatas[nomber].LocationSceneName;
         }
 
         public void NextLocation()

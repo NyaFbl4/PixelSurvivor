@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42591dc0070440bf80c44ddcb6cf455b, type: 3}
   m_Name: LaserConfig
   m_EditorClassIdentifier: 
-  _title: 
+  _title: Laser
   _iconImage: {fileID: 0}
-  _cooldownTime: 0
+  _cooldownTime: 10
   _abilityType: 0
-  _prefabProjectile: {fileID: 0}
+  _prefabProjectile: {fileID: 2881215677645828969, guid: 967ab82f1de42c045b5cec4f3d36b3f0, type: 3}
   _projectileDamage: 0
-  _currentLasers: 0
+  _currentLasers: 1
   _containerShootPoints: {fileID: 0}

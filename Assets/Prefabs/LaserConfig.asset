@@ -19,6 +19,4 @@ MonoBehaviour:
   _prefabProjectile: {fileID: 0}
   _projectileDamage: 0
   _currentLasers: 0
-  _radius: 0
-  _liveTime: 0
-  _containerShootPoints: []
+  _containerShootPoints: {fileID: 0}
