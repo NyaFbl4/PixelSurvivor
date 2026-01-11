@@ -50,12 +50,14 @@ namespace PixelSurvivor
             Debug.Log("STARTED");
             _playerExperienceData.AddExperience(_experience);
             _playerExperienceData.AddMaxExperienceOnLvl(_experienceLvl[_newLvl + 1]);
+            _playerExperienceData.AddOldMaxExperienceOnLvl(_experienceLvl[_newLvl]);
         }
         
         private void LvlUp()
         {
             _upgradeManager.SuggestUpgrades();
             _playerExperienceData.AddMaxExperienceOnLvl(_experienceLvl[_newLvl + 1]);
+            _playerExperienceData.AddOldMaxExperienceOnLvl(_experienceLvl[_newLvl]);
         }
     }
 }

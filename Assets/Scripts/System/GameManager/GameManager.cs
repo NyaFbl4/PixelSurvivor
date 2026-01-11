@@ -7,11 +7,12 @@ namespace PixelSurvivor
 {
     public class GameManager : MonoBehaviour
     {
-        [SerializeField, Unity.Collections.ReadOnly] private GameState _gameState;
+        [SerializeField, Unity.Collections.ReadOnly] 
+        private GameState _gameState;
 
-        [SerializeField] private readonly List<IGameListener> _gameListeners = new();
-        [SerializeField] private readonly List<IGameUpdateListener> _gameUpdateListeners = new();
-        [SerializeField] private readonly List<IGameFixedUpdateListener> _gameFixedUpdateListeners = new();
+        private readonly List<IGameListener> _gameListeners = new();
+        private readonly List<IGameUpdateListener> _gameUpdateListeners = new();
+        private readonly List<IGameFixedUpdateListener> _gameFixedUpdateListeners = new();
 
         public event Action OnStartGame;
 
@@ -47,7 +48,6 @@ namespace PixelSurvivor
             for (int i = 0; i < _gameUpdateListeners.Count; i++)
             {
                 _gameUpdateListeners[i].OnUpdate(deltaTime);
-                //Debug.Log("GM Update");
             }
         }
         
@@ -62,7 +62,6 @@ namespace PixelSurvivor
             for (int i = 0; i < _gameFixedUpdateListeners.Count; i++)
             {
                 _gameFixedUpdateListeners[i].OnFixedUpdate(deltaTime);
-                //Debug.Log("GM FixedUpdate");
             }
         }
 
@@ -79,8 +78,6 @@ namespace PixelSurvivor
             {
                 _gameFixedUpdateListeners.Add(gameFixedUpdateListener);
             }
-            
-            //Debug.Log("AddListener");
         }
 
         private void RemoveListener(IGameListener gameListener)
@@ -96,8 +93,6 @@ namespace PixelSurvivor
             {
                 _gameFixedUpdateListeners.Remove(gameFixedUpdateListener);
             }
-            
-            //Debug.Log("RemoveListener");
         }
 
         [Button]
@@ -105,11 +100,9 @@ namespace PixelSurvivor
         {
             foreach (var gameListener in _gameListeners)
             {
-                //Debug.Log("IGameStartListener");
                 if (gameListener is IGameStartListener gameStartListener)
                 {
                     gameStartListener.OnStartGame();
-                    //Debug.Log("IGameStartListener");
                 }
             }
 

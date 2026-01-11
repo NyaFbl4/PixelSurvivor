@@ -1,6 +1,7 @@
 ﻿using PixelSurvivor.NewAbilitySystem.UI;
 using PixelSurvivor.Units.Player;
 using UnityEngine;
+using UnityEngine.UI;
 using Zenject;
 
 namespace PixelSurvivor
@@ -8,6 +9,7 @@ namespace PixelSurvivor
     public class InstallerUI : MonoInstaller
     {
         [SerializeField] private AbilitySlotsProvoder _abilitySlotsProvoder;
+        [SerializeField] private Image _filledProgressBar;
         //[SerializeField] private CooldownView _cooldownView;
         
         public override void InstallBindings()
@@ -17,7 +19,7 @@ namespace PixelSurvivor
             CurrentHealthBind(view.CurrentHealthView);
             MaxHealthBind(view.MaxHealthView);
 
-            ExperienceBind(view.CurrentExperienceView, view.MaxExperienceView);
+            ExperienceBind(view.CurrentExperienceView, view.MaxExperienceView, _filledProgressBar);
             ScoreBind(view.ScoreView);
         }
 
@@ -29,18 +31,18 @@ namespace PixelSurvivor
                 .AsSingle();
         }
 
-        private void ExperienceBind(ValueView CurrentView, ValueView MaxView)
+        private void ExperienceBind(ValueView currentView, ValueView maxView, Image filledProgressBar)
         {
             Container
                 .Bind<PlayerExperienceData>()
                 .AsSingle()
-                .WithArguments(0L, 0L)
+                .WithArguments(0L, 0L, 0L)
                 .NonLazy();
 
             Container
                 .Bind<ExperienceObserver>()
                 .AsSingle()
-                .WithArguments(CurrentView, MaxView)
+                .WithArguments(currentView, maxView, filledProgressBar)
                 .NonLazy();
         }
 
